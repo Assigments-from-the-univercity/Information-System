@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Information_System.dir/main.cpp.o  -o Information_System 
