@@ -1,32 +1,63 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
-class Status {
-public:
-    struct Table {
-        string name;
-        string description;
-    };
+class Note {
 
+};
+
+class Sheet {
 private:
-    const char *FILE_NAME = "manage-file.dat";
+    string name;
+
+public:
+};
+
+struct SheetProperties {
+    string name;
+    string description;
+
+    //SheetProperties();
+
+    /*SheetProperties(string fileName, string fileDescription){
+        this->name = name;
+        this->description = description;
+    }*/
+};
+
+class Manifest {
+private:
+    const char *FILE_NAME = "manifest.dat";
     FILE *fp;
     const int numberOfTables = 0;
 
-    vector<Table> getAllTables() {
+    void addTable(SheetProperties table) {
+        fwrite(&table, sizeof table, 1, fp);
+    }
+
+public:
+    Manifest() {
+        fp = fopen(FILE_NAME, "r+b");
+        if (fp == NULL) {
+            cout << "Файл \"manifest.dat\" створений заново." << endl;
+            fp = fopen(FILE_NAME, "w+b");
+        }
+    }
+
+    vector<SheetProperties> getAllTables() {
         rewind(fp);
-        vector<Table> tables;
-        Table table;
+        vector<SheetProperties> tables;
+        SheetProperties sheet;
         for (int i = 0; i < numberOfTables; ++i) {
-            fread(&table, sizeof table, 1, fp);
-            tables.push_back(table);
+            fread(&sheet, sizeof sheet, 1, fp);
+            tables.push_back(sheet);
         }
         return tables;
     };
 
-    void printAllTables(vector<Table> tables) {
+    void printAllTables(vector<SheetProperties> tables) {
         int size = tables.size();
         cout << "список доступних таблиць:" << endl;
         for (int i = 0; i < size; i++) {
@@ -35,42 +66,87 @@ private:
         if (size == 0) {
             cout << "немає доступних таблиць." << endl;
         }
-        cout << "hint: press \"cd <name of table>\" to go to the table." << endl;
+        cout << "hint: use \"cd <name of table>\" to go to the table." << endl;
     }
 
-    void putTable(Table table) {
-        fwrite(&table, sizeof table, 1, fp);
+    void addTable(string fileName, string fileDescription) {
+        SheetProperties newSheet;
+        newSheet.name = fileName;
+        newSheet.description = fileDescription;
+        addTable(newSheet);
+    }
+};
+
+class Controller {
+private:
+    Manifest manifest;
+    vector<Sheet> sheets;
+
+public:
+    void lsSheet() {
+        vector<SheetProperties> tables = manifest.getAllTables();
+        manifest.printAllTables(tables);
+    };
+
+    void addSheet() {
+        string fileName, fileDescription;
+        cout << "Введіть ім'я файлу: ";
+        cin >> fileName;
+        cout << "Введіть опис файлу: ";
+        getline(cin, fileDescription);
+        manifest.addTable(fileName, fileDescription);
+    }
+};
+
+class View {
+private:
+    Controller controller;
+    stack<string> userDirectory;
+
+    void printPath() {
+        int size = userDirectory.size();
+        for (int i = 0; i < size; ++i) {
+            cout << userDirectory.top() << "/";
+        }
+        cout << "> ";
+    }
+
+    void userCommand(string command) {
+        if (userDirectory.size() == 1) {
+            if (command == "ls") {
+                controller.lsSheet();
+            } else if (command == "add") {
+                controller.addSheet();
+            } else if (command == "stop") {
+                cout << "program is stopped.";
+                return;
+            } else {
+                cout << "command \"" + command + "\" wasn't recognized." << endl;
+            }
+        } else if (userDirectory.size() == 2) {
+            //TODO work with sheets
+        } else {
+            cout << "ERROR! You are in wrong directory!" << endl;
+        }
     }
 
 public:
-    Status() {
-        fp = fopen(FILE_NAME, "r+b");
-        if (fp == NULL) {
-            cout << "файл заново створений.";
-            fp = fopen(FILE_NAME, "w+b");
-        }
+    View() {
+        userDirectory.push("home");
     }
 
-    void ls() {
-        vector<Table> tables = getAllTables();
-        printAllTables(tables);
-    };
+    void startWork() {
+        string command;
+        cout << "Щоб завершити роботу введіть \"stop\"" << endl;
+        do {
+            printPath();
+            cin >> command;
+            userCommand(command);
+        } while (command != "stop");
+    }
 };
 
 int main() {
-    string str;
-    Status status;
-    cout << "Щоб завершити роботу введіть \"end work\"" << endl;
-    do {
-        cin >> str;
-        if (str == "ls") {
-            status.ls();
-        } else if (str == "end work") {
-            cout << "program is stopped.";
-            return 0;
-        }
-        else {
-            cout << "command \"" + str + "\" wasn't recognized." << endl;
-        }
-    } while (str != "end work");
+    View model;
+    model.startWork();
 }
