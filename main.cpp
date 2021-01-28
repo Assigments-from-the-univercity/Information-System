@@ -31,10 +31,45 @@ class Manifest {
 private:
     const char *FILE_NAME = "manifest.dat";
     FILE *fp;
-    const int numberOfTables = 0;
+    int numberOfTables;
+
+    void changeNumberOfTables() {
+        FILE *fpCopy = fopen("manifest-copy.dat", "w+b");
+
+        numberOfTables++;
+        rewind(fpCopy);
+        fwrite(&numberOfTables, sizeof(int), 1, fpCopy);
+
+        fseek(fp, sizeof(int), SEEK_SET);
+        SheetProperties sheet;
+        for (int i = 0; i < numberOfTables; ++i) {
+            fread(&sheet, sizeof sheet, 1, fp);
+            fwrite(&sheet, sizeof sheet, 1, fpCopy);
+        }
+
+        fclose(fp);
+        fclose(fpCopy);
+
+        remove(FILE_NAME);
+        rename("manifest-copy.dat", FILE_NAME);
+
+        fp = fopen(FILE_NAME, "r+b");
+        /*SheetProperties sheet1;
+        sheet1.name = ".";
+        sheet1.description = "..";
+        fread(&sheet, sizeof sheet, 1, fp);
+        cout << sheet1.name;*/
+    }
 
     void addTable(SheetProperties table) {
         fwrite(&table, sizeof table, 1, fp);
+        fflush(fp);
+        changeNumberOfTables();
+    }
+
+    void readNumberOfTables() {
+        rewind(fp);
+        fread(&numberOfTables, sizeof(int), 1, fp);
     }
 
 public:
@@ -43,7 +78,11 @@ public:
         if (fp == NULL) {
             cout << "Файл \"manifest.dat\" створений заново." << endl;
             fp = fopen(FILE_NAME, "w+b");
+            int n = 0;
+            fwrite(&n, sizeof(int), 1, fp);
+            fflush(fp);
         }
+        readNumberOfTables();
     }
 
     vector<SheetProperties> getAllTables() {
