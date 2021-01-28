@@ -92,6 +92,7 @@ public:
         string fileName, fileDescription;
         cout << "Введіть ім'я файлу: ";
         cin >> fileName;
+        cin.ignore(32767, '\n'); // удаляем символ новой строки из входного потока данных
         cout << "Введіть опис файлу: ";
         getline(cin, fileDescription);
         manifest.addTable(fileName, fileDescription);
