@@ -15,19 +15,12 @@ private:
 public:
 };
 
-struct SheetProperties {
-    string name;
-    string description;
-
-    //SheetProperties();
-
-    /*SheetProperties(string fileName, string fileDescription){
-        this->name = name;
-        this->description = description;
-    }*/
-};
-
 class Manifest {
+public:
+    struct SheetProperties {
+        string name;
+        string description;
+    };
 private:
     const char *FILE_NAME = "manifest.dat";
     FILE *fp;
@@ -53,7 +46,7 @@ private:
         remove(FILE_NAME);
         rename("manifest-copy.dat", FILE_NAME);
 
-        fp = fopen(FILE_NAME, "r+b");
+        fp = fopen(FILE_NAME, "r+b");   //TODO этот метод не работает правильно!
         /*SheetProperties sheet1;
         sheet1.name = ".";
         sheet1.description = "..";
@@ -123,7 +116,7 @@ private:
 
 public:
     void lsSheet() {
-        vector<SheetProperties> tables = manifest.getAllTables();
+        vector<Manifest::SheetProperties> tables = manifest.getAllTables();
         manifest.printAllTables(tables);
     };
 
