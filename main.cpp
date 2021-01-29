@@ -1,16 +1,24 @@
 #include <iostream>
 #include <vector>
 #include <stack>
+#include <cstring>
 
 using namespace std;
 
-class Note {
 
-};
 
 class Sheet {
+public:
+    class Note {
+        static const int PROPERTIES_SIZE = 30;
+        static const int VALUES_SIZE = 50;
+
+        vector <char[PROPERTIES_SIZE]> properties;
+        vector <char[VALUES_SIZE]> values;
+    };
 private:
     string name;
+    //TODO add more propert.
 
 public:
 };
@@ -18,26 +26,30 @@ public:
 class Manifest {
 public:
     struct SheetProperties {
-        string name;
-        string description;
+        static const int NAME_SIZE = 20;
+        static const int DESCRIPTION_SIZE = 100;
+
+        char name[NAME_SIZE];
+        char description[DESCRIPTION_SIZE];
     };
 private:
     const char *FILE_NAME = "manifest.dat";
     FILE *fp;
     int numberOfTables;
+    static const int INT_SIZE = 4;
 
     void changeNumberOfTables() {
         FILE *fpCopy = fopen("manifest-copy.dat", "w+b");
 
         numberOfTables++;
         rewind(fpCopy);
-        fwrite(&numberOfTables, sizeof(int), 1, fpCopy);
+        fwrite(&numberOfTables, INT_SIZE, 1, fpCopy);
 
-        fseek(fp, sizeof(int), SEEK_SET);
+        fseek(fp, INT_SIZE, SEEK_SET);
         SheetProperties sheet;
         for (int i = 0; i < numberOfTables; ++i) {
-            fread(&sheet, sizeof sheet, 1, fp);
-            fwrite(&sheet, sizeof sheet, 1, fpCopy);
+            fread(&sheet, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fp);
+            fwrite(&sheet, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fpCopy);
         }
 
         fclose(fp);
@@ -46,23 +58,18 @@ private:
         remove(FILE_NAME);
         rename("manifest-copy.dat", FILE_NAME);
 
-        fp = fopen(FILE_NAME, "r+b");   //TODO этот метод не работает правильно!
-        /*SheetProperties sheet1;
-        sheet1.name = ".";
-        sheet1.description = "..";
-        fread(&sheet, sizeof sheet, 1, fp);
-        cout << sheet1.name;*/
+        fp = fopen(FILE_NAME, "r+b");
     }
 
     void addTable(SheetProperties table) {
-        fwrite(&table, sizeof table, 1, fp);
+        fwrite(&table, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fp);
         fflush(fp);
         changeNumberOfTables();
     }
 
     void readNumberOfTables() {
         rewind(fp);
-        fread(&numberOfTables, sizeof(int), 1, fp);
+        fread(&numberOfTables, INT_SIZE, 1, fp);
     }
 
 public:
@@ -72,18 +79,19 @@ public:
             cout << "Файл \"manifest.dat\" створений заново." << endl;
             fp = fopen(FILE_NAME, "w+b");
             int n = 0;
-            fwrite(&n, sizeof(int), 1, fp);
+            fwrite(&n, INT_SIZE, 1, fp);
             fflush(fp);
         }
         readNumberOfTables();
     }
 
     vector<SheetProperties> getAllTables() {
-        rewind(fp);
+        //rewind(fp);
+        fseek(fp, INT_SIZE, SEEK_SET);
         vector<SheetProperties> tables;
         SheetProperties sheet;
         for (int i = 0; i < numberOfTables; ++i) {
-            fread(&sheet, sizeof sheet, 1, fp);
+            fread(&sheet, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fp);
             tables.push_back(sheet);
         }
         return tables;
@@ -93,7 +101,7 @@ public:
         int size = tables.size();
         cout << "список доступних таблиць:" << endl;
         for (int i = 0; i < size; i++) {
-            cout << "Ім'я: " << tables[i].name << "Опис: " << tables[i].description << endl;
+            cout << "Ім'я: " << tables[i].name << "\nОпис: " << tables[i].description << endl << endl;
         }
         if (size == 0) {
             cout << "немає доступних таблиць." << endl;
@@ -103,9 +111,26 @@ public:
 
     void addTable(string fileName, string fileDescription) {
         SheetProperties newSheet;
-        newSheet.name = fileName;
-        newSheet.description = fileDescription;
+
+        int size = SheetProperties::NAME_SIZE - 1;
+        if (fileName.size() < size) {
+            size = fileName.size();
+        }
+        for (int i = 0; i < size; ++i) {
+            newSheet.name[i] = fileName[i];
+        }
+        newSheet.name[size] = '\0';
+
+        size = SheetProperties::DESCRIPTION_SIZE - 1;
+        if (fileName.size() < size) size = fileDescription.size();
+        for (int i = 0; i < size; ++i) {
+            newSheet.description[i] = fileDescription[i];
+        }
+        newSheet.description[size] = '\0';
+
         addTable(newSheet);
+
+        //TODO create table
     }
 };
 
