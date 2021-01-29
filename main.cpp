@@ -5,8 +5,6 @@
 
 using namespace std;
 
-
-
 class Sheet {
 public:
     class Note {
@@ -65,6 +63,33 @@ private:
         fwrite(&table, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fp);
         fflush(fp);
         changeNumberOfTables();
+    }
+
+    void createPath(char sheetName[], char *fileName){
+        char *beg = "/sheets/";
+        char *end = ".dat";
+        int i = 0;
+        for (; i < 8; ++i) {
+            fileName[i] = beg[i];
+        }
+        int size = strlen(sheetName);
+        for (int j = 0; i < size + 8; ++i) {
+            fileName[i] = sheetName[j];
+            j++;
+        }
+        for (int j = 0; i < size + 12; ++i) {
+            fileName[i] = end[j];
+            j++;
+        }
+        fileName[i] = '\0';
+    }
+
+    void addSheet(SheetProperties sheetProperties){
+        char fileName[13 + strlen(sheetProperties.name)];
+        createPath(sheetProperties.name, fileName);
+        string str(sheetProperties.name);
+        str += ".dat";
+        fp = fopen(fileName, "w+b");
     }
 
     void readNumberOfTables() {
@@ -130,7 +155,7 @@ public:
 
         addTable(newSheet);
 
-        //TODO create table
+        addSheet(newSheet);
     }
 };
 
