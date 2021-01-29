@@ -59,6 +59,8 @@ private:
         rename("manifest-copy.dat", FILE_NAME);
 
         fp = fopen(FILE_NAME, "r+b");
+
+        readNumberOfTables();
     }
 
     void addTable(SheetProperties table) {
@@ -71,20 +73,25 @@ private:
         string path = "sheets/";
         string str(sheetProperties.name);
         path += str;
+        string pathProp = path + "-prop.dat";
         path += ".dat";
+
         int n = path.length();
         char fileName[n + 1];
         strcpy(fileName, path.c_str());
-        fp = fopen(fileName, "w+b");
+
+        FILE *fpNew = fopen(fileName, "w+b");
+
+        n = pathProp.length();
+        char fileName1[n + 1];
+        strcpy(fileName1, pathProp.c_str());
+
+        fpNew = fopen(fileName, "w+b");
     }
 
     void readNumberOfTables() {
         rewind(fp);
         fread(&numberOfTables, INT_SIZE, 1, fp);
-    }
-
-    void printString() {
-
     }
 
 public:
