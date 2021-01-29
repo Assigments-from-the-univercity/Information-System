@@ -3,6 +3,14 @@
 #include <stack>
 #include <cstring>
 
+//для добавления папки - Linux !!!
+#include <bits/stdc++.h>
+#include <iostream>
+#include <sys/stat.h>
+#include <sys/types.h>
+
+#include <filesystem>
+
 using namespace std;
 
 class Sheet {
@@ -11,9 +19,10 @@ public:
         static const int PROPERTIES_SIZE = 30;
         static const int VALUES_SIZE = 50;
 
-        vector <char[PROPERTIES_SIZE]> properties;
-        vector <char[VALUES_SIZE]> values;
+        vector<char[PROPERTIES_SIZE]> properties;
+        vector<char[VALUES_SIZE]> values;
     };
+
 private:
     string name;
     //TODO add more propert.
@@ -65,30 +74,14 @@ private:
         changeNumberOfTables();
     }
 
-    void createPath(char sheetName[], char *fileName){
-        char *beg = "/sheets/";
-        char *end = ".dat";
-        int i = 0;
-        for (; i < 8; ++i) {
-            fileName[i] = beg[i];
-        }
-        int size = strlen(sheetName);
-        for (int j = 0; i < size + 8; ++i) {
-            fileName[i] = sheetName[j];
-            j++;
-        }
-        for (int j = 0; i < size + 12; ++i) {
-            fileName[i] = end[j];
-            j++;
-        }
-        fileName[i] = '\0';
-    }
-
-    void addSheet(SheetProperties sheetProperties){
-        char fileName[13 + strlen(sheetProperties.name)];
-        createPath(sheetProperties.name, fileName);
+    void addSheet(SheetProperties sheetProperties) {
+        string path = "sheets/";
         string str(sheetProperties.name);
-        str += ".dat";
+        path += str;
+        path += ".dat";
+        int n = path.length();
+        char fileName[n + 1];
+        strcpy(fileName, path.c_str());
         fp = fopen(fileName, "w+b");
     }
 
@@ -106,6 +99,10 @@ public:
             int n = 0;
             fwrite(&n, INT_SIZE, 1, fp);
             fflush(fp);
+
+            remove("sheets");
+            std::filesystem::create_directory("sheets");
+            //mkdir("sheets", 0777);
         }
         readNumberOfTables();
     }
