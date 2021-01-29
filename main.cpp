@@ -35,63 +35,41 @@ public:
 private:
     const char *FILE_NAME = "manifest.dat";
     FILE *fp;
-    int numberOfTables;
+    vector<SheetProperties> sheets;
     static const int INT_SIZE = 4;
 
-    void changeNumberOfTables() {
-        FILE *fpCopy = fopen("manifest-copy.dat", "w+b");
+    void createNewFiles(char name[SheetProperties::NAME_SIZE]) {
+        string stringName(name);
+        string folderName = "sheets/";
+        string propName = "-prop";
+        string sourceType = ".dat";
 
-        numberOfTables++;
-        rewind(fpCopy);
-        fwrite(&numberOfTables, INT_SIZE, 1, fpCopy);
+        string newFile = folderName + stringName + sourceType;
+        string newPropFile = folderName + stringName + propName + sourceType;
 
-        fseek(fp, INT_SIZE, SEEK_SET);
-        SheetProperties sheet;
-        for (int i = 0; i < numberOfTables; ++i) {
-            fread(&sheet, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fp);
-            fwrite(&sheet, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fpCopy);
-        }
+        char fileName[newFile.length() + 1];
+        strcpy(fileName, newFile.c_str());
 
-        fclose(fp);
-        fclose(fpCopy);
-
-        remove(FILE_NAME);
-        rename("manifest-copy.dat", FILE_NAME);
-
-        fp = fopen(FILE_NAME, "r+b");
-
-        readNumberOfTables();
-    }
-
-    void addTable(SheetProperties table) {
-        fwrite(&table, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fp);
-        fflush(fp);
-        changeNumberOfTables();
-    }
-
-    void addSheet(SheetProperties sheetProperties) {
-        string path = "sheets/";
-        string str(sheetProperties.name);
-        path += str;
-        string pathProp = path + "-prop.dat";
-        path += ".dat";
-
-        int n = path.length();
-        char fileName[n + 1];
-        strcpy(fileName, path.c_str());
+        char propFileName[newPropFile.length() + 1];
+        strcpy(propFileName, newPropFile.c_str());
 
         FILE *fpNew = fopen(fileName, "w+b");
-
-        n = pathProp.length();
-        char fileName1[n + 1];
-        strcpy(fileName1, pathProp.c_str());
-
-        fpNew = fopen(fileName, "w+b");
+        fpNew = fopen(propFileName, "w+b");
     }
 
-    void readNumberOfTables() {
+    void refreshManifest() {
+        fp = fopen(FILE_NAME, "w+b");
+        int n = sizeof(sheets);
+        fwrite(&n, INT_SIZE, 1, fp);
+        fwrite(&sheets, n, 1, fp);
+        fflush(fp);
+    }
+
+    void updateData() {
         rewind(fp);
-        fread(&numberOfTables, INT_SIZE, 1, fp);
+        int size = 0;
+        fread(&size, INT_SIZE, 1, fp);
+        fread(&sheets, size, 1, fp);
     }
 
 public:
@@ -99,32 +77,20 @@ public:
         fp = fopen(FILE_NAME, "r+b");
         if (fp == NULL) {
             cout << "Файл \"manifest.dat\" створений заново." << endl;
-            fp = fopen(FILE_NAME, "w+b");
-            int n = 0;
-            fwrite(&n, INT_SIZE, 1, fp);
-            fflush(fp);
+
+            refreshManifest();
 
             remove("sheets");
             std::filesystem::create_directory("sheets");
-            //mkdir("sheets", 0777);
         }
-        readNumberOfTables();
+        updateData();
     }
 
-    vector<SheetProperties> getAllTables() {
-        //rewind(fp);
-        fp = fopen(FILE_NAME, "r+b");
-        fseek(fp, INT_SIZE, SEEK_SET);
-        vector<SheetProperties> tables;
-        SheetProperties sheet;
-        for (int i = 0; i < numberOfTables; ++i) {
-            fread(&sheet, SheetProperties::NAME_SIZE + SheetProperties::DESCRIPTION_SIZE, 1, fp);
-            tables.push_back(sheet);
-        }
-        return tables;
-    };
+    vector<SheetProperties> getSheets() {
+        return sheets;
+    }
 
-    void printAllTables(vector<SheetProperties> tables) {
+    void printSheets(vector<SheetProperties> tables) {
         int size = tables.size();
         cout << "список доступних таблиць:" << endl;
         for (int i = 0; i < size; i++) {
@@ -145,8 +111,10 @@ public:
         newSheet.name[SheetProperties::NAME_SIZE - 1] = '\0';
         newSheet.description[SheetProperties::DESCRIPTION_SIZE - 1] = '\0';
 
-        addTable(newSheet);
-        addSheet(newSheet);
+        sheets.push_back(newSheet);
+
+        refreshManifest();
+        createNewFiles(newSheet.name);
     }
 };
 
@@ -157,8 +125,8 @@ private:
 
 public:
     void lsSheet() {
-        vector<Manifest::SheetProperties> tables = manifest.getAllTables();
-        manifest.printAllTables(tables);
+        vector<Manifest::SheetProperties> tables = manifest.getSheets();
+        manifest.printSheets(tables);
     };
 
     void addSheet() {
