@@ -2,13 +2,6 @@
 #include <vector>
 #include <stack>
 #include <cstring>
-
-//для добавления папки - Linux !!!
-#include <bits/stdc++.h>
-#include <iostream>
-#include <sys/stat.h>
-#include <sys/types.h>
-
 #include <filesystem>
 
 using namespace std;
@@ -90,6 +83,10 @@ private:
         fread(&numberOfTables, INT_SIZE, 1, fp);
     }
 
+    void printString() {
+
+    }
+
 public:
     Manifest() {
         fp = fopen(FILE_NAME, "r+b");
@@ -109,6 +106,7 @@ public:
 
     vector<SheetProperties> getAllTables() {
         //rewind(fp);
+        fp = fopen(FILE_NAME, "r+b");
         fseek(fp, INT_SIZE, SEEK_SET);
         vector<SheetProperties> tables;
         SheetProperties sheet;
@@ -134,24 +132,13 @@ public:
     void addTable(string fileName, string fileDescription) {
         SheetProperties newSheet;
 
-        int size = SheetProperties::NAME_SIZE - 1;
-        if (fileName.size() < size) {
-            size = fileName.size();
-        }
-        for (int i = 0; i < size; ++i) {
-            newSheet.name[i] = fileName[i];
-        }
-        newSheet.name[size] = '\0';
+        strcpy(newSheet.name, fileName.c_str());
+        strcpy(newSheet.description, fileDescription.c_str());
 
-        size = SheetProperties::DESCRIPTION_SIZE - 1;
-        if (fileName.size() < size) size = fileDescription.size();
-        for (int i = 0; i < size; ++i) {
-            newSheet.description[i] = fileDescription[i];
-        }
-        newSheet.description[size] = '\0';
+        newSheet.name[SheetProperties::NAME_SIZE - 1] = '\0';
+        newSheet.description[SheetProperties::DESCRIPTION_SIZE - 1] = '\0';
 
         addTable(newSheet);
-
         addSheet(newSheet);
     }
 };
