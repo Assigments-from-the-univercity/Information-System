@@ -6,14 +6,27 @@
 
 using namespace std;
 
+static const int INT_SIZE = 4;
+
 class Sheet {
 public:
-    class Note {
-        static const int PROPERTIES_SIZE = 30;
-        static const int VALUES_SIZE = 50;
+    enum TypeOfNote {
+        STRING,
+        DOUBLE,
+        DATE
+    };
 
-        vector<char[PROPERTIES_SIZE]> properties;
-        vector<char[VALUES_SIZE]> values;
+    struct NotesProperties {
+        /*static const int PROPERTIES_SIZE = 30;
+        static const int VALUES_SIZE = 50;*/
+
+        /*vector<char[PROPERTIES_SIZE]> properties;
+        vector<char[VALUES_SIZE]> values;*/
+
+        int numberOfNotes;
+        int numberOfProperties;
+        int sizeOfVector;
+        vector<TypeOfNote> values;
     };
 
 private:
@@ -21,6 +34,9 @@ private:
     //TODO add more propert.
 
 public:
+    static void addSheetProperties(NotesProperties notesProperties, char name[]){
+
+    }
 };
 
 class Manifest {
@@ -36,7 +52,6 @@ private:
     const char *FILE_NAME = "manifest.dat";
     FILE *fp;
     vector<SheetProperties> sheets;
-    static const int INT_SIZE = 4;
 
     void createNewFiles(char name[SheetProperties::NAME_SIZE]) {
         string stringName(name);
@@ -102,26 +117,54 @@ public:
         cout << "hint: use \"cd <name of table>\" to go to the table." << endl;
     }
 
-    void addTable(string fileName, string fileDescription) {
-        SheetProperties newSheet;
-
-        strcpy(newSheet.name, fileName.c_str());
-        strcpy(newSheet.description, fileDescription.c_str());
-
-        newSheet.name[SheetProperties::NAME_SIZE - 1] = '\0';
-        newSheet.description[SheetProperties::DESCRIPTION_SIZE - 1] = '\0';
-
-        sheets.push_back(newSheet);
+    void addTable(SheetProperties sheetProperties) {
+        sheets.push_back(sheetProperties);
 
         refreshManifest();
-        createNewFiles(newSheet.name);
+        updateData();
+        createNewFiles(sheetProperties.name);
     }
 };
 
 class Controller {
 private:
     Manifest manifest;
-    vector<Sheet> sheets;
+    Sheet sheet;
+
+    Manifest::SheetProperties toSheetProperties(string fileName, string fileDescription) {
+        Manifest::SheetProperties newSheet;
+
+        strcpy(newSheet.name, fileName.c_str());
+        strcpy(newSheet.description, fileDescription.c_str());
+
+        newSheet.name[Manifest::SheetProperties::NAME_SIZE - 1] = '\0';
+        newSheet.description[Manifest::SheetProperties::DESCRIPTION_SIZE - 1] = '\0';
+
+        return newSheet;
+    }
+
+    Sheet::NotesProperties toNoteProperties(int numberOfProperties, vector<string> values){
+        Sheet::NotesProperties notesProperties;
+
+        notesProperties.numberOfNotes = 0;
+        notesProperties.numberOfProperties = numberOfProperties;
+
+        for (int i = 0; i < numberOfProperties; ++i) {
+            if (values[i] == "string") {
+                notesProperties.values.push_back(Sheet::TypeOfNote::STRING);
+            }
+            if (values[i] == "double") {
+                notesProperties.values.push_back(Sheet::TypeOfNote::DOUBLE);
+            }
+            if (values[i] == "date") {
+                notesProperties.values.push_back(Sheet::TypeOfNote::DATE);
+            }
+        }
+
+        notesProperties.sizeOfVector = notesProperties.values.size();
+
+        return notesProperties;
+    }
 
 public:
     void lsSheet() {
@@ -130,13 +173,32 @@ public:
     };
 
     void addSheet() {
+        int numberOfProperties;
         string fileName, fileDescription;
+        vector<string> values;
+
         cout << "Введіть ім'я файлу: ";
         cin >> fileName;
         cin.ignore(32767, '\n'); // удаляем символ новой строки из входного потока данных
         cout << "Введіть опис файлу: ";
         getline(cin, fileDescription);
-        manifest.addTable(fileName, fileDescription);
+        cout << "Введіть кількість полів: ";
+        cin >> numberOfProperties;
+        string type;
+        for (int i = 0; i < numberOfProperties; ++i) {
+            cout << "Введіть тип " << (i+1) << " поля: ";
+            cin >> type;
+            if (type == "string" || type == "double" || type == "date"){
+                values.push_back(type);
+            }
+        }
+
+        manifest.addTable(toSheetProperties(fileName, fileDescription));
+
+        char name[Manifest::SheetProperties::NAME_SIZE];
+        strcpy(name, fileName.c_str());
+        name[Manifest::SheetProperties::NAME_SIZE - 1] = '\0';
+        Sheet::addSheetProperties(toNoteProperties(numberOfProperties, values), name);
     }
 };
 
