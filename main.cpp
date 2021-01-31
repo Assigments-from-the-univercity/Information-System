@@ -3,6 +3,7 @@
 #include <stack>
 #include <cstring>
 #include <filesystem>
+#include <stack>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ private:
     //TODO add more propert.
 
 public:
-    static void changeSheetProperties(NotesProperties notesProperties, char *name){
+    static void changeSheetProperties(NotesProperties notesProperties, char *name) {
         string n1(name);
         string n = "sheets/";
         n += n1;
@@ -158,7 +159,7 @@ private:
         return newSheet;
     }
 
-    Sheet::NotesProperties toNoteProperties(int numberOfProperties, vector<string> values){
+    Sheet::NotesProperties toNoteProperties(int numberOfProperties, vector<string> values) {
         Sheet::NotesProperties notesProperties;
 
         notesProperties.numberOfNotes = 0;
@@ -201,9 +202,9 @@ public:
         cin >> numberOfProperties;
         string type;
         for (int i = 0; i < numberOfProperties; ++i) {
-            cout << "Введіть тип " << (i+1) << " поля: ";
+            cout << "Введіть тип " << (i + 1) << " поля: ";
             cin >> type;
-            if (type == "string" || type == "double" || type == "date"){
+            if (type == "string" || type == "double" || type == "date") {
                 values.push_back(type);
             }
         }
@@ -220,12 +221,12 @@ public:
 class View {
 private:
     Controller controller;
-    stack<string> userDirectory;
+    vector<string> userDirectory;
 
     void printPath() {
         int size = userDirectory.size();
         for (int i = 0; i < size; ++i) {
-            cout << userDirectory.top() << "/";
+            cout << userDirectory[i] << "/";
         }
         cout << "> ";
     }
@@ -236,6 +237,14 @@ private:
                 controller.lsSheet();
             } else if (command == "add") {
                 controller.addSheet();
+            } else if (command == "cd" && userDirectory.size() == 1) {
+                char sheetName[Manifest::SheetProperties::NAME_SIZE];
+                cin >> sheetName;
+                sheetName[Manifest::SheetProperties::NAME_SIZE - 1] = '\0';
+
+                //TODO проверить, со имя существует
+
+                userDirectory.push_back(sheetName);
             } else if (command == "stop") {
                 cout << "program is stopped.";
                 return;
@@ -243,7 +252,18 @@ private:
                 cout << "command \"" + command + "\" wasn't recognized." << endl;
             }
         } else if (userDirectory.size() == 2) {
-            //TODO work with sheets
+            if (command == "ls") {
+                //TODO добавить функционал
+            } else if (command == "add") {
+                //TODO добавить функционал
+            } else if (command == "back" && userDirectory.size() == 2) {
+                userDirectory.pop_back();
+            } else if (command == "stop") {
+                cout << "program is stopped.";
+                return;
+            } else {
+                cout << "command \"" + command + "\" wasn't recognized." << endl;
+            }
         } else {
             cout << "ERROR! You are in wrong directory!" << endl;
         }
@@ -251,7 +271,7 @@ private:
 
 public:
     View() {
-        userDirectory.push("home");
+        userDirectory.push_back("home");
     }
 
     void startWork() {
