@@ -31,11 +31,26 @@ public:
 
 private:
     string name;
+    FILE *fp;
     //TODO add more propert.
 
 public:
-    static void addSheetProperties(NotesProperties notesProperties, char name[]){
+    static void changeSheetProperties(NotesProperties notesProperties, char *name){
+        string n1(name);
+        string n = "sheets/";
+        n += n1;
+        n += "-prop.dat";
+        char fileName[n.size() + 1];
+        strcpy(fileName, n.c_str());
+        fileName[n.size()] = '\0';
+        FILE *fp1 = fopen(fileName, "wb");
 
+        fwrite(&notesProperties.numberOfNotes, INT_SIZE, 1, fp1);
+        fwrite(&notesProperties.numberOfProperties, INT_SIZE, 1, fp1);
+        fwrite(&notesProperties.sizeOfVector, INT_SIZE, 1, fp1);
+        fwrite(&notesProperties.values, notesProperties.sizeOfVector, 1, fp1);
+
+        fflush(fp1);
     }
 };
 
@@ -161,7 +176,7 @@ private:
             }
         }
 
-        notesProperties.sizeOfVector = notesProperties.values.size();
+        notesProperties.sizeOfVector = sizeof(Sheet::TypeOfNote) * notesProperties.values.size();
 
         return notesProperties;
     }
@@ -198,7 +213,7 @@ public:
         char name[Manifest::SheetProperties::NAME_SIZE];
         strcpy(name, fileName.c_str());
         name[Manifest::SheetProperties::NAME_SIZE - 1] = '\0';
-        Sheet::addSheetProperties(toNoteProperties(numberOfProperties, values), name);
+        Sheet::changeSheetProperties(toNoteProperties(numberOfProperties, values), name);
     }
 };
 
