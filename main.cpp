@@ -5,9 +5,15 @@
 #include <filesystem>
 #include <stack>
 
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
 using namespace std;
 
 static const int INT_SIZE = 4;
+static const int NAME_SIZE = 20;
+static const int DESCRIPTION_SIZE = 100;
 
 class Sheet {
 public:
@@ -58,9 +64,6 @@ public:
 class Manifest {
 public:
     struct SheetProperties {
-        static const int NAME_SIZE = 20;
-        static const int DESCRIPTION_SIZE = 100;
-
         char name[NAME_SIZE];
         char description[DESCRIPTION_SIZE];
     };
@@ -69,7 +72,7 @@ private:
     FILE *fp;
     vector<SheetProperties> sheets;
 
-    void createNewFiles(char name[SheetProperties::NAME_SIZE]) {
+    void createNewFiles(char name[NAME_SIZE]) {
         string stringName(name);
         string folderName = "sheets/";
         string propName = "-prop";
@@ -90,17 +93,25 @@ private:
 
     void refreshManifest() {
         fp = fopen(FILE_NAME, "w+b");
-        int n = sizeof(sheets);
-        fwrite(&n, INT_SIZE, 1, fp);
-        fwrite(&sheets, n, 1, fp);
+        int size = sheets.size();
+        fwrite(&size, INT_SIZE, 1, fp);
+        for (int i = 0; i < size; ++i) {
+            fwrite(&sheets[i], sizeof(SheetProperties), 1, fp);
+        }
         fflush(fp);
+        fp = fopen(FILE_NAME, "r+b");
     }
 
     void updateData() {
         rewind(fp);
         int size = 0;
         fread(&size, INT_SIZE, 1, fp);
-        fread(&sheets, size, 1, fp);
+        SheetProperties sheet;
+        sheets.clear();
+        for (int i = 0; i < size; ++i) {
+            fread(&sheet, sizeof(SheetProperties), 1, fp);
+            sheets.push_back(sheet);
+        }
     }
 
 public:
@@ -121,11 +132,11 @@ public:
         return sheets;
     }
 
-    void printSheets(vector<SheetProperties> tables) {
-        int size = tables.size();
+    void printSheets() {
+        int size = sheets.size();
         cout << "список доступних таблиць:" << endl;
         for (int i = 0; i < size; i++) {
-            cout << "Ім'я: " << tables[i].name << "\nОпис: " << tables[i].description << endl << endl;
+            cout << "Ім'я: " << sheets[i].name << "\nОпис: " << sheets[i].description << endl << endl;
         }
         if (size == 0) {
             cout << "немає доступних таблиць." << endl;
@@ -153,8 +164,8 @@ private:
         strcpy(newSheet.name, fileName.c_str());
         strcpy(newSheet.description, fileDescription.c_str());
 
-        newSheet.name[Manifest::SheetProperties::NAME_SIZE - 1] = '\0';
-        newSheet.description[Manifest::SheetProperties::DESCRIPTION_SIZE - 1] = '\0';
+        newSheet.name[NAME_SIZE - 1] = '\0';
+        newSheet.description[DESCRIPTION_SIZE - 1] = '\0';
 
         return newSheet;
     }
@@ -184,8 +195,7 @@ private:
 
 public:
     void lsSheet() {
-        vector<Manifest::SheetProperties> tables = manifest.getSheets();
-        manifest.printSheets(tables);
+        manifest.printSheets();
     };
 
     void addSheet() {
@@ -211,9 +221,9 @@ public:
 
         manifest.addTable(toSheetProperties(fileName, fileDescription));
 
-        char name[Manifest::SheetProperties::NAME_SIZE];
+        char name[NAME_SIZE];
         strcpy(name, fileName.c_str());
-        name[Manifest::SheetProperties::NAME_SIZE - 1] = '\0';
+        name[NAME_SIZE - 1] = '\0';
         Sheet::changeSheetProperties(toNoteProperties(numberOfProperties, values), name);
     }
 };
@@ -238,9 +248,9 @@ private:
             } else if (command == "add") {
                 controller.addSheet();
             } else if (command == "cd" && userDirectory.size() == 1) {
-                char sheetName[Manifest::SheetProperties::NAME_SIZE];
+                char sheetName[NAME_SIZE];
                 cin >> sheetName;
-                sheetName[Manifest::SheetProperties::NAME_SIZE - 1] = '\0';
+                sheetName[NAME_SIZE - 1] = '\0';
 
                 //TODO проверить, со имя существует
 
@@ -288,4 +298,91 @@ public:
 int main() {
     View model;
     model.startWork();
+
+/*
+    struct SheetProperties {
+        char name[NAME_SIZE];
+        char description[DESCRIPTION_SIZE];
+    };
+    vector<SheetProperties> sheets;
+    vector<SheetProperties> sheets1;
+    cout << sizeof sheets << endl;
+    cout << sizeof(sheets) << endl;
+
+    SheetProperties sheet;
+    SheetProperties sheet1;
+    sheet.name[0] = 'n';
+    sheet.name[1] = '\0';
+    sheet.description[0] = 't';
+    sheet.description[1] = '\0';
+    sheets.push_back(sheet);
+
+    cout << sizeof sheets << endl;
+    cout << sizeof(sheets) << endl;
+
+    cout << endl;
+
+    cout << sizeof(sheet) << endl;
+    cout << sizeof(sheet.name) << endl;
+    cout << sizeof() << endl;
+
+    FILE *fp = fopen("in.dat", "w+b");
+    //FILE *fp = fopen("in.dat", "r+b");
+    fwrite(&sheets, 200, 1, fp);
+    fflush(fp);
+    rewind(fp);
+    fread(&sheets1, 200, 1, fp);
+    cout << sheets1[0].name << " " << sheets1[0].description;*/
+/*
+    FILE *fo;
+    if ((fo = fopen("data4.dat", "r+b")) == NULL){
+        cout << "Error open output file" << endl;
+        return 1;}
+    const int dl = 80;
+    char s[80];
+    struct Mon {
+        char type[20];
+
+        char comm[30];
+    };
+    Mon mon;
+    mon.type[0] = 't';
+    mon.type[1] = '\0';
+    mon.comm[0] = 'm';
+    mon.comm[1] = '\0';
+    cout << sizeof mon << endl << mon.type << endl;
+    vector <Mon> mons;
+    vector <Mon> mons1;
+    cout << sizeof mons << endl;
+    mons.push_back(mon);
+    cout << sizeof mons << endl;
+    fwrite(&mons, sizeof mons, 1, fo);
+    fflush(fo);
+    //Mon mon1;
+    rewind(fo);
+    fread(&mons1, sizeof mons, 1, fo);
+    cout << mons1[0].type;*/
+    /*
+    int kol = 0;  //ê³ëüê³ñòü çàïèñ³â ó ôàéë³
+    while (kol < 1){
+        strncpy(mon.type, s, 19);
+        mon.type[19] = '\0';
+        mon.opt = atof(&s[20]);
+        mon.rozn = atof(&s[30]);
+        strncpy(mon.comm, &s[40], 30);
+        fwrite(&mon, sizeof mon, 1, fo);
+        kol++;
+    }
+    int i;
+    cin >> i;
+    if (i >= kol){
+        cout << "Not exist"; return 1;}
+    fseek(fo, (sizeof mon)*i, SEEK_SET);
+    fread(&mon, sizeof mon, 1, fo);
+    cout << "mon.type " << mon.type << " opt " << mon.opt
+         << " rozn " << mon.rozn << endl;
+
+    fclose(fo);
+    cin.get();
+    return 0;*/
 }
