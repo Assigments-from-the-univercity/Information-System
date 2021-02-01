@@ -1,13 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <stack>
 #include <cstring>
 #include <filesystem>
-#include <stack>
-
 #include <cstdio>
-#include <cstdlib>
-#include <cstring>
 
 using namespace std;
 
@@ -15,6 +10,24 @@ static const int INT_SIZE = 4;
 static const int NAME_SIZE = 20;
 static const int DESCRIPTION_SIZE = 100;
 
+/**
+ * This class represent (a part of) the model layer.
+ * This class works with <sheetName>.dat and <sheetName>-prop.dat - files,
+ * that have sheets data and sheet properties.
+ *
+ * Template of <sheetName>-prop.dat :
+ *  numberOfNotes (int)
+ *  numberOfProperties (int)
+ *  sizeOfVector (int)
+ *  values (vector<TypeOfNote>)
+ *
+ * Template of <sheetName>.dat :
+ *  note1 (NotesProperties)
+ *  note2 (NotesProperties)
+ *  note3 (NotesProperties)
+ *  ...
+ *  note_i (NotesProperties)
+ */
 class Sheet {
 public:
     enum TypeOfNote {
@@ -24,12 +37,6 @@ public:
     };
 
     struct NotesProperties {
-        /*static const int PROPERTIES_SIZE = 30;
-        static const int VALUES_SIZE = 50;*/
-
-        /*vector<char[PROPERTIES_SIZE]> properties;
-        vector<char[VALUES_SIZE]> values;*/
-
         int numberOfNotes;
         int numberOfProperties;
         int sizeOfVector;
@@ -42,6 +49,12 @@ private:
     //TODO add more propert.
 
 public:
+    /**
+     * This method change sheet properties according to parameters.
+     *
+     * @param notesProperties Properties to apply
+     * @param name Name of changing file
+     */
     static void changeSheetProperties(NotesProperties notesProperties, char *name) {
         string n1(name);
         string n = "sheets/";
@@ -61,6 +74,19 @@ public:
     }
 };
 
+/**
+ * This class represent (a part of) the model layer.
+ * This class works with manifest.dat - file, that has data about
+ * sheets (name and description) to work with them.
+ *
+ * Template of manifest.dat :
+ *  numberOfSheets (int)
+ *  Sheet1 (SheetProperties)
+ *  Sheet2 (SheetProperties)
+ *  Sheet3 (SheetProperties)
+ *  ...
+ *  Sheet_i (SheetProperties)
+ */
 class Manifest {
 public:
     struct SheetProperties {
@@ -72,6 +98,12 @@ private:
     FILE *fp;
     vector<SheetProperties> sheets;
 
+    /**
+     * This method creates files <sheetName>.dat and <sheetName>-prop.dat
+     * (properties) in /sheets directory.
+     *
+     * @param name The name of new table
+     */
     void createNewFiles(char name[NAME_SIZE]) {
         string stringName(name);
         string folderName = "sheets/";
@@ -91,6 +123,10 @@ private:
         fpNew = fopen(propFileName, "w+b");
     }
 
+    /**
+     * This method make manifest.dat up-to-date.
+     * (synchronize with "vector<SheetProperties> sheets")
+     */
     void refreshManifest() {
         fp = fopen(FILE_NAME, "w+b");
         int size = sheets.size();
@@ -102,6 +138,10 @@ private:
         fp = fopen(FILE_NAME, "r+b");
     }
 
+    /**
+     * This method make "vector<SheetProperties> sheets" up-to-date.
+     * (synchronize with manifest.dat)
+     */
     void updateData() {
         rewind(fp);
         int size = 0;
@@ -115,6 +155,9 @@ private:
     }
 
 public:
+    /**
+     * public constructor
+     */
     Manifest() {
         fp = fopen(FILE_NAME, "r+b");
         if (fp == NULL) {
@@ -128,10 +171,18 @@ public:
         updateData();
     }
 
+    /**
+     * This method returns all sheets that exist.
+     *
+     * @return all existing sheets.
+     */
     vector<SheetProperties> getSheets() {
         return sheets;
     }
 
+    /**
+     * pring all sheets in console.
+     */
     void printSheets() {
         int size = sheets.size();
         cout << "список доступних таблиць:" << endl;
@@ -144,6 +195,14 @@ public:
         cout << "hint: use \"cd <name of table>\" to go to the table." << endl;
     }
 
+    /**
+     * This method adds a new sheet to manifest.dat
+     * to managing this file in future.
+     * Also, this method driggers creation files for
+     * this sheet.
+     *
+     * @param sheetProperties properties of existing sheet
+     */
     void addTable(SheetProperties sheetProperties) {
         sheets.push_back(sheetProperties);
 
@@ -153,11 +212,25 @@ public:
     }
 };
 
+/**
+ * This class represent the controller layer.
+ * This class can call methods from Manifest and Sheet classes to
+ * change, create or delete data.
+ * This class isn't working with data directly, but can call methods to do it.
+ */
 class Controller {
 private:
     Manifest manifest;
     Sheet sheet;
 
+    /**
+     * This method convert string-type name and description of file to
+     * appropriate Manifest::SheetProperties format.
+     *
+     * @param fileName mane of table we want to convert.
+     * @param fileDescription description of table we want to convert.
+     * @return Manifest::SheetProperties
+     */
     Manifest::SheetProperties toSheetProperties(string fileName, string fileDescription) {
         Manifest::SheetProperties newSheet;
 
@@ -170,6 +243,13 @@ private:
         return newSheet;
     }
 
+    /**
+     * This method convert strings to corresponding properties of sheet (NotesProperties).
+     *
+     * @param numberOfProperties Size of the vector
+     * @param values Vector of strings.
+     * @return Sheet::NotesProperties
+     */
     Sheet::NotesProperties toNoteProperties(int numberOfProperties, vector<string> values) {
         Sheet::NotesProperties notesProperties;
 
@@ -228,11 +308,20 @@ public:
     }
 };
 
+/**
+ * This class represent the view layer.
+ * This class is used for working with console
+ * and than giving commands to controller layer.
+ */
 class View {
 private:
     Controller controller;
     vector<string> userDirectory;
 
+    /**
+     * This method print the path where user is.
+     * Ut gives user a hint where he is and what he can do.
+     */
     void printPath() {
         int size = userDirectory.size();
         for (int i = 0; i < size; ++i) {
@@ -241,6 +330,12 @@ private:
         cout << "> ";
     }
 
+    /**
+     * Main method in this class that receive users command
+     * and call an appropriate method from controller layer.
+     *
+     * @param command A command from user.
+     */
     void userCommand(string command) {
         if (userDirectory.size() == 1) {
             if (command == "ls") {
@@ -280,10 +375,16 @@ private:
     }
 
 public:
+    /**
+     * Public constructor
+     */
     View() {
         userDirectory.push_back("home");
     }
 
+    /**
+     * The method that start working with user using console.
+     */
     void startWork() {
         string command;
         cout << "Щоб завершити роботу введіть \"stop\"" << endl;
@@ -295,94 +396,12 @@ public:
     }
 };
 
+/**
+ * MVC pattern is used in this program for
+ * managing the data. (https://ru.wikipedia.org/wiki/Model-View-Controller)
+ */
 int main() {
+    //create Model object to have an accesses to method startWork()
     View model;
     model.startWork();
-
-/*
-    struct SheetProperties {
-        char name[NAME_SIZE];
-        char description[DESCRIPTION_SIZE];
-    };
-    vector<SheetProperties> sheets;
-    vector<SheetProperties> sheets1;
-    cout << sizeof sheets << endl;
-    cout << sizeof(sheets) << endl;
-
-    SheetProperties sheet;
-    SheetProperties sheet1;
-    sheet.name[0] = 'n';
-    sheet.name[1] = '\0';
-    sheet.description[0] = 't';
-    sheet.description[1] = '\0';
-    sheets.push_back(sheet);
-
-    cout << sizeof sheets << endl;
-    cout << sizeof(sheets) << endl;
-
-    cout << endl;
-
-    cout << sizeof(sheet) << endl;
-    cout << sizeof(sheet.name) << endl;
-    cout << sizeof() << endl;
-
-    FILE *fp = fopen("in.dat", "w+b");
-    //FILE *fp = fopen("in.dat", "r+b");
-    fwrite(&sheets, 200, 1, fp);
-    fflush(fp);
-    rewind(fp);
-    fread(&sheets1, 200, 1, fp);
-    cout << sheets1[0].name << " " << sheets1[0].description;*/
-/*
-    FILE *fo;
-    if ((fo = fopen("data4.dat", "r+b")) == NULL){
-        cout << "Error open output file" << endl;
-        return 1;}
-    const int dl = 80;
-    char s[80];
-    struct Mon {
-        char type[20];
-
-        char comm[30];
-    };
-    Mon mon;
-    mon.type[0] = 't';
-    mon.type[1] = '\0';
-    mon.comm[0] = 'm';
-    mon.comm[1] = '\0';
-    cout << sizeof mon << endl << mon.type << endl;
-    vector <Mon> mons;
-    vector <Mon> mons1;
-    cout << sizeof mons << endl;
-    mons.push_back(mon);
-    cout << sizeof mons << endl;
-    fwrite(&mons, sizeof mons, 1, fo);
-    fflush(fo);
-    //Mon mon1;
-    rewind(fo);
-    fread(&mons1, sizeof mons, 1, fo);
-    cout << mons1[0].type;*/
-    /*
-    int kol = 0;  //ê³ëüê³ñòü çàïèñ³â ó ôàéë³
-    while (kol < 1){
-        strncpy(mon.type, s, 19);
-        mon.type[19] = '\0';
-        mon.opt = atof(&s[20]);
-        mon.rozn = atof(&s[30]);
-        strncpy(mon.comm, &s[40], 30);
-        fwrite(&mon, sizeof mon, 1, fo);
-        kol++;
-    }
-    int i;
-    cin >> i;
-    if (i >= kol){
-        cout << "Not exist"; return 1;}
-    fseek(fo, (sizeof mon)*i, SEEK_SET);
-    fread(&mon, sizeof mon, 1, fo);
-    cout << "mon.type " << mon.type << " opt " << mon.opt
-         << " rozn " << mon.rozn << endl;
-
-    fclose(fo);
-    cin.get();
-    return 0;*/
 }
