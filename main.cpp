@@ -36,11 +36,16 @@ public:
         DATE
     };
 
+    struct Field {
+        TypeOfNote type;
+        char name[NAME_SIZE];
+    };
+
     struct NotesProperties {
         int numberOfNotes;
         int numberOfProperties;
         int sizeOfVector;
-        vector<TypeOfNote> values;
+        vector<Field> values;
     };
 
 private:
@@ -250,22 +255,30 @@ private:
      * @param values Vector of strings.
      * @return Sheet::NotesProperties
      */
-    Sheet::NotesProperties toNoteProperties(int numberOfProperties, vector<string> values) {
+    Sheet::NotesProperties
+    toNoteProperties(int numberOfProperties, vector<string> values, vector<string> namesOfValues) {
         Sheet::NotesProperties notesProperties;
 
         notesProperties.numberOfNotes = 0;
         notesProperties.numberOfProperties = numberOfProperties;
 
+        Sheet::Field field;
         for (int i = 0; i < numberOfProperties; ++i) {
             if (values[i] == "string") {
-                notesProperties.values.push_back(Sheet::TypeOfNote::STRING);
+                field.type = Sheet::TypeOfNote::STRING;
+            } else if (values[i] == "double") {
+                field.type = Sheet::TypeOfNote::DOUBLE;
+            } else if (values[i] == "date") {
+                field.type = Sheet::TypeOfNote::DATE;
+            } else {
+                cout << "Wrong input of properties!" << endl << "Program was stopped.";
+                abort();
             }
-            if (values[i] == "double") {
-                notesProperties.values.push_back(Sheet::TypeOfNote::DOUBLE);
-            }
-            if (values[i] == "date") {
-                notesProperties.values.push_back(Sheet::TypeOfNote::DATE);
-            }
+
+            strcpy(field.name, namesOfValues[i].c_str());
+            field.name[NAME_SIZE - 1] = '\0';
+
+            notesProperties.values.push_back(field);
         }
 
         notesProperties.sizeOfVector = sizeof(Sheet::TypeOfNote) * notesProperties.values.size();
@@ -282,6 +295,7 @@ public:
         int numberOfProperties;
         string fileName, fileDescription;
         vector<string> values;
+        vector<string> namesOfValues;
 
         cout << "Введіть ім'я файлу: ";
         cin >> fileName;
@@ -291,11 +305,15 @@ public:
         cout << "Введіть кількість полів: ";
         cin >> numberOfProperties;
         string type;
+        string nameOfType;
         for (int i = 0; i < numberOfProperties; ++i) {
+            cout << "Введіть ім'я " << (i + 1) << " поля: ";
+            cin >> nameOfType;
             cout << "Введіть тип " << (i + 1) << " поля: ";
             cin >> type;
             if (type == "string" || type == "double" || type == "date") {
                 values.push_back(type);
+                namesOfValues.push_back(nameOfType);
             }
         }
 
@@ -304,7 +322,7 @@ public:
         char name[NAME_SIZE];
         strcpy(name, fileName.c_str());
         name[NAME_SIZE - 1] = '\0';
-        Sheet::changeSheetProperties(toNoteProperties(numberOfProperties, values), name);
+        Sheet::changeSheetProperties(toNoteProperties(numberOfProperties, values, namesOfValues), name);
     }
 };
 
