@@ -13,7 +13,7 @@ static const int DESCRIPTION_SIZE = 100;
 /**
  * This class represent (a part of) the model layer.
  * This class works with <sheetName>.dat and <sheetName>-prop.dat - files,
- * that have sheets data and sheet properties.
+ * that have tables data and table properties.
  *
  * Template of <sheetName>-prop.dat :
  *  numberOfNotes (int)
@@ -22,13 +22,13 @@ static const int DESCRIPTION_SIZE = 100;
  *  values (vector<TypeOfNote>)
  *
  * Template of <sheetName>.dat :
- *  note1 (NotesProperties)
- *  note2 (NotesProperties)
- *  note3 (NotesProperties)
+ *  note1 (TableProperties)
+ *  note2 (TableProperties)
+ *  note3 (TableProperties)
  *  ...
- *  note_i (NotesProperties)
+ *  note_i (TableProperties)
  */
-class Sheet {
+class Table {
 public:
     enum TypeOfNote {
         STRING,
@@ -41,28 +41,60 @@ public:
         char name[NAME_SIZE];
     };
 
-    struct NotesProperties {
+    struct TableProperties {
         int numberOfNotes;
-        int numberOfProperties;
-        int sizeOfVector;
+        int numberOfProperties; // избыточное
+        int sizeOfVector;       // избыточное
         vector<Field> values;
     };
 
+    struct RequestDouble {
+        double more;
+        double less;
+    };
+
+    struct RequestString {
+        string more;
+        string less;
+    };
+
 private:
-    string name;
+    char name[NAME_SIZE];
     FILE *fp;
-    //TODO add more propert.
+    FILE *fpProp;
+    TableProperties properties;
+
+    void setProperties() {
+        //TODO load properties from file
+    }
 
 public:
+    Table() {}
+
+    Table(char name[]) {
+        strcpy(this->name, name);
+        //TODO set up *fp for working with file
+        //TODO set up *fpProp for working with file
+        setProperties();
+    }
+
+    void printNotes(vector<RequestDouble> requestDouble, vector<RequestString> requestString) {
+        //TODO
+    }
+
+    void addNote(vector<string> noteProperties) {
+        //TODO
+    }
+
     /**
-     * This method change sheet properties according to parameters.
+     * This method change table properties according to parameters.
      *
-     * @param notesProperties Properties to apply
+     * @param tableProperties Properties to apply
      * @param name Name of changing file
      */
-    static void changeSheetProperties(NotesProperties notesProperties, char *name) {
+    static void changeTableProperties(TableProperties tableProperties, char *name) {
         string n1(name);
-        string n = "sheets/";
+        string n = "tables/";
         n += n1;
         n += "-prop.dat";
         char fileName[n.size() + 1];
@@ -70,10 +102,10 @@ public:
         fileName[n.size()] = '\0';
         FILE *fp1 = fopen(fileName, "wb");
 
-        fwrite(&notesProperties.numberOfNotes, INT_SIZE, 1, fp1);
-        fwrite(&notesProperties.numberOfProperties, INT_SIZE, 1, fp1);
-        fwrite(&notesProperties.sizeOfVector, INT_SIZE, 1, fp1);
-        fwrite(&notesProperties.values, notesProperties.sizeOfVector, 1, fp1);
+        fwrite(&tableProperties.numberOfNotes, INT_SIZE, 1, fp1);
+        fwrite(&tableProperties.numberOfProperties, INT_SIZE, 1, fp1);
+        fwrite(&tableProperties.sizeOfVector, INT_SIZE, 1, fp1);
+        fwrite(&tableProperties.values, tableProperties.sizeOfVector, 1, fp1);
 
         fflush(fp1);
     }
@@ -82,36 +114,36 @@ public:
 /**
  * This class represent (a part of) the model layer.
  * This class works with manifest.dat - file, that has data about
- * sheets (name and description) to work with them.
+ * tables (name and description) to work with them.
  *
  * Template of manifest.dat :
  *  numberOfSheets (int)
- *  Sheet1 (SheetProperties)
- *  Sheet2 (SheetProperties)
- *  Sheet3 (SheetProperties)
+ *  Sheet1 (TableProperties)
+ *  Sheet2 (TableProperties)
+ *  Sheet3 (TableProperties)
  *  ...
- *  Sheet_i (SheetProperties)
+ *  Sheet_i (TableProperties)
  */
 class Manifest {
 public:
-    struct SheetProperties {
+    struct TableProperties {
         char name[NAME_SIZE];
         char description[DESCRIPTION_SIZE];
     };
 private:
     const char *FILE_NAME = "manifest.dat";
     FILE *fp;
-    vector<SheetProperties> sheets;
+    vector<TableProperties> tables;
 
     /**
      * This method creates files <sheetName>.dat and <sheetName>-prop.dat
-     * (properties) in /sheets directory.
+     * (properties) in /tables directory.
      *
      * @param name The name of new table
      */
     void createNewFiles(char name[NAME_SIZE]) {
         string stringName(name);
-        string folderName = "sheets/";
+        string folderName = "tables/";
         string propName = "-prop";
         string sourceType = ".dat";
 
@@ -130,32 +162,32 @@ private:
 
     /**
      * This method make manifest.dat up-to-date.
-     * (synchronize with "vector<SheetProperties> sheets")
+     * (synchronize with "vector<TableProperties> tables")
      */
     void refreshManifest() {
         fp = fopen(FILE_NAME, "w+b");
-        int size = sheets.size();
+        int size = tables.size();
         fwrite(&size, INT_SIZE, 1, fp);
         for (int i = 0; i < size; ++i) {
-            fwrite(&sheets[i], sizeof(SheetProperties), 1, fp);
+            fwrite(&tables[i], sizeof(TableProperties), 1, fp);
         }
         fflush(fp);
         fp = fopen(FILE_NAME, "r+b");
     }
 
     /**
-     * This method make "vector<SheetProperties> sheets" up-to-date.
+     * This method make "vector<TableProperties> tables" up-to-date.
      * (synchronize with manifest.dat)
      */
     void updateData() {
         rewind(fp);
         int size = 0;
         fread(&size, INT_SIZE, 1, fp);
-        SheetProperties sheet;
-        sheets.clear();
+        TableProperties table;
+        tables.clear();
         for (int i = 0; i < size; ++i) {
-            fread(&sheet, sizeof(SheetProperties), 1, fp);
-            sheets.push_back(sheet);
+            fread(&table, sizeof(TableProperties), 1, fp);
+            tables.push_back(table);
         }
     }
 
@@ -170,29 +202,29 @@ public:
 
             refreshManifest();
 
-            remove("sheets");
-            std::filesystem::create_directory("sheets");
+            remove("tables");
+            std::filesystem::create_directory("tables");
         }
         updateData();
     }
 
     /**
-     * This method returns all sheets that exist.
+     * This method returns all tables that exist.
      *
-     * @return all existing sheets.
+     * @return all existing tables.
      */
-    vector<SheetProperties> getSheets() {
-        return sheets;
+    vector<TableProperties> getTables() {
+        return tables;
     }
 
     /**
-     * pring all sheets in console.
+     * pring all tables in console.
      */
-    void printSheets() {
-        int size = sheets.size();
+    void printTables() {
+        int size = tables.size();
         cout << "список доступних таблиць:" << endl;
         for (int i = 0; i < size; i++) {
-            cout << "Ім'я: " << sheets[i].name << "\nОпис: " << sheets[i].description << endl << endl;
+            cout << "Ім'я: " << tables[i].name << "\nОпис: " << tables[i].description << endl << endl;
         }
         if (size == 0) {
             cout << "немає доступних таблиць." << endl;
@@ -201,75 +233,75 @@ public:
     }
 
     /**
-     * This method adds a new sheet to manifest.dat
+     * This method adds a new table to manifest.dat
      * to managing this file in future.
      * Also, this method driggers creation files for
-     * this sheet.
+     * this table.
      *
-     * @param sheetProperties properties of existing sheet
+     * @param tableProperties properties of existing table
      */
-    void addTable(SheetProperties sheetProperties) {
-        sheets.push_back(sheetProperties);
+    void addTable(TableProperties tableProperties) {
+        tables.push_back(tableProperties);
 
         refreshManifest();
         updateData();
-        createNewFiles(sheetProperties.name);
+        createNewFiles(tableProperties.name);
     }
 };
 
 /**
  * This class represent the controller layer.
- * This class can call methods from Manifest and Sheet classes to
+ * This class can call methods from Manifest and Table classes to
  * change, create or delete data.
  * This class isn't working with data directly, but can call methods to do it.
  */
 class Controller {
 private:
     Manifest manifest;
-    Sheet sheet;
+    Table table;
 
     /**
      * This method convert string-type name and description of file to
-     * appropriate Manifest::SheetProperties format.
+     * appropriate Manifest::TableProperties format.
      *
      * @param fileName mane of table we want to convert.
      * @param fileDescription description of table we want to convert.
-     * @return Manifest::SheetProperties
+     * @return Manifest::TableProperties
      */
-    Manifest::SheetProperties toSheetProperties(string fileName, string fileDescription) {
-        Manifest::SheetProperties newSheet;
+    Manifest::TableProperties toTableProperties(string fileName, string fileDescription) {
+        Manifest::TableProperties newTable;
 
-        strcpy(newSheet.name, fileName.c_str());
-        strcpy(newSheet.description, fileDescription.c_str());
+        strcpy(newTable.name, fileName.c_str());
+        strcpy(newTable.description, fileDescription.c_str());
 
-        newSheet.name[NAME_SIZE - 1] = '\0';
-        newSheet.description[DESCRIPTION_SIZE - 1] = '\0';
+        newTable.name[NAME_SIZE - 1] = '\0';
+        newTable.description[DESCRIPTION_SIZE - 1] = '\0';
 
-        return newSheet;
+        return newTable;
     }
 
     /**
-     * This method convert strings to corresponding properties of sheet (NotesProperties).
+     * This method convert strings to corresponding properties of table (TableProperties).
      *
      * @param numberOfProperties Size of the vector
      * @param values Vector of strings.
-     * @return Sheet::NotesProperties
+     * @return Table::TableProperties
      */
-    Sheet::NotesProperties
+    Table::TableProperties
     toNoteProperties(int numberOfProperties, vector<string> values, vector<string> namesOfValues) {
-        Sheet::NotesProperties notesProperties;
+        Table::TableProperties notesProperties;
 
         notesProperties.numberOfNotes = 0;
         notesProperties.numberOfProperties = numberOfProperties;
 
-        Sheet::Field field;
+        Table::Field field;
         for (int i = 0; i < numberOfProperties; ++i) {
             if (values[i] == "string") {
-                field.type = Sheet::TypeOfNote::STRING;
+                field.type = Table::TypeOfNote::STRING;
             } else if (values[i] == "double") {
-                field.type = Sheet::TypeOfNote::DOUBLE;
+                field.type = Table::TypeOfNote::DOUBLE;
             } else if (values[i] == "date") {
-                field.type = Sheet::TypeOfNote::DATE;
+                field.type = Table::TypeOfNote::DATE;
             } else {
                 cout << "Wrong input of properties!" << endl << "Program was stopped.";
                 abort();
@@ -281,17 +313,17 @@ private:
             notesProperties.values.push_back(field);
         }
 
-        notesProperties.sizeOfVector = sizeof(Sheet::TypeOfNote) * notesProperties.values.size();
+        notesProperties.sizeOfVector = sizeof(Table::TypeOfNote) * notesProperties.values.size();
 
         return notesProperties;
     }
 
 public:
-    void lsSheet() {
-        manifest.printSheets();
-    };
+    void lsTable() {
+        manifest.printTables();
+    }
 
-    void addSheet() {
+    void addTable() {
         int numberOfProperties;
         string fileName, fileDescription;
         vector<string> values;
@@ -317,12 +349,24 @@ public:
             }
         }
 
-        manifest.addTable(toSheetProperties(fileName, fileDescription));
+        manifest.addTable(toTableProperties(fileName, fileDescription));
 
         char name[NAME_SIZE];
         strcpy(name, fileName.c_str());
         name[NAME_SIZE - 1] = '\0';
-        Sheet::changeSheetProperties(toNoteProperties(numberOfProperties, values, namesOfValues), name);
+        Table::changeTableProperties(toNoteProperties(numberOfProperties, values, namesOfValues), name);
+    }
+
+    void cd() {
+        //TODO
+    }
+
+    void lsNotes() {
+        //TODO
+    }
+
+    void addNote() {
+        //TODO
     }
 };
 
@@ -357,17 +401,17 @@ private:
     void userCommand(string command) {
         if (userDirectory.size() == 1) {
             if (command == "ls") {
-                controller.lsSheet();
+                controller.lsTable();
             } else if (command == "add") {
-                controller.addSheet();
+                controller.addTable();
             } else if (command == "cd" && userDirectory.size() == 1) {
-                char sheetName[NAME_SIZE];
-                cin >> sheetName;
-                sheetName[NAME_SIZE - 1] = '\0';
+                char tableName[NAME_SIZE];
+                cin >> tableName;
+                tableName[NAME_SIZE - 1] = '\0';
 
-                //TODO проверить, со имя существует
-
-                userDirectory.push_back(sheetName);
+                //TODO проверить, что имя существует
+                //TODO дать команду controller'у что директория изменилась
+                userDirectory.push_back(tableName);
             } else if (command == "stop") {
                 cout << "program is stopped.";
                 return;
