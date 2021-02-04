@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/main.cpp
+iostream
+-
+vector
+-
+cstring
+-
+filesystem
+-
+cstdio
+-
+

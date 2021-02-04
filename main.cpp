@@ -58,20 +58,29 @@ public:
         string less;
     };
 
+    struct NoteValue {
+        char value[DESCRIPTION_SIZE];
+    };
+
 private:
-    char name[NAME_SIZE];
     FILE *fp;
     FILE *fpProp;
-    TableProperties properties;
 
     void setProperties() {
         //TODO load properties from file
     }
 
 public:
+    char name[NAME_SIZE];
+    TableProperties properties;
+
     Table() {}
 
     Table(char name[]) {
+        setTable(name);
+    }
+
+    void setTable(char name[]){
         strcpy(this->name, name);
         //TODO set up *fp for working with file
         //TODO set up *fpProp for working with file
@@ -82,7 +91,7 @@ public:
         //TODO
     }
 
-    void addNote(vector<string> noteProperties) {
+    void addNote(vector<NoteValue> noteProperties) {
         //TODO
     }
 
@@ -357,16 +366,31 @@ public:
         Table::changeTableProperties(toNoteProperties(numberOfProperties, values, namesOfValues), name);
     }
 
-    void cd() {
-        //TODO
+    void cd(char tableName[NAME_SIZE]) {
+        table.setTable(tableName);
     }
 
     void lsNotes() {
-        //TODO
+        //TODO set properties
+        //table.printTable();
     }
 
     void addNote() {
-        //TODO
+        Table::NoteValue noteValue;
+        vector<Table::NoteValue> values;
+        for (int i = 0; i < table.properties.numberOfProperties; ++i) {
+            cout << "Введіть значення поля ";
+            cout << table.properties.values[i].name;
+            cout << "тип (";
+            cout << table.properties.values[i].type;
+            cout << "): ";
+
+            cin >> noteValue.value;
+
+            values.push_back(noteValue);
+        }
+
+        table.addNote(values);
     }
 };
 
@@ -410,8 +434,10 @@ private:
                 tableName[NAME_SIZE - 1] = '\0';
 
                 //TODO проверить, что имя существует
-                //TODO дать команду controller'у что директория изменилась
+
                 userDirectory.push_back(tableName);
+
+                controller.cd(tableName);
             } else if (command == "stop") {
                 cout << "program is stopped.";
                 return;
@@ -420,9 +446,9 @@ private:
             }
         } else if (userDirectory.size() == 2) {
             if (command == "ls") {
-                //TODO добавить функционал
+                controller.lsNotes();
             } else if (command == "add") {
-                //TODO добавить функционал
+                controller.addNote();
             } else if (command == "back" && userDirectory.size() == 2) {
                 userDirectory.pop_back();
             } else if (command == "stop") {
