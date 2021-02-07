@@ -5,7 +5,10 @@
 #include "Table.h"
 
 void Table::setProperties() {
-    //TODO load properties from file
+    fread(&properties.numberOfNotes, INT_SIZE, 1, fpProp);
+    fwrite(&properties.numberOfProperties, INT_SIZE, 1, fpProp);
+    fwrite(&properties.sizeOfVector, INT_SIZE, 1, fpProp);
+    fwrite(&properties.values, properties.sizeOfVector, 1, fpProp);
 }
 
 Table::Table() {}
@@ -16,8 +19,10 @@ Table::Table(char name[]) {
 
 void Table::setTable(char name[]){
     strcpy(this->name, name);
-    //TODO set up *fp for working with file
-    //TODO set up *fpProp for working with file
+    char* tableName = makeNewCharArray("", name, ".dat");
+    fp = fopen(tableName, "r+b");
+    char* tablePropName = makeNewCharArray("", name, "-prop.dat");
+    fp = fopen(tablePropName, "r+b");
     setProperties();
 }
 

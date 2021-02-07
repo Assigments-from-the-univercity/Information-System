@@ -170,6 +170,33 @@ Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Information_System.dir/build.make CMakeFiles/Information_System.dir/Controller.cpp.s
 .PHONY : Controller.cpp.s
 
+Header.o: Header.cpp.o
+
+.PHONY : Header.o
+
+# target to build an object file
+Header.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Information_System.dir/build.make CMakeFiles/Information_System.dir/Header.cpp.o
+.PHONY : Header.cpp.o
+
+Header.i: Header.cpp.i
+
+.PHONY : Header.i
+
+# target to preprocess a source file
+Header.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Information_System.dir/build.make CMakeFiles/Information_System.dir/Header.cpp.i
+.PHONY : Header.cpp.i
+
+Header.s: Header.cpp.s
+
+.PHONY : Header.s
+
+# target to generate assembly for a file
+Header.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Information_System.dir/build.make CMakeFiles/Information_System.dir/Header.cpp.s
+.PHONY : Header.cpp.s
+
 Manifest.o: Manifest.cpp.o
 
 .PHONY : Manifest.o
@@ -290,6 +317,9 @@ help:
 	@echo "... Controller.o"
 	@echo "... Controller.i"
 	@echo "... Controller.s"
+	@echo "... Header.o"
+	@echo "... Header.i"
+	@echo "... Header.s"
 	@echo "... Manifest.o"
 	@echo "... Manifest.i"
 	@echo "... Manifest.s"
