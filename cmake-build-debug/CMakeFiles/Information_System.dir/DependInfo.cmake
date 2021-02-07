@@ -4,6 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Controller.cpp" "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles/Information_System.dir/Controller.cpp.o"
+  "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Manifest.cpp" "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles/Information_System.dir/Manifest.cpp.o"
+  "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.cpp" "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles/Information_System.dir/Table.cpp.o"
+  "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/View.cpp" "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles/Information_System.dir/View.cpp.o"
   "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/main.cpp" "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles/Information_System.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
