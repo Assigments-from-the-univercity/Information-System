@@ -45,9 +45,18 @@ public:
         vector<Field> values;
     };
 
+    enum State {
+        STRONG,
+        WEAK,
+        INF
+    };
+
     struct RequestDouble {
         double more;
         double less;
+
+        State stateWeak;
+        State stateLess;
     };
 
     struct RequestString {
