@@ -90,17 +90,77 @@ CMakeFiles/Information_System.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/main.cpp" -o CMakeFiles/Information_System.dir/main.cpp.s
 
+CMakeFiles/Information_System.dir/View.cpp.o: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/View.cpp.o: ../View.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Information_System.dir/View.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Information_System.dir/View.cpp.o -c "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/View.cpp"
+
+CMakeFiles/Information_System.dir/View.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/View.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/View.cpp" > CMakeFiles/Information_System.dir/View.cpp.i
+
+CMakeFiles/Information_System.dir/View.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/View.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/View.cpp" -o CMakeFiles/Information_System.dir/View.cpp.s
+
+CMakeFiles/Information_System.dir/Controller.cpp.o: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Controller.cpp.o: ../Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Information_System.dir/Controller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Information_System.dir/Controller.cpp.o -c "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Controller.cpp"
+
+CMakeFiles/Information_System.dir/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Controller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Controller.cpp" > CMakeFiles/Information_System.dir/Controller.cpp.i
+
+CMakeFiles/Information_System.dir/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Controller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Controller.cpp" -o CMakeFiles/Information_System.dir/Controller.cpp.s
+
+CMakeFiles/Information_System.dir/Manifest.cpp.o: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Manifest.cpp.o: ../Manifest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Information_System.dir/Manifest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Information_System.dir/Manifest.cpp.o -c "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Manifest.cpp"
+
+CMakeFiles/Information_System.dir/Manifest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Manifest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Manifest.cpp" > CMakeFiles/Information_System.dir/Manifest.cpp.i
+
+CMakeFiles/Information_System.dir/Manifest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Manifest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Manifest.cpp" -o CMakeFiles/Information_System.dir/Manifest.cpp.s
+
+CMakeFiles/Information_System.dir/Table.cpp.o: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Table.cpp.o: ../Table.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Information_System.dir/Table.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Information_System.dir/Table.cpp.o -c "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.cpp"
+
+CMakeFiles/Information_System.dir/Table.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Table.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.cpp" > CMakeFiles/Information_System.dir/Table.cpp.i
+
+CMakeFiles/Information_System.dir/Table.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Table.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.cpp" -o CMakeFiles/Information_System.dir/Table.cpp.s
+
 # Object files for target Information_System
 Information_System_OBJECTS = \
-"CMakeFiles/Information_System.dir/main.cpp.o"
+"CMakeFiles/Information_System.dir/main.cpp.o" \
+"CMakeFiles/Information_System.dir/View.cpp.o" \
+"CMakeFiles/Information_System.dir/Controller.cpp.o" \
+"CMakeFiles/Information_System.dir/Manifest.cpp.o" \
+"CMakeFiles/Information_System.dir/Table.cpp.o"
 
 # External object files for target Information_System
 Information_System_EXTERNAL_OBJECTS =
 
 Information_System: CMakeFiles/Information_System.dir/main.cpp.o
+Information_System: CMakeFiles/Information_System.dir/View.cpp.o
+Information_System: CMakeFiles/Information_System.dir/Controller.cpp.o
+Information_System: CMakeFiles/Information_System.dir/Manifest.cpp.o
+Information_System: CMakeFiles/Information_System.dir/Table.cpp.o
 Information_System: CMakeFiles/Information_System.dir/build.make
 Information_System: CMakeFiles/Information_System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Information_System"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Information_System"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Information_System.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
