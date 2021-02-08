@@ -47,6 +47,22 @@ Controller::toNoteProperties(int numberOfProperties, vector<string> values, vect
     return notesProperties;
 }
 
+void Controller::makeRequest(vector<Table::RequestDouble> requestDouble, vector<Table::RequestString> requestString,
+                             vector<Table::UserRequest> userRequest) {
+    for (int i = 0; i < table.properties.numberOfProperties; ++i) {
+        for (int j = 0; j < userRequest.size(); ++j) {
+            if (userRequest[j].name == table.properties.values[i].name){
+                if (table.properties.values[i].type == Table::TypeOfNote::DOUBLE) {
+                    Table::RequestDouble mRequestDouble;
+                    //mRequestDouble.
+
+                    requestDouble.push_back(mRequestDouble);
+                }
+            }
+        }
+    }
+}
+
 void Controller::lsTable() {
     manifest.printTables();
 }
@@ -90,8 +106,11 @@ void Controller::cd(char tableName[NAME_SIZE]) {
 }
 
 void Controller::lsNotes() {
-    //TODO set properties
-    //table.printTable();
+    vector<Table::RequestDouble> requestDouble;
+    vector<Table::RequestString> requestString;
+    vector<Table::UserRequest> userRequest;
+    makeRequest(requestDouble, requestString, userRequest);
+    table.printNotes(requestDouble, requestString);
 }
 
 void Controller::addNote() {

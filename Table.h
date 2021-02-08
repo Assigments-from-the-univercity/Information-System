@@ -52,16 +52,22 @@ public:
     };
 
     struct RequestDouble {
-        double more;
-        double less;
+        double more = 0;
+        double less = 0;
 
-        State stateWeak;
+        State stateMore;
         State stateLess;
     };
 
     struct RequestString {
         string more;
         string less;
+    };
+
+    struct UserRequest {
+        char name[NAME_SIZE];
+        char oper[NAME_SIZE];
+        char value[DESCRIPTION_SIZE];
     };
 
     struct NoteValue {
