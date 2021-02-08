@@ -6,9 +6,9 @@
 
 void Table::setProperties() {
     fread(&properties.numberOfNotes, INT_SIZE, 1, fpProp);
-    fwrite(&properties.numberOfProperties, INT_SIZE, 1, fpProp);
-    fwrite(&properties.sizeOfVector, INT_SIZE, 1, fpProp);
-    fwrite(&properties.values, properties.sizeOfVector, 1, fpProp);
+    fread(&properties.numberOfProperties, INT_SIZE, 1, fpProp);
+    fread(&properties.sizeOfVector, INT_SIZE, 1, fpProp);
+    fread(&properties.values, properties.sizeOfVector, 1, fpProp);
 }
 
 Table::Table() {}
