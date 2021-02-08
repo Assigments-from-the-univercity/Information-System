@@ -47,17 +47,39 @@ Controller::toNoteProperties(int numberOfProperties, vector<string> values, vect
     return notesProperties;
 }
 
-void Controller::makeRequest(vector<Table::RequestDouble> requestDouble, vector<Table::RequestString> requestString,
-                             vector<Table::UserRequest> userRequest) {
+Table::Request::State Controller::getState(UserRequest userRequest) {
+    if (userRequest.oper == "<") {
+        return Table::Request::LESS;
+    } else if (userRequest.oper == ">") {
+        return Table::Request::MORE;
+    } else if (userRequest.oper == "<=") {
+        return Table::Request::NOT_MORE;
+    } else if (userRequest.oper == ">=") {
+        return Table::Request::NOT_LESS;
+    } else if (userRequest.oper == "=") {
+        return Table::Request::EQUAL;
+    } else if (userRequest.oper == "in") {
+        return Table::Request::INCLUDED;
+    } else {
+        return Table::Request::IGNORE;
+    }
+}
+
+void Controller::makeRequest(vector<Table::Request> request, vector<UserRequest> userRequest) {
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
         for (int j = 0; j < userRequest.size(); ++j) {
-            if (userRequest[j].name == table.properties.values[i].name){
-                if (table.properties.values[i].type == Table::TypeOfNote::DOUBLE) {
-                    Table::RequestDouble mRequestDouble;
-                    //mRequestDouble.
+            if (userRequest[j].name == table.properties.values[i].name) {
+                Table::Request mRequest;
+                mRequest.value = userRequest[j].value;
+                mRequest.state = getState(userRequest[j]);
+                request.push_back(mRequest);
 
-                    requestDouble.push_back(mRequestDouble);
-                }
+                break;
+            }
+            if (j == userRequest.size() - 1) {
+                Table::Request mRequest;
+                mRequest.state = Table::Request::State::IGNORE;
+                request.push_back(mRequest);
             }
         }
     }
@@ -106,11 +128,10 @@ void Controller::cd(char tableName[NAME_SIZE]) {
 }
 
 void Controller::lsNotes() {
-    vector<Table::RequestDouble> requestDouble;
-    vector<Table::RequestString> requestString;
-    vector<Table::UserRequest> userRequest;
-    makeRequest(requestDouble, requestString, userRequest);
-    table.printNotes(requestDouble, requestString);
+    vector<Table::Request> request;
+    vector<UserRequest> userRequest;
+    makeRequest(request, userRequest);
+    table.printNotes(request);
 }
 
 void Controller::addNote() {

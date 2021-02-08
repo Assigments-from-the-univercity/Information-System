@@ -21,6 +21,12 @@ private:
     Manifest manifest;
     Table table;
 
+    struct UserRequest {
+        string name;
+        string oper;
+        string value;
+    };
+
     /**
      * This method convert string-type name and description of file to
      * appropriate Manifest::TableProperties format.
@@ -41,14 +47,9 @@ private:
     Table::TableProperties
     toNoteProperties(int numberOfProperties, vector<string> values, vector<string> namesOfValues);
 
-    Table::RequestDouble toRequestDouble(Table::UserRequest userRequest) {
-        if (userRequest.oper == "="){
+    Table::Request::State getState(UserRequest userRequest);
 
-        }
-    }
-
-    void makeRequest(vector<Table::RequestDouble> requestDouble, vector<Table::RequestString> requestString,
-                     vector<Table::UserRequest> userRequest);
+    void makeRequest(vector<Table::Request> request, vector<UserRequest> userRequest);
 
 public:
     void lsTable();

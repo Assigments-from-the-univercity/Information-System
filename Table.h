@@ -45,29 +45,17 @@ public:
         vector<Field> values;
     };
 
-    enum State {
-        STRONG,
-        WEAK,
-        INF
-    };
-
-    struct RequestDouble {
-        double more = 0;
-        double less = 0;
-
-        State stateMore;
-        State stateLess;
-    };
-
-    struct RequestString {
-        string more;
-        string less;
-    };
-
-    struct UserRequest {
-        char name[NAME_SIZE];
-        char oper[NAME_SIZE];
-        char value[DESCRIPTION_SIZE];
+    struct Request {
+        string value;
+        enum State{
+            LESS,
+            MORE,
+            NOT_MORE,
+            NOT_LESS,
+            EQUAL,
+            INCLUDED,
+            IGNORE
+        } state;
     };
 
     struct NoteValue {
@@ -90,7 +78,7 @@ public:
 
     void setTable(char name[]);
 
-    void printNotes(vector<RequestDouble> requestDouble, vector<RequestString> requestString);
+    void printNotes(vector<Request> requestDouble);
 
     void addNote(vector<NoteValue> noteProperties);
 
