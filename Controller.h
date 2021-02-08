@@ -60,6 +60,8 @@ public:
 
     void lsNotes();
 
+    void selectNotes();
+
     void addNote();
 };
 

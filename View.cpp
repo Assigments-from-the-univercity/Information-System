@@ -37,6 +37,8 @@ void View::userCommand(string command) {
     } else if (userDirectory.size() == 2) {
         if (command == "ls") {
             controller.lsNotes();
+        } else if (command == "SELECT") {
+            controller.selectNotes();
         } else if (command == "add") {
             controller.addNote();
         } else if (command == "back" && userDirectory.size() == 2) {

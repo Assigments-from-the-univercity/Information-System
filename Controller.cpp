@@ -134,6 +134,22 @@ void Controller::lsNotes() {
     table.printNotes(request);
 }
 
+void Controller::selectNotes() {
+    vector<Table::Request> request;
+    vector<UserRequest> userRequest;
+
+    int numberOfFactors;
+    cin >> numberOfFactors;
+    UserRequest userReq;
+    for (int i = 0; i < numberOfFactors; ++i) {
+        cin >> userReq.name >> userReq.oper >> userReq.value;
+        userRequest.push_back(userReq);
+    }
+
+    makeRequest(request, userRequest);
+    table.printNotes(request);
+}
+
 void Controller::addNote() {
     Table::NoteValue noteValue;
     vector<Table::NoteValue> values;
