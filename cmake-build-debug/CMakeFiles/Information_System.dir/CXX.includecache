@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Controller.cpp
+Controller.h
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Controller.h
+
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Controller.h
+Manifest.h
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Manifest.h
+Header.h
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Header.h
+Table.h
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.h
+
 /home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Header.h
 iostream
 -
@@ -18,9 +30,9 @@ filesystem
 cstdio
 -
 
-/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.cpp
-Table.h
-/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.h
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Manifest.h
+Header.h
+/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Header.h
 
 /home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.h
 Header.h

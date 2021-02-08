@@ -8,7 +8,7 @@ void Table::setProperties() {
     fread(&properties.numberOfNotes, INT_SIZE, 1, fpProp);
     fread(&properties.numberOfProperties, INT_SIZE, 1, fpProp);
     fread(&properties.sizeOfVector, INT_SIZE, 1, fpProp);
-    fread(&properties.values, properties.sizeOfVector, 1, fpProp);
+    fread(&properties.values, properties.sizeOfVector, 1, fpProp); //неработает: не так читает первій єлемент вектора
 }
 
 Table::Table() {}

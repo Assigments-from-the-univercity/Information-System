@@ -42,7 +42,11 @@ Controller::toNoteProperties(int numberOfProperties, vector<string> values, vect
         notesProperties.values.push_back(field);
     }
 
-    notesProperties.sizeOfVector = sizeof(Table::TypeOfNote) * notesProperties.values.size();
+    //notesProperties.sizeOfVector = sizeof(Table::TypeOfNote) * notesProperties.values.size();
+    notesProperties.sizeOfVector = sizeof(Table::Field) * notesProperties.values.size();
+//    int s1 = sizeof(Table::TypeOfNote);
+//    int s2 = sizeof(notesProperties.values);
+//    int s3 = sizeof(Table::Field);
 
     return notesProperties;
 }
