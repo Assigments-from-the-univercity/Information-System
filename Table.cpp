@@ -3,6 +3,7 @@
 //
 
 #include "Table.h"
+#include <iomanip>
 
 void Table::setProperties() {
     fread(&properties.numberOfNotes, INT_SIZE, 1, fpProp);
@@ -12,6 +13,23 @@ void Table::setProperties() {
         fread(&field, sizeof(Table::Field), 1, fpProp);
         properties.values.push_back(field);
     }
+}
+
+void Table::printHeader(){
+    printf ("%3s ", "id");
+    for (int i = 0; i < properties.numberOfProperties; ++i) {
+        printf ("| %10s ", properties.values[i].name);
+    }
+    cout << endl;
+    cout << "===";
+    for (int i = 0; i < properties.numberOfProperties; ++i) {
+        cout << "=|===========";
+    }
+    cout << endl;
+}
+
+void Table::printNote(){
+    //TODO
 }
 
 Table::Table() {}
@@ -44,6 +62,7 @@ void Table::setTable(char name[]) {
 
 void Table::printNotes(vector<Table::Request> request) {
     //TODO
+    printHeader();
 }
 
 void Table::addNote(vector<NoteValue> noteProperties) {

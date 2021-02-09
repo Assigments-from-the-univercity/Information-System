@@ -15,7 +15,6 @@
  * Template of <sheetName>-prop.dat :
  *  numberOfNotes (int)
  *  numberOfProperties (int)
- *  sizeOfVector (int)
  *  values (vector<TypeOfNote>)
  *
  * Template of <sheetName>.dat :
@@ -66,6 +65,10 @@ private:
     FILE *fpProp;
 
     void setProperties();
+
+    void printHeader();
+
+    void printNote();
 
 public:
     char name[NAME_SIZE];
