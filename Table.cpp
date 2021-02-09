@@ -7,8 +7,11 @@
 void Table::setProperties() {
     fread(&properties.numberOfNotes, INT_SIZE, 1, fpProp);
     fread(&properties.numberOfProperties, INT_SIZE, 1, fpProp);
-    fread(&properties.sizeOfVector, INT_SIZE, 1, fpProp);
-    fread(&properties.values, properties.sizeOfVector, 1, fpProp); //неработает: не так читает первій єлемент вектора
+    Table::Field field;
+    for (int i = 0; i < properties.numberOfProperties; ++i) {
+        fread(&field, sizeof(Table::Field), 1, fpProp);
+        properties.values.push_back(field);
+    }
 }
 
 Table::Table() {}
@@ -18,6 +21,8 @@ Table::Table(char name[]) {
 }
 
 void Table::setTable(char name[]) {
+    strcpy(this->name, name);
+
     string stringName(name);
     string folderName = "tables/";
     string propName = "-prop";
@@ -32,24 +37,7 @@ void Table::setTable(char name[]) {
     char propFileName[newPropFile.length() + 1];
     strcpy(propFileName, newPropFile.c_str());
 
-
-
-    strcpy(this->name, name);
-//    char* tableName = makeNewCharArray("", name, ".dat");
-//    string nameString(name);
-//    string fileName = nameString + ".dat";
-//    string filePropName = nameString + "-prop.dat";
-//
-//    char tableName[fileName.size() + 1];
-//    strcpy(tableName, fileName.c_str());
-//    tableName[fileName.size()] = '\0';
-//
-//    char tablePropName[filePropName.size() + 1];
-//    strcpy(tablePropName, filePropName.c_str());
-//    tablePropName[filePropName.size()] = '\0';
-
     fp = fopen(fileName, "r+b");
-//    char* tablePropName = makeNewCharArray("", name, "-prop.dat");
     fpProp = fopen(propFileName, "r+b");
     setProperties();
 }

@@ -40,8 +40,7 @@ public:
 
     struct TableProperties {
         int numberOfNotes;
-        int numberOfProperties; // избыточное
-        int sizeOfVector;       // избыточное
+        int numberOfProperties;
         vector<Field> values;
     };
 
@@ -100,8 +99,9 @@ public:
 
         fwrite(&tableProperties.numberOfNotes, INT_SIZE, 1, fp1);
         fwrite(&tableProperties.numberOfProperties, INT_SIZE, 1, fp1);
-        fwrite(&tableProperties.sizeOfVector, INT_SIZE, 1, fp1);
-        fwrite(&tableProperties.values, tableProperties.sizeOfVector, 1, fp1);
+        for (int i = 0; i < tableProperties.numberOfProperties; ++i) {
+            fwrite(&tableProperties.values[i], sizeof(Table::Field), 1, fp1);
+        }
 
         fflush(fp1);
     }
