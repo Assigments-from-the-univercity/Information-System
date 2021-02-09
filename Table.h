@@ -40,19 +40,21 @@ public:
 
     struct TableProperties {
         int numberOfNotes;
-        int numberOfProperties; // избыточное
-        int sizeOfVector;       // избыточное
+        int numberOfProperties;
         vector<Field> values;
     };
 
-    struct RequestDouble {
-        double more;
-        double less;
-    };
-
-    struct RequestString {
-        string more;
-        string less;
+    struct Request {
+        string value;
+        enum State{
+            LESS,
+            MORE,
+            NOT_MORE,
+            NOT_LESS,
+            EQUAL,
+            INCLUDED,
+            IGNORE
+        } state;
     };
 
     struct NoteValue {
@@ -75,7 +77,7 @@ public:
 
     void setTable(char name[]);
 
-    void printNotes(vector<RequestDouble> requestDouble, vector<RequestString> requestString);
+    void printNotes(vector<Request> requestDouble);
 
     void addNote(vector<NoteValue> noteProperties);
 
@@ -97,8 +99,9 @@ public:
 
         fwrite(&tableProperties.numberOfNotes, INT_SIZE, 1, fp1);
         fwrite(&tableProperties.numberOfProperties, INT_SIZE, 1, fp1);
-        fwrite(&tableProperties.sizeOfVector, INT_SIZE, 1, fp1);
-        fwrite(&tableProperties.values, tableProperties.sizeOfVector, 1, fp1);
+        for (int i = 0; i < tableProperties.numberOfProperties; ++i) {
+            fwrite(&tableProperties.values[i], sizeof(Table::Field), 1, fp1);
+        }
 
         fflush(fp1);
     }

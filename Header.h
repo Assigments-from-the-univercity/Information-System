@@ -18,4 +18,13 @@ static const int INT_SIZE = 4;
 static const int NAME_SIZE = 20;
 static const int DESCRIPTION_SIZE = 100;
 
+/*static char* makeNewCharArray(string begin, char message[], string end){
+    string messageString(message);
+    messageString = begin + messageString + end;
+    char newMessage[messageString.size()+1];
+    strcpy(newMessage, messageString.c_str());
+    newMessage[messageString.size()] = '\0';
+    return newMessage;
+}*/
+
 #endif //INFORMATION_SYSTEM_HEADER_H

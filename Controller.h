@@ -21,6 +21,12 @@ private:
     Manifest manifest;
     Table table;
 
+    struct UserRequest {
+        string name;
+        string oper;
+        string value;
+    };
+
     /**
      * This method convert string-type name and description of file to
      * appropriate Manifest::TableProperties format.
@@ -41,6 +47,10 @@ private:
     Table::TableProperties
     toNoteProperties(int numberOfProperties, vector<string> values, vector<string> namesOfValues);
 
+    Table::Request::State getState(UserRequest userRequest);
+
+    void makeRequest(vector<Table::Request> request, vector<UserRequest> userRequest);
+
 public:
     void lsTable();
 
@@ -49,6 +59,8 @@ public:
     void cd(char tableName[NAME_SIZE]);
 
     void lsNotes();
+
+    void selectNotes();
 
     void addNote();
 };

@@ -42,9 +42,45 @@ Controller::toNoteProperties(int numberOfProperties, vector<string> values, vect
         notesProperties.values.push_back(field);
     }
 
-    notesProperties.sizeOfVector = sizeof(Table::TypeOfNote) * notesProperties.values.size();
-
     return notesProperties;
+}
+
+Table::Request::State Controller::getState(UserRequest userRequest) {
+    if (userRequest.oper == "<") {
+        return Table::Request::LESS;
+    } else if (userRequest.oper == ">") {
+        return Table::Request::MORE;
+    } else if (userRequest.oper == "<=") {
+        return Table::Request::NOT_MORE;
+    } else if (userRequest.oper == ">=") {
+        return Table::Request::NOT_LESS;
+    } else if (userRequest.oper == "=") {
+        return Table::Request::EQUAL;
+    } else if (userRequest.oper == "in") {
+        return Table::Request::INCLUDED;
+    } else {
+        return Table::Request::IGNORE;
+    }
+}
+
+void Controller::makeRequest(vector<Table::Request> request, vector<UserRequest> userRequest) {
+    for (int i = 0; i < table.properties.numberOfProperties; ++i) {
+        for (int j = 0; j < userRequest.size(); ++j) {
+            if (userRequest[j].name == table.properties.values[i].name) {
+                Table::Request mRequest;
+                mRequest.value = userRequest[j].value;
+                mRequest.state = getState(userRequest[j]);
+                request.push_back(mRequest);
+
+                break;
+            }
+            if (j == userRequest.size() - 1) {
+                Table::Request mRequest;
+                mRequest.state = Table::Request::State::IGNORE;
+                request.push_back(mRequest);
+            }
+        }
+    }
 }
 
 void Controller::lsTable() {
@@ -90,8 +126,26 @@ void Controller::cd(char tableName[NAME_SIZE]) {
 }
 
 void Controller::lsNotes() {
-    //TODO set properties
-    //table.printTable();
+    vector<Table::Request> request;
+    vector<UserRequest> userRequest;
+    makeRequest(request, userRequest);
+    table.printNotes(request);
+}
+
+void Controller::selectNotes() {
+    vector<Table::Request> request;
+    vector<UserRequest> userRequest;
+
+    int numberOfFactors;
+    cin >> numberOfFactors;
+    UserRequest userReq;
+    for (int i = 0; i < numberOfFactors; ++i) {
+        cin >> userReq.name >> userReq.oper >> userReq.value;
+        userRequest.push_back(userReq);
+    }
+
+    makeRequest(request, userRequest);
+    table.printNotes(request);
 }
 
 void Controller::addNote() {
