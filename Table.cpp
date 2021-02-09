@@ -28,8 +28,12 @@ void Table::printHeader(){
     cout << endl;
 }
 
-void Table::printNote(){
-    //TODO
+void Table::printNote(vector<NoteValue> noteProperties, int id){
+    printf ("%3d ", id);
+    for (int i = 0; i < noteProperties.size(); ++i) {
+        printf ("| %10s ", noteProperties[i].value);
+    }
+    cout << endl;
 }
 
 Table::Table() {}
@@ -63,8 +67,11 @@ void Table::setTable(char name[]) {
 void Table::printNotes(vector<Table::Request> request) {
     //TODO
     printHeader();
+
 }
 
 void Table::addNote(vector<NoteValue> noteProperties) {
     //TODO
+    printHeader();
+    printNote(noteProperties, 1);
 }

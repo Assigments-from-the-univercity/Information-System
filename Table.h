@@ -7,6 +7,8 @@
 
 #include "Header.h"
 
+static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
+
 /**
  * This class represent (a part of) the model layer.
  * This class works with <sheetName>.dat and <sheetName>-prop.dat - files,
@@ -68,7 +70,7 @@ private:
 
     void printHeader();
 
-    void printNote();
+    void printNote(vector<NoteValue> noteProperties, int id);
 
 public:
     char name[NAME_SIZE];
@@ -83,6 +85,10 @@ public:
     void printNotes(vector<Request> requestDouble);
 
     void addNote(vector<NoteValue> noteProperties);
+
+    static string getTypeOfNote(int index){
+        return valueOfTypeOfNote[index];
+    }
 
     /**
      * This method change table properties according to parameters.

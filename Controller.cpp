@@ -154,8 +154,8 @@ void Controller::addNote() {
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
         cout << "Введіть значення поля ";
         cout << table.properties.values[i].name;
-        cout << "тип (";
-        cout << table.properties.values[i].type;
+        cout << " тип (";
+        cout << Table::getTypeOfNote(table.properties.values[i].type);
         cout << "): ";
 
         cin >> noteValue.value;
