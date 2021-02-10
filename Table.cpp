@@ -111,7 +111,6 @@ void Table::writeNoteInFile(vector<NoteValue> noteProperties) {
 }
 
 vector<Table::NoteValue> Table::readNextNote() {
-    //TODO
     vector<NoteValue> result;
     NoteValue value;
     for (int i = 0; i < properties.numberOfProperties; ++i) {

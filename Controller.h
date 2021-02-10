@@ -49,7 +49,7 @@ private:
 
     Table::Request::State getState(UserRequest userRequest);
 
-    void makeRequest(vector<Table::Request> request, vector<UserRequest> userRequest);
+    vector<Table::Request> makeRequest(vector<UserRequest> userRequest);
 
 public:
     void lsTable();
