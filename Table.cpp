@@ -114,7 +114,7 @@ vector<Table::NoteValue> Table::readNextNote() {
     vector<NoteValue> result;
     NoteValue value;
     for (int i = 0; i < properties.numberOfProperties; ++i) {
-        fwrite(&value, sizeof(NoteValue), 1, fp);
+        fread(&value, sizeof(NoteValue), 1, fp);
         result.push_back(value);
     }
     return result;
