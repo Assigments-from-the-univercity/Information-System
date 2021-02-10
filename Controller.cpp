@@ -144,7 +144,7 @@ void Controller::selectNotes() {
         userRequest.push_back(userReq);
     }
 
-    makeRequest(userRequest);
+    request = makeRequest(userRequest);
     table.printNotes(request);
 }
 
