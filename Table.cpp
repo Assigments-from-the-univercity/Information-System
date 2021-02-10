@@ -138,12 +138,14 @@ void Table::setTable(char name[]) {
 void Table::printNotes(vector<Table::Request> request) {
     printHeader();
 
+    bool validNote;
     vector<NoteValue> noteProperties;
     rewind(fp);
 
     for (int i = 0; i < properties.numberOfNotes; ++i) {
         noteProperties = readNextNote();
-        for (int j = 0; j < properties.numberOfProperties; ++j) {
+        validNote = true;
+        for (int j = 0; j < properties.numberOfProperties && validNote == true; ++j) {
             if (request[j].state != Request::State::IGNORE) {
                 if (properties.values[j].type == TypeOfNote::DOUBLE) {
                     double value = stod(noteProperties[j].value), target = stod(request[j].value);
@@ -152,56 +154,64 @@ void Table::printNotes(vector<Table::Request> request) {
                             if (value < target){
                                 break;
                             } else {
+                                validNote = false;
                                 continue;
                             }
                         case Request::State::MORE:
                             if (value > target){
                                 break;
                             } else {
+                                validNote = false;
                                 continue;
                             }
                         case Request::State::NOT_MORE:
                             if (value <= target){
                                 break;
                             } else {
+                                validNote = false;
                                 continue;
                             }
                         case Request::State::NOT_LESS:
                             if (value >= target){
                                 break;
                             } else {
+                                validNote = false;
                                 continue;
                             }
                         case Request::State::EQUAL:
                             if (value == target){
                                 break;
                             } else {
+                                validNote = false;
                                 continue;
                             }
-                        default: continue;
+                        default: validNote = false; continue;
                     }
                 } else if (properties.values[j].type == TypeOfNote::STRING) {
                     string value = noteProperties[j].value, target = request[j].value;
                     switch (request[j].state){
                         case Request::State::EQUAL:
-                            if (value == target){
+                            if (value.compare(target) == 0){
                                 break;
                             } else {
+                                validNote = false;
                                 continue;
                             }
                         case Request::State::INCLUDED:
                             if (value.find(target)){
                                 break;
                             } else {
+                                validNote = false;
                                 continue;
                             }
-                        default: continue;
+                        default: validNote = false; continue;
                     }
                 }
             }
-            if (j == properties.numberOfProperties - 1) {
-                printNote(noteProperties, i + 1);
-            }
+
+        }
+        if (validNote == true) {
+            printNote(noteProperties, i + 1);
         }
     }
 }
