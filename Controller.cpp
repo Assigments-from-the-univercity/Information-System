@@ -63,24 +63,25 @@ Table::Request::State Controller::getState(UserRequest userRequest) {
     }
 }
 
-void Controller::makeRequest(vector<Table::Request> request, vector<UserRequest> userRequest) {
+vector<Table::Request> Controller::makeRequest(vector<UserRequest> userRequest) {
+    vector<Table::Request> request;
+
+    Table::Request mRequest;
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
+        mRequest.value = "0";
+        mRequest.state = Table::Request::State::IGNORE;
+
         for (int j = 0; j < userRequest.size(); ++j) {
             if (userRequest[j].name == table.properties.values[i].name) {
-                Table::Request mRequest;
                 mRequest.value = userRequest[j].value;
                 mRequest.state = getState(userRequest[j]);
-                request.push_back(mRequest);
-
-                break;
-            }
-            if (j == userRequest.size() - 1) {
-                Table::Request mRequest;
-                mRequest.state = Table::Request::State::IGNORE;
-                request.push_back(mRequest);
             }
         }
+
+        request.push_back(mRequest);
     }
+
+    return request;
 }
 
 void Controller::lsTable() {
@@ -126,9 +127,8 @@ void Controller::cd(char tableName[NAME_SIZE]) {
 }
 
 void Controller::lsNotes() {
-    vector<Table::Request> request;
     vector<UserRequest> userRequest;
-    makeRequest(request, userRequest);
+    vector<Table::Request> request = makeRequest(userRequest);
     table.printNotes(request);
 }
 
@@ -144,7 +144,7 @@ void Controller::selectNotes() {
         userRequest.push_back(userReq);
     }
 
-    makeRequest(request, userRequest);
+    makeRequest(userRequest);
     table.printNotes(request);
 }
 
@@ -154,8 +154,8 @@ void Controller::addNote() {
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
         cout << "Введіть значення поля ";
         cout << table.properties.values[i].name;
-        cout << "тип (";
-        cout << table.properties.values[i].type;
+        cout << " тип (";
+        cout << Table::getTypeOfNote(table.properties.values[i].type);
         cout << "): ";
 
         cin >> noteValue.value;
