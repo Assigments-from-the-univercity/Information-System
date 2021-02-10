@@ -63,6 +63,10 @@ public:
     void selectNotes();
 
     void addNote();
+
+    void deleteNote();
+
+    void changeNote();
 };
 
 

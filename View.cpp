@@ -43,6 +43,10 @@ void View::userCommand(string command) {
             controller.addNote();
         } else if (command == "back" && userDirectory.size() == 2) {
             userDirectory.pop_back();
+        } else if (command == "delete") {
+            controller.deleteNote();
+        } else if (command == "change") {
+            controller.changeNote();
         } else if (command == "stop") {
             cout << "program is stopped.";
             return;

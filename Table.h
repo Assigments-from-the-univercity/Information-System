@@ -84,7 +84,15 @@ private:
 
     void writeNoteInFile(vector<NoteValue> noteProperties);
 
+    void writeNoteInFile(vector<NoteValue> noteProperties, FILE *p);
+
     vector<NoteValue> readNextNote();
+
+    vector<NoteValue> readNextNote(FILE *p);
+
+    void deleteTableFile();
+
+    void renameTempFile();
 
 public:
     char name[NAME_SIZE];
@@ -99,6 +107,10 @@ public:
     void printNotes(vector<Request> requestDouble);
 
     void addNote(vector<NoteValue> noteProperties);
+
+    void deleteNote(int id);
+
+    void changeNote(vector<NoteValue> noteProperties, int id);
 
     static string getTypeOfNote(int index){
         return valueOfTypeOfNote[index];

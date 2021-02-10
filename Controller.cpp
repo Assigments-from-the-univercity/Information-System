@@ -165,3 +165,31 @@ void Controller::addNote() {
 
     table.addNote(values);
 }
+
+void Controller::deleteNote() {
+    int id;
+    cin >> id;
+
+    table.deleteNote(id - 1);
+}
+
+void Controller::changeNote() {
+    int id;
+    cin >> id;
+
+    Table::NoteValue noteValue;
+    vector<Table::NoteValue> values;
+    for (int i = 0; i < table.properties.numberOfProperties; ++i) {
+        cout << "Введіть значення поля ";
+        cout << table.properties.values[i].name;
+        cout << " тип (";
+        cout << Table::getTypeOfNote(table.properties.values[i].type);
+        cout << "): ";
+
+        cin >> noteValue.value;
+
+        values.push_back(noteValue);
+    }
+
+    table.changeNote(values, id - 1);
+}
