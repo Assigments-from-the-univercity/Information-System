@@ -9,6 +9,8 @@
 const char *TEMP_FILE = "tables/tempCopy.dat";
 
 void Table::getProperties() {
+    properties.values.clear();
+
     fread(&properties.numberOfNotes, INT_SIZE, 1, fpProp);
     fread(&properties.numberOfProperties, INT_SIZE, 1, fpProp);
     Table::Field field;
