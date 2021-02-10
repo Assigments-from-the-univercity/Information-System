@@ -82,6 +82,8 @@ private:
 
     void openFpPropForWriting();
 
+    void writeNoteInFile(vector<NoteValue> noteProperties);
+
 public:
     char name[NAME_SIZE];
     TableProperties properties;

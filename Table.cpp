@@ -102,6 +102,13 @@ void Table::openFpPropForWriting() {
     fpProp = fopen(propFileName, "w+b");
 }
 
+void Table::writeNoteInFile(vector<NoteValue> noteProperties){
+    for (int i = 0; i < properties.numberOfProperties; ++i) {
+        fwrite(&noteProperties[i], sizeof(NoteValue), 1, fp);
+    }
+    fflush(fp);
+}
+
 Table::Table() {}
 
 Table::Table(char name[]) {
@@ -124,10 +131,13 @@ void Table::printNotes(vector<Table::Request> request) {
 }
 
 void Table::addNote(vector<NoteValue> noteProperties) {
-    //TODO
+    writeNoteInFile(noteProperties);
+    properties.numberOfNotes++;
+    setProperties();
+    getProperties();
 
-
-
+/*
     printHeader();
     printNote(noteProperties, 1);
+    */
 }
