@@ -66,11 +66,21 @@ private:
     FILE *fp;
     FILE *fpProp;
 
+    void getProperties();
+
     void setProperties();
 
     void printHeader();
 
     void printNote(vector<NoteValue> noteProperties, int id);
+
+    void openFpForReading();
+
+    void openFpForWriting();
+
+    void openFpPropForReading();
+
+    void openFpPropForWriting();
 
 public:
     char name[NAME_SIZE];
