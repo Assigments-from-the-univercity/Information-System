@@ -4,6 +4,7 @@
 
 #include "Table.h"
 #include <iomanip>
+#include <string>
 
 void Table::getProperties() {
     fread(&properties.numberOfNotes, INT_SIZE, 1, fpProp);
@@ -102,11 +103,22 @@ void Table::openFpPropForWriting() {
     fpProp = fopen(propFileName, "w+b");
 }
 
-void Table::writeNoteInFile(vector<NoteValue> noteProperties){
+void Table::writeNoteInFile(vector<NoteValue> noteProperties) {
     for (int i = 0; i < properties.numberOfProperties; ++i) {
         fwrite(&noteProperties[i], sizeof(NoteValue), 1, fp);
     }
     fflush(fp);
+}
+
+vector<Table::NoteValue> Table::readNextNote() {
+    //TODO
+    vector<NoteValue> result;
+    NoteValue value;
+    for (int i = 0; i < properties.numberOfProperties; ++i) {
+        fwrite(&value, sizeof(NoteValue), 1, fp);
+        result.push_back(value);
+    }
+    return result;
 }
 
 Table::Table() {}
@@ -125,9 +137,74 @@ void Table::setTable(char name[]) {
 }
 
 void Table::printNotes(vector<Table::Request> request) {
-    //TODO
     printHeader();
 
+    vector<NoteValue> noteProperties;
+    rewind(fp);
+
+    for (int i = 0; i < properties.numberOfNotes; ++i) {
+        noteProperties = readNextNote();
+        for (int j = 0; j < properties.numberOfProperties; ++j) {
+            if (request[j].state != Request::State::IGNORE) {
+                if (properties.values[j].type == TypeOfNote::STRING) {
+                    double value = stod(noteProperties[j].value), target = stod(request[j].value);
+                    switch (request[j].state){
+                        case Request::State::LESS:
+                            if (value < target){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        case Request::State::MORE:
+                            if (value > target){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        case Request::State::NOT_MORE:
+                            if (value <= target){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        case Request::State::NOT_LESS:
+                            if (value >= target){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        case Request::State::EQUAL:
+                            if (value == target){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        default: continue;
+                    }
+                } else if (properties.values[j].type == TypeOfNote::DOUBLE) {
+                    string value = noteProperties[j].value, target = request[j].value;
+                    switch (request[j].state){
+                        case Request::State::EQUAL:
+                            if (value == target){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        case Request::State::INCLUDED:
+                            if (value.find(target)){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        default: continue;
+                    }
+                }
+            }
+            if (j == properties.numberOfProperties - 1) {
+                printNote(noteProperties, i + 1);
+            }
+        }
+    }
 }
 
 void Table::addNote(vector<NoteValue> noteProperties) {
@@ -135,9 +212,8 @@ void Table::addNote(vector<NoteValue> noteProperties) {
     properties.numberOfNotes++;
     setProperties();
     getProperties();
+    cout << "line is added: " << endl;
 
-/*
     printHeader();
-    printNote(noteProperties, 1);
-    */
+    printNote(noteProperties, properties.numberOfNotes);
 }

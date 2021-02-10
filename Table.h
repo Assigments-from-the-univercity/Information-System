@@ -84,6 +84,8 @@ private:
 
     void writeNoteInFile(vector<NoteValue> noteProperties);
 
+    vector<NoteValue> readNextNote();
+
 public:
     char name[NAME_SIZE];
     TableProperties properties;
