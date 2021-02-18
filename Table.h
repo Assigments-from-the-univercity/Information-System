@@ -54,7 +54,7 @@ public:
             NOT_LESS,
             EQUAL,
             INCLUDED,
-            IGNORE
+            IGNORE_IT
         } state;
     };
 

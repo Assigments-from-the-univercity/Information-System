@@ -59,7 +59,7 @@ Table::Request::State Controller::getState(UserRequest userRequest) {
     } else if (userRequest.oper == "in") {
         return Table::Request::INCLUDED;
     } else {
-        return Table::Request::IGNORE;
+        return Table::Request::IGNORE_IT;
     }
 }
 
@@ -69,7 +69,7 @@ vector<Table::Request> Controller::makeRequest(vector<UserRequest> userRequest) 
     Table::Request mRequest;
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
         mRequest.value = "0";
-        mRequest.state = Table::Request::State::IGNORE;
+        mRequest.state = Table::Request::State::IGNORE_IT;
 
         for (int j = 0; j < userRequest.size(); ++j) {
             if (userRequest[j].name == table.properties.values[i].name) {
@@ -94,19 +94,19 @@ void Controller::addTable() {
     vector<string> values;
     vector<string> namesOfValues;
 
-    cout << "Введіть ім'я файлу: ";
+    cout << "Write a name of the file: ";
     cin >> fileName;
     cin.ignore(32767, '\n'); // удаляем символ новой строки из входного потока данных
-    cout << "Введіть опис файлу: ";
+    cout << "Write a description of the file: ";
     getline(cin, fileDescription);
-    cout << "Введіть кількість полів: ";
+    cout << "Write a number of fields in a file: ";
     cin >> numberOfProperties;
     string type;
     string nameOfType;
     for (int i = 0; i < numberOfProperties; ++i) {
-        cout << "Введіть ім'я " << (i + 1) << " поля: ";
+        cout << "Write a name of " << (i + 1) << " field: ";
         cin >> nameOfType;
-        cout << "Введіть тип " << (i + 1) << " поля: ";
+        cout << "Write a type of " << (i + 1) << " field: ";
         cin >> type;
         if (type == "string" || type == "double" || type == "date") {
             values.push_back(type);
@@ -152,9 +152,9 @@ void Controller::addNote() {
     Table::NoteValue noteValue;
     vector<Table::NoteValue> values;
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
-        cout << "Введіть значення поля ";
+        cout << "Write the value of the field ";
         cout << table.properties.values[i].name;
-        cout << " тип (";
+        cout << " type (";
         cout << Table::getTypeOfNote(table.properties.values[i].type);
         cout << "): ";
 
@@ -180,9 +180,9 @@ void Controller::changeNote() {
     Table::NoteValue noteValue;
     vector<Table::NoteValue> values;
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
-        cout << "Введіть значення поля ";
+        cout << "Write the value of the field ";
         cout << table.properties.values[i].name;
-        cout << " тип (";
+        cout << " type (";
         cout << Table::getTypeOfNote(table.properties.values[i].type);
         cout << "): ";
 

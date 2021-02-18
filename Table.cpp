@@ -191,7 +191,7 @@ void Table::printNotes(vector<Table::Request> request) {
         noteProperties = readNextNote();
         validNote = true;
         for (int j = 0; j < properties.numberOfProperties && validNote == true; ++j) {
-            if (request[j].state != Request::State::IGNORE) {
+            if (request[j].state != Request::State::IGNORE_IT) {
                 if (properties.values[j].type == TypeOfNote::DOUBLE) {
                     double value = stod(noteProperties[j].value), target = stod(request[j].value);
                     switch (request[j].state) {

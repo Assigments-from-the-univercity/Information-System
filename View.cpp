@@ -64,7 +64,7 @@ View::View() {
 
 void View::startWork() {
     string command;
-    cout << "Щоб завершити роботу введіть \"stop\"" << endl;
+    cout << "To stop the program write \"stop\"" << endl;
     do {
         printPath();
         cin >> command;
