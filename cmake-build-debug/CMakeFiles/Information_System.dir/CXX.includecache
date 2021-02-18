@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Controller.cpp
-Controller.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Controller.h
-
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Controller.h
 Manifest.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Manifest.h
@@ -32,21 +28,9 @@ Windows.h
 cstdio
 -
 
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Manifest.cpp
-Manifest.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Manifest.h
-
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Manifest.h
 Header.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Header.h
-
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Table.cpp
-Table.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Table.h
-iomanip
--
-string
--
 
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Table.h
 Header.h
@@ -61,8 +45,4 @@ Controller.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Controller.h
 Header.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Header.h
-
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/main.cpp
-View.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/View.h
 
