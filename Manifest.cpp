@@ -54,7 +54,9 @@ Manifest::Manifest() {
         refreshManifest();
 
         remove("tables");
-        std::filesystem::create_directory("tables");
+        //creating a folder for tables files
+        //std::filesystem::create_directory("tables");
+        mkdir("tables");
     }
     updateData();
 }
@@ -65,12 +67,12 @@ vector<Manifest::TableProperties> Manifest::getTables() {
 
 void Manifest::printTables() {
     int size = tables.size();
-    cout << "список доступних таблиць:" << endl;
+    cout << "The list of available tables:" << endl;
     for (int i = 0; i < size; i++) {
-        cout << "Ім'я: " << tables[i].name << "\nОпис: " << tables[i].description << endl << endl;
+        cout << "Name: " << tables[i].name << "\nDescription: " << tables[i].description << endl << endl;
     }
     if (size == 0) {
-        cout << "немає доступних таблиць." << endl;
+        cout << "There are no available tables" << endl;
     }
     cout << "hint: use \"cd <name of table>\" to go to the table." << endl;
 }

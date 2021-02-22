@@ -6,27 +6,43 @@
 
 #IncludeRegexTransform: 
 
-/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller.h
+Manifest.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Manifest.h
+Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+Table.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Table.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 iostream
 -
 vector
 -
 cstring
 -
-filesystem
+direct.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/direct.h
+Windows.h
 -
 cstdio
 -
 
-/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.cpp
-Table.h
-/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.h
-iomanip
--
-string
--
-
-/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Table.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Manifest.h
 Header.h
-/home/mark/CLionProjects/University/First Course/Second Semester/Module 1/Information System/Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Table.h
+Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View.cpp
+View.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View.h
+Controller.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller.h
+Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 

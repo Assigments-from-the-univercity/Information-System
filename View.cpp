@@ -9,7 +9,7 @@ void View::printPath() {
     for (int i = 0; i < size; ++i) {
         cout << userDirectory[i] << "/";
     }
-    cout << "> ";
+    cout << "> "; //TODO cout << "> "; - не выводит последний пробел
 }
 
 void View::userCommand(string command) {
@@ -64,7 +64,7 @@ View::View() {
 
 void View::startWork() {
     string command;
-    cout << "Щоб завершити роботу введіть \"stop\"" << endl;
+    cout << "To stop the program write \"stop\"" << endl;
     do {
         printPath();
         cin >> command;

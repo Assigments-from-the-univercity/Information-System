@@ -8,12 +8,17 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
-#include <filesystem>
+//#include <filesystem> this library isn`t working on Windows
+#include "direct.h"
+#include <Windows.h>
 #include <cstdio>
 
 
 using namespace std;
 
+/*
+ * Constants of sizes
+ */
 static const int INT_SIZE = 4;
 static const int NAME_SIZE = 20;
 static const int DESCRIPTION_SIZE = 100;
