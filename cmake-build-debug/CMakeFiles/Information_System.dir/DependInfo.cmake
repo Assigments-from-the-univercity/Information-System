@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Controller.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/Controller.cpp.obj"
-  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Manifest.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/Manifest.cpp.obj"
-  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/Table.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/Table.cpp.obj"
-  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/View.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/View.cpp.obj"
-  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/main.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/main.cpp.obj"
+  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/Controller.cpp.obj"
+  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Manifest.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/Manifest.cpp.obj"
+  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Table.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/Table.cpp.obj"
+  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/View.cpp.obj"
+  "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/main.cpp" "C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

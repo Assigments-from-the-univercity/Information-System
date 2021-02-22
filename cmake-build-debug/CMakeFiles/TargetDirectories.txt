@@ -1,3 +1,3 @@
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/3 Module/Information-System/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/Information_System.dir
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/cmake-build-debug/CMakeFiles/rebuild_cache.dir
