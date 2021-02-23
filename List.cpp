@@ -22,6 +22,31 @@ List::List(char value) {
     begin.setValue(value);
 }
 
+string List::get() {
+    string str;
+    Node *current = &begin;
+
+    str += current->getValue();
+    while (current->getNext() != nullptr) {
+        current = current->getNext();
+        str += current->getValue();
+    }
+
+    return str;
+}
+
+void List::put(string record) {
+    int legn = record.size();
+    change(0, record[0]);
+    for (int i = 1; i < legn; i++) {
+        add(record[i]);
+    }
+}
+
+int List::size() {
+    return numberOfElements() * sizeof(Node);
+}
+
 int List::numberOfElements() {
     Node *current = &begin;
     int size = 0;

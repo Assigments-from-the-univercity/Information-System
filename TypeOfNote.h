@@ -8,6 +8,8 @@
 #include "Header.h"
 
 class TypeOfNote {
+private:
+    string names[2] = {"DOUBLE", "STRING"};
 public:
     enum {
         DOUBLE,

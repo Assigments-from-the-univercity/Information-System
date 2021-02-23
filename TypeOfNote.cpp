@@ -4,3 +4,7 @@
 
 #include "Header.h"
 #include "TypeOfNote.h"
+
+string TypeOfNote::getType(int order) {
+    return names[order];
+}
