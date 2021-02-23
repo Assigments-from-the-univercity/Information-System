@@ -89,16 +89,40 @@
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h">
 			<Option target="Information_System"/>
 		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/List.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/List.h">
+			<Option target="Information_System"/>
+		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Manifest.cpp">
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Manifest.h">
 			<Option target="Information_System"/>
 		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Node.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Node.h">
+			<Option target="Information_System"/>
+		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Table.cpp">
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Table.h">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TableProperties.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TableProperties.h">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TypeOfNote.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TypeOfNote.h">
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View.cpp">
