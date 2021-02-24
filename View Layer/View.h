@@ -6,8 +6,8 @@
 #define INFORMATION_SYSTEM_VIEW_H
 
 
-#include "Controller.h"
-#include "Header.h"
+#include "../Controller Layer/Controller.h"
+#include "../Model Layer/Header.h"
 
 /**
  * This class represent the view layer.

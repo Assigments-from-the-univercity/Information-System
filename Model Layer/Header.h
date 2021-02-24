@@ -10,7 +10,7 @@
 #include <cstring>
 //#include <filesystem> this library isn`t working on Windows
 #include "direct.h"
-#include <Windows.h>
+#include <windows.h>
 #include <cstdio>
 
 

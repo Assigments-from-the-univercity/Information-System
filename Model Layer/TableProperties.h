@@ -6,15 +6,16 @@
 #define INFORMATION_SYSTEM_TABLEPROPERTIES_H
 
 #include "Header.h"
-#include "List.h"
-#include "TypeOfNote.h"
+#include "List/List.h"
+#include "../Basic Units/TypeOfNote.h"
 
 class TableProperties {
 public:
     List name;
+    List folder;
     List description;
-    int numberOfRecords;
-    int numberOfColumns;
+    int numberOfRecords = 0;
+    int numberOfColumns = 0;
     vector<TypeOfNote> typesOfColumns;
     vector<List> namesOfColumns;
 

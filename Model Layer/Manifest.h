@@ -6,6 +6,7 @@
 #define INFORMATION_SYSTEM_MANIFEST_H
 
 #include "Header.h"
+#include "FileWorker.h"
 
 /**
  * This class represent (a part of) the model layer.
@@ -20,16 +21,10 @@
  *  ...
  *  Sheet_i (TableProperties)
  */
-class Manifest {
-public:
-    struct TableProperties {
-        char name[NAME_SIZE];
-        char description[DESCRIPTION_SIZE];
-    };
-private:
-    const char *FILE_NAME = "manifest.dat";
-    FILE *fp;
+class Manifest : FileWorker {
+protected:
     vector<TableProperties> tables;
+
 
     /**
      * This method creates files <sheetName>.dat and <sheetName>-prop.dat
@@ -37,19 +32,19 @@ private:
      *
      * @param name The name of new table
      */
-    void createNewFiles(char name[NAME_SIZE]);
+    //void createNewFiles(char name[NAME_SIZE]);
 
     /**
      * This method make manifest.dat up-to-date.
      * (synchronize with "vector<TableProperties> tables")
      */
-    void refreshManifest();
+    void safeState();
 
     /**
      * This method make "vector<TableProperties> tables" up-to-date.
      * (synchronize with manifest.dat)
      */
-    void updateData();
+    void loadState();
 
 public:
     /**
@@ -62,12 +57,12 @@ public:
      *
      * @return all existing tables.
      */
-    vector<TableProperties> getTables();
+    //vector<TableProperties> getTables();
 
     /**
      * pring all tables in console.
      */
-    void printTables();
+    //void printTables();
 
     /**
      * This method adds a new table to manifest.dat
@@ -77,7 +72,7 @@ public:
      *
      * @param tableProperties properties of existing table
      */
-    void addTable(TableProperties tableProperties);
+    //void addTable(TableProperties tableProperties);
 };
 
 #endif //INFORMATION_SYSTEM_MANIFEST_H

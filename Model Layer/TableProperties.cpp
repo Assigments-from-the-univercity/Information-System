@@ -8,6 +8,7 @@
 void TableProperties::safeProperties(FILE *fp){
     rewind(fp);
     name.writeInFile(fp);
+    folder.writeInFile(fp);
     description.writeInFile(fp);
     fwrite(&numberOfRecords, INT_SIZE, 1, fp);
     fwrite(&numberOfColumns, INT_SIZE, 1, fp);
@@ -20,6 +21,7 @@ void TableProperties::safeProperties(FILE *fp){
 void TableProperties::loadProperties(FILE *fp){
     rewind(fp);
     name.readFromFile(fp);
+    folder.readFromFile(fp);
     description.readFromFile(fp);
     fread(&numberOfRecords, INT_SIZE, 1, fp);
     fread(&numberOfColumns, INT_SIZE, 1, fp);

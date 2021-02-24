@@ -9,7 +9,7 @@
 
 class TablePropertiesWorker : public FileWorker {
 public:
-    TablePropertiesWorker(string fileName) : FileWorker(fileName) {
+    TablePropertiesWorker(string fileName) : FileWorker(fileName, TABLE_FOLDER) {
         tableProperties.loadProperties(fp);
     }
 

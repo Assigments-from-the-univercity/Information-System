@@ -24,8 +24,6 @@ public:
 
     int size();
 
-    int numberOfElements();
-
     void copy(List list);
 
     bool isInList(char value);

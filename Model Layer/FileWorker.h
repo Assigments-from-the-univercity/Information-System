@@ -13,7 +13,11 @@ protected:
     FILE *fp;
 
 public:
-    FileWorker(string fleName);
+    FileWorker(string fileName, string fileFolder);
+
+    void openForReading();
+
+    void openForWriting();
 
     //FileWorker(TableProperties tableProperties);
 };

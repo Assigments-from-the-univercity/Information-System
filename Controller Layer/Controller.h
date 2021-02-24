@@ -6,9 +6,9 @@
 #define INFORMATION_SYSTEM_CONTROLLER_H
 
 
-#include "Manifest.h"
-#include "Header.h"
-#include "Table.h"
+#include "../Model Layer/Manifest.h"
+#include "../Model Layer/Header.h"
+#include "../Model Layer/Table.h"
 
 /**
  * This class represent the controller layer.
