@@ -5,21 +5,25 @@
 #ifndef INFORMATION_SYSTEM_FILEWORKER_H
 #define INFORMATION_SYSTEM_FILEWORKER_H
 
-#include "../../TableProperties.h"
+#include "../../Basic Units/List.h"
 
 class FileWorker {
-protected:
-    TableProperties tableProperties;
+private:
+    List name;
+    List folder;
     FILE *fp;
 
-public:
-    FileWorker(string fileName, string fileFolder);
+protected:
+    int numberOfRecords;
 
     void openForReading();
 
     void openForWriting();
 
-    //FileWorker(TableProperties tableProperties);
+    FILE *getFp();
+
+public:
+    FileWorker(string fileName, string fileFolder);
 };
 
 

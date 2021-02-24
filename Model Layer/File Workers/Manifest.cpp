@@ -5,50 +5,50 @@
 #include "Manifest.h"
 
 void Manifest::safeState() {
+    // I will use namesOfTables for standard
     openForWriting();
-    tableProperties.numberOfRecords = tables.size();
-    fwrite(&tableProperties.numberOfRecords, INT_SIZE, 1, fp);
-    for (int i = 0; i < tableProperties.numberOfRecords; ++i) {
-        fwrite(&tables[i], sizeof(TableProperties), 1, fp);
+    //numberOfRecords = namesOfTables.size();
+    fwrite(&numberOfRecords, INT_SIZE, 1, getFp());
+    for (int i = 0; i < numberOfRecords; ++i) {
+        fwrite(&namesOfTables[i], sizeof(List), 1, getFp());
+        fwrite(&descriptionsOfTables[i], sizeof(List), 1, getFp());
     }
-    fflush(fp);
+    fflush(getFp());
 }
 
 void Manifest::loadState() {
     openForReading();
-    fread(&tableProperties.numberOfRecords, INT_SIZE, 1, fp);
-    TableProperties table;
-    tables.clear();
-    for (int i = 0; i < size; ++i) {
-        fread(&table, sizeof(TableProperties), 1, fp);
-        tables.push_back(table);
+    fread(&numberOfRecords, INT_SIZE, 1, getFp());
+    List list;
+    for (int i = 0; i < numberOfRecords; ++i) {
+        fwrite(&list, sizeof(List), 1, getFp());
+        namesOfTables.push_back(list);
+        fwrite(&list, sizeof(List), 1, getFp());
+        descriptionsOfTables.push_back(list);
     }
 }
 
-Manifest::Manifest() : FileWorker("manifest.dat", "") {
-
+Manifest::Manifest() : FileWorker(MANIFEST_NAME, MANIFEST_FOLDER) {
+    loadState();
 }
 
-vector<TableProperties> Manifest::getTables() {
-    return tables;
-}
-
-void Manifest::printTables() {
-    int size = tables.size();
-    cout << "The list of available tables:" << endl;
-    for (int i = 0; i < size; i++) {
-        cout << "Name: " << tables[i].name << "\nDescription: " << tables[i].description << endl << endl;
+vector<string> Manifest::getTables() {
+    vector<string> tablesNames;
+    for (int i = 0; i < numberOfRecords; ++i) {
+        tablesNames.push_back(namesOfTables[i].get());
     }
-    if (size == 0) {
-        cout << "There are no available tables" << endl;
-    }
-    cout << "hint: use \"cd <name of table>\" to go to the table." << endl;
+    return tablesNames;
 }
 
-void Manifest::addTable(TableProperties tableProperties) {
-    tables.push_back(tableProperties);
+void Manifest::addTable(string fileName, string fileProperties) {
+    List list;
+
+    list.put(fileName);
+    namesOfTables.push_back(list);
+    list.put(fileProperties);
+    descriptionsOfTables.push_back(list);
+
+    numberOfRecords++;
 
     safeState();
-    loadState();
-    createNewFiles(tableProperties.name);
 }

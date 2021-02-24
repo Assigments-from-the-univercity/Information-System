@@ -5,14 +5,29 @@
 #include "../../Header.h"
 #include "TablePropertiesWorker.h"
 
-void TablePropertiesWorker::setProperties(TableProperties tableProperties) {
-    this->tableProperties = tableProperties;
+void TablePropertiesWorker::safeState() {
+
 }
 
-TableProperties TablePropertiesWorker::getProperties() {
-    return tableProperties;
+void TablePropertiesWorker::loadState() {
+
 }
 
-TablePropertiesWorker::~TablePropertiesWorker() {
-    tableProperties.safeProperties(fp);
+//TODO set correct path to file
+TablePropertiesWorker::TablePropertiesWorker(string fileName) : FileWorker(fileName, TABLES_FOLDER) {
+    loadState();
+}
+
+void TablePropertiesWorker::setProperties(int numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
+    this->numberOfColumns = numberOfColumns;
+    this->types = types;
+    this->names = names;
+
+    safeState();
+}
+
+void TablePropertiesWorker::getProperties(int &numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
+    numberOfColumns = this->numberOfColumns;
+    types = this->types;
+    names = this->names;
 }

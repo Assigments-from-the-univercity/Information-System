@@ -35,8 +35,12 @@ static const int DESCRIPTION_SIZE = 100;
 /**
  * STRING CONSTANTS
  */
- static const string TABLE_FOLDER = "tables";
- static const string REGIME_READEBLE = "r+b";
- static const string REGIME_WRITEBLE = "w+b";
+static const string TABLES_FOLDER = "../../Data/Tables";
+static const string MANIFEST_FOLDER = "../../Data";
+
+static const string MANIFEST_NAME = "manifest.dat";
+
+static const string REGIME_READEBLE = "r+b";
+static const string REGIME_WRITEBLE = "w+b";
 
 #endif //INFORMATION_SYSTEM_HEADER_H

@@ -6,18 +6,24 @@
 #define INFORMATION_SYSTEM_TABLEPROPERTIESWORKER_H
 
 #include "FileWorker.h"
+#include "../../Basic Units/TypeOfNote.h"
 
 class TablePropertiesWorker : public FileWorker {
+private:
+    int numberOfColumns;
+    vector<TypeOfNote> types;
+    vector<List> names;
+
+    void safeState();
+
+    void loadState();
+
 public:
-    TablePropertiesWorker(string fileName) : FileWorker(fileName, TABLE_FOLDER) {
-        tableProperties.loadProperties(fp);
-    }
+    TablePropertiesWorker(string fileName);
 
-    void setProperties(TableProperties tableProperties);
+    void setProperties(int numberOfColumns, vector<TypeOfNote> types, vector<List> names);
 
-    TableProperties getProperties();
-
-    ~TablePropertiesWorker();
+    void getProperties(int &numberOfColumns, vector<TypeOfNote> types, vector<List> names);
 };
 
 
