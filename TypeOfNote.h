@@ -17,6 +17,10 @@ public:
     } type;
 
     string getType(int order);
+
+    void writeInFile(FILE *fp);
+
+    void readFromFile(FILE *fp);
 };
 
 

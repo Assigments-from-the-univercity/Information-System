@@ -37,6 +37,10 @@ public:
     void change(int order, char newValue);
 
     void del(int order);
+
+    void readFromFile(FILE *fp);
+
+    void writeInFile(FILE *fp);
 };
 
 

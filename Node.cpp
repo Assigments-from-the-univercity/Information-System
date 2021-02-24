@@ -15,7 +15,7 @@ Node::Node(char value) {
     next = nullptr;
 }
 
-int Node::getValue() {
+char Node::getValue() {
     return value;
 }
 

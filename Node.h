@@ -15,7 +15,7 @@ public:
 
     Node(char value);
 
-    int getValue();
+    char getValue();
 
     void setValue(char value);
 

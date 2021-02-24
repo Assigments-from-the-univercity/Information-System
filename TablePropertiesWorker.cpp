@@ -5,14 +5,6 @@
 #include "Header.h"
 #include "TablePropertiesWorker.h"
 
-void TablePropertiesWorker::safeProperties() {
-
-}
-
-void TablePropertiesWorker::loadProperties() {
-
-}
-
 void TablePropertiesWorker::setProperties(TableProperties tableProperties) {
     this->tableProperties = tableProperties;
 }
@@ -22,5 +14,5 @@ TableProperties TablePropertiesWorker::getProperties() {
 }
 
 TablePropertiesWorker::~TablePropertiesWorker() {
-    safeProperties();
+    tableProperties.safeProperties(fp);
 }

@@ -160,3 +160,25 @@ void List::del(int order) {
 
     delete current;
 }
+
+void List::readFromFile(FILE *fp) {
+    Node *current = &begin;
+    Node node;
+
+    fread(&node, sizeof(Node), 1, fp);
+    *current = node;
+
+    while (node.getNext() != nullptr) {
+        fread(&node, sizeof(Node), 1, fp);
+        this->add(node.getValue());
+    }
+}
+
+void List::writeInFile(FILE *fp) {
+    Node *current = &begin;
+
+    do {
+        fwrite(current, sizeof(Node), 1, fp);
+        current = current->getNext();
+    } while (current->getNext() != nullptr);
+}

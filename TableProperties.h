@@ -17,6 +17,10 @@ public:
     int numberOfColumns;
     vector<TypeOfNote> typesOfColumns;
     vector<List> namesOfColumns;
+
+    void safeProperties(FILE *fp);
+
+    void loadProperties(FILE *fp);
 };
 
 

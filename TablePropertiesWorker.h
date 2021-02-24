@@ -8,14 +8,9 @@
 #include "FileWorker.h"
 
 class TablePropertiesWorker : public FileWorker {
-private:
-    void safeProperties();
-
-    void loadProperties();
-
 public:
     TablePropertiesWorker(string fileName) : FileWorker(fileName) {
-        loadProperties();
+        tableProperties.loadProperties(fp);
     }
 
     void setProperties(TableProperties tableProperties);
