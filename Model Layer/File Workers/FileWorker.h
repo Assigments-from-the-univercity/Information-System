@@ -5,7 +5,7 @@
 #ifndef INFORMATION_SYSTEM_FILEWORKER_H
 #define INFORMATION_SYSTEM_FILEWORKER_H
 
-#include "TableProperties.h"
+#include "../../TableProperties.h"
 
 class FileWorker {
 protected:

@@ -7,7 +7,7 @@
 
 #include "Header.h"
 #include "List/List.h"
-#include "../Basic Units/TypeOfNote.h"
+#include "Basic Units/TypeOfNote.h"
 
 class TableProperties {
 public:

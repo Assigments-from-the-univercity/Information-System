@@ -5,7 +5,7 @@
 #ifndef INFORMATION_SYSTEM_TABLE_H
 #define INFORMATION_SYSTEM_TABLE_H
 
-#include "Header.h"
+#include "../Header.h"
 
 static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
 

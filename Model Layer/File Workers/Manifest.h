@@ -5,7 +5,7 @@
 #ifndef INFORMATION_SYSTEM_MANIFEST_H
 #define INFORMATION_SYSTEM_MANIFEST_H
 
-#include "Header.h"
+#include "../../Header.h"
 #include "FileWorker.h"
 
 /**

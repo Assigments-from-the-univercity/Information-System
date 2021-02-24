@@ -3,7 +3,7 @@
 //
 
 #include "Node.h"
-#include "../Model Layer/Header.h"
+#include "../Header.h"
 
 Node::Node() {
     value = '\0';

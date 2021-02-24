@@ -80,43 +80,55 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller.cpp">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.cpp">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller.h">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/FileWorker.cpp">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.cpp">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/FileWorker.h">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h">
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/List.cpp">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/FileWorker.cpp">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/List.h">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/FileWorker.h">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Manifest.cpp">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/Manifest.cpp">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Manifest.h">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/Manifest.h">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Node.cpp">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/TablePropertiesWorker.cpp">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Node.h">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/TablePropertiesWorker.h">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Table.cpp">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.cpp">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Table.h">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h">
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TableProperties.cpp">
@@ -125,22 +137,10 @@
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TableProperties.h">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TablePropertiesWorker.cpp">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.cpp">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TablePropertiesWorker.h">
-			<Option target="Information_System"/>
-		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TypeOfNote.cpp">
-			<Option target="Information_System"/>
-		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TypeOfNote.h">
-			<Option target="Information_System"/>
-		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View.cpp">
-			<Option target="Information_System"/>
-		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View.h">
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h">
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/main.cpp">

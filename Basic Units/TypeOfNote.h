@@ -5,7 +5,7 @@
 #ifndef INFORMATION_SYSTEM_TYPEOFNOTE_H
 #define INFORMATION_SYSTEM_TYPEOFNOTE_H
 
-#include "../Model Layer/Header.h"
+#include "../Header.h"
 
 class TypeOfNote {
 private:
