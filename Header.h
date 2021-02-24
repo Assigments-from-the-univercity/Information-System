@@ -32,4 +32,11 @@ static const int DESCRIPTION_SIZE = 100;
     return newMessage;
 }*/
 
+/**
+ * STRING CONSTANTS
+ */
+ static const string TABLE_FOLDER = "tables";
+ static const string REGIME_READEBLE = "r+b";
+ static const string REGIME_WRITEBLE = "w+b";
+
 #endif //INFORMATION_SYSTEM_HEADER_H

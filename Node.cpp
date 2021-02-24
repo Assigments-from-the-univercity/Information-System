@@ -6,7 +6,7 @@
 #include "Header.h"
 
 Node::Node() {
-    value = 0;
+    value = '\0';
     next = nullptr;
 }
 

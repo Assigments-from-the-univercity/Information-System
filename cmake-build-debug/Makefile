@@ -169,6 +169,33 @@ Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller.cpp.s
 .PHONY : Controller.cpp.s
 
+FileWorker.obj: FileWorker.cpp.obj
+
+.PHONY : FileWorker.obj
+
+# target to build an object file
+FileWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/FileWorker.cpp.obj
+.PHONY : FileWorker.cpp.obj
+
+FileWorker.i: FileWorker.cpp.i
+
+.PHONY : FileWorker.i
+
+# target to preprocess a source file
+FileWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/FileWorker.cpp.i
+.PHONY : FileWorker.cpp.i
+
+FileWorker.s: FileWorker.cpp.s
+
+.PHONY : FileWorker.s
+
+# target to generate assembly for a file
+FileWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/FileWorker.cpp.s
+.PHONY : FileWorker.cpp.s
+
 List.obj: List.cpp.obj
 
 .PHONY : List.obj
@@ -304,6 +331,33 @@ TableProperties.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/TableProperties.cpp.s
 .PHONY : TableProperties.cpp.s
 
+TablePropertiesWorker.obj: TablePropertiesWorker.cpp.obj
+
+.PHONY : TablePropertiesWorker.obj
+
+# target to build an object file
+TablePropertiesWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/TablePropertiesWorker.cpp.obj
+.PHONY : TablePropertiesWorker.cpp.obj
+
+TablePropertiesWorker.i: TablePropertiesWorker.cpp.i
+
+.PHONY : TablePropertiesWorker.i
+
+# target to preprocess a source file
+TablePropertiesWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/TablePropertiesWorker.cpp.i
+.PHONY : TablePropertiesWorker.cpp.i
+
+TablePropertiesWorker.s: TablePropertiesWorker.cpp.s
+
+.PHONY : TablePropertiesWorker.s
+
+# target to generate assembly for a file
+TablePropertiesWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/TablePropertiesWorker.cpp.s
+.PHONY : TablePropertiesWorker.cpp.s
+
 TypeOfNote.obj: TypeOfNote.cpp.obj
 
 .PHONY : TypeOfNote.obj
@@ -397,6 +451,9 @@ help:
 	@echo ... Controller.obj
 	@echo ... Controller.i
 	@echo ... Controller.s
+	@echo ... FileWorker.obj
+	@echo ... FileWorker.i
+	@echo ... FileWorker.s
 	@echo ... List.obj
 	@echo ... List.i
 	@echo ... List.s
@@ -412,6 +469,9 @@ help:
 	@echo ... TableProperties.obj
 	@echo ... TableProperties.i
 	@echo ... TableProperties.s
+	@echo ... TablePropertiesWorker.obj
+	@echo ... TablePropertiesWorker.i
+	@echo ... TablePropertiesWorker.s
 	@echo ... TypeOfNote.obj
 	@echo ... TypeOfNote.i
 	@echo ... TypeOfNote.s

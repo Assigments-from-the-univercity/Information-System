@@ -1,10 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Information_System.dir/Controller.cpp.obj"
+  "CMakeFiles/Information_System.dir/FileWorker.cpp.obj"
   "CMakeFiles/Information_System.dir/List.cpp.obj"
   "CMakeFiles/Information_System.dir/Manifest.cpp.obj"
   "CMakeFiles/Information_System.dir/Node.cpp.obj"
   "CMakeFiles/Information_System.dir/Table.cpp.obj"
   "CMakeFiles/Information_System.dir/TableProperties.cpp.obj"
+  "CMakeFiles/Information_System.dir/TablePropertiesWorker.cpp.obj"
   "CMakeFiles/Information_System.dir/TypeOfNote.cpp.obj"
   "CMakeFiles/Information_System.dir/View.cpp.obj"
   "CMakeFiles/Information_System.dir/main.cpp.obj"
