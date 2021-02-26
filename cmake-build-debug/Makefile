@@ -250,6 +250,60 @@ Controller_Layer/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.s
 .PHONY : Controller_Layer/Controller.cpp.s
 
+Model_Layer/File_Workers/Data_Workers/TableDataWorker.obj: Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj
+
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableDataWorker.obj
+
+# target to build an object file
+Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj
+
+Model_Layer/File_Workers/Data_Workers/TableDataWorker.i: Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.i
+
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableDataWorker.i
+
+# target to preprocess a source file
+Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.i
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.i
+
+Model_Layer/File_Workers/Data_Workers/TableDataWorker.s: Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.s
+
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableDataWorker.s
+
+# target to generate assembly for a file
+Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.s
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.s
+
+Model_Layer/File_Workers/Data_Workers/TableNotes.obj: Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj
+
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableNotes.obj
+
+# target to build an object file
+Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj
+
+Model_Layer/File_Workers/Data_Workers/TableNotes.i: Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.i
+
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableNotes.i
+
+# target to preprocess a source file
+Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.i
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.i
+
+Model_Layer/File_Workers/Data_Workers/TableNotes.s: Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.s
+
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableNotes.s
+
+# target to generate assembly for a file
+Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.s
+.PHONY : Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.s
+
 Model_Layer/File_Workers/FileWorker.obj: Model_Layer/File_Workers/FileWorker.cpp.obj
 
 .PHONY : Model_Layer/File_Workers/FileWorker.obj
@@ -330,6 +384,33 @@ Model_Layer/File_Workers/TablePropertiesWorker.s: Model_Layer/File_Workers/Table
 Model_Layer/File_Workers/TablePropertiesWorker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.s
 .PHONY : Model_Layer/File_Workers/TablePropertiesWorker.cpp.s
+
+Model_Layer/Printer.obj: Model_Layer/Printer.cpp.obj
+
+.PHONY : Model_Layer/Printer.obj
+
+# target to build an object file
+Model_Layer/Printer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.obj
+.PHONY : Model_Layer/Printer.cpp.obj
+
+Model_Layer/Printer.i: Model_Layer/Printer.cpp.i
+
+.PHONY : Model_Layer/Printer.i
+
+# target to preprocess a source file
+Model_Layer/Printer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.i
+.PHONY : Model_Layer/Printer.cpp.i
+
+Model_Layer/Printer.s: Model_Layer/Printer.cpp.s
+
+.PHONY : Model_Layer/Printer.s
+
+# target to generate assembly for a file
+Model_Layer/Printer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.s
+.PHONY : Model_Layer/Printer.cpp.s
 
 Model_Layer/Table.obj: Model_Layer/Table.cpp.obj
 
@@ -460,6 +541,12 @@ help:
 	@echo ... Controller_Layer/Controller.obj
 	@echo ... Controller_Layer/Controller.i
 	@echo ... Controller_Layer/Controller.s
+	@echo ... Model_Layer/File_Workers/Data_Workers/TableDataWorker.obj
+	@echo ... Model_Layer/File_Workers/Data_Workers/TableDataWorker.i
+	@echo ... Model_Layer/File_Workers/Data_Workers/TableDataWorker.s
+	@echo ... Model_Layer/File_Workers/Data_Workers/TableNotes.obj
+	@echo ... Model_Layer/File_Workers/Data_Workers/TableNotes.i
+	@echo ... Model_Layer/File_Workers/Data_Workers/TableNotes.s
 	@echo ... Model_Layer/File_Workers/FileWorker.obj
 	@echo ... Model_Layer/File_Workers/FileWorker.i
 	@echo ... Model_Layer/File_Workers/FileWorker.s
@@ -469,6 +556,9 @@ help:
 	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.obj
 	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.i
 	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.s
+	@echo ... Model_Layer/Printer.obj
+	@echo ... Model_Layer/Printer.i
+	@echo ... Model_Layer/Printer.s
 	@echo ... Model_Layer/Table.obj
 	@echo ... Model_Layer/Table.i
 	@echo ... Model_Layer/Table.s

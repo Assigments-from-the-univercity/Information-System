@@ -13,7 +13,6 @@ void TablePropertiesWorker::loadState() {
 
 }
 
-//TODO set correct path to file
 TablePropertiesWorker::TablePropertiesWorker(string fileName) : FileWorker(fileName, TABLES_FOLDER) {
     loadState();
 }

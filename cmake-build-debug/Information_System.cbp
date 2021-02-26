@@ -107,6 +107,18 @@
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h">
 			<Option target="Information_System"/>
 		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/Data Workers/TableDataWorker.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/Data Workers/TableDataWorker.h">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/Data Workers/TableNotes.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/Data Workers/TableNotes.h">
+			<Option target="Information_System"/>
+		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/FileWorker.cpp">
 			<Option target="Information_System"/>
 		</Unit>
@@ -123,6 +135,12 @@
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/TablePropertiesWorker.h">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Printer.cpp">
+			<Option target="Information_System"/>
+		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Printer.h">
 			<Option target="Information_System"/>
 		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.cpp">
