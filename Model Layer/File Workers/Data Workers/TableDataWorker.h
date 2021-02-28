@@ -8,6 +8,7 @@
 #include "../../../Header.h" //если убрать, то конструктор базового класса не вызываеться. Почему???
 #include "../FileWorker.h"
 #include "../../../Basic Units/TypeOfNote.h"
+#include "../../../Basic Units/Request.h"
 
 class TableDataWorker : public FileWorker {
 protected:
@@ -19,7 +20,7 @@ public:
     TableDataWorker(string fileName, int numberOfRecords, int numberOfColumns,
                     vector<TypeOfNote> types, vector<List> names);
 
-    virtual vector<vector<string>> get(){}
+    virtual vector<vector<string>> get(vector<Request> request){}
 
     virtual void add(vector<string> recordsData){}
 

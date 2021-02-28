@@ -16,15 +16,21 @@ private:
 
     void renameTempFile();
 
+    vector<string> readNextRecord(FILE *fp);
+
+    void writeNextRecord(vector<string> recordData, FILE *fp);
+
+    bool isAppropriate(vector<string> recordData, vector<Request> request);
+
 public:
     TableNotes(string name, int numberOfRecords, int numberOfColumns,
                vector<TypeOfNote> types, vector<List> names);
 
-    vector<vector<string>> get();
+    vector<vector<string>> get(vector<Request> request);
 
-    void add(vector<string> recordsData);
+    void add(vector<string> recordData);
 
-    void change(vector<string> recordsData);
+    void change(vector<string> recordData);
 
     void deleteItem(string key);
 };
