@@ -17,7 +17,8 @@ TablePropertiesWorker::TablePropertiesWorker(string fileName) : FileWorker(fileN
     loadState();
 }
 
-void TablePropertiesWorker::setProperties(int numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
+void TablePropertiesWorker::setProperties(int numberOfRecords, int numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
+    this->numberOfRecords = numberOfRecords;
     this->numberOfColumns = numberOfColumns;
     this->types = types;
     this->names = names;
@@ -25,7 +26,8 @@ void TablePropertiesWorker::setProperties(int numberOfColumns, vector<TypeOfNote
     safeState();
 }
 
-void TablePropertiesWorker::getProperties(int &numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
+void TablePropertiesWorker::getProperties(int &numberOfRecords, int &numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
+    numberOfRecords = this->numberOfRecords;
     numberOfColumns = this->numberOfColumns;
     types = this->types;
     names = this->names;

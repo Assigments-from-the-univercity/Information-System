@@ -6,8 +6,10 @@
 #define INFORMATION_SYSTEM_TABLE_H
 
 #include "../Header.h"
+#include "File Workers/TablePropertiesWorker.h"
+#include "File Workers/Data Workers/TableDataWorker.h"
 
-static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
+//static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
 
 /**
  * This class represent (a part of) the model layer.
@@ -27,7 +29,27 @@ static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
  *  note_i (TableProperties)
  */
 class Table {
+private:
+    TablePropertiesWorker tablePropertiesWorker;
+    TableDataWorker *tableDataWorker;
+
+    int numberOfRecords;
+    int numberOfColumns;
+    vector<TypeOfNote> types;
+    vector<List> names;
+
 public:
+    Table(string tableName);
+
+    vector<vector<string>> get(vector<Request> request);
+
+    void add(vector<string> recordData);
+
+    void change(vector<string> recordData);
+
+    void deleteItem(string key);
+
+/*public:
     enum TypeOfNote {
         STRING,
         DOUBLE,
@@ -106,22 +128,16 @@ public:
 
     void printNotes(vector<Request> requestDouble);
 
-    void addNote(vector<NoteValue> noteProperties);
+    void addRecord(vector<NoteValue> noteProperties);
 
-    void deleteNote(int id);
+    void deleteRecord(int id);
 
-    void changeNote(vector<NoteValue> noteProperties, int id);
+    void changeRecord(vector<NoteValue> noteProperties, int id);
 
     static string getTypeOfNote(int index){
         return valueOfTypeOfNote[index];
     }
 
-    /**
-     * This method change table properties according to parameters.
-     *
-     * @param tableProperties Properties to apply
-     * @param name Name of changing file
-     */
     static void changeTableProperties(TableProperties tableProperties, char *name){
         string n1(name);
         string n = "tables/";
@@ -139,7 +155,7 @@ public:
         }
 
         fflush(fp1);
-    }
+    }*/
 };
 
 

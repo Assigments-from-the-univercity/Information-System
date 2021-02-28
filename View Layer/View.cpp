@@ -36,17 +36,17 @@ void View::userCommand(string command) {
         }
     } else if (userDirectory.size() == 2) {
         if (command == "ls") {
-            controller.lsNotes();
+            controller.lsRecords();
         } else if (command == "SELECT") {
-            controller.selectNotes();
+            controller.selectRecords();
         } else if (command == "add") {
-            controller.addNote();
+            controller.addRecord();
         } else if (command == "back" && userDirectory.size() == 2) {
             userDirectory.pop_back();
         } else if (command == "delete") {
-            controller.deleteNote();
+            controller.deleteRecord();
         } else if (command == "change") {
-            controller.changeNote();
+            controller.changeRecord();
         } else if (command == "stop") {
             cout << "program is stopped.";
             return;

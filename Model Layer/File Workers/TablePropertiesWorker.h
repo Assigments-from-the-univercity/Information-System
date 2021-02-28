@@ -21,9 +21,9 @@ private:
 public:
     TablePropertiesWorker(string fileName);
 
-    void setProperties(int numberOfColumns, vector<TypeOfNote> types, vector<List> names);
+    void setProperties(int numberOfRecords, int numberOfColumns, vector<TypeOfNote> types, vector<List> names);
 
-    void getProperties(int &numberOfColumns, vector<TypeOfNote> types, vector<List> names);
+    void getProperties(int &numberOfRecords, int &numberOfColumns, vector<TypeOfNote> types, vector<List> names);
 };
 
 

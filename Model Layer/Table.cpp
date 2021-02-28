@@ -3,6 +3,30 @@
 //
 
 #include "Table.h"
+
+Table::Table(string tableName) : tablePropertiesWorker(tableName) {
+    tablePropertiesWorker.getProperties(numberOfRecords, numberOfColumns, types, names);
+    static TableDataWorker tableDataWorker(tableName, numberOfRecords, numberOfColumns, types);
+    this->tableDataWorker = &tableDataWorker;
+}
+
+vector<vector<string>> Table::get(vector<Request> request) {
+    return tableDataWorker->get(request);
+}
+
+void Table::add(vector<string> recordData) {
+    tableDataWorker->add(recordData);
+}
+
+void Table::change(vector<string> recordData) {
+    tableDataWorker->change(recordData);
+}
+
+void Table::deleteItem(string key) {
+    tableDataWorker->deleteItem(key);
+}
+
+/*
 #include <iomanip>
 #include <string>
 
@@ -265,7 +289,7 @@ void Table::printNotes(vector<Table::Request> request) {
     }
 }
 
-void Table::addNote(vector<NoteValue> noteProperties) {
+void Table::addRecord(vector<NoteValue> noteProperties) {
     writeNoteInFile(noteProperties);
     properties.numberOfNotes++;
     setProperties();
@@ -276,7 +300,7 @@ void Table::addNote(vector<NoteValue> noteProperties) {
     printNote(noteProperties, properties.numberOfNotes);
 }
 
-void Table::deleteNote(int id) {
+void Table::deleteRecord(int id) {
     FILE *copyOfFp = fopen(TEMP_FILE, "w+b");
 
     rewind(fp);
@@ -297,7 +321,7 @@ void Table::deleteNote(int id) {
     getProperties();
 }
 
-void Table::changeNote(vector<NoteValue> noteProperties, int id) {
+void Table::changeRecord(vector<NoteValue> noteProperties, int id) {
     FILE *copyOfFp = fopen(TEMP_FILE, "w+b");
 
     rewind(fp);
@@ -313,4 +337,4 @@ void Table::changeNote(vector<NoteValue> noteProperties, int id) {
     deleteTableFile();
     renameTempFile();
     openFpForReading();
-}
+}*/

@@ -5,8 +5,8 @@
 #include "TableNotes.h"
 
 TableNotes::TableNotes(string name, int numberOfRecords, int numberOfColumns,
-                       vector<TypeOfNote> types, vector<List> names)
-        : TableDataWorker(name, numberOfRecords, numberOfColumns, types, names) {}
+                       vector<TypeOfNote> types)
+        : TableDataWorker(name, numberOfRecords, numberOfColumns, types) {}
 
 vector<vector<string>> TableNotes::get(vector<Request> request) {
     vector<string> recordData;

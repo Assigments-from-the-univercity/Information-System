@@ -14,11 +14,10 @@ class TableDataWorker : public FileWorker {
 protected:
     int numberOfColumns;
     vector<TypeOfNote> types;
-    vector<List> names;
 
 public:
     TableDataWorker(string fileName, int numberOfRecords, int numberOfColumns,
-                    vector<TypeOfNote> types, vector<List> names);
+                    vector<TypeOfNote> types);
 
     virtual vector<vector<string>> get(vector<Request> request){}
 

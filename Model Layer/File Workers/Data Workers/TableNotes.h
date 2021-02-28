@@ -24,7 +24,7 @@ private:
 
 public:
     TableNotes(string name, int numberOfRecords, int numberOfColumns,
-               vector<TypeOfNote> types, vector<List> names);
+               vector<TypeOfNote> types);
 
     vector<vector<string>> get(vector<Request> request);
 

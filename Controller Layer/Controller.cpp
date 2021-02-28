@@ -4,6 +4,43 @@
 
 #include "Controller.h"
 
+Controller::Controller() : manifest() {
+
+}
+
+void Controller::lsTable() {
+
+}
+
+void Controller::addTable() {
+
+}
+
+void Controller::cd(string tableName) {
+    static Table table(tableName);
+    this->table = &table;
+}
+
+void Controller::lsRecords() {
+
+}
+
+void Controller::selectRecords() {
+
+}
+
+void Controller::addRecord() {
+
+}
+
+void Controller::deleteRecord() {
+
+}
+
+void Controller::changeRecord() {
+
+}
+/*
 Manifest::TableProperties Controller::toTableProperties(string fileName, string fileDescription) {
     Manifest::TableProperties newTable;
 
@@ -126,13 +163,13 @@ void Controller::cd(char tableName[NAME_SIZE]) {
     table.setTable(tableName);
 }
 
-void Controller::lsNotes() {
+void Controller::lsRecords() {
     vector<UserRequest> userRequest;
     vector<Table::Request> request = makeRequest(userRequest);
     table.printNotes(request);
 }
 
-void Controller::selectNotes() {
+void Controller::selectRecords() {
     vector<Table::Request> request;
     vector<UserRequest> userRequest;
 
@@ -148,7 +185,7 @@ void Controller::selectNotes() {
     table.printNotes(request);
 }
 
-void Controller::addNote() {
+void Controller::addRecord() {
     Table::NoteValue noteValue;
     vector<Table::NoteValue> values;
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
@@ -166,14 +203,14 @@ void Controller::addNote() {
     table.addNote(values);
 }
 
-void Controller::deleteNote() {
+void Controller::deleteRecord() {
     int id;
     cin >> id;
 
     table.deleteNote(id - 1);
 }
 
-void Controller::changeNote() {
+void Controller::changeRecord() {
     int id;
     cin >> id;
 
@@ -192,4 +229,4 @@ void Controller::changeNote() {
     }
 
     table.changeNote(values, id - 1);
-}
+}*/
