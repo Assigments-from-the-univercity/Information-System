@@ -22,9 +22,11 @@ protected:
 
     FILE *getFp();
 
-    void virtual safeState(){}
+    string getName();
 
-    void virtual loadState(){}
+    /*void virtual safeState();
+
+    void virtual loadState();*/
 
 public:
     FileWorker(string fileName, string fileFolder);

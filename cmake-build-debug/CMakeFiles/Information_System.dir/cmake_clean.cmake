@@ -10,7 +10,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj"
   "CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.obj"
   "CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj"
-  "CMakeFiles/Information_System.dir/TableProperties.cpp.obj"
   "CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj"
   "CMakeFiles/Information_System.dir/main.cpp.obj"
   "Information_System.exe"

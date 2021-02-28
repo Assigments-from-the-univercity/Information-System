@@ -167,22 +167,9 @@ CMakeFiles/Information_System.dir/Basic_Units/List.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/List.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\List.cpp.s
 
-CMakeFiles/Information_System.dir/TableProperties.cpp.obj: CMakeFiles/Information_System.dir/flags.make
-CMakeFiles/Information_System.dir/TableProperties.cpp.obj: ../TableProperties.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Information_System.dir/TableProperties.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\TableProperties.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\TableProperties.cpp"
-
-CMakeFiles/Information_System.dir/TableProperties.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/TableProperties.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\TableProperties.cpp" > CMakeFiles\Information_System.dir\TableProperties.cpp.i
-
-CMakeFiles/Information_System.dir/TableProperties.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/TableProperties.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\TableProperties.cpp" -o CMakeFiles\Information_System.dir\TableProperties.cpp.s
-
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: ../Basic\ Units/TypeOfNote.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\TypeOfNote.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\TypeOfNote.cpp"
 
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.i: cmake_force
@@ -195,7 +182,7 @@ CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.s: cmake_force
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Model_Layer\File_Workers\FileWorker.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Model Layer\File Workers\FileWorker.cpp"
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.i: cmake_force
@@ -208,7 +195,7 @@ CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.s: cma
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Model\ Layer/File\ Workers/TablePropertiesWorker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Model_Layer\File_Workers\TablePropertiesWorker.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Model Layer\File Workers\TablePropertiesWorker.cpp"
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.i: cmake_force
@@ -221,7 +208,7 @@ CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj: ../Model\ Layer/File\ Workers/Data\ Workers/TableDataWorker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Model_Layer\File_Workers\Data_Workers\TableDataWorker.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Model Layer\File Workers\Data Workers\TableDataWorker.cpp"
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.i: cmake_force
@@ -234,7 +221,7 @@ CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableDat
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj: ../Model\ Layer/File\ Workers/Data\ Workers/TableNotes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Model_Layer\File_Workers\Data_Workers\TableNotes.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Model Layer\File Workers\Data Workers\TableNotes.cpp"
 
 CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNotes.cpp.i: cmake_force
@@ -247,7 +234,7 @@ CMakeFiles/Information_System.dir/Model_Layer/File_Workers/Data_Workers/TableNot
 
 CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.obj: ../Model\ Layer/Printer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Model_Layer\Printer.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Model Layer\Printer.cpp"
 
 CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.i: cmake_force
@@ -267,7 +254,6 @@ Information_System_OBJECTS = \
 "CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj" \
-"CMakeFiles/Information_System.dir/TableProperties.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj" \
 "CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj" \
 "CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj" \
@@ -285,7 +271,6 @@ Information_System.exe: CMakeFiles/Information_System.dir/Model_Layer/File_Worke
 Information_System.exe: CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj
-Information_System.exe: CMakeFiles/Information_System.dir/TableProperties.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj
@@ -296,7 +281,7 @@ Information_System.exe: CMakeFiles/Information_System.dir/build.make
 Information_System.exe: CMakeFiles/Information_System.dir/linklibs.rsp
 Information_System.exe: CMakeFiles/Information_System.dir/objects1.rsp
 Information_System.exe: CMakeFiles/Information_System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Information_System.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Information_System.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Information_System.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

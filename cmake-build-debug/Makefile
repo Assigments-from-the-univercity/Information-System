@@ -439,33 +439,6 @@ Model_Layer/Table.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.s
 .PHONY : Model_Layer/Table.cpp.s
 
-TableProperties.obj: TableProperties.cpp.obj
-
-.PHONY : TableProperties.obj
-
-# target to build an object file
-TableProperties.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/TableProperties.cpp.obj
-.PHONY : TableProperties.cpp.obj
-
-TableProperties.i: TableProperties.cpp.i
-
-.PHONY : TableProperties.i
-
-# target to preprocess a source file
-TableProperties.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/TableProperties.cpp.i
-.PHONY : TableProperties.cpp.i
-
-TableProperties.s: TableProperties.cpp.s
-
-.PHONY : TableProperties.s
-
-# target to generate assembly for a file
-TableProperties.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/TableProperties.cpp.s
-.PHONY : TableProperties.cpp.s
-
 View_Layer/View.obj: View_Layer/View.cpp.obj
 
 .PHONY : View_Layer/View.obj
@@ -562,9 +535,6 @@ help:
 	@echo ... Model_Layer/Table.obj
 	@echo ... Model_Layer/Table.i
 	@echo ... Model_Layer/Table.s
-	@echo ... TableProperties.obj
-	@echo ... TableProperties.i
-	@echo ... TableProperties.s
 	@echo ... View_Layer/View.obj
 	@echo ... View_Layer/View.i
 	@echo ... View_Layer/View.s

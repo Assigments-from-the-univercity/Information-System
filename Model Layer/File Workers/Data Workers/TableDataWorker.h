@@ -5,22 +5,27 @@
 #ifndef INFORMATION_SYSTEM_TABLEDATAWORKER_H
 #define INFORMATION_SYSTEM_TABLEDATAWORKER_H
 
-
+#include "../../../Header.h" //если убрать, то конструктор базового класса не вызываеться. Почему???
 #include "../FileWorker.h"
 #include "../../../Basic Units/TypeOfNote.h"
 
-class TableDataWorker : FileWorker {
+class TableDataWorker : public FileWorker {
 protected:
     int numberOfColumns;
     vector<TypeOfNote> types;
     vector<List> names;
 
 public:
-    void virtual add(vector<string> recordsData){}
+    TableDataWorker(string fileName, int numberOfRecords, int numberOfColumns,
+                    vector<TypeOfNote> types, vector<List> names);
 
-    void virtual change(vector<string> recordsData){}
+    virtual vector<vector<string>> get(){}
 
-    void virtual deleteItem(string key){}
+    virtual void add(vector<string> recordsData){}
+
+    virtual void change(vector<string> recordsData){}
+
+    virtual void deleteItem(string key){}
 };
 
 

@@ -28,3 +28,7 @@ void FileWorker::openForWriting() {
 FILE *FileWorker::getFp() {
     return fp;
 }
+
+string FileWorker::getName() {
+    return name.get();
+}

@@ -9,11 +9,18 @@
 #include "TableDataWorker.h"
 
 class TableNotes : TableDataWorker {
+private:
+    const string TEMP_FILE_NAME = "Data/Tables/tempCopy.dat";
+
+    void deleteTableFile();
+
+    void renameTempFile();
+
 public:
-    TableNotes(List name, List folder, int NumberOfRecords, int NumberOfColumns,
+    TableNotes(string name, int numberOfRecords, int numberOfColumns,
                vector<TypeOfNote> types, vector<List> names);
 
-    vector<vector<string>> getNext();
+    vector<vector<string>> get();
 
     void add(vector<string> recordsData);
 

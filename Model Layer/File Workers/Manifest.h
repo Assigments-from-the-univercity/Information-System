@@ -21,7 +21,7 @@
  *  ...
  *  Sheet_i (TableProperties)
  */
-class Manifest : FileWorker {
+class Manifest : public FileWorker {
 private:
     vector<List> namesOfTables;
     vector<List> descriptionsOfTables;

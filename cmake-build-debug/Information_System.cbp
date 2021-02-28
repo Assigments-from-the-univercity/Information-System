@@ -149,12 +149,6 @@
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h">
 			<Option target="Information_System"/>
 		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TableProperties.cpp">
-			<Option target="Information_System"/>
-		</Unit>
-		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/TableProperties.h">
-			<Option target="Information_System"/>
-		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.cpp">
 			<Option target="Information_System"/>
 		</Unit>
