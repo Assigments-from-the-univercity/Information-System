@@ -250,6 +250,33 @@ Controller_Layer/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.s
 .PHONY : Controller_Layer/Controller.cpp.s
 
+Controller_Layer/Printer.obj: Controller_Layer/Printer.cpp.obj
+
+.PHONY : Controller_Layer/Printer.obj
+
+# target to build an object file
+Controller_Layer/Printer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Printer.cpp.obj
+.PHONY : Controller_Layer/Printer.cpp.obj
+
+Controller_Layer/Printer.i: Controller_Layer/Printer.cpp.i
+
+.PHONY : Controller_Layer/Printer.i
+
+# target to preprocess a source file
+Controller_Layer/Printer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Printer.cpp.i
+.PHONY : Controller_Layer/Printer.cpp.i
+
+Controller_Layer/Printer.s: Controller_Layer/Printer.cpp.s
+
+.PHONY : Controller_Layer/Printer.s
+
+# target to generate assembly for a file
+Controller_Layer/Printer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Printer.cpp.s
+.PHONY : Controller_Layer/Printer.cpp.s
+
 Model_Layer/File_Workers/Data_Workers/TableDataWorker.obj: Model_Layer/File_Workers/Data_Workers/TableDataWorker.cpp.obj
 
 .PHONY : Model_Layer/File_Workers/Data_Workers/TableDataWorker.obj
@@ -385,33 +412,6 @@ Model_Layer/File_Workers/TablePropertiesWorker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.s
 .PHONY : Model_Layer/File_Workers/TablePropertiesWorker.cpp.s
 
-Model_Layer/Printer.obj: Model_Layer/Printer.cpp.obj
-
-.PHONY : Model_Layer/Printer.obj
-
-# target to build an object file
-Model_Layer/Printer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.obj
-.PHONY : Model_Layer/Printer.cpp.obj
-
-Model_Layer/Printer.i: Model_Layer/Printer.cpp.i
-
-.PHONY : Model_Layer/Printer.i
-
-# target to preprocess a source file
-Model_Layer/Printer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.i
-.PHONY : Model_Layer/Printer.cpp.i
-
-Model_Layer/Printer.s: Model_Layer/Printer.cpp.s
-
-.PHONY : Model_Layer/Printer.s
-
-# target to generate assembly for a file
-Model_Layer/Printer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Printer.cpp.s
-.PHONY : Model_Layer/Printer.cpp.s
-
 Model_Layer/Table.obj: Model_Layer/Table.cpp.obj
 
 .PHONY : Model_Layer/Table.obj
@@ -514,6 +514,9 @@ help:
 	@echo ... Controller_Layer/Controller.obj
 	@echo ... Controller_Layer/Controller.i
 	@echo ... Controller_Layer/Controller.s
+	@echo ... Controller_Layer/Printer.obj
+	@echo ... Controller_Layer/Printer.i
+	@echo ... Controller_Layer/Printer.s
 	@echo ... Model_Layer/File_Workers/Data_Workers/TableDataWorker.obj
 	@echo ... Model_Layer/File_Workers/Data_Workers/TableDataWorker.i
 	@echo ... Model_Layer/File_Workers/Data_Workers/TableDataWorker.s
@@ -529,9 +532,6 @@ help:
 	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.obj
 	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.i
 	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.s
-	@echo ... Model_Layer/Printer.obj
-	@echo ... Model_Layer/Printer.i
-	@echo ... Model_Layer/Printer.s
 	@echo ... Model_Layer/Table.obj
 	@echo ... Model_Layer/Table.i
 	@echo ... Model_Layer/Table.s

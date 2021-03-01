@@ -5,13 +5,14 @@
 #include "Manifest.h"
 
 void Manifest::safeState() {
-    // I will use namesOfTables for standard
     openForWriting();
-    //numberOfRecords = namesOfTables.size();
     fwrite(&numberOfRecords, INT_SIZE, 1, getFp());
     for (int i = 0; i < numberOfRecords; ++i) {
-        fwrite(&namesOfTables[i], sizeof(List), 1, getFp());
-        fwrite(&descriptionsOfTables[i], sizeof(List), 1, getFp());
+        //fwrite(&namesOfTables[i], sizeof(List), 1, getFp());
+        //fwrite(&descriptionsOfTables[i], sizeof(List), 1, getFp());
+
+        namesOfTables[i].writeInFile(getFp());
+        descriptionsOfTables[i].writeInFile(getFp());
     }
     fflush(getFp());
 }
@@ -21,9 +22,9 @@ void Manifest::loadState() {
     fread(&numberOfRecords, INT_SIZE, 1, getFp());
     List list;
     for (int i = 0; i < numberOfRecords; ++i) {
-        fwrite(&list, sizeof(List), 1, getFp());
+        fread(&list, sizeof(List), 1, getFp());
         namesOfTables.push_back(list);
-        fwrite(&list, sizeof(List), 1, getFp());
+        fread(&list, sizeof(List), 1, getFp());
         descriptionsOfTables.push_back(list);
     }
 }

@@ -16,12 +16,12 @@ FileWorker::FileWorker(string fileName, string fileFolder) {
 }
 
 void FileWorker::openForReading() {
-    string filePath = folder.get() + '/' + name.get();
+    string filePath = folder.get() + '/' + name.get() + "dat";
     fp = fopen(filePath.c_str(), REGIME_WRITEBLE.c_str());
 }
 
 void FileWorker::openForWriting() {
-    string filePath = folder.get() + '/' + name.get();
+    string filePath = folder.get() + '/' + name.get() + "dat";
     fp = fopen(filePath.c_str(), REGIME_WRITEBLE.c_str());
 }
 
