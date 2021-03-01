@@ -20,13 +20,15 @@ private:
 
     void writeNextRecord(vector<string> recordData, FILE *fp);
 
+    void writeNextRecordInCSV(vector<string> recordData, ofstream &fout);
+
     bool isAppropriate(vector<string> recordData, vector<Request> request);
 
 public:
     TableNotes(string name, int numberOfRecords, int numberOfColumns,
                vector<TypeOfNote> types);
 
-    vector<vector<string>> get(vector<Request> request);
+    FILE* get(vector<Request> request);
 
     void add(vector<string> recordData);
 

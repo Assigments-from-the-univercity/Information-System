@@ -19,7 +19,7 @@ public:
     TableDataWorker(string fileName, int numberOfRecords, int numberOfColumns,
                     vector<TypeOfNote> types);
 
-    virtual vector<vector<string>> get(vector<Request> request){}
+    virtual FILE* get(vector<Request> request){}
 
     virtual void add(vector<string> recordsData){}
 

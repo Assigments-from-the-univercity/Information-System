@@ -2,22 +2,28 @@
 // Created by Mark on 26.02.2021.
 //
 
+#include <fstream>
 #include "TableNotes.h"
 
 TableNotes::TableNotes(string name, int numberOfRecords, int numberOfColumns,
                        vector<TypeOfNote> types)
         : TableDataWorker(name, numberOfRecords, numberOfColumns, types) {}
 
-vector<vector<string>> TableNotes::get(vector<Request> request) {
+FILE* TableNotes::get(vector<Request> request) {
     vector<string> recordData;
-    vector<vector<string>> result;
+    //vector<vector<string>> result;
+    //FILE *queryFp =
+    ofstream fout("Data/query.csv");
 
     for (int i = 0; i < numberOfRecords; ++i) {
         recordData = readNextRecord(getFp());
         if (isAppropriate(recordData, request)) {
-            result.push_back(recordData);
+            //result.push_back(recordData);
+            writeNextRecordInCSV(recordData, fout);
         }
     }
+
+    return fopen("Data/query.csv", "w+");
 }
 
 void TableNotes::add(vector<string> recordData) {
@@ -93,6 +99,13 @@ void TableNotes::writeNextRecord(vector<string> recordData, FILE *fp) {
         list.put(recordData[i]);
         list.writeInFile(fp);
     }
+}
+
+void TableNotes::writeNextRecordInCSV(vector<string> recordData, ofstream &fout) {
+    for (int i = 0; i < numberOfColumns; ++i) {
+        fout << recordData[i] << ';';
+    }
+    fout << endl;
 }
 
 bool TableNotes::isAppropriate(vector<string> recordData, vector<Request> request) {
