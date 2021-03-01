@@ -23,7 +23,7 @@ public:
 
     void setProperties(int numberOfRecords, int numberOfColumns, vector<TypeOfNote> types, vector<List> names);
 
-    void getProperties(int &numberOfRecords, int &numberOfColumns, vector<TypeOfNote> types, vector<List> names);
+    void getProperties(int &numberOfRecords, int &numberOfColumns, vector<TypeOfNote> &types, vector<List> &names);
 };
 
 

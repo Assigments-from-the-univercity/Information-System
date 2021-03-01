@@ -5,8 +5,8 @@
 #ifndef INFORMATION_SYSTEM_MANIFEST_H
 #define INFORMATION_SYSTEM_MANIFEST_H
 
-#include "../../Header.h"
-#include "FileWorker.h"
+#include "../Header.h"
+#include "../Model Layer/File Workers/FileWorker.h"
 
 /**
  * This class represent (a part of) the model layer.

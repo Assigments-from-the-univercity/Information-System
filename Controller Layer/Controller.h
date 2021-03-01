@@ -6,7 +6,7 @@
 #define INFORMATION_SYSTEM_CONTROLLER_H
 
 
-#include "../Model Layer/File Workers/Manifest.h"
+#include "Manifest.h"
 #include "../Header.h"
 #include "../Model Layer/Table.h"
 

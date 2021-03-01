@@ -10,7 +10,7 @@ Table::Table(string tableName) : tablePropertiesWorker(tableName) {
     this->tableDataWorker = &tableDataWorker;
 }
 
-vector<vector<string>> Table::get(vector<Request> request) {
+ofstream* Table::get(vector<Request> request) {
     return tableDataWorker->get(request);
 }
 

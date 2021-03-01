@@ -12,6 +12,7 @@
 #include "direct.h"
 #include <windows.h>
 #include <cstdio>
+#include <fstream>
 
 
 using namespace std;
@@ -35,8 +36,8 @@ static const int DESCRIPTION_SIZE = 100;
 /**
  * STRING CONSTANTS
  */
-static const string TABLES_FOLDER = "../../Data/Tables";
-static const string MANIFEST_FOLDER = "../../Data";
+static const string TABLES_FOLDER = "Data\\Tables\\";
+static const string MANIFEST_FOLDER = "Data\\";
 
 static const string MANIFEST_NAME = "manifest.dat";
 

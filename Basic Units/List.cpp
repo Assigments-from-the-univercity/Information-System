@@ -36,7 +36,11 @@ string List::get() {
 }
 
 void List::put(string record) {
-    int legn = record.size();
+    int legn = record.size(), thisSize = size();
+    for (int i = 1; i < thisSize; --thisSize) {
+        //change(i, record[i]);
+        del(i);
+    }
     change(0, record[0]);
     for (int i = 1; i < legn; i++) {
         add(record[i]);

@@ -24,10 +24,6 @@ protected:
 
     string getName();
 
-    /*void virtual safeState();
-
-    void virtual loadState();*/
-
 public:
     FileWorker(string fileName, string fileFolder);
 };

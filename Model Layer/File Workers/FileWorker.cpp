@@ -16,13 +16,13 @@ FileWorker::FileWorker(string fileName, string fileFolder) {
 }
 
 void FileWorker::openForReading() {
-    string filePath = folder.get() + '/' + name.get() + "dat";
-    fp = fopen(filePath.c_str(), REGIME_WRITEBLE.c_str());
+    string filePath = folder.get() + name.get();
+    fp = fopen(filePath.c_str(), "r+b");
 }
 
 void FileWorker::openForWriting() {
-    string filePath = folder.get() + '/' + name.get() + "dat";
-    fp = fopen(filePath.c_str(), REGIME_WRITEBLE.c_str());
+    string filePath = folder.get() + name.get();
+    fp = fopen(filePath.c_str(), "w+b");
 }
 
 FILE *FileWorker::getFp() {

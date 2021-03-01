@@ -7,7 +7,7 @@
 
 #include "../Header.h"
 #include "File Workers/TablePropertiesWorker.h"
-#include "File Workers/Data Workers/TableDataWorker.h"
+#include "File Workers/TableDataWorker.h"
 
 //static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
 
@@ -41,7 +41,7 @@ private:
 public:
     Table(string tableName);
 
-    vector<vector<string>> get(vector<Request> request);
+    ofstream* get(vector<Request> request);
 
     void add(vector<string> recordData);
 

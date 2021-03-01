@@ -27,8 +27,10 @@ void TablePropertiesWorker::loadState() {
     fflush(getFp());
 }
 
-TablePropertiesWorker::TablePropertiesWorker(string fileName) : FileWorker(fileName + "dat", TABLES_FOLDER) {
-    loadState();
+TablePropertiesWorker::TablePropertiesWorker(string fileName) : FileWorker(fileName + ".dat", "Data\\Tables\\") {
+    if (numberOfColumns != 0){
+        loadState();
+    }
 }
 
 void TablePropertiesWorker::setProperties(int numberOfRecords, int numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
@@ -40,7 +42,7 @@ void TablePropertiesWorker::setProperties(int numberOfRecords, int numberOfColum
     safeState();
 }
 
-void TablePropertiesWorker::getProperties(int &numberOfRecords, int &numberOfColumns, vector<TypeOfNote> types, vector<List> names) {
+void TablePropertiesWorker::getProperties(int &numberOfRecords, int &numberOfColumns, vector<TypeOfNote> &types, vector<List> &names) {
     numberOfRecords = this->numberOfRecords;
     numberOfColumns = this->numberOfColumns;
     types = this->types;

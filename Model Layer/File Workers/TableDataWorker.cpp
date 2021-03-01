@@ -2,37 +2,37 @@
 // Created by Mark on 26.02.2021.
 //
 
-#include <fstream>
-#include "TableNotes.h"
+#include "TableDataWorker.h"
 
-TableNotes::TableNotes(string name, int numberOfRecords, int numberOfColumns,
-                       vector<TypeOfNote> types)
-        : TableDataWorker(name, numberOfRecords, numberOfColumns, types) {}
+TableDataWorker::TableDataWorker(string fileName, int numberOfRecords, int numberOfColumns,
+                                 vector<TypeOfNote> types)
+                                 : FileWorker(fileName, TABLES_FOLDER) {
+    this->numberOfRecords = numberOfRecords;
+    this->numberOfColumns = numberOfColumns;
+    this->types = types;
+}
 
-FILE* TableNotes::get(vector<Request> request) {
+std::ofstream* TableDataWorker::get(vector<Request> request) {
     vector<string> recordData;
-    //vector<vector<string>> result;
-    //FILE *queryFp =
     ofstream fout("Data/query.csv");
 
     for (int i = 0; i < numberOfRecords; ++i) {
         recordData = readNextRecord(getFp());
         if (isAppropriate(recordData, request)) {
-            //result.push_back(recordData);
             writeNextRecordInCSV(recordData, fout);
         }
     }
 
-    return fopen("Data/query.csv", "w+");
+    return &fout;
 }
 
-void TableNotes::add(vector<string> recordData) {
+void TableDataWorker::add(vector<string> recordData) {
     openForReading();
     writeNextRecord(recordData, getFp());
     numberOfRecords++;
 }
 
-void TableNotes::change(vector<string> recordData) {
+void TableDataWorker::change(vector<string> recordData) {
     openForWriting();
     FILE *fpOfCopy = fopen(TEMP_FILE_NAME.c_str(), "w+b");
     vector<string> temporaryRecordData;
@@ -51,7 +51,7 @@ void TableNotes::change(vector<string> recordData) {
     openForReading();
 }
 
-void TableNotes::deleteItem(string key) {
+void TableDataWorker::deleteItem(string key) {
     openForWriting();
     FILE *fpOfCopy = fopen(TEMP_FILE_NAME.c_str(), "w+b");
     vector<string> temporaryRecordData;
@@ -70,17 +70,17 @@ void TableNotes::deleteItem(string key) {
     numberOfRecords--;
 }
 
-void TableNotes::deleteTableFile() {
+void TableDataWorker::deleteTableFile() {
     string oldFile = "Data/Tables/" + getName() + ".dat";
     remove(oldFile.c_str());
 }
 
-void TableNotes::renameTempFile() {
+void TableDataWorker::renameTempFile() {
     string originalName = "Data/Tables/" + getName() + ".dat";
     rename(TEMP_FILE_NAME.c_str(), originalName.c_str());
 }
 
-vector<string> TableNotes::readNextRecord(FILE *fp) {
+vector<string> TableDataWorker::readNextRecord(FILE *fp) {
     List list;
     vector<string> recordData;
 
@@ -92,7 +92,7 @@ vector<string> TableNotes::readNextRecord(FILE *fp) {
     return recordData;
 }
 
-void TableNotes::writeNextRecord(vector<string> recordData, FILE *fp) {
+void TableDataWorker::writeNextRecord(vector<string> recordData, FILE *fp) {
     List list;
 
     for (int i = 0; i < numberOfColumns; ++i) {
@@ -101,14 +101,14 @@ void TableNotes::writeNextRecord(vector<string> recordData, FILE *fp) {
     }
 }
 
-void TableNotes::writeNextRecordInCSV(vector<string> recordData, ofstream &fout) {
+void TableDataWorker::writeNextRecordInCSV(vector<string> recordData, ofstream &fout) {
     for (int i = 0; i < numberOfColumns; ++i) {
         fout << recordData[i] << ';';
     }
     fout << endl;
 }
 
-bool TableNotes::isAppropriate(vector<string> recordData, vector<Request> request) {
+bool TableDataWorker::isAppropriate(vector<string> recordData, vector<Request> request) {
     bool validNote = true;
 
     for (int i = 0; i < numberOfColumns && validNote == true; ++i) {
