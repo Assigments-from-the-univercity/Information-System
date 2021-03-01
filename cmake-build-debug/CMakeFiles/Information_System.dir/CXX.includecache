@@ -1,0 +1,88 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
+Node.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Request.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
+Manifest.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Manifest.h
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+../Model Layer/Table.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Manifest.h
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+../Model Layer/File Workers/FileWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/FileWorker.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+iostream
+-
+vector
+-
+cstring
+-
+direct.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/direct.h
+windows.h
+-
+cstdio
+-
+fstream
+-
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/FileWorker.h
+../../Basic Units/List.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/TableDataWorker.h
+../../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+FileWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/FileWorker.h
+../../Basic Units/TypeOfNote.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+../../Basic Units/Request.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Request.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/TablePropertiesWorker.h
+FileWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/FileWorker.h
+../../Basic Units/TypeOfNote.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+File Workers/TablePropertiesWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/TablePropertiesWorker.h
+File Workers/TableDataWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/File Workers/TableDataWorker.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
+../Controller Layer/Controller.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/main.cpp
+View Layer/View.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
+
