@@ -7,6 +7,7 @@
 
 #include "../Header.h"
 #include "../Basic Units/TypeOfNote.h"
+#include "../DAT Workers/DATWorker.h"
 #include <ostream>
 //#include "File Workers/TablePropertiesWorker.h"
 //#include "File Workers/TableDataWorker.h"
@@ -32,7 +33,8 @@
  */
 class Table {
 private:
-
+    //DATWorker datWorker;
+    fstream f;
 
 public:
     Table(string tableName);

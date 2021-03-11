@@ -2,13 +2,13 @@
 // Created by Mark on 11.03.2021.
 //
 
-#include "CSVReader.h"
+#include "FileReader.h"
 
-istream &CSVReader::getFin() {
+istream &FileReader::getFin() {
     return fin;
 }
 
-vector<string> CSVReader::readNext(istream &from) {
+vector<string> FileReader::readNext(istream &from) {
     vector<string> recordData;
     string propLine;
     string propData;
@@ -28,16 +28,16 @@ vector<string> CSVReader::readNext(istream &from) {
     return recordData;
 }
 
-vector<string> CSVReader::readNext() {
+vector<string> FileReader::readNext() {
     return readNext(fin);
 }
 
-void CSVReader::rewindToVeryBeginning() {
+void FileReader::rewindToVeryBeginning() {
     fin.clear();
     fin.seekg(fin.beg);
 }
 
-void CSVReader::rewind() {
+void FileReader::rewind() {
     rewindToVeryBeginning();
     string s;
     fin >> s;
@@ -45,7 +45,7 @@ void CSVReader::rewind() {
 
 }
 
-void CSVReader::getProperties(int &numberOfRecords, vector<string> &names, vector<TypeOfNote> &types) {
+void FileReader::getProperties(int &numberOfRecords, vector<string> &names, vector<TypeOfNote> &types) {
     // setting column's names
     names = readNext();
 
@@ -66,7 +66,7 @@ void CSVReader::getProperties(int &numberOfRecords, vector<string> &names, vecto
     rewind();
 }
 
-CSVReader::CSVReader(istream &fin) : fin(fin) {
+FileReader::FileReader(istream &fin) : fin(fin) {
     rewindToVeryBeginning();
 
     numberOfColumns = 0;

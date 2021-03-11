@@ -3,23 +3,52 @@
 //
 
 #include "Table.h"
+#include "../File Workers/FileWriter.h"
+#include "../File Workers/FileWorker.h"
 
 Table::Table(string tableName) {
-    /*tablePropertiesWorker.getProperties(numberOfRecords, numberOfColumns, types, names);
-    static TableDataWorker tableDataWorker(tableName, numberOfRecords, numberOfColumns, types);
-    this->tableDataWorker = &tableDataWorker;*/
+    f.open(tableName, std::fstream::binary);
 }
 
 Table::Table(string tableName, int numberOfColumns, vector <string> names, vector <TypeOfNote> types) {
-
+    f.open(tableName, std::fstream::binary);
+    FileWriter fileWriter(f, numberOfColumns, names, types);
 }
 
 void Table::get(ostream &fout) {
-    //return tableDataWorker->get(request);
+    //создаём екземпляр для доступа к файлу
+    FileWorker fileWorker(f, fout);
+
+    //данные таблици
+    int numberOfRecords;
+    vector<string> names;
+    vector<TypeOfNote> types;
+
+    //получаем данные таблици
+    fileWorker.getProperties(numberOfRecords, names, types);
+
+    //печатаем заголовок
+    fileWorker.setProperties(names, types);
+
+    //печатаем сами записи
+    fileWorker.copyFromCurrentPosition(numberOfRecords, f, fout);
 }
 
 void Table::add(vector <string> recordData) {
-    //tableDataWorker->add(recordData);
+    //создаём екземпляр для доступа к файлу
+    FileWorker fileWorker(f, f);
+
+    //данные таблици
+    int numberOfRecords;
+    vector<string> names;
+    vector<TypeOfNote> types;
+
+    //получаем данные таблици
+    fileWorker.getProperties(numberOfRecords, names, types);
+
+    //перематывем указатель в конец и добавляем запись
+    fileWorker.getFout().seekp(fileWorker.getFout().end);
+    fileWorker.writeNext(recordData);
 }
 
 void Table::change(vector <string> recordData) {
