@@ -11,5 +11,5 @@ add_executable(Information_System "main.cpp" "View Layer/View.cpp" "View Layer/V
         "DEPRECATED/File Workers/TablePropertiesWorker.cpp" "DEPRECATED/File Workers/TablePropertiesWorker.h"
         "DEPRECATED/File Workers/TableDataWorker.cpp" "DEPRECATED/File Workers/TableDataWorker.h"
         "View Layer/Printer.cpp" "View Layer/Printer.h" "Basic Units/FilterRequest.h"
-        "CSVWorkers/CSVWorker.cpp"
-        "CSVWorkers/CSVWorker.h" "Controller Layer/Filter.cpp" "Controller Layer/Filter.h" "Basic Units/SortRequest.h" CSVWorkers/CSVReader.cpp CSVWorkers/CSVReader.h CSVWorkers/CSVWriter.cpp CSVWorkers/CSVWriter.h "Controller Layer/Sorter.cpp" "Controller Layer/Sorter.h")
+        "CSV Workers/CSVWorker.cpp"
+        "CSV Workers/CSVWorker.h" "Controller Layer/Filter.cpp" "Controller Layer/Filter.h" "Basic Units/SortRequest.h" "CSV Workers/CSVReader.cpp" "CSV Workers/CSVReader.h" "CSV Workers/CSVWriter.cpp" "CSV Workers/CSVWriter.h" "Controller Layer/Sorter.cpp" "Controller Layer/Sorter.h" "DAT Workers/DATReader.cpp" "DAT Workers/DATReader.h" "DAT Workers/DATWriter.cpp" "DAT Workers/DATWriter.h")

@@ -93,12 +93,12 @@ clean: CMakeFiles/Information_System.dir/clean
 CMakeFiles/Information_System.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target Information_System"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target Information_System"
 .PHONY : CMakeFiles/Information_System.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Information_System.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" 18
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Information_System.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Information_System.dir/rule

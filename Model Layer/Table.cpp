@@ -4,26 +4,30 @@
 
 #include "Table.h"
 
-Table::Table(string tableName) : tablePropertiesWorker(tableName) {
-    tablePropertiesWorker.getProperties(numberOfRecords, numberOfColumns, types, names);
+Table::Table(string tableName) {
+    /*tablePropertiesWorker.getProperties(numberOfRecords, numberOfColumns, types, names);
     static TableDataWorker tableDataWorker(tableName, numberOfRecords, numberOfColumns, types);
-    this->tableDataWorker = &tableDataWorker;
+    this->tableDataWorker = &tableDataWorker;*/
 }
 
-ofstream* Table::get(vector<FilterRequest> request) {
-    return tableDataWorker->get(request);
+Table::Table(string tableName, int numberOfColumns, vector <string> names, vector <TypeOfNote> types) {
+
 }
 
-void Table::add(vector<string> recordData) {
-    tableDataWorker->add(recordData);
+void Table::get(ostream &fout) {
+    //return tableDataWorker->get(request);
 }
 
-void Table::change(vector<string> recordData) {
-    tableDataWorker->change(recordData);
+void Table::add(vector <string> recordData) {
+    //tableDataWorker->add(recordData);
+}
+
+void Table::change(vector <string> recordData) {
+    //tableDataWorker->change(recordData);
 }
 
 void Table::deleteItem(string key) {
-    tableDataWorker->deleteItem(key);
+    //tableDataWorker->deleteItem(key);
 }
 
 /*

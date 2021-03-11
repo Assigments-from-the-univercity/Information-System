@@ -6,8 +6,10 @@
 #define INFORMATION_SYSTEM_TABLE_H
 
 #include "../Header.h"
-#include "File Workers/TablePropertiesWorker.h"
-#include "File Workers/TableDataWorker.h"
+#include "../Basic Units/TypeOfNote.h"
+#include <ostream>
+//#include "File Workers/TablePropertiesWorker.h"
+//#include "File Workers/TableDataWorker.h"
 
 //static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
 
@@ -30,18 +32,14 @@
  */
 class Table {
 private:
-    TablePropertiesWorker tablePropertiesWorker;
-    TableDataWorker *tableDataWorker;
 
-    int numberOfRecords;
-    int numberOfColumns;
-    vector<TypeOfNote> types;
-    vector<List> names;
 
 public:
     Table(string tableName);
 
-    ofstream* get(vector<FilterRequest> request);
+    Table(string tableName, int numberOfColumns, vector<string> names, vector<TypeOfNote> types);
+
+    void get(ostream &fout);
 
     void add(vector<string> recordData);
 

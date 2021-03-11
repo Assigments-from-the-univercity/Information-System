@@ -1,0 +1,14 @@
+//
+// Created by Mark on 11.03.2021.
+//
+
+#ifndef INFORMATION_SYSTEM_DATREADER_H
+#define INFORMATION_SYSTEM_DATREADER_H
+
+
+class DATReader {
+
+};
+
+
+#endif //INFORMATION_SYSTEM_DATREADER_H

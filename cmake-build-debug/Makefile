@@ -223,86 +223,86 @@ Basic_Units/TypeOfNote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.s
 .PHONY : Basic_Units/TypeOfNote.cpp.s
 
-CSVWorkers/CSVReader.obj: CSVWorkers/CSVReader.cpp.obj
+CSV_Workers/CSVReader.obj: CSV_Workers/CSVReader.cpp.obj
 
-.PHONY : CSVWorkers/CSVReader.obj
-
-# target to build an object file
-CSVWorkers/CSVReader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.obj
-.PHONY : CSVWorkers/CSVReader.cpp.obj
-
-CSVWorkers/CSVReader.i: CSVWorkers/CSVReader.cpp.i
-
-.PHONY : CSVWorkers/CSVReader.i
-
-# target to preprocess a source file
-CSVWorkers/CSVReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.i
-.PHONY : CSVWorkers/CSVReader.cpp.i
-
-CSVWorkers/CSVReader.s: CSVWorkers/CSVReader.cpp.s
-
-.PHONY : CSVWorkers/CSVReader.s
-
-# target to generate assembly for a file
-CSVWorkers/CSVReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.s
-.PHONY : CSVWorkers/CSVReader.cpp.s
-
-CSVWorkers/CSVWorker.obj: CSVWorkers/CSVWorker.cpp.obj
-
-.PHONY : CSVWorkers/CSVWorker.obj
+.PHONY : CSV_Workers/CSVReader.obj
 
 # target to build an object file
-CSVWorkers/CSVWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj
-.PHONY : CSVWorkers/CSVWorker.cpp.obj
+CSV_Workers/CSVReader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj
+.PHONY : CSV_Workers/CSVReader.cpp.obj
 
-CSVWorkers/CSVWorker.i: CSVWorkers/CSVWorker.cpp.i
+CSV_Workers/CSVReader.i: CSV_Workers/CSVReader.cpp.i
 
-.PHONY : CSVWorkers/CSVWorker.i
+.PHONY : CSV_Workers/CSVReader.i
 
 # target to preprocess a source file
-CSVWorkers/CSVWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.i
-.PHONY : CSVWorkers/CSVWorker.cpp.i
+CSV_Workers/CSVReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.i
+.PHONY : CSV_Workers/CSVReader.cpp.i
 
-CSVWorkers/CSVWorker.s: CSVWorkers/CSVWorker.cpp.s
+CSV_Workers/CSVReader.s: CSV_Workers/CSVReader.cpp.s
 
-.PHONY : CSVWorkers/CSVWorker.s
+.PHONY : CSV_Workers/CSVReader.s
 
 # target to generate assembly for a file
-CSVWorkers/CSVWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.s
-.PHONY : CSVWorkers/CSVWorker.cpp.s
+CSV_Workers/CSVReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.s
+.PHONY : CSV_Workers/CSVReader.cpp.s
 
-CSVWorkers/CSVWriter.obj: CSVWorkers/CSVWriter.cpp.obj
+CSV_Workers/CSVWorker.obj: CSV_Workers/CSVWorker.cpp.obj
 
-.PHONY : CSVWorkers/CSVWriter.obj
+.PHONY : CSV_Workers/CSVWorker.obj
 
 # target to build an object file
-CSVWorkers/CSVWriter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.obj
-.PHONY : CSVWorkers/CSVWriter.cpp.obj
+CSV_Workers/CSVWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj
+.PHONY : CSV_Workers/CSVWorker.cpp.obj
 
-CSVWorkers/CSVWriter.i: CSVWorkers/CSVWriter.cpp.i
+CSV_Workers/CSVWorker.i: CSV_Workers/CSVWorker.cpp.i
 
-.PHONY : CSVWorkers/CSVWriter.i
+.PHONY : CSV_Workers/CSVWorker.i
 
 # target to preprocess a source file
-CSVWorkers/CSVWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.i
-.PHONY : CSVWorkers/CSVWriter.cpp.i
+CSV_Workers/CSVWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.i
+.PHONY : CSV_Workers/CSVWorker.cpp.i
 
-CSVWorkers/CSVWriter.s: CSVWorkers/CSVWriter.cpp.s
+CSV_Workers/CSVWorker.s: CSV_Workers/CSVWorker.cpp.s
 
-.PHONY : CSVWorkers/CSVWriter.s
+.PHONY : CSV_Workers/CSVWorker.s
 
 # target to generate assembly for a file
-CSVWorkers/CSVWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.s
-.PHONY : CSVWorkers/CSVWriter.cpp.s
+CSV_Workers/CSVWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.s
+.PHONY : CSV_Workers/CSVWorker.cpp.s
+
+CSV_Workers/CSVWriter.obj: CSV_Workers/CSVWriter.cpp.obj
+
+.PHONY : CSV_Workers/CSVWriter.obj
+
+# target to build an object file
+CSV_Workers/CSVWriter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj
+.PHONY : CSV_Workers/CSVWriter.cpp.obj
+
+CSV_Workers/CSVWriter.i: CSV_Workers/CSVWriter.cpp.i
+
+.PHONY : CSV_Workers/CSVWriter.i
+
+# target to preprocess a source file
+CSV_Workers/CSVWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.i
+.PHONY : CSV_Workers/CSVWriter.cpp.i
+
+CSV_Workers/CSVWriter.s: CSV_Workers/CSVWriter.cpp.s
+
+.PHONY : CSV_Workers/CSVWriter.s
+
+# target to generate assembly for a file
+CSV_Workers/CSVWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.s
+.PHONY : CSV_Workers/CSVWriter.cpp.s
 
 Controller_Layer/Controller.obj: Controller_Layer/Controller.cpp.obj
 
@@ -358,33 +358,6 @@ Controller_Layer/Filter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.s
 .PHONY : Controller_Layer/Filter.cpp.s
 
-Controller_Layer/Manifest.obj: Controller_Layer/Manifest.cpp.obj
-
-.PHONY : Controller_Layer/Manifest.obj
-
-# target to build an object file
-Controller_Layer/Manifest.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.obj
-.PHONY : Controller_Layer/Manifest.cpp.obj
-
-Controller_Layer/Manifest.i: Controller_Layer/Manifest.cpp.i
-
-.PHONY : Controller_Layer/Manifest.i
-
-# target to preprocess a source file
-Controller_Layer/Manifest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.i
-.PHONY : Controller_Layer/Manifest.cpp.i
-
-Controller_Layer/Manifest.s: Controller_Layer/Manifest.cpp.s
-
-.PHONY : Controller_Layer/Manifest.s
-
-# target to generate assembly for a file
-Controller_Layer/Manifest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.s
-.PHONY : Controller_Layer/Manifest.cpp.s
-
 Controller_Layer/Sorter.obj: Controller_Layer/Sorter.cpp.obj
 
 .PHONY : Controller_Layer/Sorter.obj
@@ -412,86 +385,167 @@ Controller_Layer/Sorter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.s
 .PHONY : Controller_Layer/Sorter.cpp.s
 
-Model_Layer/File_Workers/FileWorker.obj: Model_Layer/File_Workers/FileWorker.cpp.obj
+DAT_Workers/DATReader.obj: DAT_Workers/DATReader.cpp.obj
 
-.PHONY : Model_Layer/File_Workers/FileWorker.obj
-
-# target to build an object file
-Model_Layer/File_Workers/FileWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj
-.PHONY : Model_Layer/File_Workers/FileWorker.cpp.obj
-
-Model_Layer/File_Workers/FileWorker.i: Model_Layer/File_Workers/FileWorker.cpp.i
-
-.PHONY : Model_Layer/File_Workers/FileWorker.i
-
-# target to preprocess a source file
-Model_Layer/File_Workers/FileWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.i
-.PHONY : Model_Layer/File_Workers/FileWorker.cpp.i
-
-Model_Layer/File_Workers/FileWorker.s: Model_Layer/File_Workers/FileWorker.cpp.s
-
-.PHONY : Model_Layer/File_Workers/FileWorker.s
-
-# target to generate assembly for a file
-Model_Layer/File_Workers/FileWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.s
-.PHONY : Model_Layer/File_Workers/FileWorker.cpp.s
-
-Model_Layer/File_Workers/TableDataWorker.obj: Model_Layer/File_Workers/TableDataWorker.cpp.obj
-
-.PHONY : Model_Layer/File_Workers/TableDataWorker.obj
+.PHONY : DAT_Workers/DATReader.obj
 
 # target to build an object file
-Model_Layer/File_Workers/TableDataWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj
-.PHONY : Model_Layer/File_Workers/TableDataWorker.cpp.obj
+DAT_Workers/DATReader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj
+.PHONY : DAT_Workers/DATReader.cpp.obj
 
-Model_Layer/File_Workers/TableDataWorker.i: Model_Layer/File_Workers/TableDataWorker.cpp.i
+DAT_Workers/DATReader.i: DAT_Workers/DATReader.cpp.i
 
-.PHONY : Model_Layer/File_Workers/TableDataWorker.i
+.PHONY : DAT_Workers/DATReader.i
 
 # target to preprocess a source file
-Model_Layer/File_Workers/TableDataWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.i
-.PHONY : Model_Layer/File_Workers/TableDataWorker.cpp.i
+DAT_Workers/DATReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.i
+.PHONY : DAT_Workers/DATReader.cpp.i
 
-Model_Layer/File_Workers/TableDataWorker.s: Model_Layer/File_Workers/TableDataWorker.cpp.s
+DAT_Workers/DATReader.s: DAT_Workers/DATReader.cpp.s
 
-.PHONY : Model_Layer/File_Workers/TableDataWorker.s
+.PHONY : DAT_Workers/DATReader.s
 
 # target to generate assembly for a file
-Model_Layer/File_Workers/TableDataWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.s
-.PHONY : Model_Layer/File_Workers/TableDataWorker.cpp.s
+DAT_Workers/DATReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.s
+.PHONY : DAT_Workers/DATReader.cpp.s
 
-Model_Layer/File_Workers/TablePropertiesWorker.obj: Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj
+DAT_Workers/DATWriter.obj: DAT_Workers/DATWriter.cpp.obj
 
-.PHONY : Model_Layer/File_Workers/TablePropertiesWorker.obj
+.PHONY : DAT_Workers/DATWriter.obj
 
 # target to build an object file
-Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj
-.PHONY : Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj
+DAT_Workers/DATWriter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj
+.PHONY : DAT_Workers/DATWriter.cpp.obj
 
-Model_Layer/File_Workers/TablePropertiesWorker.i: Model_Layer/File_Workers/TablePropertiesWorker.cpp.i
+DAT_Workers/DATWriter.i: DAT_Workers/DATWriter.cpp.i
 
-.PHONY : Model_Layer/File_Workers/TablePropertiesWorker.i
+.PHONY : DAT_Workers/DATWriter.i
 
 # target to preprocess a source file
-Model_Layer/File_Workers/TablePropertiesWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.i
-.PHONY : Model_Layer/File_Workers/TablePropertiesWorker.cpp.i
+DAT_Workers/DATWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.i
+.PHONY : DAT_Workers/DATWriter.cpp.i
 
-Model_Layer/File_Workers/TablePropertiesWorker.s: Model_Layer/File_Workers/TablePropertiesWorker.cpp.s
+DAT_Workers/DATWriter.s: DAT_Workers/DATWriter.cpp.s
 
-.PHONY : Model_Layer/File_Workers/TablePropertiesWorker.s
+.PHONY : DAT_Workers/DATWriter.s
 
 # target to generate assembly for a file
-Model_Layer/File_Workers/TablePropertiesWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.s
-.PHONY : Model_Layer/File_Workers/TablePropertiesWorker.cpp.s
+DAT_Workers/DATWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.s
+.PHONY : DAT_Workers/DATWriter.cpp.s
+
+DEPRECATED/File_Workers/FileWorker.obj: DEPRECATED/File_Workers/FileWorker.cpp.obj
+
+.PHONY : DEPRECATED/File_Workers/FileWorker.obj
+
+# target to build an object file
+DEPRECATED/File_Workers/FileWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj
+.PHONY : DEPRECATED/File_Workers/FileWorker.cpp.obj
+
+DEPRECATED/File_Workers/FileWorker.i: DEPRECATED/File_Workers/FileWorker.cpp.i
+
+.PHONY : DEPRECATED/File_Workers/FileWorker.i
+
+# target to preprocess a source file
+DEPRECATED/File_Workers/FileWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.i
+.PHONY : DEPRECATED/File_Workers/FileWorker.cpp.i
+
+DEPRECATED/File_Workers/FileWorker.s: DEPRECATED/File_Workers/FileWorker.cpp.s
+
+.PHONY : DEPRECATED/File_Workers/FileWorker.s
+
+# target to generate assembly for a file
+DEPRECATED/File_Workers/FileWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.s
+.PHONY : DEPRECATED/File_Workers/FileWorker.cpp.s
+
+DEPRECATED/File_Workers/TableDataWorker.obj: DEPRECATED/File_Workers/TableDataWorker.cpp.obj
+
+.PHONY : DEPRECATED/File_Workers/TableDataWorker.obj
+
+# target to build an object file
+DEPRECATED/File_Workers/TableDataWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj
+.PHONY : DEPRECATED/File_Workers/TableDataWorker.cpp.obj
+
+DEPRECATED/File_Workers/TableDataWorker.i: DEPRECATED/File_Workers/TableDataWorker.cpp.i
+
+.PHONY : DEPRECATED/File_Workers/TableDataWorker.i
+
+# target to preprocess a source file
+DEPRECATED/File_Workers/TableDataWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.i
+.PHONY : DEPRECATED/File_Workers/TableDataWorker.cpp.i
+
+DEPRECATED/File_Workers/TableDataWorker.s: DEPRECATED/File_Workers/TableDataWorker.cpp.s
+
+.PHONY : DEPRECATED/File_Workers/TableDataWorker.s
+
+# target to generate assembly for a file
+DEPRECATED/File_Workers/TableDataWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.s
+.PHONY : DEPRECATED/File_Workers/TableDataWorker.cpp.s
+
+DEPRECATED/File_Workers/TablePropertiesWorker.obj: DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj
+
+.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.obj
+
+# target to build an object file
+DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj
+.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj
+
+DEPRECATED/File_Workers/TablePropertiesWorker.i: DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i
+
+.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.i
+
+# target to preprocess a source file
+DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i
+.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i
+
+DEPRECATED/File_Workers/TablePropertiesWorker.s: DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s
+
+.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.s
+
+# target to generate assembly for a file
+DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s
+.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s
+
+DEPRECATED/Manifest.obj: DEPRECATED/Manifest.cpp.obj
+
+.PHONY : DEPRECATED/Manifest.obj
+
+# target to build an object file
+DEPRECATED/Manifest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.obj
+.PHONY : DEPRECATED/Manifest.cpp.obj
+
+DEPRECATED/Manifest.i: DEPRECATED/Manifest.cpp.i
+
+.PHONY : DEPRECATED/Manifest.i
+
+# target to preprocess a source file
+DEPRECATED/Manifest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.i
+.PHONY : DEPRECATED/Manifest.cpp.i
+
+DEPRECATED/Manifest.s: DEPRECATED/Manifest.cpp.s
+
+.PHONY : DEPRECATED/Manifest.s
+
+# target to generate assembly for a file
+DEPRECATED/Manifest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.s
+.PHONY : DEPRECATED/Manifest.cpp.s
 
 Model_Layer/Table.obj: Model_Layer/Table.cpp.obj
 
@@ -619,36 +673,42 @@ help:
 	@echo ... Basic_Units/TypeOfNote.obj
 	@echo ... Basic_Units/TypeOfNote.i
 	@echo ... Basic_Units/TypeOfNote.s
-	@echo ... CSVWorkers/CSVReader.obj
-	@echo ... CSVWorkers/CSVReader.i
-	@echo ... CSVWorkers/CSVReader.s
-	@echo ... CSVWorkers/CSVWorker.obj
-	@echo ... CSVWorkers/CSVWorker.i
-	@echo ... CSVWorkers/CSVWorker.s
-	@echo ... CSVWorkers/CSVWriter.obj
-	@echo ... CSVWorkers/CSVWriter.i
-	@echo ... CSVWorkers/CSVWriter.s
+	@echo ... CSV_Workers/CSVReader.obj
+	@echo ... CSV_Workers/CSVReader.i
+	@echo ... CSV_Workers/CSVReader.s
+	@echo ... CSV_Workers/CSVWorker.obj
+	@echo ... CSV_Workers/CSVWorker.i
+	@echo ... CSV_Workers/CSVWorker.s
+	@echo ... CSV_Workers/CSVWriter.obj
+	@echo ... CSV_Workers/CSVWriter.i
+	@echo ... CSV_Workers/CSVWriter.s
 	@echo ... Controller_Layer/Controller.obj
 	@echo ... Controller_Layer/Controller.i
 	@echo ... Controller_Layer/Controller.s
 	@echo ... Controller_Layer/Filter.obj
 	@echo ... Controller_Layer/Filter.i
 	@echo ... Controller_Layer/Filter.s
-	@echo ... Controller_Layer/Manifest.obj
-	@echo ... Controller_Layer/Manifest.i
-	@echo ... Controller_Layer/Manifest.s
 	@echo ... Controller_Layer/Sorter.obj
 	@echo ... Controller_Layer/Sorter.i
 	@echo ... Controller_Layer/Sorter.s
-	@echo ... Model_Layer/File_Workers/FileWorker.obj
-	@echo ... Model_Layer/File_Workers/FileWorker.i
-	@echo ... Model_Layer/File_Workers/FileWorker.s
-	@echo ... Model_Layer/File_Workers/TableDataWorker.obj
-	@echo ... Model_Layer/File_Workers/TableDataWorker.i
-	@echo ... Model_Layer/File_Workers/TableDataWorker.s
-	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.obj
-	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.i
-	@echo ... Model_Layer/File_Workers/TablePropertiesWorker.s
+	@echo ... DAT_Workers/DATReader.obj
+	@echo ... DAT_Workers/DATReader.i
+	@echo ... DAT_Workers/DATReader.s
+	@echo ... DAT_Workers/DATWriter.obj
+	@echo ... DAT_Workers/DATWriter.i
+	@echo ... DAT_Workers/DATWriter.s
+	@echo ... DEPRECATED/File_Workers/FileWorker.obj
+	@echo ... DEPRECATED/File_Workers/FileWorker.i
+	@echo ... DEPRECATED/File_Workers/FileWorker.s
+	@echo ... DEPRECATED/File_Workers/TableDataWorker.obj
+	@echo ... DEPRECATED/File_Workers/TableDataWorker.i
+	@echo ... DEPRECATED/File_Workers/TableDataWorker.s
+	@echo ... DEPRECATED/File_Workers/TablePropertiesWorker.obj
+	@echo ... DEPRECATED/File_Workers/TablePropertiesWorker.i
+	@echo ... DEPRECATED/File_Workers/TablePropertiesWorker.s
+	@echo ... DEPRECATED/Manifest.obj
+	@echo ... DEPRECATED/Manifest.i
+	@echo ... DEPRECATED/Manifest.s
 	@echo ... Model_Layer/Table.obj
 	@echo ... Model_Layer/Table.i
 	@echo ... Model_Layer/Table.s
