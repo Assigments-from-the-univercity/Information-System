@@ -18,6 +18,10 @@ public:
 
     string getType(int order);
 
+    string getType();
+
+    void setType(string name);
+
     void writeInFile(FILE *fp);
 
     void readFromFile(FILE *fp);

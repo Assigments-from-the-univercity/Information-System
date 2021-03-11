@@ -8,7 +8,7 @@
 #include "../../Header.h" //если убрать, то конструктор базового класса не вызываеться. Почему???
 #include "FileWorker.h"
 #include "../../Basic Units/TypeOfNote.h"
-#include "../../Basic Units/Request.h"
+#include "../../Basic Units/FilterRequest.h"
 
 class TableDataWorker : public FileWorker {
 private:
@@ -27,13 +27,13 @@ private:
 
     void writeNextRecordInCSV(vector<string> recordData, ofstream &fout);
 
-    bool isAppropriate(vector<string> recordData, vector<Request> request);
+    bool isAppropriate(vector<string> recordData, vector<FilterRequest> request);
 
 public:
     TableDataWorker(string fileName, int numberOfRecords, int numberOfColumns,
                     vector<TypeOfNote> types);
 
-    std::ofstream* get(vector<Request> request);
+    std::ofstream* get(vector<FilterRequest> request);
 
     void add(vector<string> recordsData);
 

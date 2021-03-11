@@ -82,31 +82,31 @@ Controller::toNoteProperties(int numberOfProperties, vector<string> values, vect
     return notesProperties;
 }
 
-Table::Request::State Controller::getState(UserRequest userRequest) {
+Table::FilterRequest::State Controller::getState(UserRequest userRequest) {
     if (userRequest.oper == "<") {
-        return Table::Request::LESS;
+        return Table::FilterRequest::LESS;
     } else if (userRequest.oper == ">") {
-        return Table::Request::MORE;
+        return Table::FilterRequest::MORE;
     } else if (userRequest.oper == "<=") {
-        return Table::Request::NOT_MORE;
+        return Table::FilterRequest::NOT_MORE;
     } else if (userRequest.oper == ">=") {
-        return Table::Request::NOT_LESS;
+        return Table::FilterRequest::NOT_LESS;
     } else if (userRequest.oper == "=") {
-        return Table::Request::EQUAL;
+        return Table::FilterRequest::EQUAL;
     } else if (userRequest.oper == "in") {
-        return Table::Request::INCLUDED;
+        return Table::FilterRequest::INCLUDED;
     } else {
-        return Table::Request::IGNORE_IT;
+        return Table::FilterRequest::IGNORE_IT;
     }
 }
 
-vector<Table::Request> Controller::makeRequest(vector<UserRequest> userRequest) {
-    vector<Table::Request> request;
+vector<Table::FilterRequest> Controller::makeRequest(vector<UserRequest> userRequest) {
+    vector<Table::FilterRequest> request;
 
-    Table::Request mRequest;
+    Table::FilterRequest mRequest;
     for (int i = 0; i < table.properties.numberOfProperties; ++i) {
         mRequest.value = "0";
-        mRequest.state = Table::Request::State::IGNORE_IT;
+        mRequest.state = Table::FilterRequest::State::IGNORE_IT;
 
         for (int j = 0; j < userRequest.size(); ++j) {
             if (userRequest[j].name == table.properties.values[i].name) {
@@ -165,12 +165,12 @@ void Controller::cd(char tableName[NAME_SIZE]) {
 
 void Controller::lsRecords() {
     vector<UserRequest> userRequest;
-    vector<Table::Request> request = makeRequest(userRequest);
+    vector<Table::FilterRequest> request = makeRequest(userRequest);
     table.printNotes(request);
 }
 
 void Controller::selectRecords() {
-    vector<Table::Request> request;
+    vector<Table::FilterRequest> request;
     vector<UserRequest> userRequest;
 
     int numberOfFactors;

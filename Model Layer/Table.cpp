@@ -10,7 +10,7 @@ Table::Table(string tableName) : tablePropertiesWorker(tableName) {
     this->tableDataWorker = &tableDataWorker;
 }
 
-ofstream* Table::get(vector<Request> request) {
+ofstream* Table::get(vector<FilterRequest> request) {
     return tableDataWorker->get(request);
 }
 
@@ -204,7 +204,7 @@ void Table::setTable(char name[]) {
     getProperties();
 }
 
-void Table::printNotes(vector<Table::Request> request) {
+void Table::printNotes(vector<Table::FilterRequest> request) {
     printHeader();
 
     bool validNote;
@@ -215,39 +215,39 @@ void Table::printNotes(vector<Table::Request> request) {
         noteProperties = readNextNote();
         validNote = true;
         for (int j = 0; j < properties.numberOfProperties && validNote == true; ++j) {
-            if (request[j].state != Request::State::IGNORE_IT) {
+            if (request[j].state != FilterRequest::State::IGNORE_IT) {
                 if (properties.values[j].type == TypeOfNote::DOUBLE) {
                     double value = stod(noteProperties[j].value), target = stod(request[j].value);
                     switch (request[j].state) {
-                        case Request::State::LESS:
+                        case FilterRequest::State::LESS:
                             if (value < target) {
                                 break;
                             } else {
                                 validNote = false;
                                 continue;
                             }
-                        case Request::State::MORE:
+                        case FilterRequest::State::MORE:
                             if (value > target) {
                                 break;
                             } else {
                                 validNote = false;
                                 continue;
                             }
-                        case Request::State::NOT_MORE:
+                        case FilterRequest::State::NOT_MORE:
                             if (value <= target) {
                                 break;
                             } else {
                                 validNote = false;
                                 continue;
                             }
-                        case Request::State::NOT_LESS:
+                        case FilterRequest::State::NOT_LESS:
                             if (value >= target) {
                                 break;
                             } else {
                                 validNote = false;
                                 continue;
                             }
-                        case Request::State::EQUAL:
+                        case FilterRequest::State::EQUAL:
                             if (value == target) {
                                 break;
                             } else {
@@ -261,14 +261,14 @@ void Table::printNotes(vector<Table::Request> request) {
                 } else if (properties.values[j].type == TypeOfNote::STRING) {
                     string value = noteProperties[j].value, target = request[j].value;
                     switch (request[j].state) {
-                        case Request::State::EQUAL:
+                        case FilterRequest::State::EQUAL:
                             if (value.compare(target) == 0) {
                                 break;
                             } else {
                                 validNote = false;
                                 continue;
                             }
-                        case Request::State::INCLUDED:
+                        case FilterRequest::State::INCLUDED:
                             if (value.find(target)) {
                                 break;
                             } else {

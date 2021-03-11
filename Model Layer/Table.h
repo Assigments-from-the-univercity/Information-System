@@ -41,7 +41,7 @@ private:
 public:
     Table(string tableName);
 
-    ofstream* get(vector<Request> request);
+    ofstream* get(vector<FilterRequest> request);
 
     void add(vector<string> recordData);
 
@@ -67,7 +67,7 @@ public:
         vector<Field> values;
     };
 
-    struct Request {
+    struct FilterRequest {
         string value;
         enum State{
             LESS,
@@ -126,7 +126,7 @@ public:
 
     void setTable(char name[]);
 
-    void printNotes(vector<Request> requestDouble);
+    void printNotes(vector<FilterRequest> requestDouble);
 
     void addRecord(vector<NoteValue> noteProperties);
 

@@ -7,23 +7,22 @@
 
 
 #include "../Basic Units/TypeOfNote.h"
+#include "../CSVWorkers/CSVReader.h"
 
-class Printer {
+class Printer : public CSVReader {
 private:
     int numberOfRecords;
-    int numberOfColumns;
-    vector<TypeOfNote> types;
     vector<string> names;
-    int current;
-    vector<vector<string>> data;
+    vector<TypeOfNote> types;
 
     void printHeader();
 
-    void printRecord();
+    void printNextRecord();
 
 public:
-    Printer(int numberOfRecords, int numberOfColumns, vector<TypeOfNote> types,
-            vector<string> names, vector<vector<string>> data);
+    Printer(istream &fin);
+
+    void print();
 };
 
 

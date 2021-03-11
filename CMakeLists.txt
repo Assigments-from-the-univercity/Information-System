@@ -4,12 +4,12 @@ project(Information_System)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Information_System "main.cpp" "View Layer/View.cpp" "View Layer/View.h" "Controller Layer/Controller.cpp"
-        "Controller Layer/Controller.h" "Header.h" "Controller Layer/Manifest.cpp" "Controller Layer/Manifest.h"
+        "Controller Layer/Controller.h" "Header.h" "DEPRECATED/Manifest.cpp" "DEPRECATED/Manifest.h"
         "Model Layer/Table.cpp" "Model Layer/Table.h" "Basic Units/Node.cpp" "Basic Units/Node.h" "Basic Units/List.cpp"
         "Basic Units/List.h" "Basic Units/TypeOfNote.cpp" "Basic Units/TypeOfNote.h"
-        "Model Layer/File Workers/FileWorker.cpp" "Model Layer/File Workers/FileWorker.h"
-        "Model Layer/File Workers/TablePropertiesWorker.cpp" "Model Layer/File Workers/TablePropertiesWorker.h"
-        "Model Layer/File Workers/TableDataWorker.cpp" "Model Layer/File Workers/TableDataWorker.h"
-        "View Layer/Printer.cpp" "View Layer/Printer.h" "Basic Units/Request.h" "Basic Units/CSVWorker.cpp"
-        "Basic Units/CSVWorker.h" "Basic Units/FilePath.h" "Controller Layer/CSVWorkers/CSVWorker.cpp"
-        "Controller Layer/CSVWorkers/CSVWorker.h" "Controller Layer/CSVWorkers/Filter.cpp" "Controller Layer/CSVWorkers/Filter.h")
+        "DEPRECATED/File Workers/FileWorker.cpp" "DEPRECATED/File Workers/FileWorker.h"
+        "DEPRECATED/File Workers/TablePropertiesWorker.cpp" "DEPRECATED/File Workers/TablePropertiesWorker.h"
+        "DEPRECATED/File Workers/TableDataWorker.cpp" "DEPRECATED/File Workers/TableDataWorker.h"
+        "View Layer/Printer.cpp" "View Layer/Printer.h" "Basic Units/FilterRequest.h"
+        "CSVWorkers/CSVWorker.cpp"
+        "CSVWorkers/CSVWorker.h" "Controller Layer/Filter.cpp" "Controller Layer/Filter.h" "Basic Units/SortRequest.h" CSVWorkers/CSVReader.cpp CSVWorkers/CSVReader.h CSVWorkers/CSVWriter.cpp CSVWorkers/CSVWriter.h "Controller Layer/Sorter.cpp" "Controller Layer/Sorter.h")

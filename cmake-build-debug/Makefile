@@ -142,33 +142,6 @@ Information_System/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/build
 .PHONY : Information_System/fast
 
-Basic_Units/CSVWorker.obj: Basic_Units/CSVWorker.cpp.obj
-
-.PHONY : Basic_Units/CSVWorker.obj
-
-# target to build an object file
-Basic_Units/CSVWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/CSVWorker.cpp.obj
-.PHONY : Basic_Units/CSVWorker.cpp.obj
-
-Basic_Units/CSVWorker.i: Basic_Units/CSVWorker.cpp.i
-
-.PHONY : Basic_Units/CSVWorker.i
-
-# target to preprocess a source file
-Basic_Units/CSVWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/CSVWorker.cpp.i
-.PHONY : Basic_Units/CSVWorker.cpp.i
-
-Basic_Units/CSVWorker.s: Basic_Units/CSVWorker.cpp.s
-
-.PHONY : Basic_Units/CSVWorker.s
-
-# target to generate assembly for a file
-Basic_Units/CSVWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/CSVWorker.cpp.s
-.PHONY : Basic_Units/CSVWorker.cpp.s
-
 Basic_Units/List.obj: Basic_Units/List.cpp.obj
 
 .PHONY : Basic_Units/List.obj
@@ -250,59 +223,86 @@ Basic_Units/TypeOfNote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.s
 .PHONY : Basic_Units/TypeOfNote.cpp.s
 
-Controller_Layer/CSVWorkers/CSVWorker.obj: Controller_Layer/CSVWorkers/CSVWorker.cpp.obj
+CSVWorkers/CSVReader.obj: CSVWorkers/CSVReader.cpp.obj
 
-.PHONY : Controller_Layer/CSVWorkers/CSVWorker.obj
-
-# target to build an object file
-Controller_Layer/CSVWorkers/CSVWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/CSVWorkers/CSVWorker.cpp.obj
-.PHONY : Controller_Layer/CSVWorkers/CSVWorker.cpp.obj
-
-Controller_Layer/CSVWorkers/CSVWorker.i: Controller_Layer/CSVWorkers/CSVWorker.cpp.i
-
-.PHONY : Controller_Layer/CSVWorkers/CSVWorker.i
-
-# target to preprocess a source file
-Controller_Layer/CSVWorkers/CSVWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/CSVWorkers/CSVWorker.cpp.i
-.PHONY : Controller_Layer/CSVWorkers/CSVWorker.cpp.i
-
-Controller_Layer/CSVWorkers/CSVWorker.s: Controller_Layer/CSVWorkers/CSVWorker.cpp.s
-
-.PHONY : Controller_Layer/CSVWorkers/CSVWorker.s
-
-# target to generate assembly for a file
-Controller_Layer/CSVWorkers/CSVWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/CSVWorkers/CSVWorker.cpp.s
-.PHONY : Controller_Layer/CSVWorkers/CSVWorker.cpp.s
-
-Controller_Layer/CSVWorkers/Filter.obj: Controller_Layer/CSVWorkers/Filter.cpp.obj
-
-.PHONY : Controller_Layer/CSVWorkers/Filter.obj
+.PHONY : CSVWorkers/CSVReader.obj
 
 # target to build an object file
-Controller_Layer/CSVWorkers/Filter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/CSVWorkers/Filter.cpp.obj
-.PHONY : Controller_Layer/CSVWorkers/Filter.cpp.obj
+CSVWorkers/CSVReader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.obj
+.PHONY : CSVWorkers/CSVReader.cpp.obj
 
-Controller_Layer/CSVWorkers/Filter.i: Controller_Layer/CSVWorkers/Filter.cpp.i
+CSVWorkers/CSVReader.i: CSVWorkers/CSVReader.cpp.i
 
-.PHONY : Controller_Layer/CSVWorkers/Filter.i
+.PHONY : CSVWorkers/CSVReader.i
 
 # target to preprocess a source file
-Controller_Layer/CSVWorkers/Filter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/CSVWorkers/Filter.cpp.i
-.PHONY : Controller_Layer/CSVWorkers/Filter.cpp.i
+CSVWorkers/CSVReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.i
+.PHONY : CSVWorkers/CSVReader.cpp.i
 
-Controller_Layer/CSVWorkers/Filter.s: Controller_Layer/CSVWorkers/Filter.cpp.s
+CSVWorkers/CSVReader.s: CSVWorkers/CSVReader.cpp.s
 
-.PHONY : Controller_Layer/CSVWorkers/Filter.s
+.PHONY : CSVWorkers/CSVReader.s
 
 # target to generate assembly for a file
-Controller_Layer/CSVWorkers/Filter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/CSVWorkers/Filter.cpp.s
-.PHONY : Controller_Layer/CSVWorkers/Filter.cpp.s
+CSVWorkers/CSVReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.s
+.PHONY : CSVWorkers/CSVReader.cpp.s
+
+CSVWorkers/CSVWorker.obj: CSVWorkers/CSVWorker.cpp.obj
+
+.PHONY : CSVWorkers/CSVWorker.obj
+
+# target to build an object file
+CSVWorkers/CSVWorker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj
+.PHONY : CSVWorkers/CSVWorker.cpp.obj
+
+CSVWorkers/CSVWorker.i: CSVWorkers/CSVWorker.cpp.i
+
+.PHONY : CSVWorkers/CSVWorker.i
+
+# target to preprocess a source file
+CSVWorkers/CSVWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.i
+.PHONY : CSVWorkers/CSVWorker.cpp.i
+
+CSVWorkers/CSVWorker.s: CSVWorkers/CSVWorker.cpp.s
+
+.PHONY : CSVWorkers/CSVWorker.s
+
+# target to generate assembly for a file
+CSVWorkers/CSVWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.s
+.PHONY : CSVWorkers/CSVWorker.cpp.s
+
+CSVWorkers/CSVWriter.obj: CSVWorkers/CSVWriter.cpp.obj
+
+.PHONY : CSVWorkers/CSVWriter.obj
+
+# target to build an object file
+CSVWorkers/CSVWriter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.obj
+.PHONY : CSVWorkers/CSVWriter.cpp.obj
+
+CSVWorkers/CSVWriter.i: CSVWorkers/CSVWriter.cpp.i
+
+.PHONY : CSVWorkers/CSVWriter.i
+
+# target to preprocess a source file
+CSVWorkers/CSVWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.i
+.PHONY : CSVWorkers/CSVWriter.cpp.i
+
+CSVWorkers/CSVWriter.s: CSVWorkers/CSVWriter.cpp.s
+
+.PHONY : CSVWorkers/CSVWriter.s
+
+# target to generate assembly for a file
+CSVWorkers/CSVWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.s
+.PHONY : CSVWorkers/CSVWriter.cpp.s
 
 Controller_Layer/Controller.obj: Controller_Layer/Controller.cpp.obj
 
@@ -331,6 +331,33 @@ Controller_Layer/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.s
 .PHONY : Controller_Layer/Controller.cpp.s
 
+Controller_Layer/Filter.obj: Controller_Layer/Filter.cpp.obj
+
+.PHONY : Controller_Layer/Filter.obj
+
+# target to build an object file
+Controller_Layer/Filter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj
+.PHONY : Controller_Layer/Filter.cpp.obj
+
+Controller_Layer/Filter.i: Controller_Layer/Filter.cpp.i
+
+.PHONY : Controller_Layer/Filter.i
+
+# target to preprocess a source file
+Controller_Layer/Filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.i
+.PHONY : Controller_Layer/Filter.cpp.i
+
+Controller_Layer/Filter.s: Controller_Layer/Filter.cpp.s
+
+.PHONY : Controller_Layer/Filter.s
+
+# target to generate assembly for a file
+Controller_Layer/Filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.s
+.PHONY : Controller_Layer/Filter.cpp.s
+
 Controller_Layer/Manifest.obj: Controller_Layer/Manifest.cpp.obj
 
 .PHONY : Controller_Layer/Manifest.obj
@@ -357,6 +384,33 @@ Controller_Layer/Manifest.s: Controller_Layer/Manifest.cpp.s
 Controller_Layer/Manifest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.s
 .PHONY : Controller_Layer/Manifest.cpp.s
+
+Controller_Layer/Sorter.obj: Controller_Layer/Sorter.cpp.obj
+
+.PHONY : Controller_Layer/Sorter.obj
+
+# target to build an object file
+Controller_Layer/Sorter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj
+.PHONY : Controller_Layer/Sorter.cpp.obj
+
+Controller_Layer/Sorter.i: Controller_Layer/Sorter.cpp.i
+
+.PHONY : Controller_Layer/Sorter.i
+
+# target to preprocess a source file
+Controller_Layer/Sorter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.i
+.PHONY : Controller_Layer/Sorter.cpp.i
+
+Controller_Layer/Sorter.s: Controller_Layer/Sorter.cpp.s
+
+.PHONY : Controller_Layer/Sorter.s
+
+# target to generate assembly for a file
+Controller_Layer/Sorter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.s
+.PHONY : Controller_Layer/Sorter.cpp.s
 
 Model_Layer/File_Workers/FileWorker.obj: Model_Layer/File_Workers/FileWorker.cpp.obj
 
@@ -556,9 +610,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Information_System
-	@echo ... Basic_Units/CSVWorker.obj
-	@echo ... Basic_Units/CSVWorker.i
-	@echo ... Basic_Units/CSVWorker.s
 	@echo ... Basic_Units/List.obj
 	@echo ... Basic_Units/List.i
 	@echo ... Basic_Units/List.s
@@ -568,18 +619,27 @@ help:
 	@echo ... Basic_Units/TypeOfNote.obj
 	@echo ... Basic_Units/TypeOfNote.i
 	@echo ... Basic_Units/TypeOfNote.s
-	@echo ... Controller_Layer/CSVWorkers/CSVWorker.obj
-	@echo ... Controller_Layer/CSVWorkers/CSVWorker.i
-	@echo ... Controller_Layer/CSVWorkers/CSVWorker.s
-	@echo ... Controller_Layer/CSVWorkers/Filter.obj
-	@echo ... Controller_Layer/CSVWorkers/Filter.i
-	@echo ... Controller_Layer/CSVWorkers/Filter.s
+	@echo ... CSVWorkers/CSVReader.obj
+	@echo ... CSVWorkers/CSVReader.i
+	@echo ... CSVWorkers/CSVReader.s
+	@echo ... CSVWorkers/CSVWorker.obj
+	@echo ... CSVWorkers/CSVWorker.i
+	@echo ... CSVWorkers/CSVWorker.s
+	@echo ... CSVWorkers/CSVWriter.obj
+	@echo ... CSVWorkers/CSVWriter.i
+	@echo ... CSVWorkers/CSVWriter.s
 	@echo ... Controller_Layer/Controller.obj
 	@echo ... Controller_Layer/Controller.i
 	@echo ... Controller_Layer/Controller.s
+	@echo ... Controller_Layer/Filter.obj
+	@echo ... Controller_Layer/Filter.i
+	@echo ... Controller_Layer/Filter.s
 	@echo ... Controller_Layer/Manifest.obj
 	@echo ... Controller_Layer/Manifest.i
 	@echo ... Controller_Layer/Manifest.s
+	@echo ... Controller_Layer/Sorter.obj
+	@echo ... Controller_Layer/Sorter.i
+	@echo ... Controller_Layer/Sorter.s
 	@echo ... Model_Layer/File_Workers/FileWorker.obj
 	@echo ... Model_Layer/File_Workers/FileWorker.i
 	@echo ... Model_Layer/File_Workers/FileWorker.s

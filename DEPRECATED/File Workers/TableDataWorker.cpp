@@ -12,7 +12,7 @@ TableDataWorker::TableDataWorker(string fileName, int numberOfRecords, int numbe
     this->types = types;
 }
 
-std::ofstream* TableDataWorker::get(vector<Request> request) {
+std::ofstream* TableDataWorker::get(vector<FilterRequest> request) {
     vector<string> recordData;
     ofstream fout("Data/query.csv");
 
@@ -108,35 +108,35 @@ void TableDataWorker::writeNextRecordInCSV(vector<string> recordData, ofstream &
     fout << endl;
 }
 
-bool TableDataWorker::isAppropriate(vector<string> recordData, vector<Request> request) {
+bool TableDataWorker::isAppropriate(vector<string> recordData, vector<FilterRequest> request) {
     bool validNote = true;
 
     for (int i = 0; i < numberOfColumns && validNote == true; ++i) {
-        if (request[i].state != Request::IGNORE_IT) {
+        if (request[i].state != FilterRequest::IGNORE_IT) {
             if (types[i].type == TypeOfNote::DOUBLE) {
                 double value = stod(recordData[i]), target = stod(request[i].value);
                 switch (request[i].state) {
-                    case Request::State::LESS:
+                    case FilterRequest::State::LESS:
                         if (value > target) {
                             validNote = false;
                         }
                         break;
-                    case Request::State::MORE:
+                    case FilterRequest::State::MORE:
                         if (value < target) {
                             validNote = false;
                         }
                         break;
-                    case Request::State::NOT_MORE:
+                    case FilterRequest::State::NOT_MORE:
                         if (value >= target) {
                             validNote = false;
                         }
                         break;
-                    case Request::State::NOT_LESS:
+                    case FilterRequest::State::NOT_LESS:
                         if (value <= target) {
                             validNote = false;
                         }
                         break;
-                    case Request::State::EQUAL:
+                    case FilterRequest::State::EQUAL:
                         if (value != target) {
                             validNote = false;
                         }
@@ -148,12 +148,12 @@ bool TableDataWorker::isAppropriate(vector<string> recordData, vector<Request> r
             else if (types[i].type == TypeOfNote::STRING) {
                 string value = recordData[i], target = request[i].value;
                 switch (request[i].state) {
-                    case Request::State::EQUAL:
+                    case FilterRequest::State::EQUAL:
                         if (value.compare(target) != 0) {
                             validNote = false;
                         }
                         break;
-                    case Request::State::INCLUDED:
+                    case FilterRequest::State::INCLUDED:
                         if (!value.find(target)) {
                             validNote = false;
 

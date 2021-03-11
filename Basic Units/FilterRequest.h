@@ -2,11 +2,11 @@
 // Created by Mark on 28.02.2021.
 //
 
-#ifndef INFORMATION_SYSTEM_REQUEST_H
-#define INFORMATION_SYSTEM_REQUEST_H
+#ifndef INFORMATION_SYSTEM_FILTERREQUEST_H
+#define INFORMATION_SYSTEM_FILTERREQUEST_H
 
 
-class Request {
+class FilterRequest {
 public:
     string value;
 
@@ -22,4 +22,4 @@ public:
 };
 
 
-#endif //INFORMATION_SYSTEM_REQUEST_H
+#endif //INFORMATION_SYSTEM_FILTERREQUEST_H

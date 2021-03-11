@@ -6,7 +6,7 @@
 #define INFORMATION_SYSTEM_CONTROLLER_H
 
 
-#include "Manifest.h"
+#include "../DEPRECATED/Manifest.h"
 #include "../Header.h"
 #include "../Model Layer/Table.h"
 
@@ -32,9 +32,9 @@ private:
     Table::TableProperties
     toNoteProperties(int numberOfProperties, vector<string> values, vector<string> namesOfValues);
 
-    Request::State getState(UserRequest userRequest);
+    FilterRequest::State getState(UserRequest userRequest);
 
-    vector<Request> makeRequest(vector<UserRequest> userRequest);*/
+    vector<FilterRequest> makeRequest(vector<UserRequest> userRequest);*/
 
 public:
     Controller();
