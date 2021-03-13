@@ -9,8 +9,8 @@
 #include "../Basic Units/TypeOfNote.h"
 #include "../DAT Workers/DATWorker.h"
 #include <ostream>
-//#include "File Workers/TablePropertiesWorker.h"
-//#include "File Workers/TableDataWorker.h"
+//#include "CSV Workers/TablePropertiesWorker.h"
+//#include "CSV Workers/TableDataWorker.h"
 
 //static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
 

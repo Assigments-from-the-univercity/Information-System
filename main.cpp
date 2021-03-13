@@ -13,7 +13,7 @@ int main() {
     //model.startWork();
 
     string name = "test.dat";
-    //FileWorker fileWorker(name, "Data\\");
+    //CSVWorker fileWorker(name, "Data\\");
     TablePropertiesWorker tablePropertiesWorker("test");
     vector<TypeOfNote> types;
     vector<List> names;

@@ -14,91 +14,75 @@ CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: ../Basic\ Unit
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.obj: ../CSVWorkers/CSVReader.cpp
-CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.obj: ../CSVWorkers/CSVReader.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVReader.cpp.obj: ../Header.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj: ../CSV\ Workers/CSVReader.cpp
+CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj: ../CSV\ Workers/CSVReader.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj: ../CSVWorkers/CSVReader.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj: ../CSVWorkers/CSVWorker.cpp
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj: ../CSVWorkers/CSVWorker.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj: ../CSVWorkers/CSVWriter.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWorker.cpp.obj: ../Header.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj: ../CSV\ Workers/CSVReader.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj: ../CSV\ Workers/CSVWorker.cpp
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj: ../CSV\ Workers/CSVWorker.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj: ../CSV\ Workers/CSVWriter.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.obj: ../CSVWorkers/CSVWriter.cpp
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.obj: ../CSVWorkers/CSVWriter.h
-CMakeFiles/Information_System.dir/CSVWorkers/CSVWriter.cpp.obj: ../Header.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj: ../CSV\ Workers/CSVWriter.cpp
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj: ../CSV\ Workers/CSVWriter.h
+CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Basic\ Units/FilterRequest.h
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Basic\ Units/Node.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Controller.cpp
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Controller.h
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Manifest.h
+CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../DEPRECATED/Manifest.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Model\ Layer/File\ Workers/TableDataWorker.h
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Model\ Layer/File\ Workers/TablePropertiesWorker.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Model\ Layer/Table.h
 
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../CSVWorkers/CSVReader.h
-CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../CSVWorkers/CSVWorker.h
-CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../CSVWorkers/CSVWriter.h
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../Controller\ Layer/Filter.cpp
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../Controller\ Layer/Filter.h
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.obj: ../Basic\ Units/Node.h
-CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.obj: ../Controller\ Layer/Manifest.cpp
-CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.obj: ../Controller\ Layer/Manifest.h
-CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/Controller_Layer/Manifest.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
-
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Basic\ Units/SortRequest.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../CSVWorkers/CSVReader.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../CSVWorkers/CSVWorker.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../CSVWorkers/CSVWriter.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Controller\ Layer/Sorter.cpp
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Controller\ Layer/Sorter.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj: ../Basic\ Units/Node.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.cpp
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/FileWorker.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../DAT\ Workers/DATWriter.cpp
+CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../DAT\ Workers/DATWriter.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/FilterRequest.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/Node.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Model\ Layer/File\ Workers/TableDataWorker.cpp
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TableDataWorker.cpp.obj: ../Model\ Layer/File\ Workers/TableDataWorker.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj: ../Basic\ Units/List.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj: ../Basic\ Units/Node.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj: ../DEPRECATED/File\ Workers/FileWorker.cpp
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj: ../DEPRECATED/File\ Workers/FileWorker.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Basic\ Units/Node.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Model\ Layer/File\ Workers/TablePropertiesWorker.cpp
-CMakeFiles/Information_System.dir/Model_Layer/File_Workers/TablePropertiesWorker.cpp.obj: ../Model\ Layer/File\ Workers/TablePropertiesWorker.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/FilterRequest.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/List.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/Node.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../DEPRECATED/File\ Workers/FileWorker.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../DEPRECATED/File\ Workers/TableDataWorker.cpp
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../DEPRECATED/File\ Workers/TableDataWorker.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Basic\ Units/FilterRequest.h
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Basic\ Units/Node.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj: ../Basic\ Units/List.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj: ../Basic\ Units/Node.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj: ../DEPRECATED/File\ Workers/FileWorker.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj: ../DEPRECATED/File\ Workers/TablePropertiesWorker.cpp
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj: ../DEPRECATED/File\ Workers/TablePropertiesWorker.h
+CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj: ../Header.h
+
+CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.obj: ../DEPRECATED/Manifest.cpp
+CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.obj: ../DEPRECATED/Manifest.h
+CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.obj: ../Header.h
+
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Model\ Layer/File\ Workers/TableDataWorker.h
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Model\ Layer/File\ Workers/TablePropertiesWorker.h
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Model\ Layer/Table.cpp
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Model\ Layer/Table.h
 
@@ -107,30 +91,18 @@ CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj: ../Header.h
 CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj: ../View\ Layer/Printer.cpp
 CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj: ../View\ Layer/Printer.h
 
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Basic\ Units/FilterRequest.h
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Basic\ Units/Node.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Controller.h
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Manifest.h
+CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../DEPRECATED/Manifest.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Model\ Layer/File\ Workers/TableDataWorker.h
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Model\ Layer/File\ Workers/TablePropertiesWorker.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Model\ Layer/Table.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../View\ Layer/View.cpp
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../View\ Layer/View.h
 
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Basic\ Units/FilterRequest.h
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Basic\ Units/Node.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Controller.h
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Manifest.h
+CMakeFiles/Information_System.dir/main.cpp.obj: ../DEPRECATED/Manifest.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Header.h
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Model\ Layer/File\ Workers/FileWorker.h
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Model\ Layer/File\ Workers/TableDataWorker.h
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Model\ Layer/File\ Workers/TablePropertiesWorker.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Model\ Layer/Table.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../View\ Layer/View.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../main.cpp

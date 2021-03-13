@@ -2,8 +2,8 @@
 // Created by Mark on 11.03.2021.
 //
 
-#ifndef INFORMATION_SYSTEM_FILEREADER_H
-#define INFORMATION_SYSTEM_FILEREADER_H
+#ifndef INFORMATION_SYSTEM_CSVREADER_H
+#define INFORMATION_SYSTEM_CSVREADER_H
 
 #include <istream>
 #include <vector>
@@ -11,19 +11,16 @@
 
 using namespace std;
 
-class FileReader {
+class CSVReader {
 private:
     istream &fin;
+    int numberOfColumns;
 
-public:
-    FileReader(istream &fin);
-
+protected:
     void getProperties(int &numberOfRecords, vector<string> &names,
                        vector<TypeOfNote> &types);
 
     vector<string> readNext();
-
-    int numberOfColumns;
 
     istream &getFin();
 
@@ -32,7 +29,10 @@ public:
     void rewindToVeryBeginning();
 
     void rewind();
+
+public:
+    CSVReader(istream &fin);
 };
 
 
-#endif //INFORMATION_SYSTEM_FILEREADER_H
+#endif //INFORMATION_SYSTEM_CSVREADER_H

@@ -5,7 +5,7 @@
 #include "../../Header.h"
 #include "FileWorker.h"
 
-FileWorker::FileWorker(string fileName, string fileFolder) {
+CSVWorker::CSVWorker(string fileName, string fileFolder) {
     name.put(fileName);
     folder.put(fileFolder);
     openForReading();
@@ -15,20 +15,20 @@ FileWorker::FileWorker(string fileName, string fileFolder) {
     }
 }
 
-void FileWorker::openForReading() {
+void CSVWorker::openForReading() {
     string filePath = folder.get() + name.get();
     fp = fopen(filePath.c_str(), "r+b");
 }
 
-void FileWorker::openForWriting() {
+void CSVWorker::openForWriting() {
     string filePath = folder.get() + name.get();
     fp = fopen(filePath.c_str(), "w+b");
 }
 
-FILE *FileWorker::getFp() {
+FILE *CSVWorker::getFp() {
     return fp;
 }
 
-string FileWorker::getName() {
+string CSVWorker::getName() {
     return name.get();
 }

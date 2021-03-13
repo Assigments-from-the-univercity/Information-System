@@ -2,12 +2,12 @@
 // Created by Mark on 23.02.2021.
 //
 
-#ifndef INFORMATION_SYSTEM_FILEWORKER_H
+#ifndef INFORMATION_SYSTEM_CSVWORKER_H
 #define INFORMATION_SYSTEM_FILEWORKER_H
 
 #include "../../Basic Units/List.h"
 
-class FileWorker {
+class CSVWorker {
 private:
     List name;
     List folder;
@@ -25,8 +25,8 @@ protected:
     string getName();
 
 public:
-    FileWorker(string fileName, string fileFolder);
+    CSVWorker(string fileName, string fileFolder);
 };
 
 
-#endif //INFORMATION_SYSTEM_FILEWORKER_H
+#endif //INFORMATION_SYSTEM_CSVWORKER_H

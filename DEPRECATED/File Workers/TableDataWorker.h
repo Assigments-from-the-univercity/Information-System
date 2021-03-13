@@ -10,7 +10,7 @@
 #include "../../Basic Units/TypeOfNote.h"
 #include "../../Basic Units/FilterRequest.h"
 
-class TableDataWorker : public FileWorker {
+class TableDataWorker : public CSVWorker {
 private:
     const string TEMP_FILE_NAME = "Data/Tables/tempCopy.dat";
 

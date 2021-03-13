@@ -2,14 +2,14 @@
 // Created by Mark on 11.03.2021.
 //
 
-#include "FileWriter.h"
+#include "CSVWriter.h"
 
-ostream &FileWriter::getFout() {
+ostream &CSVWriter::getFout() {
     return fout;
 }
 
 void
-FileWriter::setProperties(vector<string> names, vector<TypeOfNote> types) {
+CSVWriter::setProperties(vector<string> names, vector<TypeOfNote> types) {
     // setting column'typesInString names
     writeNext(names);
 
@@ -23,7 +23,7 @@ FileWriter::setProperties(vector<string> names, vector<TypeOfNote> types) {
     writeNext(typesInString);
 }
 
-void FileWriter::writeNext(vector<string> recordData, ostream &to) {
+void CSVWriter::writeNext(vector<string> recordData, ostream &to) {
     if (numberOfColumns != recordData.size()) {
         return;
     }
@@ -34,15 +34,10 @@ void FileWriter::writeNext(vector<string> recordData, ostream &to) {
     to << endl;
 }
 
-void FileWriter::writeNext(vector<string> recordData) {
+void CSVWriter::writeNext(vector<string> recordData) {
     writeNext(recordData, fout);
 }
 
-FileWriter::FileWriter(ostream &fout, int numberOfColumns) : fout(fout) {
+CSVWriter::CSVWriter(ostream &fout, int numberOfColumns) : fout(fout) {
     this->numberOfColumns = numberOfColumns;
-}
-
-FileWriter::FileWriter(ostream &fout, int numberOfColumns, vector<string> names, vector<TypeOfNote> types) : fout(fout) {
-    this->numberOfColumns = numberOfColumns;
-    setProperties(names, types);
 }

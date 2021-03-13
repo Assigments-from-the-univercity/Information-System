@@ -412,33 +412,6 @@ DAT_Workers/DATReader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.s
 .PHONY : DAT_Workers/DATReader.cpp.s
 
-DAT_Workers/DATWorker.obj: DAT_Workers/DATWorker.cpp.obj
-
-.PHONY : DAT_Workers/DATWorker.obj
-
-# target to build an object file
-DAT_Workers/DATWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATWorker.cpp.obj
-.PHONY : DAT_Workers/DATWorker.cpp.obj
-
-DAT_Workers/DATWorker.i: DAT_Workers/DATWorker.cpp.i
-
-.PHONY : DAT_Workers/DATWorker.i
-
-# target to preprocess a source file
-DAT_Workers/DATWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATWorker.cpp.i
-.PHONY : DAT_Workers/DATWorker.cpp.i
-
-DAT_Workers/DATWorker.s: DAT_Workers/DATWorker.cpp.s
-
-.PHONY : DAT_Workers/DATWorker.s
-
-# target to generate assembly for a file
-DAT_Workers/DATWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATWorker.cpp.s
-.PHONY : DAT_Workers/DATWorker.cpp.s
-
 DAT_Workers/DATWriter.obj: DAT_Workers/DATWriter.cpp.obj
 
 .PHONY : DAT_Workers/DATWriter.obj
@@ -721,9 +694,6 @@ help:
 	@echo ... DAT_Workers/DATReader.obj
 	@echo ... DAT_Workers/DATReader.i
 	@echo ... DAT_Workers/DATReader.s
-	@echo ... DAT_Workers/DATWorker.obj
-	@echo ... DAT_Workers/DATWorker.i
-	@echo ... DAT_Workers/DATWorker.s
 	@echo ... DAT_Workers/DATWriter.obj
 	@echo ... DAT_Workers/DATWriter.i
 	@echo ... DAT_Workers/DATWriter.s

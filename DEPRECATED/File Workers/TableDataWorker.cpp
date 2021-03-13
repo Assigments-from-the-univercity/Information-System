@@ -6,7 +6,7 @@
 
 TableDataWorker::TableDataWorker(string fileName, int numberOfRecords, int numberOfColumns,
                                  vector<TypeOfNote> types)
-                                 : FileWorker(fileName, TABLES_FOLDER) {
+                                 : CSVWorker(fileName, TABLES_FOLDER) {
     this->numberOfRecords = numberOfRecords;
     this->numberOfColumns = numberOfColumns;
     this->types = types;

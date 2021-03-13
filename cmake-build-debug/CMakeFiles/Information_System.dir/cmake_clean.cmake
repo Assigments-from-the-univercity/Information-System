@@ -9,7 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj"
   "CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj"
   "CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj"
-  "CMakeFiles/Information_System.dir/DAT_Workers/DATWorker.cpp.obj"
   "CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj"
   "CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj"
   "CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj"

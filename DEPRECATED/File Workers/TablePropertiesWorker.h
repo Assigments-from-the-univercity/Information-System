@@ -8,7 +8,7 @@
 #include "FileWorker.h"
 #include "../../Basic Units/TypeOfNote.h"
 
-class TablePropertiesWorker : public FileWorker {
+class TablePropertiesWorker : public CSVWorker {
 private:
     int numberOfColumns;
     vector<TypeOfNote> types;

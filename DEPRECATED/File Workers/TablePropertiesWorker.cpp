@@ -27,7 +27,7 @@ void TablePropertiesWorker::loadState() {
     fflush(getFp());
 }
 
-TablePropertiesWorker::TablePropertiesWorker(string fileName) : FileWorker(fileName + ".dat", "Data\\Tables\\") {
+TablePropertiesWorker::TablePropertiesWorker(string fileName) : CSVWorker(fileName + ".dat", "Data\\Tables\\") {
     if (numberOfColumns != 0){
         loadState();
     }
