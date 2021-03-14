@@ -18,8 +18,8 @@ private:
 protected:
     int numberOfRecords;
 
-    void getProperties(int &numberOfRecords, vector<string> &names,
-                       vector<TypeOfNote> &types);
+    //void getProperties(int &numberOfRecords, vector<string> &names,
+    //                   vector<TypeOfNote> &types);
 
     vector<string> readNext();
 
@@ -29,6 +29,9 @@ protected:
 
 public:
     DATReader(FILE *fin);
+
+    void getProperties(int &numberOfRecords, vector<string> &names,
+                       vector<TypeOfNote> &types);
 };
 
 

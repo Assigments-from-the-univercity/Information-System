@@ -14,9 +14,10 @@ using namespace std;
 class CSVReader {
 private:
     istream &fin;
-    int numberOfColumns;
 
 protected:
+    int numberOfColumns;
+
     void getProperties(int &numberOfRecords, vector<string> &names,
                        vector<TypeOfNote> &types);
 

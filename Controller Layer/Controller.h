@@ -6,7 +6,7 @@
 #define INFORMATION_SYSTEM_CONTROLLER_H
 
 
-#include "../DEPRECATED/Manifest.h"
+
 #include "../Header.h"
 #include "../Model Layer/Table.h"
 
@@ -18,7 +18,7 @@
  */
 class Controller {
 private:
-    Manifest manifest;
+    //Manifest manifest;
     Table *table = nullptr;
 
     struct UserRequest {

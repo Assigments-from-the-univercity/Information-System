@@ -27,7 +27,7 @@ private:
 public:
     DATWriter(FILE *fout, int numberOfColumns);
 
-    DATWriter(FILE *fout, int numberOfColumns, vector<string> names, vector<TypeOfNote> types);
+    DATWriter(FILE *fout, vector<string> names, vector<TypeOfNote> types);
 };
 
 

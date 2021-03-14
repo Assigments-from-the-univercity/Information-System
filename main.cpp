@@ -1,4 +1,6 @@
 #include "View Layer/View.h"
+#include "DAT Workers/DATWriter.h"
+#include "DAT Workers/DATReader.h"
 
 //Testing
 
@@ -12,6 +14,7 @@ int main() {
     //View model;
     //model.startWork();
 
+    /*
     string name = "test.dat";
     //CSVWorker fileWorker(name, "Data\\");
     TablePropertiesWorker tablePropertiesWorker("test");
@@ -43,4 +46,36 @@ int main() {
     tablePropertiesWorker.getProperties(n1, n2, types1, names2);
 
     cout << n1 << " " << n2 << " " << names[0].get();
+     */
+
+    /// DAT WORKERS TESTING
+    FILE *fp = fopen("tables\\test-1.dat", "w+b");
+
+    vector<string> names;
+    vector<TypeOfNote> types;
+
+    names.push_back("id11");
+    names.push_back("name365");
+    names.push_back("age34");
+
+    TypeOfNote typeOfNote;
+    typeOfNote.type = TypeOfNote::DOUBLE;
+    types.push_back(typeOfNote);
+    typeOfNote.type = TypeOfNote::STRING;
+    types.push_back(typeOfNote);
+    typeOfNote.type = TypeOfNote::DOUBLE;
+    types.push_back(typeOfNote);
+
+    DATWriter datWriter(fp, names, types);
+
+    rewind(fp);
+    DATReader datReader(fp);
+
+    int numberOfRecords;
+    names.clear();
+    types.clear();
+
+    datReader.getProperties(numberOfRecords, names, types);
+
+    cout << numberOfRecords << endl;
 }

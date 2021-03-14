@@ -4,7 +4,7 @@
 
 #include "Controller.h"
 
-Controller::Controller() : manifest() {
+Controller::Controller() /*: manifest()*/ {
 
 }
 

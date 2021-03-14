@@ -3,8 +3,8 @@
 //
 
 #include "Table.h"
-#include "../File Workers/CSVWriter.h"
-#include "../File Workers/CSVWorker.h"
+#include "../CSV Workers/CSVWriter.h"
+#include "../CSV Workers/CSVWorker.h"
 
 Table::Table(string tableName) {
     f.open(tableName, std::fstream::binary);
@@ -12,10 +12,11 @@ Table::Table(string tableName) {
 
 Table::Table(string tableName, int numberOfColumns, vector <string> names, vector <TypeOfNote> types) {
     f.open(tableName, std::fstream::binary);
-    CSVWriter fileWriter(f, numberOfColumns, names, types);
+    //CSVWriter fileWriter(f, numberOfColumns, names, types);
 }
 
 void Table::get(ostream &fout) {
+    /*
     //создаём екземпляр для доступа к файлу
     CSVWorker fileWorker(f, fout);
 
@@ -32,9 +33,11 @@ void Table::get(ostream &fout) {
 
     //печатаем сами записи
     fileWorker.copyFromCurrentPosition(numberOfRecords, f, fout);
+    */
 }
 
 void Table::add(vector <string> recordData) {
+    /*
     //создаём екземпляр для доступа к файлу
     CSVWorker fileWorker(f, f);
 
@@ -49,6 +52,7 @@ void Table::add(vector <string> recordData) {
     //перематывем указатель в конец и добавляем запись
     fileWorker.getFout().seekp(fileWorker.getFout().end);
     fileWorker.writeNext(recordData);
+     */
 }
 
 void Table::change(vector <string> recordData) {

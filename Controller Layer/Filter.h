@@ -6,7 +6,7 @@
 #define INFORMATION_SYSTEM_FILTER_H
 
 
-#include "../CSVWorkers/CSVWorker.h"
+#include "../CSV Workers/CSVWorker.h"
 #include "../Basic Units/TypeOfNote.h"
 
 class Filter : CSVWorker {

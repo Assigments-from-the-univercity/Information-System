@@ -48,12 +48,24 @@ FILE *DATWriter::getFout() {
 }
 
 DATWriter::DATWriter(FILE *fout, int numberOfColumns) {
+    if (fout == NULL){
+        cout << "fout NOT OPEN";
+        return;
+    }
     this->fout = fout;
     this->numberOfColumns = numberOfColumns;
 }
 
-DATWriter::DATWriter(FILE *fout, int numberOfColumns, vector<string> names, vector<TypeOfNote> types) {
+DATWriter::DATWriter(FILE *fout, vector<string> names, vector<TypeOfNote> types) {
+    if (fout == NULL){
+        cout << "fout NOT OPEN";
+        return;
+    }
+    if (names.size() != types.size()) {
+        cout << "names.size() != types.size()";
+        return;
+    }
     this->fout = fout;
-    this->numberOfColumns = numberOfColumns;
+    this->numberOfColumns = names.size();
     setProperties(0, names, types);
 }

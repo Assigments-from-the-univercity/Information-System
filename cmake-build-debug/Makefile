@@ -439,114 +439,6 @@ DAT_Workers/DATWriter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.s
 .PHONY : DAT_Workers/DATWriter.cpp.s
 
-DEPRECATED/File_Workers/FileWorker.obj: DEPRECATED/File_Workers/FileWorker.cpp.obj
-
-.PHONY : DEPRECATED/File_Workers/FileWorker.obj
-
-# target to build an object file
-DEPRECATED/File_Workers/FileWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj
-.PHONY : DEPRECATED/File_Workers/FileWorker.cpp.obj
-
-DEPRECATED/File_Workers/FileWorker.i: DEPRECATED/File_Workers/FileWorker.cpp.i
-
-.PHONY : DEPRECATED/File_Workers/FileWorker.i
-
-# target to preprocess a source file
-DEPRECATED/File_Workers/FileWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.i
-.PHONY : DEPRECATED/File_Workers/FileWorker.cpp.i
-
-DEPRECATED/File_Workers/FileWorker.s: DEPRECATED/File_Workers/FileWorker.cpp.s
-
-.PHONY : DEPRECATED/File_Workers/FileWorker.s
-
-# target to generate assembly for a file
-DEPRECATED/File_Workers/FileWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.s
-.PHONY : DEPRECATED/File_Workers/FileWorker.cpp.s
-
-DEPRECATED/File_Workers/TableDataWorker.obj: DEPRECATED/File_Workers/TableDataWorker.cpp.obj
-
-.PHONY : DEPRECATED/File_Workers/TableDataWorker.obj
-
-# target to build an object file
-DEPRECATED/File_Workers/TableDataWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj
-.PHONY : DEPRECATED/File_Workers/TableDataWorker.cpp.obj
-
-DEPRECATED/File_Workers/TableDataWorker.i: DEPRECATED/File_Workers/TableDataWorker.cpp.i
-
-.PHONY : DEPRECATED/File_Workers/TableDataWorker.i
-
-# target to preprocess a source file
-DEPRECATED/File_Workers/TableDataWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.i
-.PHONY : DEPRECATED/File_Workers/TableDataWorker.cpp.i
-
-DEPRECATED/File_Workers/TableDataWorker.s: DEPRECATED/File_Workers/TableDataWorker.cpp.s
-
-.PHONY : DEPRECATED/File_Workers/TableDataWorker.s
-
-# target to generate assembly for a file
-DEPRECATED/File_Workers/TableDataWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.s
-.PHONY : DEPRECATED/File_Workers/TableDataWorker.cpp.s
-
-DEPRECATED/File_Workers/TablePropertiesWorker.obj: DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj
-
-.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.obj
-
-# target to build an object file
-DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj
-.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj
-
-DEPRECATED/File_Workers/TablePropertiesWorker.i: DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i
-
-.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.i
-
-# target to preprocess a source file
-DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i
-.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.cpp.i
-
-DEPRECATED/File_Workers/TablePropertiesWorker.s: DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s
-
-.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.s
-
-# target to generate assembly for a file
-DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s
-.PHONY : DEPRECATED/File_Workers/TablePropertiesWorker.cpp.s
-
-DEPRECATED/Manifest.obj: DEPRECATED/Manifest.cpp.obj
-
-.PHONY : DEPRECATED/Manifest.obj
-
-# target to build an object file
-DEPRECATED/Manifest.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.obj
-.PHONY : DEPRECATED/Manifest.cpp.obj
-
-DEPRECATED/Manifest.i: DEPRECATED/Manifest.cpp.i
-
-.PHONY : DEPRECATED/Manifest.i
-
-# target to preprocess a source file
-DEPRECATED/Manifest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.i
-.PHONY : DEPRECATED/Manifest.cpp.i
-
-DEPRECATED/Manifest.s: DEPRECATED/Manifest.cpp.s
-
-.PHONY : DEPRECATED/Manifest.s
-
-# target to generate assembly for a file
-DEPRECATED/Manifest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.s
-.PHONY : DEPRECATED/Manifest.cpp.s
-
 Model_Layer/Table.obj: Model_Layer/Table.cpp.obj
 
 .PHONY : Model_Layer/Table.obj
@@ -697,18 +589,6 @@ help:
 	@echo ... DAT_Workers/DATWriter.obj
 	@echo ... DAT_Workers/DATWriter.i
 	@echo ... DAT_Workers/DATWriter.s
-	@echo ... DEPRECATED/File_Workers/FileWorker.obj
-	@echo ... DEPRECATED/File_Workers/FileWorker.i
-	@echo ... DEPRECATED/File_Workers/FileWorker.s
-	@echo ... DEPRECATED/File_Workers/TableDataWorker.obj
-	@echo ... DEPRECATED/File_Workers/TableDataWorker.i
-	@echo ... DEPRECATED/File_Workers/TableDataWorker.s
-	@echo ... DEPRECATED/File_Workers/TablePropertiesWorker.obj
-	@echo ... DEPRECATED/File_Workers/TablePropertiesWorker.i
-	@echo ... DEPRECATED/File_Workers/TablePropertiesWorker.s
-	@echo ... DEPRECATED/Manifest.obj
-	@echo ... DEPRECATED/Manifest.i
-	@echo ... DEPRECATED/Manifest.s
 	@echo ... Model_Layer/Table.obj
 	@echo ... Model_Layer/Table.i
 	@echo ... Model_Layer/Table.s

@@ -35,66 +35,56 @@ CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/Manifest.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Filter.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Filter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/SortRequest.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorter.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.cpp
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
-CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/FileWorker.cpp.obj
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/FileWorker.cpp
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/FileWorker.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
-CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TableDataWorker.cpp.obj
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/FilterRequest.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/FileWorker.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/TableDataWorker.cpp
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/TableDataWorker.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
-CMakeFiles/Information_System.dir/DEPRECATED/File_Workers/TablePropertiesWorker.cpp.obj
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/FileWorker.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/TablePropertiesWorker.cpp
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/File Workers/TablePropertiesWorker.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
-CMakeFiles/Information_System.dir/DEPRECATED/Manifest.cpp.obj
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/Manifest.cpp
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/Manifest.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
 CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/Manifest.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.cpp
@@ -102,7 +92,8 @@ CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj
 CMakeFiles/Information_System.dir/main.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DEPRECATED/Manifest.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h

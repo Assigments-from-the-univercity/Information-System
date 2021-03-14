@@ -5,7 +5,7 @@
 #ifndef INFORMATION_SYSTEM_SORTER_H
 #define INFORMATION_SYSTEM_SORTER_H
 
-#include "../CSVWorkers/CSVWorker.h"
+#include "../CSV Workers/CSVWorker.h"
 #include "../Basic Units/SortRequest.h"
 #include "../Basic Units/TypeOfNote.h"
 

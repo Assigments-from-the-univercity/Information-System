@@ -22,7 +22,7 @@ void Sorter::sort() {
     sortNextLevel(0);
 
     //buffer.open(bufferName);
-    setProperties(numberOfRecords, names, types);
+    setProperties(names, types);
     copyAll(numberOfRecords, buffer, getFout());
 
     buffer.close();

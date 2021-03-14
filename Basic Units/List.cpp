@@ -167,10 +167,13 @@ void List::readFromFile(FILE *fp) {
 
     fread(&node, sizeof(Node), 1, fp);
     *current = node;
+    current->setNext(nullptr);
 
     while (node.getNext() != nullptr) {
         fread(&node, sizeof(Node), 1, fp);
         this->add(node.getValue());
+        //current = current->getNext();
+        //current->setNext(nullptr);
     }
 }
 
@@ -180,5 +183,5 @@ void List::writeInFile(FILE *fp) {
     do {
         fwrite(current, sizeof(Node), 1, fp);
         current = current->getNext();
-    } while (current->getNext() != nullptr);
+    } while (current != nullptr);
 }
