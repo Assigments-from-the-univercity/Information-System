@@ -9,12 +9,13 @@
 
 Table::Table(string tableName) {
     this->tableName = tableName;
-    path = folder + tableName;
+    path = folder + tableName + extension;
 }
 
 Table::Table(string tableName, vector<string> names, vector<TypeOfNote> types) {
-    path = folder + tableName;
-    FILE *f = fopen(path.c_str(), "r+b");
+    this->tableName = tableName;
+    path = folder + tableName + extension;
+    FILE *f = fopen(path.c_str(), "w+b");
     DATWriter datWriter(f, names, types);
 }
 
@@ -27,15 +28,21 @@ void Table::get(ostream &fout) {
     vector<TypeOfNote> types;
 
     DATReader datReader(f);
+    int p = ftell(f);
+    fseek(f, 0, SEEK_END);
+    p = ftell(f);
     datReader.getProperties(numberOfRecords, names, types);
+    p = ftell(f);
     CSVWriter csvWriter(fout, datReader.getNumberOfColumns());
 
     //печатаем заголовок
     csvWriter.setProperties(names, types);
 
     //печатаем сами записи
-    for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
-        csvWriter.writeNext(datReader.readNext());
+    for (int i = 0; i < datReader.getNumberOfRecords(); ++i) {
+        p = ftell(f);
+        vector<string> s = datReader.readNext();
+        csvWriter.writeNext(s);
     }
 }
 
@@ -52,7 +59,17 @@ void Table::add(vector<string> recordData) {
     DATWriter datWriter(f, datReader.getNumberOfColumns());
 
     //добавляем запись
+    for (int i = 0; i < numberOfRecords; ++i) {
+        if (!strcmp(datReader.readNext()[0].c_str(), recordData[0].c_str())) {
+            return;
+        }
+    }
+    fseek(datWriter.getFout(), 0, SEEK_END);
     datWriter.writeNext(recordData);
+
+    //печатаем правильный заголовок
+    numberOfRecords++;
+    datWriter.setProperties(numberOfRecords, names, types);
 }
 
 void Table::change(vector<string> recordData) {
@@ -76,7 +93,7 @@ void Table::change(vector<string> recordData) {
     vector<string> currentRecord;
     for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
         currentRecord = datReader.readNext();
-        if (currentRecord[0] != recordData[0]) {
+        if (!strcmp(currentRecord[0].c_str(), recordData[0].c_str())) {
             datWriter.writeNext(currentRecord);
         } else {
             datWriter.writeNext(recordData);
@@ -109,7 +126,7 @@ void Table::deleteItem(string key) {
     bool isDeleted = false;
     for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
         currentRecord = datReader.readNext();
-        if (currentRecord[0] != key) {
+        if (!strcmp(currentRecord[0].c_str(), key.c_str())) {
             datWriter.writeNext(currentRecord);
             isDeleted = true;
         }

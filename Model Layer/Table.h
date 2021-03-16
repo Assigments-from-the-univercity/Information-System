@@ -31,6 +31,7 @@ private:
     string tableName;
     string folder = "tables\\";
     string path;
+    string extension = ".dat";
 
 public:
     Table(string tableName);
