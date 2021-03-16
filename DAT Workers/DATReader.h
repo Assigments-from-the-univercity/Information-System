@@ -14,12 +14,13 @@ class DATReader {
 private:
     FILE *fin;
     int numberOfColumns;
-
-protected:
     int numberOfRecords;
 
-    //void getProperties(int &numberOfRecords, vector<string> &names,
-    //                   vector<TypeOfNote> &types);
+public:
+    DATReader(FILE *fin);
+
+    void getProperties(int &numberOfRecords, vector<string> &names,
+                       vector<TypeOfNote> &types);
 
     vector<string> readNext();
 
@@ -27,11 +28,9 @@ protected:
 
     vector<string> readNext(FILE *from);
 
-public:
-    DATReader(FILE *fin);
+    int getNumberOfColumns();
 
-    void getProperties(int &numberOfRecords, vector<string> &names,
-                       vector<TypeOfNote> &types);
+    int getNumberOfRecords();
 };
 
 

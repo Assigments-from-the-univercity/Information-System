@@ -15,7 +15,11 @@ private:
     FILE *fout;
     int numberOfColumns;
 
-private:
+public:
+    DATWriter(FILE *fout, int numberOfColumns);
+
+    DATWriter(FILE *fout, vector<string> names, vector<TypeOfNote> types);
+
     void setProperties(int numberOfRecords, vector<string> names, vector<TypeOfNote> types);
 
     void writeNext(vector<string> recordData);
@@ -23,11 +27,6 @@ private:
     void writeNext(vector<string> recordData, FILE *to);
 
     FILE *getFout();
-
-public:
-    DATWriter(FILE *fout, int numberOfColumns);
-
-    DATWriter(FILE *fout, vector<string> names, vector<TypeOfNote> types);
 };
 
 

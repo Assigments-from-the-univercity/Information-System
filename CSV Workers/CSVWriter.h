@@ -14,7 +14,9 @@ private:
     ostream &fout;
     int numberOfColumns;
 
-protected:
+public:
+    CSVWriter(ostream &fout, int numberOfColumns);
+
     void setProperties(vector<string> names, vector<TypeOfNote> types);
 
     void writeNext(vector<string> recordData);
@@ -22,9 +24,6 @@ protected:
     ostream &getFout();
 
     void writeNext(vector<string> recordData, ostream &to);
-
-public:
-    CSVWriter(ostream &fout, int numberOfColumns);
 };
 
 

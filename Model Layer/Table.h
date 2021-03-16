@@ -7,12 +7,7 @@
 
 #include "../Header.h"
 #include "../Basic Units/TypeOfNote.h"
-//#include "../DAT Workers/DATWorker.h"
 #include <ostream>
-//#include "CSV Workers/TablePropertiesWorker.h"
-//#include "CSV Workers/TableDataWorker.h"
-
-//static const string valueOfTypeOfNote[2] = {"STRING", "DOUBLE"};
 
 /**
  * This class represent (a part of) the model layer.
@@ -33,13 +28,14 @@
  */
 class Table {
 private:
-    //DATWorker datWorker;
-    fstream f;
+    string tableName;
+    string folder = "tables\\";
+    string path;
 
 public:
     Table(string tableName);
 
-    Table(string tableName, int numberOfColumns, vector<string> names, vector<TypeOfNote> types);
+    Table(string tableName, vector<string> names, vector<TypeOfNote> types);
 
     void get(ostream &fout);
 

@@ -52,3 +52,11 @@ DATReader::DATReader(FILE *fin) {
     fread(&numberOfColumns, sizeof(int), 1, fin);
     fread(&numberOfRecords, sizeof(int), 1, fin);
 }
+
+int DATReader::getNumberOfColumns() {
+    return numberOfColumns;
+}
+
+int DATReader::getNumberOfRecords() {
+    return numberOfRecords;
+}

@@ -4,63 +4,124 @@
 
 #include "Table.h"
 #include "../CSV Workers/CSVWriter.h"
-#include "../CSV Workers/CSVWorker.h"
+#include "../DAT Workers/DATWriter.h"
+#include "../DAT Workers/DATReader.h"
 
 Table::Table(string tableName) {
-    f.open(tableName, std::fstream::binary);
+    this->tableName = tableName;
+    path = folder + tableName;
 }
 
-Table::Table(string tableName, int numberOfColumns, vector <string> names, vector <TypeOfNote> types) {
-    f.open(tableName, std::fstream::binary);
-    //CSVWriter fileWriter(f, numberOfColumns, names, types);
+Table::Table(string tableName, vector<string> names, vector<TypeOfNote> types) {
+    path = folder + tableName;
+    FILE *f = fopen(path.c_str(), "r+b");
+    DATWriter datWriter(f, names, types);
 }
 
 void Table::get(ostream &fout) {
-    /*
-    //создаём екземпляр для доступа к файлу
-    CSVWorker fileWorker(f, fout);
+    //создаём объекты для доступа к файлу
+    FILE *f = fopen(path.c_str(), "rb");
 
-    //данные таблици
     int numberOfRecords;
     vector<string> names;
     vector<TypeOfNote> types;
 
-    //получаем данные таблици
-    fileWorker.getProperties(numberOfRecords, names, types);
+    DATReader datReader(f);
+    datReader.getProperties(numberOfRecords, names, types);
+    CSVWriter csvWriter(fout, datReader.getNumberOfColumns());
 
     //печатаем заголовок
-    fileWorker.setProperties(names, types);
+    csvWriter.setProperties(names, types);
 
     //печатаем сами записи
-    fileWorker.copyFromCurrentPosition(numberOfRecords, f, fout);
-    */
+    for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
+        csvWriter.writeNext(datReader.readNext());
+    }
 }
 
-void Table::add(vector <string> recordData) {
-    /*
-    //создаём екземпляр для доступа к файлу
-    CSVWorker fileWorker(f, f);
+void Table::add(vector<string> recordData) {
+    //создаём объекты для доступа к файлу
+    FILE *f = fopen(path.c_str(), "r+b");
 
-    //данные таблици
     int numberOfRecords;
     vector<string> names;
     vector<TypeOfNote> types;
 
-    //получаем данные таблици
-    fileWorker.getProperties(numberOfRecords, names, types);
+    DATReader datReader(f);
+    datReader.getProperties(numberOfRecords, names, types);
+    DATWriter datWriter(f, datReader.getNumberOfColumns());
 
-    //перематывем указатель в конец и добавляем запись
-    fileWorker.getFout().seekp(fileWorker.getFout().end);
-    fileWorker.writeNext(recordData);
-     */
+    //добавляем запись
+    datWriter.writeNext(recordData);
 }
 
-void Table::change(vector <string> recordData) {
-    //tableDataWorker->change(recordData);
+void Table::change(vector<string> recordData) {
+    //создаём объекты для доступа к файлу
+    string pathTemp = folder + "TEMP";
+    FILE *fin = fopen(path.c_str(), "rb");
+    FILE *fout = fopen(pathTemp.c_str(), "w+b");
+
+    int numberOfRecords;
+    vector<string> names;
+    vector<TypeOfNote> types;
+
+    DATReader datReader(fin);
+    datReader.getProperties(numberOfRecords, names, types);
+    DATWriter datWriter(fout, datReader.getNumberOfColumns());
+
+    //печатаем заголовок
+    datWriter.setProperties(numberOfRecords, names, types);
+
+    //печатаем сами записи
+    vector<string> currentRecord;
+    for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
+        currentRecord = datReader.readNext();
+        if (currentRecord[0] != recordData[0]) {
+            datWriter.writeNext(currentRecord);
+        } else {
+            datWriter.writeNext(recordData);
+        }
+    }
+
+    remove(path.c_str());
+    rename(pathTemp.c_str(), path.c_str());
 }
 
 void Table::deleteItem(string key) {
-    //tableDataWorker->deleteItem(key);
+    //создаём объекты для доступа к файлу
+    string pathTemp = folder + "TEMP";
+    FILE *fin = fopen(path.c_str(), "rb");
+    FILE *fout = fopen(pathTemp.c_str(), "w+b");
+
+    int numberOfRecords;
+    vector<string> names;
+    vector<TypeOfNote> types;
+
+    DATReader datReader(fin);
+    datReader.getProperties(numberOfRecords, names, types);
+    DATWriter datWriter(fout, datReader.getNumberOfColumns());
+
+    //печатаем пробный заголовок (если запись удаляем - этот изменим) - чтоз зарезервировать место
+    datWriter.setProperties(numberOfRecords, names, types);
+
+    //печатаем сами записи
+    vector<string> currentRecord;
+    bool isDeleted = false;
+    for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
+        currentRecord = datReader.readNext();
+        if (currentRecord[0] != key) {
+            datWriter.writeNext(currentRecord);
+            isDeleted = true;
+        }
+    }
+
+    if (isDeleted) {
+        //печатаем правильный заголовок
+        datWriter.setProperties(numberOfRecords - 1, names, types);
+    }
+
+    remove(path.c_str());
+    rename(pathTemp.c_str(), path.c_str());
 }
 
 /*
