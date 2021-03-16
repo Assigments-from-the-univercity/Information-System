@@ -6,9 +6,7 @@
 #include "../Basic Units/List.h"
 
 void DATReader::getProperties(int &numberOfRecords, vector<string> &names, vector<TypeOfNote> &types) {
-    int p = ftell(fin);
     rewind(this->fin);
-    p = ftell(fin);
 
     numberOfRecords = this->numberOfRecords;
 

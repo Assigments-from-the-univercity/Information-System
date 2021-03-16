@@ -28,11 +28,7 @@ void Table::get(ostream &fout) {
     vector<TypeOfNote> types;
 
     DATReader datReader(f);
-    int p = ftell(f);
-    fseek(f, 0, SEEK_END);
-    p = ftell(f);
     datReader.getProperties(numberOfRecords, names, types);
-    p = ftell(f);
     CSVWriter csvWriter(fout, datReader.getNumberOfColumns());
 
     //печатаем заголовок
@@ -40,9 +36,7 @@ void Table::get(ostream &fout) {
 
     //печатаем сами записи
     for (int i = 0; i < datReader.getNumberOfRecords(); ++i) {
-        p = ftell(f);
-        vector<string> s = datReader.readNext();
-        csvWriter.writeNext(s);
+        csvWriter.writeNext(datReader.readNext());
     }
 }
 
