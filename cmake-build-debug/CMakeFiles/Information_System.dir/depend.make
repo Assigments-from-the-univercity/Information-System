@@ -32,10 +32,12 @@ CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj: ../CSV\ Workers
 CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj: ../Header.h
 
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../CSV\ Workers/CSVReader.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Controller.cpp
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Controller.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Header.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Model\ Layer/Table.h
+CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../View\ Layer/Printer.h
 
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj: ../CSV\ Workers/CSVReader.h
@@ -69,9 +71,9 @@ CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../DAT\ Workers
 CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Header.h
 
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../CSV\ Workers/CSVReader.h
-CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../CSV\ Workers/CSVWorker.h
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../CSV\ Workers/CSVWriter.h
+CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../DAT\ Workers/DATReader.h
+CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../DAT\ Workers/DATWriter.h
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Header.h
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Model\ Layer/Table.cpp
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj: ../Model\ Layer/Table.h
@@ -83,18 +85,22 @@ CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj: ../View\ Layer/Pri
 CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj: ../View\ Layer/Printer.h
 
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../CSV\ Workers/CSVReader.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Controller.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Header.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Model\ Layer/Table.h
+CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../View\ Layer/Printer.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../View\ Layer/View.cpp
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../View\ Layer/View.h
 
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/main.cpp.obj: ../CSV\ Workers/CSVReader.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Controller.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../DAT\ Workers/DATReader.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../DAT\ Workers/DATWriter.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Header.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Model\ Layer/Table.h
+CMakeFiles/Information_System.dir/main.cpp.obj: ../View\ Layer/Printer.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../View\ Layer/View.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../main.cpp
 

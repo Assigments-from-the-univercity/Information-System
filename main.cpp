@@ -83,9 +83,20 @@ int main() {
     cout << numberOfRecords << endl;
     */
 
+    /*
     Table table("test-2", names, types);
     //Table table("test-2");
     table.add(recordData);
     ofstream fout("tables\\result.csv");
-    table.get(fout);
+    table.get(fout);*/
+
+    Controller controller;
+    controller.getTables();
+    cout << endl << endl;
+    controller.addTable();
+    controller.getTables();
+
+    /*fstream fin("tables\\temp_result.csv");
+    Printer printer(fin);
+    printer.print();*/
 }

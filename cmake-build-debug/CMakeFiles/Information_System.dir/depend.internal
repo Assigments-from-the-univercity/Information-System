@@ -33,10 +33,12 @@ CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
 CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
@@ -70,9 +72,9 @@ CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
- C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
@@ -84,17 +86,21 @@ CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.cpp
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
 CMakeFiles/Information_System.dir/main.cpp.obj
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
+ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
  C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/main.cpp

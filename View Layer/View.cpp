@@ -15,7 +15,7 @@ void View::printPath() {
 void View::userCommand(string command) {
     if (userDirectory.size() == 1) {
         if (command == "ls") {
-            controller.lsTable();
+            controller.getTables();
         } else if (command == "add") {
             controller.addTable();
         } else if (command == "cd" && userDirectory.size() == 1) {
@@ -36,9 +36,10 @@ void View::userCommand(string command) {
         }
     } else if (userDirectory.size() == 2) {
         if (command == "ls") {
-            controller.lsRecords();
+            controller.getRecords();
         } else if (command == "SELECT") {
-            controller.selectRecords();
+            //controller.selectRecords();
+            //TODO re-change select method
         } else if (command == "add") {
             controller.addRecord();
         } else if (command == "back" && userDirectory.size() == 2) {

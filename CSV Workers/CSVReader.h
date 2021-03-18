@@ -18,11 +18,6 @@ private:
 protected:
     int numberOfColumns;
 
-    void getProperties(int &numberOfRecords, vector<string> &names,
-                       vector<TypeOfNote> &types);
-
-    vector<string> readNext();
-
     istream &getFin();
 
     vector<string> readNext(istream &from);
@@ -33,6 +28,11 @@ protected:
 
 public:
     CSVReader(istream &fin);
+
+    void getProperties(int &numberOfRecords, vector<string> &names,
+                       vector<TypeOfNote> &types);
+
+    vector<string> readNext();
 };
 
 

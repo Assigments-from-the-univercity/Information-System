@@ -14,7 +14,8 @@ vector<string> CSVReader::readNext(istream &from) {
     string propData;
     char propChar = 0;
 
-    from >> propLine;
+    //from >> propLine;
+    getline(from, propLine);
     int sizeOfPropLine = propLine.size();
     for (int i = 0; i < sizeOfPropLine; ++i) {
         propChar = propLine[i];
@@ -40,12 +41,16 @@ void CSVReader::rewindToVeryBeginning() {
 void CSVReader::rewind() {
     rewindToVeryBeginning();
     string s;
-    fin >> s;
-    fin >> s;
+    getline(fin, s);
+    getline(fin, s);
+    //fin >> s;
+    //fin >> s;
 
 }
 
 void CSVReader::getProperties(int &numberOfRecords, vector<string> &names, vector<TypeOfNote> &types) {
+    rewindToVeryBeginning();
+
     // setting column's names
     names = readNext();
 
@@ -60,8 +65,10 @@ void CSVReader::getProperties(int &numberOfRecords, vector<string> &names, vecto
 
     // setting numberOfRecords
     numberOfRecords = 0;
-    for (string str; getline(getFin(), str); ++numberOfRecords) {}
-    numberOfRecords--;
+    string str;
+    //fin.ignore();
+    for (/*string str*/; getline(getFin(), str); ++numberOfRecords) {}
+    //numberOfRecords--;
 
     rewind();
 }

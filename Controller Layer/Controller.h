@@ -9,6 +9,7 @@
 
 #include "../Header.h"
 #include "../Model Layer/Table.h"
+#include "../View Layer/Printer.h"
 
 /**
  * This class represent the controller layer.
@@ -16,16 +17,22 @@
  * change, create or delete data.
  * This class isn't working with data directly, but can call methods to do it.
  */
+
+const static string manifestName = "Manifest";
+
 class Controller {
 private:
-    //Manifest manifest;
-    Table *table = nullptr;
-
-    struct UserRequest {
+    /*struct UserRequest {
         string name;
         string oper;
         string value;
-    };
+    };*/
+
+    Table manifest;
+    string currentTableName = "";
+    string tempFile = "tables\\temp_result.csv";
+
+    void createTempFile();
 
     /*Manifest::TableProperties toTableProperties(string fileName, string fileDescription);
 
@@ -39,15 +46,13 @@ private:
 public:
     Controller();
 
-    void lsTable();
+    void getTables();
 
     void addTable();
 
     void cd(string tableName);
 
-    void lsRecords();
-
-    void selectRecords();
+    void getRecords();
 
     void addRecord();
 

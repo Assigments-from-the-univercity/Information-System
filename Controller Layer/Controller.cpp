@@ -4,229 +4,188 @@
 
 #include "Controller.h"
 
-Controller::Controller() /*: manifest()*/ {
-
+void Controller::createTempFile() {
+    ofstream f(tempFile);
+    f.close();
 }
 
-void Controller::lsTable() {
+Controller::Controller() : manifest(manifestName) {
+    ifstream fin("tables\\" + manifestName + ".dat");
+    if (fin.is_open() == false) {
+        vector<string> names;
+        vector<TypeOfNote> types;
+        TypeOfNote type;
 
+        names.push_back("name");
+        names.push_back("description");
+
+        type.setType("STRING");
+        types.push_back(type);
+        types.push_back(type);
+
+        Table::createTable(manifestName, names, types);
+    }
+}
+
+void Controller::getTables() {
+    createTempFile();
+    fstream allRecordsFromTable(tempFile);
+    manifest.get(allRecordsFromTable);
+
+    Printer printer(allRecordsFromTable);
+    printer.print();
+
+    allRecordsFromTable.close();
+    remove(tempFile.c_str());
 }
 
 void Controller::addTable() {
+    // данные таблици
+    int numberOfProperties;
+    string tableDescription;
+    string tableName;
+    vector<string> names;
+    vector<TypeOfNote> types;
 
+    // дополнительные переменные
+    string stringTypeOfColumn;
+    TypeOfNote typeOfColumn;
+    string nameOfColumn;
+
+    // получаем имя новой таблицы
+    cout << "Write a name of the file: ";
+    cin >> tableName;
+
+    // получаем описание таблицы
+    cin.ignore(32767, '\n'); // удаляем символ новой строки из входного потока данных
+    cout << "Write a description of the file: ";
+    getline(cin, tableDescription);
+
+    // добавляем таблицу в manifest
+    vector<string> tableProperties;
+    tableProperties.push_back(tableName);
+    tableProperties.push_back(tableDescription);
+    manifest.add(tableProperties);
+
+    // получаем количество полей таблицы
+    cout << "Write a number of fields in a file: ";
+    cin >> numberOfProperties;
+
+    // получаем имя и тип каждого поля таблицы
+    for (int i = 0; i < numberOfProperties; ++i) {
+        cout << "Write a name of " << (i + 1) << " field: ";
+        cin >> nameOfColumn;
+        cout << "Write a type of " << (i + 1) << " field: ";
+        cin >> stringTypeOfColumn;
+        if (stringTypeOfColumn == "STRING" || stringTypeOfColumn == "DOUBLE") {
+            typeOfColumn.setType(stringTypeOfColumn);
+            types.push_back(typeOfColumn);
+            names.push_back(nameOfColumn);
+        } else {
+            cout << "wrong input: " + stringTypeOfColumn + " isn't STRING or DOUBLE." << endl;
+            cout << "re-input this field." << endl;
+            i--;
+        }
+    }
+
+    Table::createTable(tableName, names, types);
 }
 
 void Controller::cd(string tableName) {
-    static Table table(tableName);
-    this->table = &table;
+    fstream allRecordsFromTable(tempFile);
+    manifest.get(allRecordsFromTable);
+
+    CSVReader csvReader(allRecordsFromTable);
+    vector<string> recordData;
+    int numberOfRecords;
+    vector<string> names;
+    vector<TypeOfNote> types;
+    csvReader.getProperties(numberOfRecords, names, types);
+
+    for (int i = 0; i < numberOfRecords; ++i) {
+        recordData = csvReader.readNext();
+        if (recordData[0] == tableName) {
+            currentTableName = tableName;
+            break;
+        }
+    }
+
+    remove(tempFile.c_str());
 }
 
-void Controller::lsRecords() {
+void Controller::getRecords() {
+    fstream allRecordsFromTable(tempFile);
+    Table table(currentTableName);
+    table.get(allRecordsFromTable);
 
-}
+    //TODO filter and sorter the data
 
-void Controller::selectRecords() {
+    Printer printer(allRecordsFromTable);
+    printer.print();
 
+    remove(tempFile.c_str());
 }
 
 void Controller::addRecord() {
+    fstream allRecordsFromTable(tempFile);
+    Table table(currentTableName);
 
-}
+    vector<string> names;
+    vector<TypeOfNote> types;
+    table.getProperties(names, types);
+    int numberOfColumns = names.size();
 
-void Controller::deleteRecord() {
-
-}
-
-void Controller::changeRecord() {
-
-}
-/*
-Manifest::TableProperties Controller::toTableProperties(string fileName, string fileDescription) {
-    Manifest::TableProperties newTable;
-
-    strcpy(newTable.name, fileName.c_str());
-    strcpy(newTable.description, fileDescription.c_str());
-
-    newTable.name[NAME_SIZE - 1] = '\0';
-    newTable.description[DESCRIPTION_SIZE - 1] = '\0';
-
-    return newTable;
-}
-
-Table::TableProperties
-Controller::toNoteProperties(int numberOfProperties, vector<string> values, vector<string> namesOfValues) {
-    Table::TableProperties notesProperties;
-
-    notesProperties.numberOfNotes = 0;
-    notesProperties.numberOfProperties = numberOfProperties;
-
-    Table::Field field;
-    for (int i = 0; i < numberOfProperties; ++i) {
-        if (values[i] == "string") {
-            field.type = Table::TypeOfNote::STRING;
-        } else if (values[i] == "double") {
-            field.type = Table::TypeOfNote::DOUBLE;
-        } else if (values[i] == "date") {
-            field.type = Table::TypeOfNote::DATE;
-        } else {
-            cout << "Wrong input of properties!" << endl << "Program was stopped.";
-            abort();
-        }
-
-        strcpy(field.name, namesOfValues[i].c_str());
-        field.name[NAME_SIZE - 1] = '\0';
-
-        notesProperties.values.push_back(field);
-    }
-
-    return notesProperties;
-}
-
-Table::FilterRequest::State Controller::getState(UserRequest userRequest) {
-    if (userRequest.oper == "<") {
-        return Table::FilterRequest::LESS;
-    } else if (userRequest.oper == ">") {
-        return Table::FilterRequest::MORE;
-    } else if (userRequest.oper == "<=") {
-        return Table::FilterRequest::NOT_MORE;
-    } else if (userRequest.oper == ">=") {
-        return Table::FilterRequest::NOT_LESS;
-    } else if (userRequest.oper == "=") {
-        return Table::FilterRequest::EQUAL;
-    } else if (userRequest.oper == "in") {
-        return Table::FilterRequest::INCLUDED;
-    } else {
-        return Table::FilterRequest::IGNORE_IT;
-    }
-}
-
-vector<Table::FilterRequest> Controller::makeRequest(vector<UserRequest> userRequest) {
-    vector<Table::FilterRequest> request;
-
-    Table::FilterRequest mRequest;
-    for (int i = 0; i < table.properties.numberOfProperties; ++i) {
-        mRequest.value = "0";
-        mRequest.state = Table::FilterRequest::State::IGNORE_IT;
-
-        for (int j = 0; j < userRequest.size(); ++j) {
-            if (userRequest[j].name == table.properties.values[i].name) {
-                mRequest.value = userRequest[j].value;
-                mRequest.state = getState(userRequest[j]);
-            }
-        }
-
-        request.push_back(mRequest);
-    }
-
-    return request;
-}
-
-void Controller::lsTable() {
-    manifest.printTables();
-}
-
-void Controller::addTable() {
-    int numberOfProperties;
-    string fileName, fileDescription;
+    string recordFiledValue;
     vector<string> values;
-    vector<string> namesOfValues;
-
-    cout << "Write a name of the file: ";
-    cin >> fileName;
-    cin.ignore(32767, '\n'); // удаляем символ новой строки из входного потока данных
-    cout << "Write a description of the file: ";
-    getline(cin, fileDescription);
-    cout << "Write a number of fields in a file: ";
-    cin >> numberOfProperties;
-    string type;
-    string nameOfType;
-    for (int i = 0; i < numberOfProperties; ++i) {
-        cout << "Write a name of " << (i + 1) << " field: ";
-        cin >> nameOfType;
-        cout << "Write a type of " << (i + 1) << " field: ";
-        cin >> type;
-        if (type == "string" || type == "double" || type == "date") {
-            values.push_back(type);
-            namesOfValues.push_back(nameOfType);
-        }
-    }
-
-    manifest.addTable(toTableProperties(fileName, fileDescription));
-
-    char name[NAME_SIZE];
-    strcpy(name, fileName.c_str());
-    name[NAME_SIZE - 1] = '\0';
-    Table::changeTableProperties(toNoteProperties(numberOfProperties, values, namesOfValues), name);
-}
-
-void Controller::cd(char tableName[NAME_SIZE]) {
-    table.setTable(tableName);
-}
-
-void Controller::lsRecords() {
-    vector<UserRequest> userRequest;
-    vector<Table::FilterRequest> request = makeRequest(userRequest);
-    table.printNotes(request);
-}
-
-void Controller::selectRecords() {
-    vector<Table::FilterRequest> request;
-    vector<UserRequest> userRequest;
-
-    int numberOfFactors;
-    cin >> numberOfFactors;
-    UserRequest userReq;
-    for (int i = 0; i < numberOfFactors; ++i) {
-        cin >> userReq.name >> userReq.oper >> userReq.value;
-        userRequest.push_back(userReq);
-    }
-
-    request = makeRequest(userRequest);
-    table.printNotes(request);
-}
-
-void Controller::addRecord() {
-    Table::NoteValue noteValue;
-    vector<Table::NoteValue> values;
-    for (int i = 0; i < table.properties.numberOfProperties; ++i) {
-        cout << "Write the value of the field ";
-        cout << table.properties.values[i].name;
+    for (int i = 0; i < numberOfColumns; ++i) {
+        cout << "Write a value of the field ";
+        cout << names[i];
         cout << " type (";
-        cout << Table::getTypeOfNote(table.properties.values[i].type);
+        cout << types[i].getType();
         cout << "): ";
 
-        cin >> noteValue.value;
-
-        values.push_back(noteValue);
+        cin >> recordFiledValue;
+        //TODO verify recordFiledValue compare the type
+        values.push_back(recordFiledValue);
     }
 
-    table.addNote(values);
+    table.add(values);
+
+    remove(tempFile.c_str());
 }
 
 void Controller::deleteRecord() {
-    int id;
-    cin >> id;
+    Table table(currentTableName);
 
-    table.deleteNote(id - 1);
+    string key;
+    cin >> key;
+    table.deleteItem(key);
 }
 
 void Controller::changeRecord() {
-    int id;
-    cin >> id;
+    fstream allRecordsFromTable(tempFile);
+    Table table(currentTableName);
 
-    Table::NoteValue noteValue;
-    vector<Table::NoteValue> values;
-    for (int i = 0; i < table.properties.numberOfProperties; ++i) {
-        cout << "Write the value of the field ";
-        cout << table.properties.values[i].name;
+    vector<string> names;
+    vector<TypeOfNote> types;
+    table.getProperties(names, types);
+    int numberOfColumns = names.size();
+
+    string recordFiledValue;
+    vector<string> values;
+    for (int i = 0; i < numberOfColumns; ++i) {
+        cout << "Write a new value of the field ";
+        cout << names[i];
         cout << " type (";
-        cout << Table::getTypeOfNote(table.properties.values[i].type);
+        cout << types[i].getType();
         cout << "): ";
 
-        cin >> noteValue.value;
-
-        values.push_back(noteValue);
+        cin >> recordFiledValue;
+        //TODO verify recordFiledValue compare the type
+        values.push_back(recordFiledValue);
     }
 
-    table.changeNote(values, id - 1);
-}*/
+    table.change(values);
+
+    remove(tempFile.c_str());
+}
