@@ -92,6 +92,7 @@ void Controller::addTable() {
 }
 
 void Controller::cd(string tableName) {
+    createTempFile();
     fstream allRecordsFromTable(tempFile);
     manifest.get(allRecordsFromTable);
 
@@ -110,10 +111,12 @@ void Controller::cd(string tableName) {
         }
     }
 
+    allRecordsFromTable.close();
     remove(tempFile.c_str());
 }
 
 void Controller::getRecords() {
+    createTempFile();
     fstream allRecordsFromTable(tempFile);
     Table table(currentTableName);
     table.get(allRecordsFromTable);
@@ -123,10 +126,12 @@ void Controller::getRecords() {
     Printer printer(allRecordsFromTable);
     printer.print();
 
+    allRecordsFromTable.close();
     remove(tempFile.c_str());
 }
 
 void Controller::addRecord() {
+    createTempFile();
     fstream allRecordsFromTable(tempFile);
     Table table(currentTableName);
 
@@ -151,6 +156,7 @@ void Controller::addRecord() {
 
     table.add(values);
 
+    allRecordsFromTable.close();
     remove(tempFile.c_str());
 }
 
@@ -163,6 +169,7 @@ void Controller::deleteRecord() {
 }
 
 void Controller::changeRecord() {
+    createTempFile();
     fstream allRecordsFromTable(tempFile);
     Table table(currentTableName);
 

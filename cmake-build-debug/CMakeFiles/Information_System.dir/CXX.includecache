@@ -18,6 +18,10 @@ vector
 ../Basic Units/TypeOfNote.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
 
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.cpp
+Controller.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
+
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
 ../Header.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
@@ -25,18 +29,6 @@ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-Syst
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
 ../View Layer/Printer.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
-
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
-cstdio
--
-../Basic Units/TypeOfNote.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
-
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
-cstdio
--
-../Basic Units/TypeOfNote.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
 
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
 iostream
@@ -67,18 +59,4 @@ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-Syst
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
 ../CSV Workers/CSVReader.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
-
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
-../Controller Layer/Controller.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
-../Header.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
-
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/main.cpp
-View Layer/View.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
-DAT Workers/DATWriter.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
-DAT Workers/DATReader.h
-C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
 
