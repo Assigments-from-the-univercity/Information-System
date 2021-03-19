@@ -115,6 +115,10 @@ void Controller::cd(string tableName) {
     remove(tempFile.c_str());
 }
 
+void Controller::exit() {
+    currentTableName = "";
+}
+
 void Controller::getRecords() {
     createTempFile();
     fstream allRecordsFromTable(tempFile);

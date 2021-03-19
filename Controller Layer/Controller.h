@@ -52,6 +52,8 @@ public:
 
     void cd(string tableName);
 
+    void exit();
+
     void getRecords();
 
     void addRecord();
