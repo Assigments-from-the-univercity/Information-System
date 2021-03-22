@@ -6,9 +6,39 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.cpp
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+List.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
+Node.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.cpp
+Node.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/Node.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/SortRequest.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.cpp
+../Header.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+TypeOfNote.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
 ../Header.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.cpp
+CSVReader.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
 
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
 istream
@@ -18,6 +48,36 @@ vector
 ../Basic Units/TypeOfNote.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
 
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.cpp
+CSVWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
+fstream
+-
+vector
+-
+CSVReader.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
+CSVWriter.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.cpp
+CSVWriter.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
+istream
+-
+vector
+-
+../Basic Units/TypeOfNote.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.cpp
+Controller.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
+
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Controller.h
 ../Header.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
@@ -26,11 +86,49 @@ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-Syst
 ../View Layer/Printer.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
 
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Filter.cpp
+Filter.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Filter.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Filter.h
+../CSV Workers/CSVWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
+../Basic Units/TypeOfNote.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorter.cpp
+Sorter.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorter.h
+math.h
+-
+string.h
+-
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorter.h
+../CSV Workers/CSVWorker.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWorker.h
+../Basic Units/SortRequest.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/SortRequest.h
+../Basic Units/TypeOfNote.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.cpp
+DATReader.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
+../Basic Units/List.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
+
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
 cstdio
 -
 ../Basic Units/TypeOfNote.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.cpp
+DATWriter.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
+../Basic Units/List.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/List.h
 
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
 cstdio
@@ -54,6 +152,16 @@ cstdio
 fstream
 -
 
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.cpp
+Table.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
+../CSV Workers/CSVWriter.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVWriter.h
+../DAT Workers/DATWriter.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATWriter.h
+../DAT Workers/DATReader.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/DAT Workers/DATReader.h
+
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Model Layer/Table.h
 ../Header.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Header.h
@@ -62,11 +170,21 @@ C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-Syst
 ostream
 -
 
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.cpp
+Printer.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
+iostream
+-
+
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/Printer.h
 ../Basic Units/TypeOfNote.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Basic Units/TypeOfNote.h
 ../CSV Workers/CSVReader.h
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/CSV Workers/CSVReader.h
+
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.cpp
+View.h
+C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
 
 C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/View Layer/View.h
 ../Controller Layer/Controller.h

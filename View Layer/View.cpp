@@ -19,14 +19,10 @@ void View::userCommand(string command) {
         } else if (command == "add") {
             controller.addTable();
         } else if (command == "cd" && userDirectory.size() == 1) {
-            char tableName[NAME_SIZE];
+            string tableName;
             cin >> tableName;
-            tableName[NAME_SIZE - 1] = '\0';
-
-            //TODO проверить, что имя существует
 
             userDirectory.push_back(tableName);
-
             controller.cd(tableName);
         } else if (command == "stop") {
             cout << "program is stopped.";
@@ -44,6 +40,7 @@ void View::userCommand(string command) {
             controller.addRecord();
         } else if (command == "back" && userDirectory.size() == 2) {
             userDirectory.pop_back();
+            controller.exit();
         } else if (command == "delete") {
             controller.deleteRecord();
         } else if (command == "change") {

@@ -158,8 +158,6 @@ void Table::deleteItem(string key) {
         copy("TEMP", tableName);
         remove(pathTemp.c_str());
     }
-    /*remove(path.c_str());
-    rename(pathTemp.c_str(), path.c_str());*/
 }
 
 void Table::copy(string fromFileName, string toFileName) {

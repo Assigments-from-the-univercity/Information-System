@@ -8,10 +8,10 @@
  */
 int main() {
     //create Model object to have an accesses to method startWork()
-    //View model;
-    //model.startWork();
+    View model;
+    model.startWork();
 
-    vector<string> names;
+    /*vector<string> names;
     vector<TypeOfNote> types;
 
     names.push_back("id");
@@ -90,12 +90,12 @@ int main() {
     ofstream fout("tables\\result.csv");
     table.get(fout);*/
 
-    Controller controller;
+    /*Controller controller;
     controller.getTables();
     cout << endl << endl;
     controller.addTable();
     /*controller.getTables();*/
-    controller.cd("Table-1");
+    /*controller.cd("Table-1");
     controller.addRecord();
     controller.getRecords();
     controller.deleteRecord();
