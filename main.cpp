@@ -93,12 +93,12 @@ int main() {
     Controller controller;
     controller.getTables();
     cout << endl << endl;
-    /*controller.addTable();
-    controller.getTables();*/
+    controller.addTable();
+    /*controller.getTables();*/
     controller.cd("Table-1");
-    //controller.addRecord();
+    controller.addRecord();
     controller.getRecords();
-    controller.changeRecord();
+    controller.deleteRecord();
     controller.getRecords();
 
     /*fstream fin("tables\\temp_result.csv");

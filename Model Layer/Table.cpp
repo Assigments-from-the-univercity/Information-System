@@ -120,7 +120,7 @@ void Table::change(vector<string> recordData) {
 
 void Table::deleteItem(string key) {
     //создаём объекты для доступа к файлу
-    string pathTemp = folder + "TEMP";
+    string pathTemp = folder + "TEMP.dat";
     FILE *fin = fopen(path.c_str(), "rb");
     FILE *fout = fopen(pathTemp.c_str(), "w+b");
 
@@ -138,10 +138,12 @@ void Table::deleteItem(string key) {
     //печатаем сами записи
     vector<string> currentRecord;
     bool isDeleted = false;
-    for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
+    for (int i = 0; i < numberOfRecords; ++i) {
         currentRecord = datReader.readNext();
-        if (!strcmp(currentRecord[0].c_str(), key.c_str())) {
+        if (strcmp(currentRecord[0].c_str(), key.c_str())) {
             datWriter.writeNext(currentRecord);
+        } else {
+            //datWriter.writeNext(currentRecord);
             isDeleted = true;
         }
     }
@@ -149,10 +151,15 @@ void Table::deleteItem(string key) {
     if (isDeleted) {
         //печатаем правильный заголовок
         datWriter.setProperties(numberOfRecords - 1, names, types);
-    }
 
-    remove(path.c_str());
-    rename(pathTemp.c_str(), path.c_str());
+        fclose(fin);
+        fclose(fout);
+
+        copy("TEMP", tableName);
+        remove(pathTemp.c_str());
+    }
+    /*remove(path.c_str());
+    rename(pathTemp.c_str(), path.c_str());*/
 }
 
 void Table::copy(string fromFileName, string toFileName) {
