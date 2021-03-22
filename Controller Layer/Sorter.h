@@ -30,7 +30,7 @@ private:
 public:
     Sorter(istream &fin, ostream &fout, vector<SortRequest> sortRequest);
 
-    void sort();
+    void sort(); //TODO change: put "vector<SortRequest> sortRequest" to sort() function
 };
 
 

@@ -8,15 +8,23 @@
 
 #include "../CSV Workers/CSVWorker.h"
 #include "../Basic Units/TypeOfNote.h"
+#include "../Basic Units/FilterRequest.h"
 
 class Filter : CSVWorker {
 private:
-    int numberOfColumns;
+    int numberOfRecords;
+    vector<string> names;
     vector<TypeOfNote> types;
+    vector<FilterRequest> request;
+    string bufferName = "buffer.csv";
+    fstream buffer;
 
-    bool isAppropriate();
+    bool isAppropriate(vector<string> recordData);
+
 public:
-    Filter();
+    Filter(istream &fin, ostream &fout);
+
+    void filtrate(vector<FilterRequest> request);
 };
 
 

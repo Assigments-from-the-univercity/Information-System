@@ -127,6 +127,7 @@ void Controller::getRecords() {
 
     //TODO filter and sorter the data
 
+
     Printer printer(allRecordsFromTable);
     printer.print();
 
