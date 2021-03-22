@@ -173,8 +173,6 @@ void Controller::deleteRecord() {
 }
 
 void Controller::changeRecord() {
-    createTempFile();
-    fstream allRecordsFromTable(tempFile);
     Table table(currentTableName);
 
     vector<string> names;
@@ -197,6 +195,4 @@ void Controller::changeRecord() {
     }
 
     table.change(values);
-
-    remove(tempFile.c_str());
 }

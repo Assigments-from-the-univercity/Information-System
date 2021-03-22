@@ -35,6 +35,8 @@ private:
     string tableName;
     string path;
 
+    static void copy(string fromFileName, string toFileName);
+
 public:
     Table(string tableName);
 

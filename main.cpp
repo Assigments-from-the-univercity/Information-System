@@ -98,6 +98,8 @@ int main() {
     controller.cd("Table-1");
     //controller.addRecord();
     controller.getRecords();
+    controller.changeRecord();
+    controller.getRecords();
 
     /*fstream fin("tables\\temp_result.csv");
     Printer printer(fin);

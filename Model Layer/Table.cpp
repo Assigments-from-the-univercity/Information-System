@@ -85,7 +85,7 @@ void Table::add(vector<string> recordData) {
 
 void Table::change(vector<string> recordData) {
     //создаём объекты для доступа к файлу
-    string pathTemp = folder + "TEMP";
+    string pathTemp = folder + "TEMP.dat";
     FILE *fin = fopen(path.c_str(), "rb");
     FILE *fout = fopen(pathTemp.c_str(), "w+b");
 
@@ -102,17 +102,20 @@ void Table::change(vector<string> recordData) {
 
     //печатаем сами записи
     vector<string> currentRecord;
-    for (int i = 0; i < datReader.getNumberOfColumns(); ++i) {
+    for (int i = 0; i < numberOfRecords; ++i) {
         currentRecord = datReader.readNext();
-        if (!strcmp(currentRecord[0].c_str(), recordData[0].c_str())) {
+        if (strcmp(currentRecord[0].c_str(), recordData[0].c_str())) {
             datWriter.writeNext(currentRecord);
         } else {
             datWriter.writeNext(recordData);
         }
     }
 
-    remove(path.c_str());
-    rename(pathTemp.c_str(), path.c_str());
+    fclose(fin);
+    fclose(fout);
+
+    copy("TEMP", tableName);
+    remove(pathTemp.c_str());
 }
 
 void Table::deleteItem(string key) {
@@ -150,4 +153,30 @@ void Table::deleteItem(string key) {
 
     remove(path.c_str());
     rename(pathTemp.c_str(), path.c_str());
+}
+
+void Table::copy(string fromFileName, string toFileName) {
+    //создаём объекты для доступа к файлу
+    string pathFrom = folder + fromFileName + extension;
+    string pathTo = folder + toFileName + extension;
+    FILE *fin = fopen(pathFrom.c_str(), "rb");
+    FILE *fout = fopen(pathTo.c_str(), "wb");
+
+    int numberOfRecords;
+    vector<string> names;
+    vector<TypeOfNote> types;
+
+    DATReader datReader(fin);
+    datReader.getProperties(numberOfRecords, names, types);
+    DATWriter datWriter(fout, datReader.getNumberOfColumns());
+
+    //печатаем заголовок
+    datWriter.setProperties(numberOfRecords, names, types);
+
+    for (int i = 0; i < numberOfRecords; ++i) {
+        datWriter.writeNext(datReader.readNext());
+    }
+
+    fclose(fin);
+    fclose(fout);
 }
