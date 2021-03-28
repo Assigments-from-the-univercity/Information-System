@@ -10,6 +10,10 @@
 #include "../Header.h"
 #include "../Model Layer/Table.h"
 #include "../View Layer/Printer.h"
+#include "Filter.h"
+#include "Sorter.h"
+#include "../Basic Units/FilterRequest.h"
+#include "../Basic Units/SortRequest.h"
 
 /**
  * This class represent the controller layer.

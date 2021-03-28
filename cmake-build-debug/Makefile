@@ -142,6 +142,33 @@ Information_System/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/build
 .PHONY : Information_System/fast
 
+Basic_Units/Action.obj: Basic_Units/Action.cpp.obj
+
+.PHONY : Basic_Units/Action.obj
+
+# target to build an object file
+Basic_Units/Action.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj
+.PHONY : Basic_Units/Action.cpp.obj
+
+Basic_Units/Action.i: Basic_Units/Action.cpp.i
+
+.PHONY : Basic_Units/Action.i
+
+# target to preprocess a source file
+Basic_Units/Action.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.i
+.PHONY : Basic_Units/Action.cpp.i
+
+Basic_Units/Action.s: Basic_Units/Action.cpp.s
+
+.PHONY : Basic_Units/Action.s
+
+# target to generate assembly for a file
+Basic_Units/Action.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.s
+.PHONY : Basic_Units/Action.cpp.s
+
 Basic_Units/List.obj: Basic_Units/List.cpp.obj
 
 .PHONY : Basic_Units/List.obj
@@ -222,6 +249,33 @@ Basic_Units/TypeOfNote.s: Basic_Units/TypeOfNote.cpp.s
 Basic_Units/TypeOfNote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.s
 .PHONY : Basic_Units/TypeOfNote.cpp.s
+
+Basic_Units/UserRequest.obj: Basic_Units/UserRequest.cpp.obj
+
+.PHONY : Basic_Units/UserRequest.obj
+
+# target to build an object file
+Basic_Units/UserRequest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.obj
+.PHONY : Basic_Units/UserRequest.cpp.obj
+
+Basic_Units/UserRequest.i: Basic_Units/UserRequest.cpp.i
+
+.PHONY : Basic_Units/UserRequest.i
+
+# target to preprocess a source file
+Basic_Units/UserRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.i
+.PHONY : Basic_Units/UserRequest.cpp.i
+
+Basic_Units/UserRequest.s: Basic_Units/UserRequest.cpp.s
+
+.PHONY : Basic_Units/UserRequest.s
+
+# target to generate assembly for a file
+Basic_Units/UserRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.s
+.PHONY : Basic_Units/UserRequest.cpp.s
 
 CSV_Workers/CSVReader.obj: CSV_Workers/CSVReader.cpp.obj
 
@@ -466,6 +520,33 @@ Model_Layer/Table.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.s
 .PHONY : Model_Layer/Table.cpp.s
 
+View_Layer/Parser.obj: View_Layer/Parser.cpp.obj
+
+.PHONY : View_Layer/Parser.obj
+
+# target to build an object file
+View_Layer/Parser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.obj
+.PHONY : View_Layer/Parser.cpp.obj
+
+View_Layer/Parser.i: View_Layer/Parser.cpp.i
+
+.PHONY : View_Layer/Parser.i
+
+# target to preprocess a source file
+View_Layer/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.i
+.PHONY : View_Layer/Parser.cpp.i
+
+View_Layer/Parser.s: View_Layer/Parser.cpp.s
+
+.PHONY : View_Layer/Parser.s
+
+# target to generate assembly for a file
+View_Layer/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.s
+.PHONY : View_Layer/Parser.cpp.s
+
 View_Layer/Printer.obj: View_Layer/Printer.cpp.obj
 
 .PHONY : View_Layer/Printer.obj
@@ -556,6 +637,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Information_System
+	@echo ... Basic_Units/Action.obj
+	@echo ... Basic_Units/Action.i
+	@echo ... Basic_Units/Action.s
 	@echo ... Basic_Units/List.obj
 	@echo ... Basic_Units/List.i
 	@echo ... Basic_Units/List.s
@@ -565,6 +649,9 @@ help:
 	@echo ... Basic_Units/TypeOfNote.obj
 	@echo ... Basic_Units/TypeOfNote.i
 	@echo ... Basic_Units/TypeOfNote.s
+	@echo ... Basic_Units/UserRequest.obj
+	@echo ... Basic_Units/UserRequest.i
+	@echo ... Basic_Units/UserRequest.s
 	@echo ... CSV_Workers/CSVReader.obj
 	@echo ... CSV_Workers/CSVReader.i
 	@echo ... CSV_Workers/CSVReader.s
@@ -592,6 +679,9 @@ help:
 	@echo ... Model_Layer/Table.obj
 	@echo ... Model_Layer/Table.i
 	@echo ... Model_Layer/Table.s
+	@echo ... View_Layer/Parser.obj
+	@echo ... View_Layer/Parser.i
+	@echo ... View_Layer/Parser.s
 	@echo ... View_Layer/Printer.obj
 	@echo ... View_Layer/Printer.i
 	@echo ... View_Layer/Printer.s

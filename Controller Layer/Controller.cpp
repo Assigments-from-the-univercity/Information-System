@@ -3,6 +3,11 @@
 //
 
 #include "Controller.h"
+#include "../Basic Units/Action.h"
+#include "../Basic Units/UserRequest.h"
+#include "../Basic Units/PreSortRequest.h"
+#include "../View Layer/Parser.h"
+
 
 void Controller::createTempFile() {
     ofstream f(tempFile);
@@ -126,7 +131,29 @@ void Controller::getRecords() {
     table.get(allRecordsFromTable);
 
     //TODO filter and sorter the data
+    /*void Controller::lsNotes() {
+        vector<UserRequest> userRequest;
+        vector<Table::Request> request = makeRequest(userRequest);
+        table.printNotes(request);
+    }*/
 
+    Action action;
+    string tableName;
+    vector<UserRequest> userRequest;
+    vector<PreSortRequest> preSortRequest;
+    vector<string> names;
+    vector<TypeOfNote> types;
+
+    action.actionType = Action::SELECT;
+    Parser::makeRequest(action, tableName, userRequest, preSortRequest);
+
+    table.getProperties(names, types);
+
+    Filter filter(allRecordsFromTable, allRecordsFromTable);
+    filter.filtrate(UserRequest::makeRequest(userRequest, names));
+
+    Sorter sorter(allRecordsFromTable, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+    sorter.sort();
 
     Printer printer(allRecordsFromTable);
     printer.print();

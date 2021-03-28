@@ -12,4 +12,4 @@ add_executable(Information_System "main.cpp" "View Layer/View.cpp" "View Layer/V
         "CSV Workers/CSVWorker.h" "Controller Layer/Filter.cpp" "Controller Layer/Filter.h"
         "Basic Units/SortRequest.h" "CSV Workers/CSVReader.cpp" "CSV Workers/CSVReader.h"
         "CSV Workers/CSVWriter.cpp" "CSV Workers/CSVWriter.h" "Controller Layer/Sorter.cpp"
-        "Controller Layer/Sorter.h" "DAT Workers/DATWriter.cpp" "DAT Workers/DATWriter.h" "DAT Workers/DATReader.cpp" "DAT Workers/DATReader.h")
+        "Controller Layer/Sorter.h" "DAT Workers/DATWriter.cpp" "DAT Workers/DATWriter.h" "DAT Workers/DATReader.cpp" "DAT Workers/DATReader.h" "View Layer/Parser.cpp" "View Layer/Parser.h" "Basic Units/Action.h" "Basic Units/PreSortRequest.h" "Basic Units/Action.cpp" "Basic Units/UserRequest.cpp" "Basic Units/UserRequest.h")
