@@ -15,19 +15,17 @@ void View::printPath() {
 void View::userCommand(string command) {
     if (userDirectory.size() == 1) {
         if (command == "ls") {
-            controller.lsTable();
+            controller.getTables();
         } else if (command == "add") {
             controller.addTable();
         } else if (command == "cd" && userDirectory.size() == 1) {
-            char tableName[NAME_SIZE];
+            string tableName;
             cin >> tableName;
-            tableName[NAME_SIZE - 1] = '\0';
-
-            //TODO проверить, что имя существует
 
             userDirectory.push_back(tableName);
-
             controller.cd(tableName);
+        } else if (command == "SELECT") {
+            controller.getRecords();
         } else if (command == "stop") {
             cout << "program is stopped.";
             return;
@@ -36,17 +34,18 @@ void View::userCommand(string command) {
         }
     } else if (userDirectory.size() == 2) {
         if (command == "ls") {
-            controller.lsNotes();
+            controller.getRecords();
         } else if (command == "SELECT") {
-            controller.selectNotes();
+            controller.getRecords();
         } else if (command == "add") {
-            controller.addNote();
+            controller.addRecord();
         } else if (command == "back" && userDirectory.size() == 2) {
             userDirectory.pop_back();
+            controller.exit();
         } else if (command == "delete") {
-            controller.deleteNote();
+            controller.deleteRecord();
         } else if (command == "change") {
-            controller.changeNote();
+            controller.changeRecord();
         } else if (command == "stop") {
             cout << "program is stopped.";
             return;

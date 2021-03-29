@@ -10,8 +10,9 @@
 #include <cstring>
 //#include <filesystem> this library isn`t working on Windows
 #include "direct.h"
-#include <Windows.h>
+#include <windows.h>
 #include <cstdio>
+#include <fstream>
 
 
 using namespace std;
@@ -31,5 +32,16 @@ static const int DESCRIPTION_SIZE = 100;
     newMessage[messageString.size()] = '\0';
     return newMessage;
 }*/
+
+/**
+ * STRING CONSTANTS
+ */
+static const string TABLES_FOLDER = "Data\\Tables\\";
+static const string MANIFEST_FOLDER = "Data\\";
+
+static const string MANIFEST_NAME = "manifest.dat";
+
+static const string REGIME_READEBLE = "r+b";
+static const string REGIME_WRITEBLE = "w+b";
 
 #endif //INFORMATION_SYSTEM_HEADER_H

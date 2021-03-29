@@ -1,4 +1,4 @@
-#include "View.h"
+#include "View Layer/View.h"
 
 /**
  * MVC pattern is used in this program for
@@ -6,6 +6,6 @@
  */
 int main() {
     //create Model object to have an accesses to method startWork()
-    View model;
-    model.startWork();
+    View view;
+    view.startWork();
 }
