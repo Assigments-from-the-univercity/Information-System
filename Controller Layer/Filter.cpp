@@ -19,6 +19,9 @@ void Filter::filtrate(vector<FilterRequest> request) {
     f1.close();
     buffer.open(bufferName);
 
+    readNext();
+    readNext();
+
     int numberOfRecordsAfterSort;
     for (int i = 0; i < numberOfRecords; ++i) {
         vector<string> recordData = readNext();
@@ -27,6 +30,9 @@ void Filter::filtrate(vector<FilterRequest> request) {
             numberOfRecordsAfterSort++;
         }
     }
+
+    getFout().seekp(getFout().beg);
+    getFin().seekg(getFin().beg);
 
     setProperties(names, types);
     copyAll(numberOfRecords, buffer, getFout());

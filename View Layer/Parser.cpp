@@ -10,10 +10,18 @@ void Parser::makeRequest(Action action, string &tableName, vector<UserRequest> &
         case Action::SELECT: {
             string s;
             cin >> s;
+
+            cin >> s;
+            action.getAction(s);
         }
             break;
-        case Action::FROM:
+        case Action::FROM: {
             cin >> tableName;
+
+            string s;
+            cin >> s;
+            action.getAction(s);
+        }
             break;
         case Action::WHERE:
             userRequest = setFilterRequest(action);
@@ -38,7 +46,7 @@ vector<PreSortRequest> Parser::setPreSorterRequest(Action &action) {
     do {
         cin >> column;
 
-        if (column != "SELECT" || column != "FROM" || column != "WHERE" || column != "SORT" || column != ";") {
+        if (column != "SELECT" && column != "FROM" && column != "WHERE" && column != "SORT" && column != ";") {
             cin >> order;
 
             PreSortRequest sR;
@@ -70,7 +78,7 @@ vector<UserRequest> Parser::setFilterRequest(Action &action) {
     do {
         cin >> name;
 
-        if (name != "SELECT" || name != "FROM" || name != "WHERE" || name != "SORT" || name != ";") {
+        if (name != "SELECT" && name != "FROM" && name != "WHERE" && name != "SORT" && name != ";") {
             cin >> oper >> value;
 
             UserRequest uR;

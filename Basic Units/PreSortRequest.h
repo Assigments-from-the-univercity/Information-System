@@ -33,6 +33,8 @@ public:
                 cout << "error in SORT input";
                 abort();
             }
+
+            sortRequest.push_back(sR);
         }
 
         return sortRequest;

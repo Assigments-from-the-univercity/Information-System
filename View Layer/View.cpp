@@ -34,7 +34,7 @@ void View::userCommand(string command) {
         if (command == "ls") {
             controller.getRecords();
         } else if (command == "SELECT") {
-            //controller.selectRecords();
+            controller.getRecords();
             //TODO re-change select method
         } else if (command == "add") {
             controller.addRecord();
