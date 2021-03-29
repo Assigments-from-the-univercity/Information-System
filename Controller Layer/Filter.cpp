@@ -31,9 +31,6 @@ void Filter::filtrate(vector<FilterRequest> request) {
         }
     }
 
-    getFout().seekp(getFout().beg);
-    getFin().seekg(getFin().beg);
-
     setProperties(names, types);
     copyAll(numberOfRecords, buffer, getFout());
 

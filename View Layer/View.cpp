@@ -24,6 +24,8 @@ void View::userCommand(string command) {
 
             userDirectory.push_back(tableName);
             controller.cd(tableName);
+        } else if (command == "SELECT") {
+            controller.getRecords();
         } else if (command == "stop") {
             cout << "program is stopped.";
             return;
@@ -35,7 +37,6 @@ void View::userCommand(string command) {
             controller.getRecords();
         } else if (command == "SELECT") {
             controller.getRecords();
-            //TODO re-change select method
         } else if (command == "add") {
             controller.addRecord();
         } else if (command == "back" && userDirectory.size() == 2) {

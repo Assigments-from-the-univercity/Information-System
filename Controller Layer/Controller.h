@@ -32,7 +32,7 @@ private:
     string currentTableName = "";
     string tempFile = "tables\\temp_result.csv";
 
-    void createTempFile();
+    void createFile(string fileName);
 
     /*Manifest::TableProperties toTableProperties(string fileName, string fileDescription);
 

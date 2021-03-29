@@ -22,8 +22,6 @@ void Sorter::sort() {
     sortNextLevel(0);
 
     //buffer.open(bufferName);
-    getFout().seekp(getFout().beg);
-    getFin().seekg(getFin().beg);
     setProperties(names, types);
     copyAll(numberOfRecords, buffer, getFout());
 

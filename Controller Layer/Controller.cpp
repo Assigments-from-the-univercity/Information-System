@@ -9,8 +9,8 @@
 #include "Sorter.h"
 #include "Filter.h"
 
-void Controller::createTempFile() {
-    ofstream f(tempFile);
+void Controller::createFile(string fileName) {
+    ofstream f(fileName);
     f.close();
 }
 
@@ -33,7 +33,7 @@ Controller::Controller() : manifest(manifestName) {
 }
 
 void Controller::getTables() {
-    createTempFile();
+    createFile(tempFile);
     fstream allRecordsFromTable(tempFile);
     manifest.get(allRecordsFromTable);
 
@@ -97,7 +97,7 @@ void Controller::addTable() {
 }
 
 void Controller::cd(string tableName) {
-    createTempFile();
+    createFile(tempFile);
     fstream allRecordsFromTable(tempFile);
     manifest.get(allRecordsFromTable);
 
@@ -125,12 +125,6 @@ void Controller::exit() {
 }
 
 void Controller::getRecords() {
-    createTempFile();
-    fstream allRecordsFromTable(tempFile);
-    Table table(currentTableName);
-    table.get(allRecordsFromTable);
-
-    //TODO filter and sorter the data
     Action action;
     string tableName;
     vector<UserRequest> userRequest;
@@ -141,12 +135,24 @@ void Controller::getRecords() {
     action.actionType = Action::SELECT;
     Parser::makeRequest(action, tableName, userRequest, preSortRequest);
 
+    createFile(tempFile);
+    createFile("tables\\temp_2.csv");
+    fstream allRecordsFromTable(tempFile);
+    fstream tempCSVFile("tables\\temp_2.csv");
+    Table table(tableName);
+    table.get(allRecordsFromTable);
+
     table.getProperties(names, types);
 
-    Filter filter(allRecordsFromTable, allRecordsFromTable);
+    Filter filter(allRecordsFromTable, tempCSVFile);
     filter.filtrate(UserRequest::makeRequest(userRequest, names));
 
-    Sorter sorter(allRecordsFromTable, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+    allRecordsFromTable.close();
+    remove(tempFile.c_str());
+    createFile(tempFile);
+    allRecordsFromTable.open(tempFile);
+
+    Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
     sorter.sort();
 
     Printer printer(allRecordsFromTable);
@@ -157,7 +163,7 @@ void Controller::getRecords() {
 }
 
 void Controller::addRecord() {
-    createTempFile();
+    createFile(tempFile);
     fstream allRecordsFromTable(tempFile);
     Table table(currentTableName);
 
