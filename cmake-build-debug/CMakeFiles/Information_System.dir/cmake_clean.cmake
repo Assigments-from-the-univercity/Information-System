@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj"
-  "CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj"
-  "CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj"
+  "CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj"
+  "CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj"
+  "CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj"
+  "CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj"
   "CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj"
   "CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.obj"
   "CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj"

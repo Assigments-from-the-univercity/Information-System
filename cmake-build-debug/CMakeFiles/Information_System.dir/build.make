@@ -128,31 +128,31 @@ CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Model Layer\Table.cpp" -o CMakeFiles\Information_System.dir\Model_Layer\Table.cpp.s
 
-CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj: CMakeFiles/Information_System.dir/flags.make
-CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj: ../Basic\ Units/Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\Node.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Node.cpp"
+CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj: ../Basic\ Units/List/Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\List\Node.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List\Node.cpp"
 
-CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Node.cpp" > CMakeFiles\Information_System.dir\Basic_Units\Node.cpp.i
+CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List\Node.cpp" > CMakeFiles\Information_System.dir\Basic_Units\List\Node.cpp.i
 
-CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Node.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\Node.cpp.s
+CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List\Node.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\List\Node.cpp.s
 
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj: CMakeFiles/Information_System.dir/flags.make
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj: ../Basic\ Units/List.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\List.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List.cpp"
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj: ../Basic\ Units/List/List.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\List\List.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List\List.cpp"
 
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/List.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List.cpp" > CMakeFiles\Information_System.dir\Basic_Units\List.cpp.i
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List\List.cpp" > CMakeFiles\Information_System.dir\Basic_Units\List\List.cpp.i
 
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/List.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\List.cpp.s
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\List\List.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\List\List.cpp.s
 
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: ../Basic\ Units/TypeOfNote.cpp
@@ -310,14 +310,40 @@ CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\View Layer\Parser.cpp" -o CMakeFiles\Information_System.dir\View_Layer\Parser.cpp.s
 
+CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj: ../Basic\ Units/Trie/TrieNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\Trie\TrieNode.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Trie\TrieNode.cpp"
+
+CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Trie\TrieNode.cpp" > CMakeFiles\Information_System.dir\Basic_Units\Trie\TrieNode.cpp.i
+
+CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Trie\TrieNode.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\Trie\TrieNode.cpp.s
+
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: ../Basic\ Units/Trie/Trie.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\Trie\Trie.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Trie\Trie.cpp"
+
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Trie\Trie.cpp" > CMakeFiles\Information_System.dir\Basic_Units\Trie\Trie.cpp.i
+
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Trie\Trie.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\Trie\Trie.cpp.s
+
 # Object files for target Information_System
 Information_System_OBJECTS = \
 "CMakeFiles/Information_System.dir/main.cpp.obj" \
 "CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj" \
 "CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj" \
 "CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj" \
-"CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj" \
-"CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj" \
+"CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj" \
+"CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj" \
 "CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj" \
 "CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj" \
@@ -329,7 +355,9 @@ Information_System_OBJECTS = \
 "CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.obj" \
-"CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.obj"
+"CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.obj" \
+"CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj" \
+"CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj"
 
 # External object files for target Information_System
 Information_System_EXTERNAL_OBJECTS =
@@ -338,8 +366,8 @@ Information_System.exe: CMakeFiles/Information_System.dir/main.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Model_Layer/Table.cpp.obj
-Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj
-Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj
+Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj
+Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/View_Layer/Printer.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.cpp.obj
@@ -352,11 +380,13 @@ Information_System.exe: CMakeFiles/Information_System.dir/DAT_Workers/DATReader.
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.obj
+Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj
+Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/build.make
 Information_System.exe: CMakeFiles/Information_System.dir/linklibs.rsp
 Information_System.exe: CMakeFiles/Information_System.dir/objects1.rsp
 Information_System.exe: CMakeFiles/Information_System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Information_System.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable Information_System.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Information_System.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

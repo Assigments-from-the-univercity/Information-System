@@ -4,14 +4,24 @@
 CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj: ../Basic\ Units/Action.cpp
 CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj: ../Basic\ Units/Action.h
 
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj: ../Basic\ Units/List.cpp
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj: ../Basic\ Units/Node.h
-CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj: ../Header.h
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj: ../Basic\ Units/List/List.cpp
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj: ../Basic\ Units/List/List.h
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj: ../Basic\ Units/List/Node.h
+CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj: ../Basic\ Units/Node.cpp
-CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj: ../Basic\ Units/Node.h
-CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj: ../Header.h
+CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj: ../Basic\ Units/List/Node.cpp
+CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj: ../Basic\ Units/List/Node.h
+CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj: ../Header.h
+
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: ../Basic\ Units/SortRequest.h
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: ../Basic\ Units/Trie/Trie.cpp
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: ../Basic\ Units/Trie/Trie.h
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: ../Basic\ Units/Trie/TrieNode.h
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj: ../Header.h
+
+CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj: ../Basic\ Units/Trie/TrieNode.cpp
+CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj: ../Basic\ Units/Trie/TrieNode.h
 
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: ../Basic\ Units/TypeOfNote.cpp
 CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.obj: ../Basic\ Units/TypeOfNote.h
@@ -74,15 +84,15 @@ CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Controller
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Controller\ Layer/Sorter.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../Basic\ Units/Node.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../Basic\ Units/List/List.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../Basic\ Units/List/Node.h
 CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../DAT\ Workers/DATReader.cpp
 CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../DAT\ Workers/DATReader.h
 CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj: ../Header.h
 
-CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Basic\ Units/List.h
-CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Basic\ Units/Node.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Basic\ Units/List/List.h
+CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Basic\ Units/List/Node.h
 CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../Basic\ Units/TypeOfNote.h
 CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../DAT\ Workers/DATWriter.cpp
 CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../DAT\ Workers/DATWriter.h

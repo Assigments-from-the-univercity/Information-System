@@ -169,59 +169,113 @@ Basic_Units/Action.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.s
 .PHONY : Basic_Units/Action.cpp.s
 
-Basic_Units/List.obj: Basic_Units/List.cpp.obj
+Basic_Units/List/List.obj: Basic_Units/List/List.cpp.obj
 
-.PHONY : Basic_Units/List.obj
-
-# target to build an object file
-Basic_Units/List.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj
-.PHONY : Basic_Units/List.cpp.obj
-
-Basic_Units/List.i: Basic_Units/List.cpp.i
-
-.PHONY : Basic_Units/List.i
-
-# target to preprocess a source file
-Basic_Units/List.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List.cpp.i
-.PHONY : Basic_Units/List.cpp.i
-
-Basic_Units/List.s: Basic_Units/List.cpp.s
-
-.PHONY : Basic_Units/List.s
-
-# target to generate assembly for a file
-Basic_Units/List.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List.cpp.s
-.PHONY : Basic_Units/List.cpp.s
-
-Basic_Units/Node.obj: Basic_Units/Node.cpp.obj
-
-.PHONY : Basic_Units/Node.obj
+.PHONY : Basic_Units/List/List.obj
 
 # target to build an object file
-Basic_Units/Node.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj
-.PHONY : Basic_Units/Node.cpp.obj
+Basic_Units/List/List.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj
+.PHONY : Basic_Units/List/List.cpp.obj
 
-Basic_Units/Node.i: Basic_Units/Node.cpp.i
+Basic_Units/List/List.i: Basic_Units/List/List.cpp.i
 
-.PHONY : Basic_Units/Node.i
+.PHONY : Basic_Units/List/List.i
 
 # target to preprocess a source file
-Basic_Units/Node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.i
-.PHONY : Basic_Units/Node.cpp.i
+Basic_Units/List/List.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.i
+.PHONY : Basic_Units/List/List.cpp.i
 
-Basic_Units/Node.s: Basic_Units/Node.cpp.s
+Basic_Units/List/List.s: Basic_Units/List/List.cpp.s
 
-.PHONY : Basic_Units/Node.s
+.PHONY : Basic_Units/List/List.s
 
 # target to generate assembly for a file
-Basic_Units/Node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.s
-.PHONY : Basic_Units/Node.cpp.s
+Basic_Units/List/List.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.s
+.PHONY : Basic_Units/List/List.cpp.s
+
+Basic_Units/List/Node.obj: Basic_Units/List/Node.cpp.obj
+
+.PHONY : Basic_Units/List/Node.obj
+
+# target to build an object file
+Basic_Units/List/Node.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj
+.PHONY : Basic_Units/List/Node.cpp.obj
+
+Basic_Units/List/Node.i: Basic_Units/List/Node.cpp.i
+
+.PHONY : Basic_Units/List/Node.i
+
+# target to preprocess a source file
+Basic_Units/List/Node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.i
+.PHONY : Basic_Units/List/Node.cpp.i
+
+Basic_Units/List/Node.s: Basic_Units/List/Node.cpp.s
+
+.PHONY : Basic_Units/List/Node.s
+
+# target to generate assembly for a file
+Basic_Units/List/Node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.s
+.PHONY : Basic_Units/List/Node.cpp.s
+
+Basic_Units/Trie/Trie.obj: Basic_Units/Trie/Trie.cpp.obj
+
+.PHONY : Basic_Units/Trie/Trie.obj
+
+# target to build an object file
+Basic_Units/Trie/Trie.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj
+.PHONY : Basic_Units/Trie/Trie.cpp.obj
+
+Basic_Units/Trie/Trie.i: Basic_Units/Trie/Trie.cpp.i
+
+.PHONY : Basic_Units/Trie/Trie.i
+
+# target to preprocess a source file
+Basic_Units/Trie/Trie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.i
+.PHONY : Basic_Units/Trie/Trie.cpp.i
+
+Basic_Units/Trie/Trie.s: Basic_Units/Trie/Trie.cpp.s
+
+.PHONY : Basic_Units/Trie/Trie.s
+
+# target to generate assembly for a file
+Basic_Units/Trie/Trie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.s
+.PHONY : Basic_Units/Trie/Trie.cpp.s
+
+Basic_Units/Trie/TrieNode.obj: Basic_Units/Trie/TrieNode.cpp.obj
+
+.PHONY : Basic_Units/Trie/TrieNode.obj
+
+# target to build an object file
+Basic_Units/Trie/TrieNode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj
+.PHONY : Basic_Units/Trie/TrieNode.cpp.obj
+
+Basic_Units/Trie/TrieNode.i: Basic_Units/Trie/TrieNode.cpp.i
+
+.PHONY : Basic_Units/Trie/TrieNode.i
+
+# target to preprocess a source file
+Basic_Units/Trie/TrieNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.i
+.PHONY : Basic_Units/Trie/TrieNode.cpp.i
+
+Basic_Units/Trie/TrieNode.s: Basic_Units/Trie/TrieNode.cpp.s
+
+.PHONY : Basic_Units/Trie/TrieNode.s
+
+# target to generate assembly for a file
+Basic_Units/Trie/TrieNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.s
+.PHONY : Basic_Units/Trie/TrieNode.cpp.s
 
 Basic_Units/TypeOfNote.obj: Basic_Units/TypeOfNote.cpp.obj
 
@@ -640,12 +694,18 @@ help:
 	@echo ... Basic_Units/Action.obj
 	@echo ... Basic_Units/Action.i
 	@echo ... Basic_Units/Action.s
-	@echo ... Basic_Units/List.obj
-	@echo ... Basic_Units/List.i
-	@echo ... Basic_Units/List.s
-	@echo ... Basic_Units/Node.obj
-	@echo ... Basic_Units/Node.i
-	@echo ... Basic_Units/Node.s
+	@echo ... Basic_Units/List/List.obj
+	@echo ... Basic_Units/List/List.i
+	@echo ... Basic_Units/List/List.s
+	@echo ... Basic_Units/List/Node.obj
+	@echo ... Basic_Units/List/Node.i
+	@echo ... Basic_Units/List/Node.s
+	@echo ... Basic_Units/Trie/Trie.obj
+	@echo ... Basic_Units/Trie/Trie.i
+	@echo ... Basic_Units/Trie/Trie.s
+	@echo ... Basic_Units/Trie/TrieNode.obj
+	@echo ... Basic_Units/Trie/TrieNode.i
+	@echo ... Basic_Units/Trie/TrieNode.s
 	@echo ... Basic_Units/TypeOfNote.obj
 	@echo ... Basic_Units/TypeOfNote.i
 	@echo ... Basic_Units/TypeOfNote.s

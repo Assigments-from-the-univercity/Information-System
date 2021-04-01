@@ -3,7 +3,7 @@
 //
 
 #include "DATReader.h"
-#include "../Basic Units/List.h"
+#include "../Basic Units/List/List.h"
 
 void DATReader::getProperties(int &numberOfRecords, vector<string> &names, vector<TypeOfNote> &types) {
     rewind(this->fin);
