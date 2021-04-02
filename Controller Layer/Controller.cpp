@@ -8,6 +8,7 @@
 #include "../View Layer/Parser.h"
 #include "Sorter.h"
 #include "Filter.h"
+#include "../Basic Units/Trie/Trie.h"
 
 void Controller::createFile(string fileName) {
     ofstream f(fileName);
@@ -152,8 +153,15 @@ void Controller::getRecords() {
     createFile(tempFile);
     allRecordsFromTable.open(tempFile);
 
-    Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
-    sorter.sort();
+    cout << "choose sort method: ";
+    string s;
+    cin >> s;
+    if (s == "trie") {
+        Trie trie(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+    } else if (s == "sorter") {
+        Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+        sorter.sort();
+    }
 
     Printer printer(allRecordsFromTable);
     printer.print();

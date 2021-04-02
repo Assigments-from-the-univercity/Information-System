@@ -4,16 +4,29 @@
 
 #include "Trie.h"
 
-Trie::Trie() {
+Trie::Trie(istream &fin, ostream &fout, vector<SortRequest> sortRequest) : CSVWorker(fin, fout) {
+    this->sortRequest = sortRequest;
+    getProperties(numberOfRecords, names, types);
 
+    for (int i = 0; i < numberOfRecords; ++i) {
+        add(readNext());
+    }
+
+    setProperties(names, types);
+    DFS(root);
 }
 
-Trie::Trie(vector<string> rootNodeValue) {
+/*Trie::Trie(vector<string> rootNodeValue) {
     this->root = new TrieNode(rootNodeValue);
-}
+}*/
 
 void Trie::add(vector<string> newNodeValue) {
     TrieNode *current = root;
+
+    if (root == nullptr) {
+        root = new TrieNode(newNodeValue);
+        return;
+    }
 
     while (current != nullptr) {
         if (firstIsBigger(newNodeValue, current->getData())) {
@@ -24,8 +37,7 @@ void Trie::add(vector<string> newNodeValue) {
                 current->setRightChild(new TrieNode(newNodeValue));
                 return;
             }
-        }
-        else {
+        } else {
             //левый ребёнок
             if (current->getLeftChild() != nullptr) {
                 current = current->getLeftChild();
@@ -101,4 +113,12 @@ TrieNode *Trie::getUncle(TrieNode *trieNode) {
         return grandparent->getRightChild();
     else
         return grandparent->getLeftChild();
+}
+
+void Trie::DFS(TrieNode *trieNode) {
+    if (trieNode != nullptr) {
+        DFS(trieNode->getLeftChild());
+        writeNext(trieNode->getData());
+        DFS(trieNode->getRightChild());
+    }
 }
