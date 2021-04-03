@@ -6,12 +6,13 @@
 #define INFORMATION_SYSTEM_TRIE_H
 
 
-#include "TrieNode.h"
-#include "../SortRequest.h"
-#include "../TypeOfNote.h"
-#include "../../CSV Workers/CSVWorker.h"
 #include <vector>
 #include <string>
+#include <cstring>
+#include "TrieNode.h"
+#include "../../../Basic Units/Sort Request/SortRequest.h"
+#include "../../../Basic Units/TypeOfNote.h"
+#include "../../../CSV Workers/CSVWorker.h"
 
 using namespace std;
 

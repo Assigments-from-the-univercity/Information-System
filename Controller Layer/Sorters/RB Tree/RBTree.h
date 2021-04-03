@@ -5,12 +5,14 @@
 #ifndef INFORMATION_SYSTEM_RBTREE_H
 #define INFORMATION_SYSTEM_RBTREE_H
 
-#include "RBTNode.h"
-#include "../SortRequest.h"
-#include "../TypeOfNote.h"
-#include "../../CSV Workers/CSVWorker.h"
+
 #include <vector>
 #include <string>
+#include <cstring>
+#include "RBTNode.h"
+#include "../../../Basic Units/Sort Request/SortRequest.h"
+#include "../../../Basic Units/TypeOfNote.h"
+#include "../../../CSV Workers/CSVWorker.h"
 
 using namespace std;
 

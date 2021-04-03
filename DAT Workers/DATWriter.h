@@ -5,8 +5,12 @@
 #ifndef INFORMATION_SYSTEM_DATWRITER_H
 #define INFORMATION_SYSTEM_DATWRITER_H
 
+
 #include <cstdio>
+#include <vector>
+#include <iostream>
 #include "../Basic Units/TypeOfNote.h"
+#include "../Basic Units/List/List.h"
 
 using namespace std;
 

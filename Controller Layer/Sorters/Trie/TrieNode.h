@@ -5,6 +5,7 @@
 #ifndef INFORMATION_SYSTEM_TRIENODE_H
 #define INFORMATION_SYSTEM_TRIENODE_H
 
+
 #include <vector>
 #include <string>
 

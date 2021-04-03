@@ -3,13 +3,6 @@
 //
 
 #include "Controller.h"
-#include "../Basic Units/Action.h"
-#include "../Basic Units/PreSortRequest.h"
-#include "../View Layer/Parser.h"
-#include "Sorter.h"
-#include "Filter.h"
-#include "../Basic Units/Trie/Trie.h"
-#include "../Basic Units/RB Tree/RBTree.h"
 
 void Controller::createFile(string fileName) {
     ofstream f(fileName);

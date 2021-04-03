@@ -6,6 +6,7 @@
 #define INFORMATION_SYSTEM_PRINTER_H
 
 
+#include <iostream>
 #include "../Basic Units/TypeOfNote.h"
 #include "../CSV Workers/CSVReader.h"
 

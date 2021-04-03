@@ -2,7 +2,6 @@
 // Created by Mark on 23.02.2021.
 //
 
-#include "../../Header.h"
 #include "List.h"
 
 void List::add(char value) {
@@ -104,20 +103,6 @@ bool List::isEqual(List list) {
     }
 
     return true;
-}
-
-bool List::isContains(List list) {
-    /*Node *currentThis = &begin;
-
-    while (currentThis) {
-        if (!(list.isInList(currentThis->getValue()))) {
-            return false;
-        }
-
-        currentThis = currentThis->getNext();
-    }
-
-    return true;*/
 }
 
 void List::change(int order, char newValue) {

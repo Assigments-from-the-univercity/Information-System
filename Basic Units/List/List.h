@@ -5,7 +5,11 @@
 #ifndef INFORMATION_SYSTEM_LIST_H
 #define INFORMATION_SYSTEM_LIST_H
 
+
+#include <string>
 #include "Node.h"
+
+using namespace std;
 
 class List {
 private:
@@ -29,8 +33,6 @@ public:
     bool isInList(char value);
 
     bool isEqual(List list);
-
-    bool isContains(List list);//TODO this method
 
     void change(int order, char newValue);
 

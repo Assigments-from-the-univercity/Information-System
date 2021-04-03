@@ -1,5 +1,4 @@
 #include "View Layer/View.h"
-#include "Basic Units/Trie/Trie.h"
 
 /**
  * MVC pattern is used in this program for

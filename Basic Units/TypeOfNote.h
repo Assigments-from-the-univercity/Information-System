@@ -5,7 +5,10 @@
 #ifndef INFORMATION_SYSTEM_TYPEOFNOTE_H
 #define INFORMATION_SYSTEM_TYPEOFNOTE_H
 
-#include "../Header.h"
+
+#include <string>
+
+using namespace std;
 
 class TypeOfNote {
 private:

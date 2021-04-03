@@ -3,7 +3,6 @@
 //
 
 #include "Node.h"
-#include "../../Header.h"
 
 Node::Node() {
     value = '\0';

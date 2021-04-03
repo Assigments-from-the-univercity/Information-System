@@ -8,7 +8,7 @@
 
 #include "../CSV Workers/CSVWorker.h"
 #include "../Basic Units/TypeOfNote.h"
-#include "../Basic Units/FilterRequest.h"
+#include "../Basic Units/Filter Request/FilterRequest.h"
 
 class Filter : CSVWorker {
 private:

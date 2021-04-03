@@ -3,9 +3,6 @@
 //
 
 #include "Table.h"
-#include "../CSV Workers/CSVWriter.h"
-#include "../DAT Workers/DATWriter.h"
-#include "../DAT Workers/DATReader.h"
 
 Table::Table(string tableName) {
     this->tableName = tableName;
