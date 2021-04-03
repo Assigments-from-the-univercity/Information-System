@@ -154,23 +154,33 @@ void Controller::getRecords() {
     createFile(tempFile);
     allRecordsFromTable.open(tempFile);
 
-    cout << "choose sort method: ";
-    string s;
-    cin >> s;
-    if (s == "trie") {
-        Trie trie(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
-    } else if (s == "sorter") {
-        Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
-        sorter.sort();
-    } else if (s == "rbtree") {
-        RBTree rbTree(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+    if (preSortRequest.size() > 0) {
+        cout << "choose sort method (sorter, trie or rbtree): ";
+        string s;
+        cin >> s;
+        if (s == "trie") {
+            Trie trie(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+        } else if (s == "sorter") {
+            Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+            sorter.sort();
+        } else if (s == "rbtree") {
+            RBTree rbTree(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+        }
+
+        Printer printer(allRecordsFromTable);
+        printer.print();
+    } else {
+        Printer printer(tempCSVFile);
+        printer.print();
     }
 
-    Printer printer(allRecordsFromTable);
-    printer.print();
+    //Printer printer(allRecordsFromTable);
+    //printer.print();
 
     allRecordsFromTable.close();
     remove(tempFile.c_str());
+    tempCSVFile.close();
+    remove("tables\\temp_2.csv");
 }
 
 void Controller::addRecord() {
