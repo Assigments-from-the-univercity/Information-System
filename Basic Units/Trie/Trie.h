@@ -24,7 +24,7 @@ private:
     vector<SortRequest> sortRequest;
     vector<TypeOfNote> types;
 
-    bool firstIsBigger(vector<string> first, vector<string> second);
+    bool firstIsBigger(vector<string> firstRecord, vector<string> secondRecord);
 
     TrieNode *getGrandparent(TrieNode *trieNode);
 

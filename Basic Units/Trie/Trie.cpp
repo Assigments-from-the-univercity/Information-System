@@ -97,24 +97,6 @@ bool Trie::firstIsBigger(vector<string> firstRecord, vector<string> secondRecord
     return false;
 }
 
-TrieNode *Trie::getGrandparent(TrieNode *trieNode) {
-    if (trieNode != nullptr && trieNode->getParent() != nullptr) {
-        return trieNode->getParent()->getParent();
-    } else {
-        return nullptr;
-    }
-}
-
-TrieNode *Trie::getUncle(TrieNode *trieNode) {
-    TrieNode *grandparent = getGrandparent(trieNode);
-    if (grandparent == nullptr)
-        return nullptr; // No grandparent means no uncle
-    if (trieNode->getParent() == grandparent->getLeftChild())
-        return grandparent->getRightChild();
-    else
-        return grandparent->getLeftChild();
-}
-
 void Trie::DFS(TrieNode *trieNode) {
     if (trieNode != nullptr) {
         DFS(trieNode->getLeftChild());

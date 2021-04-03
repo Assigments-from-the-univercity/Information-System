@@ -336,6 +336,32 @@ CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\Trie\Trie.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\Trie\Trie.cpp.s
 
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.obj: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.obj: ../Basic\ Units/RB\ Tree/RBTNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\RB_Tree\RBTNode.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\RB Tree\RBTNode.cpp"
+
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\RB Tree\RBTNode.cpp" > CMakeFiles\Information_System.dir\Basic_Units\RB_Tree\RBTNode.cpp.i
+
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\RB Tree\RBTNode.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\RB_Tree\RBTNode.cpp.s
+
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.obj: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.obj: ../Basic\ Units/RB\ Tree/RBTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Basic_Units\RB_Tree\RBTree.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\RB Tree\RBTree.cpp"
+
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\RB Tree\RBTree.cpp" > CMakeFiles\Information_System.dir\Basic_Units\RB_Tree\RBTree.cpp.i
+
+CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Basic Units\RB Tree\RBTree.cpp" -o CMakeFiles\Information_System.dir\Basic_Units\RB_Tree\RBTree.cpp.s
+
 # Object files for target Information_System
 Information_System_OBJECTS = \
 "CMakeFiles/Information_System.dir/main.cpp.obj" \
@@ -357,7 +383,9 @@ Information_System_OBJECTS = \
 "CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.obj" \
 "CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj" \
-"CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj"
+"CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj" \
+"CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.obj" \
+"CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.obj"
 
 # External object files for target Information_System
 Information_System_EXTERNAL_OBJECTS =
@@ -382,11 +410,13 @@ Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/UserReques
 Information_System.exe: CMakeFiles/Information_System.dir/View_Layer/Parser.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Trie/TrieNode.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Trie/Trie.cpp.obj
+Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTNode.cpp.obj
+Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/RB_Tree/RBTree.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/build.make
 Information_System.exe: CMakeFiles/Information_System.dir/linklibs.rsp
 Information_System.exe: CMakeFiles/Information_System.dir/objects1.rsp
 Information_System.exe: CMakeFiles/Information_System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable Information_System.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable Information_System.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Information_System.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

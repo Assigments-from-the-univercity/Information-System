@@ -9,6 +9,7 @@
 #include "Sorter.h"
 #include "Filter.h"
 #include "../Basic Units/Trie/Trie.h"
+#include "../Basic Units/RB Tree/RBTree.h"
 
 void Controller::createFile(string fileName) {
     ofstream f(fileName);
@@ -161,6 +162,8 @@ void Controller::getRecords() {
     } else if (s == "sorter") {
         Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
         sorter.sort();
+    } else if (s == "rbtree") {
+        RBTree rbTree(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
     }
 
     Printer printer(allRecordsFromTable);
