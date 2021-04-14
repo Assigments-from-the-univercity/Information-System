@@ -5,9 +5,12 @@
 #ifndef INFORMATION_SYSTEM_SORTER_H
 #define INFORMATION_SYSTEM_SORTER_H
 
-#include "../CSV Workers/CSVWorker.h"
-#include "../Basic Units/SortRequest.h"
-#include "../Basic Units/TypeOfNote.h"
+
+#include <math.h>
+#include <string.h>
+#include "../../CSV Workers/CSVWorker.h"
+#include "../../Basic Units/Sort Request/SortRequest.h"
+#include "../../Basic Units/TypeOfNote.h"
 
 class Sorter : public CSVWorker {
 private:

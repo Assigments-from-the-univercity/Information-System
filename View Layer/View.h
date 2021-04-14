@@ -7,7 +7,6 @@
 
 
 #include "../Controller Layer/Controller.h"
-#include "../Header.h"
 
 /**
  * This class represent the view layer.

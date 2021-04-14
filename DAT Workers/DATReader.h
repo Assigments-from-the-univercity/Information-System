@@ -6,7 +6,9 @@
 #define INFORMATION_SYSTEM_DATREADER_H
 
 #include <cstdio>
+#include <vector>
 #include "../Basic Units/TypeOfNote.h"
+#include "../Basic Units/List/List.h"
 
 using namespace std;
 

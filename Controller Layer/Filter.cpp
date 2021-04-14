@@ -4,7 +4,6 @@
 
 #include "Filter.h"
 
-
 Filter::Filter(istream &fin, ostream &fout) : CSVWorker(fin, fout) {
     getProperties(numberOfRecords, names, types);
 }

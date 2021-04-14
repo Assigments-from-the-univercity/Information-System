@@ -5,9 +5,10 @@
 #ifndef INFORMATION_SYSTEM_PRESORTREQUEST_H
 #define INFORMATION_SYSTEM_PRESORTREQUEST_H
 
+
 #include <string>
 #include <vector>
-#include "../Basic Units/SortRequest.h"
+#include "SortRequest.h"
 
 using namespace std;
 

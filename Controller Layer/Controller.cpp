@@ -3,11 +3,6 @@
 //
 
 #include "Controller.h"
-#include "../Basic Units/Action.h"
-#include "../Basic Units/PreSortRequest.h"
-#include "../View Layer/Parser.h"
-#include "Sorter.h"
-#include "Filter.h"
 
 void Controller::createFile(string fileName) {
     ofstream f(fileName);
@@ -152,14 +147,33 @@ void Controller::getRecords() {
     createFile(tempFile);
     allRecordsFromTable.open(tempFile);
 
-    Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
-    sorter.sort();
+    if (preSortRequest.size() > 0) {
+        cout << "choose sort method (sorter, trie or rbtree): ";
+        string s;
+        cin >> s;
+        if (s == "trie") {
+            Trie trie(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+        } else if (s == "sorter") {
+            Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+            sorter.sort();
+        } else if (s == "rbtree") {
+            RBTree rbTree(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+        }
 
-    Printer printer(allRecordsFromTable);
-    printer.print();
+        Printer printer(allRecordsFromTable);
+        printer.print();
+    } else {
+        Printer printer(tempCSVFile);
+        printer.print();
+    }
+
+    //Printer printer(allRecordsFromTable);
+    //printer.print();
 
     allRecordsFromTable.close();
     remove(tempFile.c_str());
+    tempCSVFile.close();
+    remove("tables\\temp_2.csv");
 }
 
 void Controller::addRecord() {

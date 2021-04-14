@@ -169,59 +169,86 @@ Basic_Units/Action.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.s
 .PHONY : Basic_Units/Action.cpp.s
 
-Basic_Units/List.obj: Basic_Units/List.cpp.obj
+Basic_Units/Filter_Request/UserRequest.obj: Basic_Units/Filter_Request/UserRequest.cpp.obj
 
-.PHONY : Basic_Units/List.obj
-
-# target to build an object file
-Basic_Units/List.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List.cpp.obj
-.PHONY : Basic_Units/List.cpp.obj
-
-Basic_Units/List.i: Basic_Units/List.cpp.i
-
-.PHONY : Basic_Units/List.i
-
-# target to preprocess a source file
-Basic_Units/List.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List.cpp.i
-.PHONY : Basic_Units/List.cpp.i
-
-Basic_Units/List.s: Basic_Units/List.cpp.s
-
-.PHONY : Basic_Units/List.s
-
-# target to generate assembly for a file
-Basic_Units/List.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List.cpp.s
-.PHONY : Basic_Units/List.cpp.s
-
-Basic_Units/Node.obj: Basic_Units/Node.cpp.obj
-
-.PHONY : Basic_Units/Node.obj
+.PHONY : Basic_Units/Filter_Request/UserRequest.obj
 
 # target to build an object file
-Basic_Units/Node.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.obj
-.PHONY : Basic_Units/Node.cpp.obj
+Basic_Units/Filter_Request/UserRequest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Filter_Request/UserRequest.cpp.obj
+.PHONY : Basic_Units/Filter_Request/UserRequest.cpp.obj
 
-Basic_Units/Node.i: Basic_Units/Node.cpp.i
+Basic_Units/Filter_Request/UserRequest.i: Basic_Units/Filter_Request/UserRequest.cpp.i
 
-.PHONY : Basic_Units/Node.i
+.PHONY : Basic_Units/Filter_Request/UserRequest.i
 
 # target to preprocess a source file
-Basic_Units/Node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.i
-.PHONY : Basic_Units/Node.cpp.i
+Basic_Units/Filter_Request/UserRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Filter_Request/UserRequest.cpp.i
+.PHONY : Basic_Units/Filter_Request/UserRequest.cpp.i
 
-Basic_Units/Node.s: Basic_Units/Node.cpp.s
+Basic_Units/Filter_Request/UserRequest.s: Basic_Units/Filter_Request/UserRequest.cpp.s
 
-.PHONY : Basic_Units/Node.s
+.PHONY : Basic_Units/Filter_Request/UserRequest.s
 
 # target to generate assembly for a file
-Basic_Units/Node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Node.cpp.s
-.PHONY : Basic_Units/Node.cpp.s
+Basic_Units/Filter_Request/UserRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/Filter_Request/UserRequest.cpp.s
+.PHONY : Basic_Units/Filter_Request/UserRequest.cpp.s
+
+Basic_Units/List/List.obj: Basic_Units/List/List.cpp.obj
+
+.PHONY : Basic_Units/List/List.obj
+
+# target to build an object file
+Basic_Units/List/List.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.obj
+.PHONY : Basic_Units/List/List.cpp.obj
+
+Basic_Units/List/List.i: Basic_Units/List/List.cpp.i
+
+.PHONY : Basic_Units/List/List.i
+
+# target to preprocess a source file
+Basic_Units/List/List.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.i
+.PHONY : Basic_Units/List/List.cpp.i
+
+Basic_Units/List/List.s: Basic_Units/List/List.cpp.s
+
+.PHONY : Basic_Units/List/List.s
+
+# target to generate assembly for a file
+Basic_Units/List/List.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/List.cpp.s
+.PHONY : Basic_Units/List/List.cpp.s
+
+Basic_Units/List/Node.obj: Basic_Units/List/Node.cpp.obj
+
+.PHONY : Basic_Units/List/Node.obj
+
+# target to build an object file
+Basic_Units/List/Node.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.obj
+.PHONY : Basic_Units/List/Node.cpp.obj
+
+Basic_Units/List/Node.i: Basic_Units/List/Node.cpp.i
+
+.PHONY : Basic_Units/List/Node.i
+
+# target to preprocess a source file
+Basic_Units/List/Node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.i
+.PHONY : Basic_Units/List/Node.cpp.i
+
+Basic_Units/List/Node.s: Basic_Units/List/Node.cpp.s
+
+.PHONY : Basic_Units/List/Node.s
+
+# target to generate assembly for a file
+Basic_Units/List/Node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/List/Node.cpp.s
+.PHONY : Basic_Units/List/Node.cpp.s
 
 Basic_Units/TypeOfNote.obj: Basic_Units/TypeOfNote.cpp.obj
 
@@ -249,33 +276,6 @@ Basic_Units/TypeOfNote.s: Basic_Units/TypeOfNote.cpp.s
 Basic_Units/TypeOfNote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/TypeOfNote.cpp.s
 .PHONY : Basic_Units/TypeOfNote.cpp.s
-
-Basic_Units/UserRequest.obj: Basic_Units/UserRequest.cpp.obj
-
-.PHONY : Basic_Units/UserRequest.obj
-
-# target to build an object file
-Basic_Units/UserRequest.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.obj
-.PHONY : Basic_Units/UserRequest.cpp.obj
-
-Basic_Units/UserRequest.i: Basic_Units/UserRequest.cpp.i
-
-.PHONY : Basic_Units/UserRequest.i
-
-# target to preprocess a source file
-Basic_Units/UserRequest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.i
-.PHONY : Basic_Units/UserRequest.cpp.i
-
-Basic_Units/UserRequest.s: Basic_Units/UserRequest.cpp.s
-
-.PHONY : Basic_Units/UserRequest.s
-
-# target to generate assembly for a file
-Basic_Units/UserRequest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Basic_Units/UserRequest.cpp.s
-.PHONY : Basic_Units/UserRequest.cpp.s
 
 CSV_Workers/CSVReader.obj: CSV_Workers/CSVReader.cpp.obj
 
@@ -412,32 +412,140 @@ Controller_Layer/Filter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.s
 .PHONY : Controller_Layer/Filter.cpp.s
 
-Controller_Layer/Sorter.obj: Controller_Layer/Sorter.cpp.obj
+Controller_Layer/Sorters/RB_Tree/RBTNode.obj: Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.obj
 
-.PHONY : Controller_Layer/Sorter.obj
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTNode.obj
 
 # target to build an object file
-Controller_Layer/Sorter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.obj
-.PHONY : Controller_Layer/Sorter.cpp.obj
+Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.obj
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.obj
 
-Controller_Layer/Sorter.i: Controller_Layer/Sorter.cpp.i
+Controller_Layer/Sorters/RB_Tree/RBTNode.i: Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.i
 
-.PHONY : Controller_Layer/Sorter.i
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTNode.i
 
 # target to preprocess a source file
-Controller_Layer/Sorter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.i
-.PHONY : Controller_Layer/Sorter.cpp.i
+Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.i
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.i
 
-Controller_Layer/Sorter.s: Controller_Layer/Sorter.cpp.s
+Controller_Layer/Sorters/RB_Tree/RBTNode.s: Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.s
 
-.PHONY : Controller_Layer/Sorter.s
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTNode.s
 
 # target to generate assembly for a file
-Controller_Layer/Sorter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorter.cpp.s
-.PHONY : Controller_Layer/Sorter.cpp.s
+Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.s
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.s
+
+Controller_Layer/Sorters/RB_Tree/RBTree.obj: Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj
+
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTree.obj
+
+# target to build an object file
+Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj
+
+Controller_Layer/Sorters/RB_Tree/RBTree.i: Controller_Layer/Sorters/RB_Tree/RBTree.cpp.i
+
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTree.i
+
+# target to preprocess a source file
+Controller_Layer/Sorters/RB_Tree/RBTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.i
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTree.cpp.i
+
+Controller_Layer/Sorters/RB_Tree/RBTree.s: Controller_Layer/Sorters/RB_Tree/RBTree.cpp.s
+
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTree.s
+
+# target to generate assembly for a file
+Controller_Layer/Sorters/RB_Tree/RBTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.s
+.PHONY : Controller_Layer/Sorters/RB_Tree/RBTree.cpp.s
+
+Controller_Layer/Sorters/Sorter.obj: Controller_Layer/Sorters/Sorter.cpp.obj
+
+.PHONY : Controller_Layer/Sorters/Sorter.obj
+
+# target to build an object file
+Controller_Layer/Sorters/Sorter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj
+.PHONY : Controller_Layer/Sorters/Sorter.cpp.obj
+
+Controller_Layer/Sorters/Sorter.i: Controller_Layer/Sorters/Sorter.cpp.i
+
+.PHONY : Controller_Layer/Sorters/Sorter.i
+
+# target to preprocess a source file
+Controller_Layer/Sorters/Sorter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.i
+.PHONY : Controller_Layer/Sorters/Sorter.cpp.i
+
+Controller_Layer/Sorters/Sorter.s: Controller_Layer/Sorters/Sorter.cpp.s
+
+.PHONY : Controller_Layer/Sorters/Sorter.s
+
+# target to generate assembly for a file
+Controller_Layer/Sorters/Sorter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.s
+.PHONY : Controller_Layer/Sorters/Sorter.cpp.s
+
+Controller_Layer/Sorters/Trie/Trie.obj: Controller_Layer/Sorters/Trie/Trie.cpp.obj
+
+.PHONY : Controller_Layer/Sorters/Trie/Trie.obj
+
+# target to build an object file
+Controller_Layer/Sorters/Trie/Trie.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/Trie.cpp.obj
+.PHONY : Controller_Layer/Sorters/Trie/Trie.cpp.obj
+
+Controller_Layer/Sorters/Trie/Trie.i: Controller_Layer/Sorters/Trie/Trie.cpp.i
+
+.PHONY : Controller_Layer/Sorters/Trie/Trie.i
+
+# target to preprocess a source file
+Controller_Layer/Sorters/Trie/Trie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/Trie.cpp.i
+.PHONY : Controller_Layer/Sorters/Trie/Trie.cpp.i
+
+Controller_Layer/Sorters/Trie/Trie.s: Controller_Layer/Sorters/Trie/Trie.cpp.s
+
+.PHONY : Controller_Layer/Sorters/Trie/Trie.s
+
+# target to generate assembly for a file
+Controller_Layer/Sorters/Trie/Trie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/Trie.cpp.s
+.PHONY : Controller_Layer/Sorters/Trie/Trie.cpp.s
+
+Controller_Layer/Sorters/Trie/TrieNode.obj: Controller_Layer/Sorters/Trie/TrieNode.cpp.obj
+
+.PHONY : Controller_Layer/Sorters/Trie/TrieNode.obj
+
+# target to build an object file
+Controller_Layer/Sorters/Trie/TrieNode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/TrieNode.cpp.obj
+.PHONY : Controller_Layer/Sorters/Trie/TrieNode.cpp.obj
+
+Controller_Layer/Sorters/Trie/TrieNode.i: Controller_Layer/Sorters/Trie/TrieNode.cpp.i
+
+.PHONY : Controller_Layer/Sorters/Trie/TrieNode.i
+
+# target to preprocess a source file
+Controller_Layer/Sorters/Trie/TrieNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/TrieNode.cpp.i
+.PHONY : Controller_Layer/Sorters/Trie/TrieNode.cpp.i
+
+Controller_Layer/Sorters/Trie/TrieNode.s: Controller_Layer/Sorters/Trie/TrieNode.cpp.s
+
+.PHONY : Controller_Layer/Sorters/Trie/TrieNode.s
+
+# target to generate assembly for a file
+Controller_Layer/Sorters/Trie/TrieNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/TrieNode.cpp.s
+.PHONY : Controller_Layer/Sorters/Trie/TrieNode.cpp.s
 
 DAT_Workers/DATReader.obj: DAT_Workers/DATReader.cpp.obj
 
@@ -640,18 +748,18 @@ help:
 	@echo ... Basic_Units/Action.obj
 	@echo ... Basic_Units/Action.i
 	@echo ... Basic_Units/Action.s
-	@echo ... Basic_Units/List.obj
-	@echo ... Basic_Units/List.i
-	@echo ... Basic_Units/List.s
-	@echo ... Basic_Units/Node.obj
-	@echo ... Basic_Units/Node.i
-	@echo ... Basic_Units/Node.s
+	@echo ... Basic_Units/Filter_Request/UserRequest.obj
+	@echo ... Basic_Units/Filter_Request/UserRequest.i
+	@echo ... Basic_Units/Filter_Request/UserRequest.s
+	@echo ... Basic_Units/List/List.obj
+	@echo ... Basic_Units/List/List.i
+	@echo ... Basic_Units/List/List.s
+	@echo ... Basic_Units/List/Node.obj
+	@echo ... Basic_Units/List/Node.i
+	@echo ... Basic_Units/List/Node.s
 	@echo ... Basic_Units/TypeOfNote.obj
 	@echo ... Basic_Units/TypeOfNote.i
 	@echo ... Basic_Units/TypeOfNote.s
-	@echo ... Basic_Units/UserRequest.obj
-	@echo ... Basic_Units/UserRequest.i
-	@echo ... Basic_Units/UserRequest.s
 	@echo ... CSV_Workers/CSVReader.obj
 	@echo ... CSV_Workers/CSVReader.i
 	@echo ... CSV_Workers/CSVReader.s
@@ -667,9 +775,21 @@ help:
 	@echo ... Controller_Layer/Filter.obj
 	@echo ... Controller_Layer/Filter.i
 	@echo ... Controller_Layer/Filter.s
-	@echo ... Controller_Layer/Sorter.obj
-	@echo ... Controller_Layer/Sorter.i
-	@echo ... Controller_Layer/Sorter.s
+	@echo ... Controller_Layer/Sorters/RB_Tree/RBTNode.obj
+	@echo ... Controller_Layer/Sorters/RB_Tree/RBTNode.i
+	@echo ... Controller_Layer/Sorters/RB_Tree/RBTNode.s
+	@echo ... Controller_Layer/Sorters/RB_Tree/RBTree.obj
+	@echo ... Controller_Layer/Sorters/RB_Tree/RBTree.i
+	@echo ... Controller_Layer/Sorters/RB_Tree/RBTree.s
+	@echo ... Controller_Layer/Sorters/Sorter.obj
+	@echo ... Controller_Layer/Sorters/Sorter.i
+	@echo ... Controller_Layer/Sorters/Sorter.s
+	@echo ... Controller_Layer/Sorters/Trie/Trie.obj
+	@echo ... Controller_Layer/Sorters/Trie/Trie.i
+	@echo ... Controller_Layer/Sorters/Trie/Trie.s
+	@echo ... Controller_Layer/Sorters/Trie/TrieNode.obj
+	@echo ... Controller_Layer/Sorters/Trie/TrieNode.i
+	@echo ... Controller_Layer/Sorters/Trie/TrieNode.s
 	@echo ... DAT_Workers/DATReader.obj
 	@echo ... DAT_Workers/DATReader.i
 	@echo ... DAT_Workers/DATReader.s

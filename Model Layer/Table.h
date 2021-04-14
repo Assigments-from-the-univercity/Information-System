@@ -5,9 +5,15 @@
 #ifndef INFORMATION_SYSTEM_TABLE_H
 #define INFORMATION_SYSTEM_TABLE_H
 
-#include "../Header.h"
-#include "../Basic Units/TypeOfNote.h"
+
 #include <ostream>
+#include <vector>
+#include <iostream>
+#include <cstring>
+#include "../Basic Units/TypeOfNote.h"
+#include "../CSV Workers/CSVWriter.h"
+#include "../DAT Workers/DATWriter.h"
+#include "../DAT Workers/DATReader.h"
 
 /**
  * This class represent (a part of) the model layer.

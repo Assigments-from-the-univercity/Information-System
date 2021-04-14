@@ -5,6 +5,7 @@
 #ifndef INFORMATION_SYSTEM_CSVREADER_H
 #define INFORMATION_SYSTEM_CSVREADER_H
 
+
 #include <istream>
 #include <vector>
 #include "../Basic Units/TypeOfNote.h"

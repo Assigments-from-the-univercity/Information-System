@@ -3,8 +3,6 @@
 //
 
 #include "Sorter.h"
-#include <math.h>
-#include <string.h>
 
 Sorter::Sorter(istream &fin, ostream &fout, vector<SortRequest> sortRequest) : CSVWorker(fin, fout) {
     this->sortRequest = sortRequest;

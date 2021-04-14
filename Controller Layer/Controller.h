@@ -6,10 +6,15 @@
 #define INFORMATION_SYSTEM_CONTROLLER_H
 
 
-
-#include "../Header.h"
 #include "../Model Layer/Table.h"
 #include "../View Layer/Printer.h"
+#include "../Basic Units/Action.h"
+#include "../Basic Units/Sort Request/PreSortRequest.h"
+#include "../View Layer/Parser.h"
+#include "Sorters/Sorter.h"
+#include "Filter.h"
+#include "Sorters/Trie/Trie.h"
+#include "Sorters/RB Tree/RBTree.h"
 
 /**
  * This class represent the controller layer.

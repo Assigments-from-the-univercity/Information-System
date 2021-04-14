@@ -5,6 +5,7 @@
 #ifndef INFORMATION_SYSTEM_FILTERREQUEST_H
 #define INFORMATION_SYSTEM_FILTERREQUEST_H
 
+
 #include <string>
 
 using namespace std;

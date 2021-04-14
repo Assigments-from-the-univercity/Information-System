@@ -5,9 +5,10 @@
 #ifndef INFORMATION_SYSTEM_USERREQUEST_H
 #define INFORMATION_SYSTEM_USERREQUEST_H
 
+
 #include <string>
 #include <vector>
-#include "../Basic Units/FilterRequest.h"
+#include "FilterRequest.h"
 
 class UserRequest {
 public:

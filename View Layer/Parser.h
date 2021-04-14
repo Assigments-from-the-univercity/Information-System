@@ -8,9 +8,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../Basic Units/PreSortRequest.h"
+#include "../Basic Units/Sort Request/PreSortRequest.h"
 #include "../Basic Units/Action.h"
-#include "../Basic Units/UserRequest.h"
+#include "../Basic Units/Filter Request/UserRequest.h"
 
 using namespace std;
 

@@ -3,7 +3,6 @@
 //
 
 #include "Printer.h"
-#include <iostream>
 
 void Printer::printHeader() {
     printf("%10s ", names[0].c_str());
