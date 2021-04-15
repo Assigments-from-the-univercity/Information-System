@@ -169,9 +169,6 @@ void Controller::getRecords() {
         printer.print();
     }
 
-    //Printer printer(allRecordsFromTable);
-    //printer.print();
-
     allRecordsFromTable.close();
     remove(tempFile.c_str());
     tempCSVFile.close();
