@@ -49,7 +49,7 @@ CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Contro
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTNode.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTree.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Sorters/Sortable.h
-CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Sorters/Sorter/Sorter.h
+CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Sorters/Sorter.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Sorters/Trie/Trie.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../Controller\ Layer/Sorters/Trie/TrieNode.h
 CMakeFiles/Information_System.dir/Controller_Layer/Controller.cpp.obj: ../DAT\ Workers/DATReader.h
@@ -79,14 +79,14 @@ CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.ob
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTree.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj: ../Controller\ Layer/Sorters/Sortable.h
 
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Basic\ Units/Sort\ Request/SortRequest.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Basic\ Units/TypeOfNote.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../CSV\ Workers/CSVReader.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../CSV\ Workers/CSVWorker.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../CSV\ Workers/CSVWriter.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sortable.h
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sorter/Sorter.cpp
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sorter/Sorter.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../Basic\ Units/Sort\ Request/SortRequest.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../Basic\ Units/TypeOfNote.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../CSV\ Workers/CSVReader.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../CSV\ Workers/CSVWorker.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../CSV\ Workers/CSVWriter.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sortable.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sorter.cpp
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sorter.h
 
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/Trie.cpp.obj: ../Basic\ Units/Sort\ Request/SortRequest.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/Trie.cpp.obj: ../Basic\ Units/TypeOfNote.h
@@ -151,7 +151,7 @@ CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTNode.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTree.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Sorters/Sortable.h
-CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Sorters/Sorter/Sorter.h
+CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Sorters/Sorter.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Sorters/Trie/Trie.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../Controller\ Layer/Sorters/Trie/TrieNode.h
 CMakeFiles/Information_System.dir/View_Layer/View.cpp.obj: ../DAT\ Workers/DATReader.h
@@ -178,7 +178,7 @@ CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Filter.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTNode.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTree.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Sorters/Sortable.h
-CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Sorters/Sorter/Sorter.h
+CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Sorters/Sorter.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Sorters/Trie/Trie.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../Controller\ Layer/Sorters/Trie/TrieNode.h
 CMakeFiles/Information_System.dir/main.cpp.obj: ../DAT\ Workers/DATReader.h

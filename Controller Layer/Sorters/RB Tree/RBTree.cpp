@@ -49,7 +49,7 @@ void RBTree::rotate(RBTNode *rbtNode) {
     delete rbtNode;
 }
 
-RBTree::RBTree(istream &fin, ostream &fout) : CSVWorker(fin, fout), Sortable(fin, fout) {
+RBTree::RBTree(istream &fin, ostream &fout) : Sortable(fin, fout) {
     getProperties(numberOfRecords, names, types);
 }
 

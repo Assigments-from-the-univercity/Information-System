@@ -4,8 +4,7 @@
 
 #include "Sorter.h"
 
-Sorter::Sorter(istream &fin, ostream &fout) : CSVWorker(fin, fout),
-                                              Sortable(fin, fout) {
+Sorter::Sorter(istream &fin, ostream &fout) : Sortable(fin, fout) {
     getProperties(numberOfRecords, names, types);
 }
 

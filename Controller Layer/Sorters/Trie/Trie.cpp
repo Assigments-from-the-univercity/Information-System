@@ -4,7 +4,7 @@
 
 #include "Trie.h"
 
-Trie::Trie(istream &fin, ostream &fout) : CSVWorker(fin, fout), Sortable(fin, fout) {
+Trie::Trie(istream &fin, ostream &fout) : Sortable(fin, fout) {
     getProperties(numberOfRecords, names, types);
 }
 

@@ -17,7 +17,7 @@
 
 using namespace std;
 
-class RBTree : public CSVWorker, public Sortable {
+class RBTree : public Sortable {
 private:
     RBTNode *root = nullptr;
 

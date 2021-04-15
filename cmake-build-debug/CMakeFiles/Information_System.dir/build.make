@@ -231,18 +231,18 @@ CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\CSV Workers\CSVWriter.cpp" -o CMakeFiles\Information_System.dir\CSV_Workers\CSVWriter.cpp.s
 
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: CMakeFiles/Information_System.dir/flags.make
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sorter/Sorter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Controller_Layer\Sorters\Sorter\Sorter.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Controller Layer\Sorters\Sorter\Sorter.cpp"
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: CMakeFiles/Information_System.dir/flags.make
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj: ../Controller\ Layer/Sorters/Sorter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Information_System.dir\Controller_Layer\Sorters\Sorter.cpp.obj -c "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Controller Layer\Sorters\Sorter.cpp"
 
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Controller Layer\Sorters\Sorter\Sorter.cpp" > CMakeFiles\Information_System.dir\Controller_Layer\Sorters\Sorter\Sorter.cpp.i
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Controller Layer\Sorters\Sorter.cpp" > CMakeFiles\Information_System.dir\Controller_Layer\Sorters\Sorter.cpp.i
 
-CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Controller Layer\Sorters\Sorter\Sorter.cpp" -o CMakeFiles\Information_System.dir\Controller_Layer\Sorters\Sorter\Sorter.cpp.s
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mark\Documents\Univercity\Programming\1 year\2 semestr\Information-System\Controller Layer\Sorters\Sorter.cpp" -o CMakeFiles\Information_System.dir\Controller_Layer\Sorters\Sorter.cpp.s
 
 CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: CMakeFiles/Information_System.dir/flags.make
 CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj: ../DAT\ Workers/DATWriter.cpp
@@ -375,7 +375,7 @@ Information_System_OBJECTS = \
 "CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj" \
 "CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj" \
 "CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj" \
-"CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj" \
+"CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj" \
 "CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj" \
 "CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj" \
 "CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj" \
@@ -401,7 +401,7 @@ Information_System.exe: CMakeFiles/Information_System.dir/CSV_Workers/CSVWorker.
 Information_System.exe: CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/CSV_Workers/CSVReader.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/CSV_Workers/CSVWriter.cpp.obj
-Information_System.exe: CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj
+Information_System.exe: CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/DAT_Workers/DATWriter.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj
 Information_System.exe: CMakeFiles/Information_System.dir/Basic_Units/Action.cpp.obj

@@ -8,9 +8,9 @@
 /**
  * This interface is used for sorting records according to @arg vector <SortRequest> sortRequest
  */
-class Sortable {
+class Sortable : public CSVWorker {
 public:
-    Sortable(istream &fin, ostream &fout) {}
+    Sortable(istream &fin, ostream &fout) : CSVWorker(fin, fout) {}
 
     /**
      * This method is sorting records which we gained from @arg fin.

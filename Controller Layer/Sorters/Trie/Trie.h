@@ -17,7 +17,7 @@
 
 using namespace std;
 
-class Trie : public CSVWorker, public Sortable {
+class Trie : public Sortable {
 private:
     TrieNode *root = nullptr;
 

@@ -8,12 +8,12 @@
 
 #include <math.h>
 #include <string.h>
-#include "../../../CSV Workers/CSVWorker.h"
-#include "../../../Basic Units/Sort Request/SortRequest.h"
-#include "../../../Basic Units/TypeOfNote.h"
-#include "../Sortable.h"
+#include "../../CSV Workers/CSVWorker.h"
+#include "../../Basic Units/Sort Request/SortRequest.h"
+#include "../../Basic Units/TypeOfNote.h"
+#include "Sortable.h"
 
-class Sorter : public CSVWorker, public Sortable {
+class Sorter : public Sortable {
 private:
     int numberOfRecords;
     vector<string> names;

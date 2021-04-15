@@ -11,7 +11,7 @@
 #include "../Basic Units/Action.h"
 #include "../Basic Units/Sort Request/PreSortRequest.h"
 #include "../View Layer/Parser.h"
-#include "Sorters/Sorter/Sorter.h"
+#include "Sorters/Sorter.h"
 #include "Filter.h"
 #include "Sorters/Trie/Trie.h"
 #include "Sorters/RB Tree/RBTree.h"
