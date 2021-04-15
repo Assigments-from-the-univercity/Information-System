@@ -152,7 +152,8 @@ void Controller::getRecords() {
         string s;
         cin >> s;
         if (s == "trie") {
-            Trie trie(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+            Trie trie(tempCSVFile, allRecordsFromTable);
+            trie.sort(PreSortRequest::makeSortRequest(preSortRequest, names));
         } else if (s == "sorter") {
             Sorter sorter(tempCSVFile, allRecordsFromTable);
             sorter.sort(PreSortRequest::makeSortRequest(preSortRequest, names));

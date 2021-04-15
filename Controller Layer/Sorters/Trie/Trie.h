@@ -13,10 +13,11 @@
 #include "../../../Basic Units/Sort Request/SortRequest.h"
 #include "../../../Basic Units/TypeOfNote.h"
 #include "../../../CSV Workers/CSVWorker.h"
+#include "../Sortable.h"
 
 using namespace std;
 
-class Trie : public CSVWorker {
+class Trie : public CSVWorker, public Sortable {
 private:
     TrieNode *root = nullptr;
 
@@ -25,20 +26,14 @@ private:
     vector<SortRequest> sortRequest;
     vector<TypeOfNote> types;
 
-    bool firstIsBigger(vector<string> firstRecord, vector<string> secondRecord);
-
-    TrieNode *getGrandparent(TrieNode *trieNode);
-
-    TrieNode *getUncle(TrieNode *trieNode);
-
-public:
-    Trie(istream &fin, ostream &fout, vector<SortRequest> sortRequest);
-
-    //Trie(vector<string> rootNodeValue);
-
     void add(vector<string> newNodeValue);
 
     void DFS(TrieNode *trieNode);
+
+public:
+    Trie(istream &fin, ostream &fout);
+
+    void sort(vector<SortRequest> sortRequest);
 };
 
 

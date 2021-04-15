@@ -4,9 +4,12 @@
 
 #include "Trie.h"
 
-Trie::Trie(istream &fin, ostream &fout, vector<SortRequest> sortRequest) : CSVWorker(fin, fout) {
-    this->sortRequest = sortRequest;
+Trie::Trie(istream &fin, ostream &fout) : CSVWorker(fin, fout), Sortable(fin, fout) {
     getProperties(numberOfRecords, names, types);
+}
+
+void Trie::sort(vector<SortRequest> sortRequest) {
+    this->sortRequest = sortRequest;
 
     for (int i = 0; i < numberOfRecords; ++i) {
         add(readNext());
@@ -15,10 +18,6 @@ Trie::Trie(istream &fin, ostream &fout, vector<SortRequest> sortRequest) : CSVWo
     setProperties(names, types);
     DFS(root);
 }
-
-/*Trie::Trie(vector<string> rootNodeValue) {
-    this->root = new TrieNode(rootNodeValue);
-}*/
 
 void Trie::add(vector<string> newNodeValue) {
     TrieNode *current = root;
@@ -29,7 +28,7 @@ void Trie::add(vector<string> newNodeValue) {
     }
 
     while (current != nullptr) {
-        if (firstIsBigger(newNodeValue, current->getData())) {
+        if (firsIsBigger(newNodeValue, current->getData(), sortRequest, types)) {
             //правый ребёнок
             if (current->getRightChild() != nullptr) {
                 current = current->getRightChild();
@@ -47,54 +46,6 @@ void Trie::add(vector<string> newNodeValue) {
             }
         }
     }
-}
-
-bool Trie::firstIsBigger(vector<string> firstRecord, vector<string> secondRecord) {
-    int requestSize = sortRequest.size();
-    for (int i = 0; i < requestSize; ++i) {
-        switch (types[sortRequest[i].ColumnIndex].type) {
-            case TypeOfNote::STRING: {
-                int compareResult = strcmp(firstRecord[sortRequest[i].ColumnIndex].c_str(),
-                                           secondRecord[sortRequest[i].ColumnIndex].c_str());
-                if (compareResult > 0) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return true;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return false;
-                    }
-                } else if (compareResult < 0) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return false;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return true;
-                    }
-                }
-            }
-                break;
-
-            case TypeOfNote::DOUBLE: {
-                double value1 = stod(firstRecord[sortRequest[i].ColumnIndex]);
-                double value2 = stod(secondRecord[sortRequest[i].ColumnIndex]);
-                if (value1 > value2) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return true;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return false;
-                    }
-                } else if (value1 < value2) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return false;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return true;
-                    }
-                }
-            }
-                break;
-        }
-    }
-
-    //если они полностью равны, то первый НЕ БОЛЬШЕ второго
-    return false;
 }
 
 void Trie::DFS(TrieNode *trieNode) {

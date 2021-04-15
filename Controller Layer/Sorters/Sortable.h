@@ -9,7 +9,16 @@
  * This interface is used for sorting records according to @arg vector <SortRequest> sortRequest
  */
 class Sortable {
-protected:
+public:
+    Sortable(istream &fin, ostream &fout) {}
+
+    /**
+     * This method is sorting records which we gained from @arg fin.
+     *
+     * @param sortRequest
+     */
+    void sort(vector <SortRequest> sortRequest) {}
+
     /**
      * This function is used for comparison two elements.
      *
@@ -66,16 +75,6 @@ protected:
         //если они полностью равны, то первый НЕ БОЛЬШЕ второго
         return false;
     }
-
-public:
-    Sortable(istream &fin, ostream &fout) {}
-
-    /**
-     * This method is sorting records which we gained from @arg fin.
-     *
-     * @param sortRequest
-     */
-    void sort(vector <SortRequest> sortRequest) {}
 };
 
 

@@ -465,32 +465,32 @@ Controller_Layer/Sorters/RB_Tree/RBTree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.s
 .PHONY : Controller_Layer/Sorters/RB_Tree/RBTree.cpp.s
 
-Controller_Layer/Sorters/Sorter.obj: Controller_Layer/Sorters/Sorter.cpp.obj
+Controller_Layer/Sorters/Sorter/Sorter.obj: Controller_Layer/Sorters/Sorter/Sorter.cpp.obj
 
-.PHONY : Controller_Layer/Sorters/Sorter.obj
+.PHONY : Controller_Layer/Sorters/Sorter/Sorter.obj
 
 # target to build an object file
-Controller_Layer/Sorters/Sorter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj
-.PHONY : Controller_Layer/Sorters/Sorter.cpp.obj
+Controller_Layer/Sorters/Sorter/Sorter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj
+.PHONY : Controller_Layer/Sorters/Sorter/Sorter.cpp.obj
 
-Controller_Layer/Sorters/Sorter.i: Controller_Layer/Sorters/Sorter.cpp.i
+Controller_Layer/Sorters/Sorter/Sorter.i: Controller_Layer/Sorters/Sorter/Sorter.cpp.i
 
-.PHONY : Controller_Layer/Sorters/Sorter.i
+.PHONY : Controller_Layer/Sorters/Sorter/Sorter.i
 
 # target to preprocess a source file
-Controller_Layer/Sorters/Sorter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.i
-.PHONY : Controller_Layer/Sorters/Sorter.cpp.i
+Controller_Layer/Sorters/Sorter/Sorter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.i
+.PHONY : Controller_Layer/Sorters/Sorter/Sorter.cpp.i
 
-Controller_Layer/Sorters/Sorter.s: Controller_Layer/Sorters/Sorter.cpp.s
+Controller_Layer/Sorters/Sorter/Sorter.s: Controller_Layer/Sorters/Sorter/Sorter.cpp.s
 
-.PHONY : Controller_Layer/Sorters/Sorter.s
+.PHONY : Controller_Layer/Sorters/Sorter/Sorter.s
 
 # target to generate assembly for a file
-Controller_Layer/Sorters/Sorter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.s
-.PHONY : Controller_Layer/Sorters/Sorter.cpp.s
+Controller_Layer/Sorters/Sorter/Sorter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Information_System.dir\build.make CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.s
+.PHONY : Controller_Layer/Sorters/Sorter/Sorter.cpp.s
 
 Controller_Layer/Sorters/Trie/Trie.obj: Controller_Layer/Sorters/Trie/Trie.cpp.obj
 
@@ -780,9 +780,9 @@ help:
 	@echo ... Controller_Layer/Sorters/RB_Tree/RBTree.obj
 	@echo ... Controller_Layer/Sorters/RB_Tree/RBTree.i
 	@echo ... Controller_Layer/Sorters/RB_Tree/RBTree.s
-	@echo ... Controller_Layer/Sorters/Sorter.obj
-	@echo ... Controller_Layer/Sorters/Sorter.i
-	@echo ... Controller_Layer/Sorters/Sorter.s
+	@echo ... Controller_Layer/Sorters/Sorter/Sorter.obj
+	@echo ... Controller_Layer/Sorters/Sorter/Sorter.i
+	@echo ... Controller_Layer/Sorters/Sorter/Sorter.s
 	@echo ... Controller_Layer/Sorters/Trie/Trie.obj
 	@echo ... Controller_Layer/Sorters/Trie/Trie.i
 	@echo ... Controller_Layer/Sorters/Trie/Trie.s
