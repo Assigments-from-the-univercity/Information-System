@@ -161,6 +161,9 @@
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorters/RB Tree/RBTree.h">
 			<Option target="Information_System"/>
 		</Unit>
+		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorters/Sortable.h">
+			<Option target="Information_System"/>
+		</Unit>
 		<Unit filename="C:/Users/Mark/Documents/Univercity/Programming/1 year/2 semestr/Information-System/Controller Layer/Sorters/Sorter.cpp">
 			<Option target="Information_System"/>
 		</Unit>

@@ -4,33 +4,36 @@
 
 #include "Sorter.h"
 
-Sorter::Sorter(istream &fin, ostream &fout, vector<SortRequest> sortRequest) : CSVWorker(fin, fout) {
-    this->sortRequest = sortRequest;
+Sorter::Sorter(istream &fin, ostream &fout) : Sortable(fin, fout) {
     getProperties(numberOfRecords, names, types);
 }
 
-void Sorter::sort() {
+void Sorter::sort(vector<SortRequest> sortRequest) {
+    this->sortRequest = sortRequest;
+
     //creation buffer file
-    ofstream f1(bufferName);
-    f1.close();
-    buffer.open(bufferName);
+    string bufferName = "buffer.csv";
+    createFileIfNotExist(bufferName);
+    fstream buffer(bufferName);
     copyFromCurrentPosition(numberOfRecords, getFin(), buffer);
-    //buffer.close();
 
-    sortNextLevel(0);
+    // sorting itself
+    sortNextLevel(0, buffer);
 
-    //buffer.open(bufferName);
+    // printing result
     setProperties(names, types);
     copyAll(numberOfRecords, buffer, getFout());
 
     buffer.close();
-    remove(subFile1.c_str());
-    remove(subFile2.c_str());
     remove(bufferName.c_str());
-    remove(subBufferName.c_str());
 }
 
-void Sorter::sortNextLevel(int level) {
+void Sorter::sortNextLevel(int level, fstream &buffer) {
+    // names for files need in the sort
+    string subFile1 = "set1.csv";
+    string subFile2 = "set2.csv";
+    string subBufferName = "subBuffer.csv";
+
     //создаём необходимые для работы программы файлы
     createFileIfNotExist(subFile1);
     createFileIfNotExist(subFile2);
@@ -43,9 +46,6 @@ void Sorter::sortNextLevel(int level) {
 
     //подготавливаем буфер и под-буфер для результата промежуточной сортировки
     copyAll(numberOfRecords, buffer, subBuffer);
-    /*buffer.close();
-    this->clearFile(bufferName);
-    buffer.open(bufferName);*/
     rewind(buffer);
     rewind(subBuffer);
 
@@ -67,7 +67,9 @@ void Sorter::sortNextLevel(int level) {
             writeNext(readNext(subBuffer), set2);
         }
 
-        mergeTwoFiles(set1, currentRecordInSet1, set2, currentRecordInSet2);
+        mergeTwoFiles(set1, currentRecordInSet1, set2, currentRecordInSet2, buffer);
+        clearFile(subFile1);
+        clearFile(subFile2);
     }
 
     set1.close();
@@ -76,11 +78,11 @@ void Sorter::sortNextLevel(int level) {
     remove(subFile2.c_str());
 
     if (set * 2 < numberOfRecords) {
-        sortNextLevel(level + 1);
+        sortNextLevel(level + 1, buffer);
     }
 }
 
-void Sorter::mergeTwoFiles(fstream &set1, int sizeSet1, fstream &set2, int sizeSet2) {
+void Sorter::mergeTwoFiles(fstream &set1, int sizeSet1, fstream &set2, int sizeSet2, fstream &buffer) {
     //переходим в начало файла
     rewind(set1);
     rewind(set2);
@@ -128,13 +130,8 @@ void Sorter::mergeTwoFiles(fstream &set1, int sizeSet1, fstream &set2, int sizeS
             isReady2 = true;
         }
 
-        /*////debug
-        cout << "arg1: " << arg1[0] << " " << arg1[1] << " " << arg1[2] << endl;
-        cout << "arg2: " << arg2[0] << " " << arg2[1] << " " << arg2[2] << endl << endl;
-        ////*/
-
         //сравнение
-        if (firsIsBigger(arg1, arg2)) {
+        if (firsIsBigger(arg1, arg2, sortRequest, types)) {
             writeNext(arg2, buffer);
             isReady2 = false;
             sizeSet2--;
@@ -144,55 +141,4 @@ void Sorter::mergeTwoFiles(fstream &set1, int sizeSet1, fstream &set2, int sizeS
             sizeSet1--;
         }
     }
-
-    clearFile(subFile1);
-    clearFile(subFile2);
-}
-
-bool Sorter::firsIsBigger(vector<string> firstRecord, vector<string> secondRecord) {
-    int requestSize = sortRequest.size();
-    for (int i = 0; i < requestSize; ++i) {
-        switch (types[sortRequest[i].ColumnIndex].type) {
-            case TypeOfNote::STRING: {
-                int compareResult = strcmp(firstRecord[sortRequest[i].ColumnIndex].c_str(),
-                                           secondRecord[sortRequest[i].ColumnIndex].c_str());
-                if (compareResult > 0) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return true;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return false;
-                    }
-                } else if (compareResult < 0) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return false;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return true;
-                    }
-                }
-            }
-                break;
-
-            case TypeOfNote::DOUBLE: {
-                double value1 = stod(firstRecord[sortRequest[i].ColumnIndex]);
-                double value2 = stod(secondRecord[sortRequest[i].ColumnIndex]);
-                if (value1 > value2) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return true;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return false;
-                    }
-                } else if (value1 < value2) {
-                    if (sortRequest[i].order == SortRequest::ASCENDING) {
-                        return false;
-                    } else if (sortRequest[i].order == SortRequest::DESCENDING) {
-                        return true;
-                    }
-                }
-            }
-                break;
-        }
-    }
-
-    //если они полностью равны, то первый НЕ БОЛЬШЕ второго
-    return false;
 }

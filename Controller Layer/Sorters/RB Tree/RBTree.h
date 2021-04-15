@@ -13,10 +13,11 @@
 #include "../../../Basic Units/Sort Request/SortRequest.h"
 #include "../../../Basic Units/TypeOfNote.h"
 #include "../../../CSV Workers/CSVWorker.h"
+#include "../Sortable.h"
 
 using namespace std;
 
-class RBTree : public CSVWorker {
+class RBTree : public Sortable {
 private:
     RBTNode *root = nullptr;
 
@@ -24,8 +25,6 @@ private:
     vector<string> names;
     vector<SortRequest> sortRequest;
     vector<TypeOfNote> types;
-
-    bool firstIsBigger(vector<string> firstRecord, vector<string> secondRecord);
 
     RBTNode *getGrandparent(RBTNode *rbtNode);
 
@@ -43,12 +42,14 @@ private:
 
     void insertCase5(RBTNode *trieNode);
 
-public:
-    RBTree(istream &fin, ostream &fout, vector<SortRequest> sortRequest);
-
     void add(vector<string> newNodeValue);
 
     void DFS(RBTNode *rbtNode);
+
+public:
+    RBTree(istream &fin, ostream &fout);
+
+    void sort(vector<SortRequest> sortRequest);
 };
 
 

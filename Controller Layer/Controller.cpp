@@ -152,12 +152,14 @@ void Controller::getRecords() {
         string s;
         cin >> s;
         if (s == "trie") {
-            Trie trie(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+            Trie trie(tempCSVFile, allRecordsFromTable);
+            trie.sort(PreSortRequest::makeSortRequest(preSortRequest, names));
         } else if (s == "sorter") {
-            Sorter sorter(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
-            sorter.sort();
+            Sorter sorter(tempCSVFile, allRecordsFromTable);
+            sorter.sort(PreSortRequest::makeSortRequest(preSortRequest, names));
         } else if (s == "rbtree") {
-            RBTree rbTree(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+            RBTree rbTree(tempCSVFile, allRecordsFromTable);
+            rbTree.sort(PreSortRequest::makeSortRequest(preSortRequest, names));
         }
 
         Printer printer(allRecordsFromTable);
@@ -166,9 +168,6 @@ void Controller::getRecords() {
         Printer printer(tempCSVFile);
         printer.print();
     }
-
-    //Printer printer(allRecordsFromTable);
-    //printer.print();
 
     allRecordsFromTable.close();
     remove(tempFile.c_str());
