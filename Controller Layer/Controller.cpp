@@ -158,7 +158,8 @@ void Controller::getRecords() {
             Sorter sorter(tempCSVFile, allRecordsFromTable);
             sorter.sort(PreSortRequest::makeSortRequest(preSortRequest, names));
         } else if (s == "rbtree") {
-            RBTree rbTree(tempCSVFile, allRecordsFromTable, PreSortRequest::makeSortRequest(preSortRequest, names));
+            RBTree rbTree(tempCSVFile, allRecordsFromTable);
+            rbTree.sort(PreSortRequest::makeSortRequest(preSortRequest, names));
         }
 
         Printer printer(allRecordsFromTable);

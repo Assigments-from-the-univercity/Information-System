@@ -11,7 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Information_System.dir/Controller_Layer/Filter.cpp.obj"
   "CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTNode.cpp.obj"
   "CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj"
-  "CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter.cpp.obj"
+  "CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj"
   "CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/Trie.cpp.obj"
   "CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Trie/TrieNode.cpp.obj"
   "CMakeFiles/Information_System.dir/DAT_Workers/DATReader.cpp.obj"

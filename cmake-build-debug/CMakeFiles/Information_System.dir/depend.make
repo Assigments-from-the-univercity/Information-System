@@ -77,6 +77,7 @@ CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.ob
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTNode.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTree.cpp
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj: ../Controller\ Layer/Sorters/RB\ Tree/RBTree.h
+CMakeFiles/Information_System.dir/Controller_Layer/Sorters/RB_Tree/RBTree.cpp.obj: ../Controller\ Layer/Sorters/Sortable.h
 
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Basic\ Units/Sort\ Request/SortRequest.h
 CMakeFiles/Information_System.dir/Controller_Layer/Sorters/Sorter/Sorter.cpp.obj: ../Basic\ Units/TypeOfNote.h
